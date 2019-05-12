@@ -1,1 +1,3 @@
-== EP4CE6 VHDL Code ==
+== WaveShare CoreEP4CE6 FPGA Card ==
+
+<img src="http://land-boards.com/blwiki/images/0/0e/CoreEP4CE6-intro.jpg"></img>
