@@ -1,3 +1,5 @@
 == EP2C5 Cyclone II FPGA Development Mini-Board ==
 
+* [http://land-boards.com/blwiki/index.php?title=Cyclone_II_EP2C5_Mini_Dev_Board Land Boards Wiki page]
+
 <img src="http://land-boards.com/blwiki/images/f/f6/EP2C5-Mini-Board-TopView-800px.jpg"></img>
