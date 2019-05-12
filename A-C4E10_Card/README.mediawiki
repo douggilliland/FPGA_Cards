@@ -1,3 +1,3 @@
-= FPGA_Cards =
+= A-C4E10 FPGA Card =
 
 <img src="http://land-boards.com/blwiki/images/9/94/A-C4E10_Card_002.PNG"></img>
