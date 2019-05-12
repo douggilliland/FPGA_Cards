@@ -1,5 +1,5 @@
 = A-ESTF V2 EP4CE22 Board FPGA Card =
 
-* [http://land-boards.com/blwiki/index.php?title=A-ESTF_V2_EP4CE22_Board Land Boards wiki page]
+* [http://land-boards.com/blwiki/index.php?title=A-ESTF_V2_EP4CE22_Board Land Boards Wiki Page]
 
 <img src="http://land-boards.com/blwiki/images/b/b3/A-ESTF_V2_EP4CE22_Board-01.png"></img>
