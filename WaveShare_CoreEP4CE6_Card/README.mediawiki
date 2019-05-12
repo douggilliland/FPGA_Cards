@@ -1,6 +1,6 @@
 == WaveShare CoreEP4CE6 FPGA Card ==
 
 * <a href="http://land-boards.com/blwiki/index.php?title=WaveShare_CoreEP4CE6_EP4CE6E22C8N_FPGA_Board">Land Boards CoreEP4CE6 FPGA Card Wiki page</a>
-* <a href="https://www.waveshare.com/wiki/CoreEP4CE6">WaveShare Wiki Page</a>
+* <a href="https://www.waveshare.com/wiki/CoreEP4CE6">WaveShare CoreEP4CE6 Wiki Page</a>
 
 <img src="http://land-boards.com/blwiki/images/0/0e/CoreEP4CE6-intro.jpg"></img>
