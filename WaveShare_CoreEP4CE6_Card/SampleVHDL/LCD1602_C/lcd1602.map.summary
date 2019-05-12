@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Sep 07 21:38:50 2015
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : lcd1602
+Top-level Entity Name : lcd1602
+Family : Cyclone IV E
+Total logic elements : 57
+    Total combinational functions : 43
+    Dedicated logic registers : 45
+Total registers : 45
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

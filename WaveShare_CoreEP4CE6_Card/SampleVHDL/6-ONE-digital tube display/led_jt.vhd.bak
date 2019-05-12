@@ -1,0 +1,32 @@
+--深圳市21EDA电子
+--开发板型号:A-C5FB
+--www.21eda.com
+--www.sz-21eda.com
+--www.21eda.net
+--www.21eda-bbs.com
+
+
+--学习单个数码管静态显示原理
+--在第一个数码管上面显示
+--你可以修改7段码的值。来显示你要显示的数
+--视频教程适合我们21EDA电子的所有学习板
+--注意：如果是自己建立工程，一定要把没有用到的管脚设置为三态输入。
+--21EDA-Altera-FPGA开发板使用入门.PDF里面讲了的，在最后几页。
+library ieee; 
+use ieee.std_logic_1164.all; 
+use ieee.std_logic_unsigned.all; 
+entity led_jt is 
+port( 
+      led_bit :out std_logic;                   --数码管的位选择口
+      led_out :out std_logic_vector(7 downto 0) --数码管的7段码口
+    ); 
+end led_jt ; 
+architecture bhv of led_jt is 
+begin  
+  led_bit<= '0';             --使第一位数码管处于导通状态
+                             --其他数码管截止。
+
+  led_out <="11111001";      --在给数码管显示1的段码给过去
+                             --你可以修改7段码的值。来显示你要显示的数字或者字符
+end bhv; 
+

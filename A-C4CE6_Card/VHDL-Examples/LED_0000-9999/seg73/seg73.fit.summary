@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Sep 07 21:50:52 2015
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : seg73
+Top-level Entity Name : seg73
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 79 / 6,272 ( 1 % )
+    Total combinational functions : 79 / 6,272 ( 1 % )
+    Dedicated logic registers : 49 / 6,272 ( 1 % )
+Total registers : 49
+Total pins : 14 / 92 ( 15 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

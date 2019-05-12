@@ -1,0 +1,192 @@
+Release 8.1i par I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+ZSX::  Thu May 17 22:17:24 2007
+
+par -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd
+ps2_lcd1602_1.pcf 
+
+
+Constraints file: ps2_lcd1602_1.pcf.
+Loading device for application Rf_Device from file '3s400.nph' in environment C:\Xilinx.
+   "ps2_lcd1602_1" is an NCD, version 3.1, device xc3s400, package pq208, speed -5
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. The PAR timing summary will list the performance achieved for each clock. Note: For
+   the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high". For a
+   balance between the fastest runtime and best performance, set the effort level to "med".
+
+Device speed data version:  "PRODUCTION 1.37 2005-11-04".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                  3 out of 8      37%
+   Number of External IOBs            16 out of 141    11%
+      Number of LOCed IOBs            16 out of 16    100%
+
+   Number of Slices                  142 out of 3584    3%
+      Number of SLICEMs               16 out of 1792    1%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:989a03) REAL time: 4 secs 
+
+Phase 2.31
+Phase 2.31 (Checksum:1312cfe) REAL time: 4 secs 
+
+Phase 3.2
+
+
+
+Phase 3.2 (Checksum:1c9c37d) REAL time: 7 secs 
+
+Phase 4.8
+...........
+.....
+......
+..
+..
+.
+Phase 4.8 (Checksum:9b5d73) REAL time: 8 secs 
+
+Phase 5.5
+Phase 5.5 (Checksum:2faf07b) REAL time: 8 secs 
+
+Phase 6.18
+Phase 6.18 (Checksum:39386fa) REAL time: 9 secs 
+
+Phase 7.5
+Phase 7.5 (Checksum:42c1d79) REAL time: 9 secs 
+
+Writing design to file ps2_lcd1602_1.ncd
+
+
+Total REAL time to Placer completion: 9 secs 
+Total CPU time to Placer completion: 9 secs 
+
+Starting Router
+
+Phase 1: 1034 unrouted;       REAL time: 9 secs 
+
+Phase 2: 945 unrouted;       REAL time: 10 secs 
+
+Phase 3: 378 unrouted;       REAL time: 10 secs 
+
+Phase 4: 378 unrouted; (31807)      REAL time: 10 secs 
+
+Phase 5: 383 unrouted; (0)      REAL time: 10 secs 
+
+Phase 6: 0 unrouted; (160)      REAL time: 11 secs 
+
+Phase 7: 0 unrouted; (160)      REAL time: 11 secs 
+
+Phase 8: 0 unrouted; (160)      REAL time: 12 secs 
+
+WARNING:Route:447 - CLK Net:a1/Clk_Out may have excessive skew because 
+   1 NON-CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 12 secs 
+Total CPU time to Router completion: 11 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|          a1/Clk_Out |      BUFGMUX3| No   |   28 |  0.035     |  0.936      |
++---------------------+--------------+------+------+------------+-------------+
+|            a0/hit_1 |      BUFGMUX7| No   |   19 |  0.017     |  0.901      |
++---------------------+--------------+------+------+------------+-------------+
+|           CLK_BUFGP |      BUFGMUX2| No   |   28 |  0.053     |  0.936      |
++---------------------+--------------+------+------+------------+-------------+
+|           a0/_n0017 |         Local|      |    1 |  0.000     |  0.309      |
++---------------------+--------------+------+------+------------+-------------+
+|               a0/N3 |         Local|      |    7 |  0.010     |  2.312      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+
+   The Delay Summary Report
+
+
+The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
+
+   The AVERAGE CONNECTION DELAY for this design is:        1.229
+   The MAXIMUM PIN DELAY IS:                               6.336
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   3.236
+
+   Listing Pin Delays by value: (nsec)
+
+    d < 1.00   < d < 2.00  < d < 3.00  < d < 4.00  < d < 7.00  d >= 7.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+         516         355         111          24          20           0
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                | Requested  | Actual     | Logic  | Absolute   |Number of  
+                                            |            |            | Levels | Slack      |errors     
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net a1/ | N/A        | 7.660ns    | 3      | N/A        | N/A       
+  Clk_Out                                   |            |            |        |            |           
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net a0/ | N/A        | 4.106ns    | 2      | N/A        | N/A       
+  hit_1                                     |            |            |        |            |           
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net CLK | N/A        | 4.783ns    | 3      | N/A        | N/A       
+  _BUFGP                                    |            |            |        |            |           
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net a0/ | N/A        | 16.764ns   | 13     | N/A        | N/A       
+  N3                                        |            |            |        |            |           
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the
+   constraint does not cover any paths or that it has no requested value.
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 13 secs 
+Total CPU time to PAR completion: 12 secs 
+
+Peak Memory Usage:  119 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 1
+Number of info messages: 1
+
+Writing design to file ps2_lcd1602_1.ncd
+
+
+
+PAR done!

@@ -1,0 +1,83 @@
+--lpm_counter CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone" lpm_modulus=8 lpm_port_updown="PORT_CONNECTIVITY" lpm_width=3 clock q sclr CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 10.1 cbx_cycloneii 2010:11:29:22:18:02:SJ cbx_lpm_add_sub 2010:11:29:22:18:02:SJ cbx_lpm_compare 2010:11:29:22:18:02:SJ cbx_lpm_counter 2010:11:29:22:18:02:SJ cbx_lpm_decode 2010:11:29:22:18:02:SJ cbx_mgl 2010:11:29:22:19:52:SJ cbx_stratix 2010:11:29:22:18:02:SJ cbx_stratixii 2010:11:29:22:18:02:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2010 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION cyclone_lcell (aclr, aload, cin, clk, dataa, datab, datac, datad, ena, inverta, regcascin, sclr, sload)
+WITH ( cin0_used, cin1_used, cin_used, lut_mask, operation_mode, output_mode, power_up, register_cascade_mode, sum_lutc_input, synch_mode, x_on_violation)
+RETURNS ( combout, cout, regout);
+
+--synthesis_resources = lut 3 
+SUBDESIGN cntr_r2i
+( 
+	clock	:	input;
+	q[2..0]	:	output;
+	sclr	:	input;
+) 
+VARIABLE 
+	counter_cella0 : cyclone_lcell
+		WITH (
+			cin_used = "false",
+			lut_mask = "11AA",
+			operation_mode = "arithmetic",
+			synch_mode = "on"
+		);
+	counter_cella1 : cyclone_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "12A0",
+			operation_mode = "arithmetic",
+			sum_lutc_input = "cin",
+			synch_mode = "on"
+		);
+	counter_cella2 : cyclone_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "12A0",
+			operation_mode = "normal",
+			sum_lutc_input = "cin",
+			synch_mode = "on"
+		);
+	aclr	: NODE;
+	aclr_actual	: WIRE;
+	clk_en	: NODE;
+	data[2..0]	: NODE;
+	safe_q[2..0]	: WIRE;
+	sload	: NODE;
+
+BEGIN 
+	counter_cella[2..0].aclr = aclr_actual;
+	counter_cella[2..0].aload = B"000";
+	counter_cella[1].cin = counter_cella[0].cout;
+	counter_cella[2].cin = counter_cella[1].cout;
+	counter_cella[2..0].clk = clock;
+	counter_cella[2..0].dataa = safe_q[];
+	counter_cella[2..0].datab = B"000";
+	counter_cella[2..0].datac = data[];
+	counter_cella[2].datad = B"1";
+	counter_cella[2..0].ena = clk_en;
+	counter_cella[2..0].sclr = sclr;
+	counter_cella[2..0].sload = sload;
+	aclr = GND;
+	aclr_actual = aclr;
+	clk_en = VCC;
+	data[] = GND;
+	q[] = safe_q[];
+	safe_q[] = counter_cella[2..0].regout;
+	sload = GND;
+END;
+--VALID FILE

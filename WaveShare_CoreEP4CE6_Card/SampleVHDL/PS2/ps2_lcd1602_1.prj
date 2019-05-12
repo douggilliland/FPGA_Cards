@@ -1,0 +1,3 @@
+vhdl work "ps2.vhd"
+vhdl work "LCD1602.vhd"
+vhdl work "ps2_lcd1602_1.vhd"

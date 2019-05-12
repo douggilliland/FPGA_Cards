@@ -1,0 +1,1186 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--LED1[0] is LED1[0] at LC_X22_Y3_N2
+--operation mode is normal
+
+LED1[0]_lut_out = !Glide[0];
+LED1[0] = DFFEAS(LED1[0]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, , , , );
+
+
+--LED3[0] is LED3[0] at LC_X22_Y3_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED3[0]_lut_out = GND;
+LED3[0] = DFFEAS(LED3[0]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, LED2[0], , , VCC);
+
+
+--Refresh[1] is Refresh[1] at LC_X21_Y3_N5
+--operation mode is normal
+
+Refresh[1]_lut_out = Refresh[1] $ (Refresh[0]);
+Refresh[1] = DFFEAS(Refresh[1]_lut_out, GLOBAL(Count1[8]), VCC, , , , , , );
+
+
+--Refresh[0] is Refresh[0] at LC_X21_Y3_N3
+--operation mode is normal
+
+Refresh[0]_lut_out = !Refresh[0];
+Refresh[0] = DFFEAS(Refresh[0]_lut_out, GLOBAL(Count1[8]), VCC, , , , , , );
+
+
+--Refresh[2] is Refresh[2] at LC_X21_Y3_N8
+--operation mode is normal
+
+Refresh[2]_lut_out = Refresh[2] $ (Refresh[1] & Refresh[0]);
+Refresh[2] = DFFEAS(Refresh[2]_lut_out, GLOBAL(Count1[8]), VCC, , , , , , );
+
+
+--A1L135 is LED[0]~368 at LC_X21_Y3_N0
+--operation mode is normal
+
+A1L135 = !Refresh[2] & (Refresh[1] $ Refresh[0]);
+
+
+--A1L136 is LED[0]~369 at LC_X21_Y3_N1
+--operation mode is normal
+
+A1L136 = !Refresh[2] & Refresh[0];
+
+
+--A1L137 is LED[0]~370 at LC_X21_Y3_N6
+--operation mode is normal
+
+A1L137 = Refresh[2] & !Refresh[1];
+
+
+--LED7[0] is LED7[0] at LC_X21_Y4_N9
+--operation mode is normal
+
+LED7[0]_lut_out = LED6[0];
+LED7[0] = DFFEAS(LED7[0]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, , , , );
+
+
+--A1L138 is LED[0]~371 at LC_X21_Y3_N9
+--operation mode is normal
+
+A1L138 = Refresh[2] & !Refresh[0];
+
+
+--A1L139 is LED[0]~372 at LC_X21_Y4_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED8[0]_qfbk = LED8[0];
+A1L139 = A1L138 & (LED7[0] # A1L137) # !A1L138 & (LED8[0]_qfbk & !A1L137);
+
+--LED8[0] is LED8[0] at LC_X21_Y4_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED8[0] = DFFEAS(A1L139, GLOBAL(Count2[9]), VCC, , RESET, LED7[0], , , VCC);
+
+
+--LED5[0] is LED5[0] at LC_X21_Y3_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED5[0]_lut_out = GND;
+LED5[0] = DFFEAS(LED5[0]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, LED4[0], , , VCC);
+
+
+--A1L140 is LED[0]~373 at LC_X21_Y4_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED6[0]_qfbk = LED6[0];
+A1L140 = A1L139 & (LED5[0] # !A1L137) # !A1L139 & (LED6[0]_qfbk & A1L137);
+
+--LED6[0] is LED6[0] at LC_X21_Y4_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED6[0] = DFFEAS(A1L140, GLOBAL(Count2[9]), VCC, , RESET, LED5[0], , , VCC);
+
+
+--A1L141 is LED[0]~374 at LC_X21_Y3_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED4[0]_qfbk = LED4[0];
+A1L141 = A1L135 & (A1L136) # !A1L135 & (A1L136 & (LED4[0]_qfbk) # !A1L136 & A1L140);
+
+--LED4[0] is LED4[0] at LC_X21_Y3_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED4[0] = DFFEAS(A1L141, GLOBAL(Count2[9]), VCC, , RESET, LED3[0], , , VCC);
+
+
+--A1L142 is LED[0]~375 at LC_X22_Y3_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED2[0]_qfbk = LED2[0];
+A1L142 = A1L135 & (A1L141 & (LED2[0]_qfbk) # !A1L141 & LED3[0]) # !A1L135 & (A1L141);
+
+--LED2[0] is LED2[0] at LC_X22_Y3_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED2[0] = DFFEAS(A1L142, GLOBAL(Count2[9]), VCC, , RESET, LED1[0], , , VCC);
+
+
+--A1L198 is rtl~52 at LC_X21_Y3_N4
+--operation mode is normal
+
+A1L198 = !Refresh[1] & !Refresh[2] & !Refresh[0];
+
+
+--A1L143 is LED[0]~376 at LC_X22_Y3_N6
+--operation mode is normal
+
+A1L143 = A1L198 & LED1[0] # !A1L198 & (A1L142);
+
+
+--LED4[1] is LED4[1] at LC_X22_Y4_N3
+--operation mode is normal
+
+LED4[1]_lut_out = LED3[1];
+LED4[1] = DFFEAS(LED4[1]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, , , , );
+
+
+--LED6[1] is LED6[1] at LC_X22_Y4_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED6[1]_lut_out = GND;
+LED6[1] = DFFEAS(LED6[1]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, LED5[1], , , VCC);
+
+
+--A1L144 is LED[1]~377 at LC_X22_Y4_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED8[1]_qfbk = LED8[1];
+A1L144 = A1L138 & (A1L137) # !A1L138 & (A1L137 & LED6[1] # !A1L137 & (LED8[1]_qfbk));
+
+--LED8[1] is LED8[1] at LC_X22_Y4_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED8[1] = DFFEAS(A1L144, GLOBAL(Count2[9]), VCC, , RESET, LED7[1], , , VCC);
+
+
+--LED5[1] is LED5[1] at LC_X22_Y4_N0
+--operation mode is normal
+
+LED5[1]_lut_out = LED4[1];
+LED5[1] = DFFEAS(LED5[1]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, , , , );
+
+
+--A1L145 is LED[1]~378 at LC_X22_Y4_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED7[1]_qfbk = LED7[1];
+A1L145 = A1L138 & (A1L144 & LED5[1] # !A1L144 & (LED7[1]_qfbk)) # !A1L138 & (A1L144);
+
+--LED7[1] is LED7[1] at LC_X22_Y4_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED7[1] = DFFEAS(A1L145, GLOBAL(Count2[9]), VCC, , RESET, LED6[1], , , VCC);
+
+
+--A1L146 is LED[1]~379 at LC_X22_Y4_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED3[1]_qfbk = LED3[1];
+A1L146 = A1L136 & A1L135 # !A1L136 & (A1L135 & LED3[1]_qfbk # !A1L135 & (A1L145));
+
+--LED3[1] is LED3[1] at LC_X22_Y4_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED3[1] = DFFEAS(A1L146, GLOBAL(Count2[9]), VCC, , RESET, LED2[1], , , VCC);
+
+
+--A1L147 is LED[1]~380 at LC_X22_Y4_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED2[1]_qfbk = LED2[1];
+A1L147 = A1L136 & (A1L146 & (LED2[1]_qfbk) # !A1L146 & LED4[1]) # !A1L136 & (A1L146);
+
+--LED2[1] is LED2[1] at LC_X22_Y4_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED2[1] = DFFEAS(A1L147, GLOBAL(Count2[9]), VCC, , RESET, LED1[1], , , VCC);
+
+
+--A1L148 is LED[1]~381 at LC_X22_Y4_N7
+--operation mode is normal
+
+A1L148 = A1L198 & LED1[1] # !A1L198 & (A1L147);
+
+
+--LED3[2] is LED3[2] at LC_X22_Y3_N0
+--operation mode is normal
+
+LED3[2]_lut_out = LED2[2];
+LED3[2] = DFFEAS(LED3[2]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, , , , );
+
+
+--LED7[2] is LED7[2] at LC_X21_Y4_N7
+--operation mode is normal
+
+LED7[2]_lut_out = LED6[2];
+LED7[2] = DFFEAS(LED7[2]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, , , , );
+
+
+--A1L149 is LED[2]~382 at LC_X21_Y4_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED8[2]_qfbk = LED8[2];
+A1L149 = A1L138 & (LED7[2] # A1L137) # !A1L138 & (LED8[2]_qfbk & !A1L137);
+
+--LED8[2] is LED8[2] at LC_X21_Y4_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED8[2] = DFFEAS(A1L149, GLOBAL(Count2[9]), VCC, , RESET, LED7[2], , , VCC);
+
+
+--LED5[2] is LED5[2] at LC_X22_Y4_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED5[2]_lut_out = GND;
+LED5[2] = DFFEAS(LED5[2]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, LED4[2], , , VCC);
+
+
+--A1L150 is LED[2]~383 at LC_X21_Y4_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED6[2]_qfbk = LED6[2];
+A1L150 = A1L149 & (LED5[2] # !A1L137) # !A1L149 & (LED6[2]_qfbk & A1L137);
+
+--LED6[2] is LED6[2] at LC_X21_Y4_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED6[2] = DFFEAS(A1L150, GLOBAL(Count2[9]), VCC, , RESET, LED5[2], , , VCC);
+
+
+--A1L151 is LED[2]~384 at LC_X22_Y4_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED4[2]_qfbk = LED4[2];
+A1L151 = A1L135 & (A1L136) # !A1L135 & (A1L136 & (LED4[2]_qfbk) # !A1L136 & A1L150);
+
+--LED4[2] is LED4[2] at LC_X22_Y4_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED4[2] = DFFEAS(A1L151, GLOBAL(Count2[9]), VCC, , RESET, LED3[2], , , VCC);
+
+
+--A1L152 is LED[2]~385 at LC_X22_Y3_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED2[2]_qfbk = LED2[2];
+A1L152 = A1L151 & (LED2[2]_qfbk # !A1L135) # !A1L151 & A1L135 & (LED3[2]);
+
+--LED2[2] is LED2[2] at LC_X22_Y3_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED2[2] = DFFEAS(A1L152, GLOBAL(Count2[9]), VCC, , RESET, LED1[2], , , VCC);
+
+
+--A1L153 is LED[2]~386 at LC_X22_Y3_N3
+--operation mode is normal
+
+A1L153 = A1L198 & (LED1[2]) # !A1L198 & A1L152;
+
+
+--LED4[3] is LED4[3] at LC_X22_Y5_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED4[3]_lut_out = GND;
+LED4[3] = DFFEAS(LED4[3]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, LED3[3], , , VCC);
+
+
+--LED6[3] is LED6[3] at LC_X21_Y4_N2
+--operation mode is normal
+
+LED6[3]_lut_out = LED5[3];
+LED6[3] = DFFEAS(LED6[3]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, , , , );
+
+
+--A1L154 is LED[3]~387 at LC_X21_Y4_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED8[3]_qfbk = LED8[3];
+A1L154 = A1L138 & (A1L137) # !A1L138 & (A1L137 & LED6[3] # !A1L137 & (LED8[3]_qfbk));
+
+--LED8[3] is LED8[3] at LC_X21_Y4_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED8[3] = DFFEAS(A1L154, GLOBAL(Count2[9]), VCC, , RESET, LED7[3], , , VCC);
+
+
+--LED5[3] is LED5[3] at LC_X21_Y4_N0
+--operation mode is normal
+
+LED5[3]_lut_out = LED4[3];
+LED5[3] = DFFEAS(LED5[3]_lut_out, GLOBAL(Count2[9]), VCC, , RESET, , , , );
+
+
+--A1L155 is LED[3]~388 at LC_X21_Y4_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED7[3]_qfbk = LED7[3];
+A1L155 = A1L154 & (LED5[3] # !A1L138) # !A1L154 & A1L138 & LED7[3]_qfbk;
+
+--LED7[3] is LED7[3] at LC_X21_Y4_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED7[3] = DFFEAS(A1L155, GLOBAL(Count2[9]), VCC, , RESET, LED6[3], , , VCC);
+
+
+--A1L156 is LED[3]~389 at LC_X22_Y5_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED3[3]_qfbk = LED3[3];
+A1L156 = A1L135 & (LED3[3]_qfbk # A1L136) # !A1L135 & A1L155 & (!A1L136);
+
+--LED3[3] is LED3[3] at LC_X22_Y5_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED3[3] = DFFEAS(A1L156, GLOBAL(Count2[9]), VCC, , RESET, LED2[3], , , VCC);
+
+
+--A1L157 is LED[3]~390 at LC_X22_Y5_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED2[3]_qfbk = LED2[3];
+A1L157 = A1L136 & (A1L156 & (LED2[3]_qfbk) # !A1L156 & LED4[3]) # !A1L136 & (A1L156);
+
+--LED2[3] is LED2[3] at LC_X22_Y5_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED2[3] = DFFEAS(A1L157, GLOBAL(Count2[9]), VCC, , RESET, LED1[3], , , VCC);
+
+
+--A1L158 is LED[3]~391 at LC_X22_Y5_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED1[3]_qfbk = LED1[3];
+A1L158 = A1L198 & LED1[3]_qfbk # !A1L198 & (A1L157);
+
+--LED1[3] is LED1[3] at LC_X22_Y5_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+LED1[3] = DFFEAS(A1L158, GLOBAL(Count2[9]), VCC, , RESET, A1L3, , , VCC);
+
+
+--A1L184 is Mux~237 at LC_X22_Y3_N8
+--operation mode is normal
+
+A1L184 = A1L153 & !A1L148 & (A1L143 $ !A1L158) # !A1L153 & A1L143 & (A1L148 $ !A1L158);
+
+
+--A1L185 is Mux~238 at LC_X22_Y3_N4
+--operation mode is normal
+
+A1L185 = A1L148 & (A1L143 & (A1L158) # !A1L143 & A1L153) # !A1L148 & A1L153 & (A1L143 $ A1L158);
+
+
+--A1L186 is Mux~239 at LC_X22_Y3_N5
+--operation mode is normal
+
+A1L186 = A1L153 & A1L158 & (A1L148 # !A1L143) # !A1L153 & !A1L143 & A1L148 & !A1L158;
+
+
+--A1L187 is Mux~240 at LC_X18_Y3_N5
+--operation mode is normal
+
+A1L187 = A1L148 & (A1L153 & A1L143 # !A1L153 & !A1L143 & A1L158) # !A1L148 & !A1L158 & (A1L153 $ A1L143);
+
+
+--A1L188 is Mux~241 at LC_X18_Y3_N4
+--operation mode is normal
+
+A1L188 = A1L148 & (A1L143 & !A1L158) # !A1L148 & (A1L153 & (!A1L158) # !A1L153 & A1L143);
+
+
+--A1L189 is Mux~242 at LC_X18_Y3_N8
+--operation mode is normal
+
+A1L189 = A1L153 & A1L143 & (A1L148 $ A1L158) # !A1L153 & !A1L158 & (A1L143 # A1L148);
+
+
+--A1L190 is Mux~243 at LC_X18_Y3_N2
+--operation mode is normal
+
+A1L190 = A1L143 & (A1L158 # A1L153 $ A1L148) # !A1L143 & (A1L148 # A1L153 $ A1L158);
+
+
+--A1L191 is Mux~244 at LC_X18_Y3_N6
+--operation mode is normal
+
+A1L191 = A1L153 & A1L143 & A1L148 & A1L158;
+
+
+--Count2[9] is Count2[9] at LC_X8_Y6_N9
+--operation mode is normal
+
+Count2[9]_carry_eqn = (!A1L65 & A1L76) # (A1L65 & A1L77);
+Count2[9]_lut_out = Count2[9] $ (Count2[9]_carry_eqn);
+Count2[9] = DFFEAS(Count2[9]_lut_out, GLOBAL(Count1[9]), VCC, , , , , A1L170, );
+
+
+--Glide[0] is Glide[0] at LC_X22_Y5_N4
+--operation mode is normal
+
+Glide[0]_lut_out = !Glide[0];
+Glide[0] = DFFEAS(Glide[0]_lut_out, GLOBAL(Count2[9]), GLOBAL(RESET), , , , , , );
+
+
+--Glide[1] is Glide[1] at LC_X22_Y5_N6
+--operation mode is normal
+
+Glide[1]_lut_out = A1L1;
+Glide[1] = DFFEAS(Glide[1]_lut_out, GLOBAL(Count2[9]), GLOBAL(RESET), , , , , , );
+
+
+--A1L1 is add~743 at LC_X22_Y5_N5
+--operation mode is normal
+
+A1L1 = Glide[0] $ Glide[1];
+
+--LED1[1] is LED1[1] at LC_X22_Y5_N5
+--operation mode is normal
+
+LED1[1] = DFFEAS(A1L1, GLOBAL(Count2[9]), VCC, , RESET, , , , );
+
+
+--Glide[2] is Glide[2] at LC_X22_Y5_N1
+--operation mode is normal
+
+Glide[2]_lut_out = A1L2;
+Glide[2] = DFFEAS(Glide[2]_lut_out, GLOBAL(Count2[9]), GLOBAL(RESET), , , , , , );
+
+
+--A1L2 is add~744 at LC_X22_Y5_N0
+--operation mode is normal
+
+A1L2 = Glide[2] $ (Glide[1] & Glide[0]);
+
+--LED1[2] is LED1[2] at LC_X22_Y5_N0
+--operation mode is normal
+
+LED1[2] = DFFEAS(A1L2, GLOBAL(Count2[9]), VCC, , RESET, , , , );
+
+
+--A1L3 is add~745 at LC_X22_Y5_N2
+--operation mode is normal
+
+Glide[3]_qfbk = Glide[3];
+A1L3 = Glide[3]_qfbk $ (Glide[1] & Glide[0] & Glide[2]);
+
+--Glide[3] is Glide[3] at LC_X22_Y5_N2
+--operation mode is normal
+
+Glide[3] = DFFEAS(A1L3, GLOBAL(Count2[9]), GLOBAL(RESET), , , , , , );
+
+
+--Count1[8] is Count1[8] at LC_X19_Y8_N8
+--operation mode is arithmetic
+
+Count1[8]_carry_eqn = (!A1L37 & A1L45) # (A1L37 & A1L46);
+Count1[8]_lut_out = Count1[8] $ !Count1[8]_carry_eqn;
+Count1[8] = DFFEAS(Count1[8]_lut_out, GLOBAL(Period1uS), VCC, , , , , A1L173, );
+
+--A1L48 is Count1[8]~127 at LC_X19_Y8_N8
+--operation mode is arithmetic
+
+A1L48_cout_0 = Count1[8] & !A1L45;
+A1L48 = CARRY(A1L48_cout_0);
+
+--A1L49 is Count1[8]~127COUT1_174 at LC_X19_Y8_N8
+--operation mode is arithmetic
+
+A1L49_cout_1 = Count1[8] & !A1L46;
+A1L49 = CARRY(A1L49_cout_1);
+
+
+--Count1[9] is Count1[9] at LC_X19_Y8_N9
+--operation mode is normal
+
+Count1[9]_carry_eqn = (!A1L37 & A1L48) # (A1L37 & A1L49);
+Count1[9]_lut_out = Count1[9] $ (Count1[9]_carry_eqn);
+Count1[9] = DFFEAS(Count1[9]_lut_out, GLOBAL(Period1uS), VCC, , , , , A1L173, );
+
+
+--Count2[8] is Count2[8] at LC_X8_Y6_N8
+--operation mode is arithmetic
+
+Count2[8]_carry_eqn = (!A1L65 & A1L73) # (A1L65 & A1L74);
+Count2[8]_lut_out = Count2[8] $ !Count2[8]_carry_eqn;
+Count2[8] = DFFEAS(Count2[8]_lut_out, GLOBAL(Count1[9]), VCC, , , , , A1L170, );
+
+--A1L76 is Count2[8]~131 at LC_X8_Y6_N8
+--operation mode is arithmetic
+
+A1L76_cout_0 = Count2[8] & !A1L73;
+A1L76 = CARRY(A1L76_cout_0);
+
+--A1L77 is Count2[8]~131COUT1_174 at LC_X8_Y6_N8
+--operation mode is arithmetic
+
+A1L77_cout_1 = Count2[8] & !A1L74;
+A1L77 = CARRY(A1L77_cout_1);
+
+
+--Count2[5] is Count2[5] at LC_X8_Y6_N5
+--operation mode is arithmetic
+
+Count2[5]_carry_eqn = A1L65;
+Count2[5]_lut_out = Count2[5] $ Count2[5]_carry_eqn;
+Count2[5] = DFFEAS(Count2[5]_lut_out, GLOBAL(Count1[9]), VCC, , , , , A1L170, );
+
+--A1L67 is Count2[5]~135 at LC_X8_Y6_N5
+--operation mode is arithmetic
+
+A1L67_cout_0 = !A1L65 # !Count2[5];
+A1L67 = CARRY(A1L67_cout_0);
+
+--A1L68 is Count2[5]~135COUT1_171 at LC_X8_Y6_N5
+--operation mode is arithmetic
+
+A1L68_cout_1 = !A1L65 # !Count2[5];
+A1L68 = CARRY(A1L68_cout_1);
+
+
+--Count2[6] is Count2[6] at LC_X8_Y6_N6
+--operation mode is arithmetic
+
+Count2[6]_carry_eqn = (!A1L65 & A1L67) # (A1L65 & A1L68);
+Count2[6]_lut_out = Count2[6] $ (!Count2[6]_carry_eqn);
+Count2[6] = DFFEAS(Count2[6]_lut_out, GLOBAL(Count1[9]), VCC, , , , , A1L170, );
+
+--A1L70 is Count2[6]~139 at LC_X8_Y6_N6
+--operation mode is arithmetic
+
+A1L70_cout_0 = Count2[6] & (!A1L67);
+A1L70 = CARRY(A1L70_cout_0);
+
+--A1L71 is Count2[6]~139COUT1_172 at LC_X8_Y6_N6
+--operation mode is arithmetic
+
+A1L71_cout_1 = Count2[6] & (!A1L68);
+A1L71 = CARRY(A1L71_cout_1);
+
+
+--Count2[7] is Count2[7] at LC_X8_Y6_N7
+--operation mode is arithmetic
+
+Count2[7]_carry_eqn = (!A1L65 & A1L70) # (A1L65 & A1L71);
+Count2[7]_lut_out = Count2[7] $ (Count2[7]_carry_eqn);
+Count2[7] = DFFEAS(Count2[7]_lut_out, GLOBAL(Count1[9]), VCC, , , , , A1L170, );
+
+--A1L73 is Count2[7]~143 at LC_X8_Y6_N7
+--operation mode is arithmetic
+
+A1L73_cout_0 = !A1L70 # !Count2[7];
+A1L73 = CARRY(A1L73_cout_0);
+
+--A1L74 is Count2[7]~143COUT1_173 at LC_X8_Y6_N7
+--operation mode is arithmetic
+
+A1L74_cout_1 = !A1L71 # !Count2[7];
+A1L74 = CARRY(A1L74_cout_1);
+
+
+--A1L168 is LessThan~384 at LC_X9_Y6_N4
+--operation mode is normal
+
+A1L168 = Count2[6] & Count2[9] & Count2[5] & Count2[7];
+
+
+--Count2[4] is Count2[4] at LC_X8_Y6_N4
+--operation mode is arithmetic
+
+Count2[4]_lut_out = Count2[4] $ !A1L62;
+Count2[4] = DFFEAS(Count2[4]_lut_out, GLOBAL(Count1[9]), VCC, , , , , A1L170, );
+
+--A1L65 is Count2[4]~147 at LC_X8_Y6_N4
+--operation mode is arithmetic
+
+A1L65 = CARRY(Count2[4] & !A1L63);
+
+
+--Count2[3] is Count2[3] at LC_X8_Y6_N3
+--operation mode is arithmetic
+
+Count2[3]_lut_out = Count2[3] $ A1L59;
+Count2[3] = DFFEAS(Count2[3]_lut_out, GLOBAL(Count1[9]), VCC, , , , , A1L170, );
+
+--A1L62 is Count2[3]~151 at LC_X8_Y6_N3
+--operation mode is arithmetic
+
+A1L62_cout_0 = !A1L59 # !Count2[3];
+A1L62 = CARRY(A1L62_cout_0);
+
+--A1L63 is Count2[3]~151COUT1_170 at LC_X8_Y6_N3
+--operation mode is arithmetic
+
+A1L63_cout_1 = !A1L60 # !Count2[3];
+A1L63 = CARRY(A1L63_cout_1);
+
+
+--Count2[0] is Count2[0] at LC_X8_Y6_N0
+--operation mode is arithmetic
+
+Count2[0]_lut_out = !Count2[0];
+Count2[0] = DFFEAS(Count2[0]_lut_out, GLOBAL(Count1[9]), VCC, , , , , A1L170, );
+
+--A1L53 is Count2[0]~155 at LC_X8_Y6_N0
+--operation mode is arithmetic
+
+A1L53_cout_0 = Count2[0];
+A1L53 = CARRY(A1L53_cout_0);
+
+--A1L54 is Count2[0]~155COUT1_167 at LC_X8_Y6_N0
+--operation mode is arithmetic
+
+A1L54_cout_1 = Count2[0];
+A1L54 = CARRY(A1L54_cout_1);
+
+
+--Count2[1] is Count2[1] at LC_X8_Y6_N1
+--operation mode is arithmetic
+
+Count2[1]_lut_out = Count2[1] $ (A1L53);
+Count2[1] = DFFEAS(Count2[1]_lut_out, GLOBAL(Count1[9]), VCC, , , , , A1L170, );
+
+--A1L56 is Count2[1]~159 at LC_X8_Y6_N1
+--operation mode is arithmetic
+
+A1L56_cout_0 = !A1L53 # !Count2[1];
+A1L56 = CARRY(A1L56_cout_0);
+
+--A1L57 is Count2[1]~159COUT1_168 at LC_X8_Y6_N1
+--operation mode is arithmetic
+
+A1L57_cout_1 = !A1L54 # !Count2[1];
+A1L57 = CARRY(A1L57_cout_1);
+
+
+--Count2[2] is Count2[2] at LC_X8_Y6_N2
+--operation mode is arithmetic
+
+Count2[2]_lut_out = Count2[2] $ (!A1L56);
+Count2[2] = DFFEAS(Count2[2]_lut_out, GLOBAL(Count1[9]), VCC, , , , , A1L170, );
+
+--A1L59 is Count2[2]~163 at LC_X8_Y6_N2
+--operation mode is arithmetic
+
+A1L59_cout_0 = Count2[2] & (!A1L56);
+A1L59 = CARRY(A1L59_cout_0);
+
+--A1L60 is Count2[2]~163COUT1_169 at LC_X8_Y6_N2
+--operation mode is arithmetic
+
+A1L60_cout_1 = Count2[2] & (!A1L57);
+A1L60 = CARRY(A1L60_cout_1);
+
+
+--A1L169 is LessThan~385 at LC_X9_Y6_N5
+--operation mode is normal
+
+A1L169 = Count2[3] # Count2[1] & Count2[0] & Count2[2];
+
+
+--A1L170 is LessThan~386 at LC_X9_Y6_N2
+--operation mode is normal
+
+A1L170 = Count2[8] & A1L168 & (A1L169 # Count2[4]);
+
+
+--Count1[7] is Count1[7] at LC_X19_Y8_N7
+--operation mode is arithmetic
+
+Count1[7]_carry_eqn = (!A1L37 & A1L42) # (A1L37 & A1L43);
+Count1[7]_lut_out = Count1[7] $ (Count1[7]_carry_eqn);
+Count1[7] = DFFEAS(Count1[7]_lut_out, GLOBAL(Period1uS), VCC, , , , , A1L173, );
+
+--A1L45 is Count1[7]~135 at LC_X19_Y8_N7
+--operation mode is arithmetic
+
+A1L45_cout_0 = !A1L42 # !Count1[7];
+A1L45 = CARRY(A1L45_cout_0);
+
+--A1L46 is Count1[7]~135COUT1_173 at LC_X19_Y8_N7
+--operation mode is arithmetic
+
+A1L46_cout_1 = !A1L43 # !Count1[7];
+A1L46 = CARRY(A1L46_cout_1);
+
+
+--Count1[5] is Count1[5] at LC_X19_Y8_N5
+--operation mode is arithmetic
+
+Count1[5]_carry_eqn = A1L37;
+Count1[5]_lut_out = Count1[5] $ Count1[5]_carry_eqn;
+Count1[5] = DFFEAS(Count1[5]_lut_out, GLOBAL(Period1uS), VCC, , , , , A1L173, );
+
+--A1L39 is Count1[5]~139 at LC_X19_Y8_N5
+--operation mode is arithmetic
+
+A1L39_cout_0 = !A1L37 # !Count1[5];
+A1L39 = CARRY(A1L39_cout_0);
+
+--A1L40 is Count1[5]~139COUT1_171 at LC_X19_Y8_N5
+--operation mode is arithmetic
+
+A1L40_cout_1 = !A1L37 # !Count1[5];
+A1L40 = CARRY(A1L40_cout_1);
+
+
+--Count1[6] is Count1[6] at LC_X19_Y8_N6
+--operation mode is arithmetic
+
+Count1[6]_carry_eqn = (!A1L37 & A1L39) # (A1L37 & A1L40);
+Count1[6]_lut_out = Count1[6] $ (!Count1[6]_carry_eqn);
+Count1[6] = DFFEAS(Count1[6]_lut_out, GLOBAL(Period1uS), VCC, , , , , A1L173, );
+
+--A1L42 is Count1[6]~143 at LC_X19_Y8_N6
+--operation mode is arithmetic
+
+A1L42_cout_0 = Count1[6] & (!A1L39);
+A1L42 = CARRY(A1L42_cout_0);
+
+--A1L43 is Count1[6]~143COUT1_172 at LC_X19_Y8_N6
+--operation mode is arithmetic
+
+A1L43_cout_1 = Count1[6] & (!A1L40);
+A1L43 = CARRY(A1L43_cout_1);
+
+
+--A1L171 is LessThan~387 at LC_X20_Y8_N4
+--operation mode is normal
+
+A1L171 = Count1[8] & Count1[9] & Count1[5] & Count1[6];
+
+
+--Count1[4] is Count1[4] at LC_X19_Y8_N4
+--operation mode is arithmetic
+
+Count1[4]_lut_out = Count1[4] $ !A1L34;
+Count1[4] = DFFEAS(Count1[4]_lut_out, GLOBAL(Period1uS), VCC, , , , , A1L173, );
+
+--A1L37 is Count1[4]~147 at LC_X19_Y8_N4
+--operation mode is arithmetic
+
+A1L37 = CARRY(Count1[4] & !A1L35);
+
+
+--Count1[3] is Count1[3] at LC_X19_Y8_N3
+--operation mode is arithmetic
+
+Count1[3]_lut_out = Count1[3] $ A1L31;
+Count1[3] = DFFEAS(Count1[3]_lut_out, GLOBAL(Period1uS), VCC, , , , , A1L173, );
+
+--A1L34 is Count1[3]~151 at LC_X19_Y8_N3
+--operation mode is arithmetic
+
+A1L34_cout_0 = !A1L31 # !Count1[3];
+A1L34 = CARRY(A1L34_cout_0);
+
+--A1L35 is Count1[3]~151COUT1_170 at LC_X19_Y8_N3
+--operation mode is arithmetic
+
+A1L35_cout_1 = !A1L32 # !Count1[3];
+A1L35 = CARRY(A1L35_cout_1);
+
+
+--Count1[0] is Count1[0] at LC_X19_Y8_N0
+--operation mode is arithmetic
+
+Count1[0]_lut_out = !Count1[0];
+Count1[0] = DFFEAS(Count1[0]_lut_out, GLOBAL(Period1uS), VCC, , , , , A1L173, );
+
+--A1L25 is Count1[0]~155 at LC_X19_Y8_N0
+--operation mode is arithmetic
+
+A1L25_cout_0 = Count1[0];
+A1L25 = CARRY(A1L25_cout_0);
+
+--A1L26 is Count1[0]~155COUT1_167 at LC_X19_Y8_N0
+--operation mode is arithmetic
+
+A1L26_cout_1 = Count1[0];
+A1L26 = CARRY(A1L26_cout_1);
+
+
+--Count1[1] is Count1[1] at LC_X19_Y8_N1
+--operation mode is arithmetic
+
+Count1[1]_lut_out = Count1[1] $ (A1L25);
+Count1[1] = DFFEAS(Count1[1]_lut_out, GLOBAL(Period1uS), VCC, , , , , A1L173, );
+
+--A1L28 is Count1[1]~159 at LC_X19_Y8_N1
+--operation mode is arithmetic
+
+A1L28_cout_0 = !A1L25 # !Count1[1];
+A1L28 = CARRY(A1L28_cout_0);
+
+--A1L29 is Count1[1]~159COUT1_168 at LC_X19_Y8_N1
+--operation mode is arithmetic
+
+A1L29_cout_1 = !A1L26 # !Count1[1];
+A1L29 = CARRY(A1L29_cout_1);
+
+
+--Count1[2] is Count1[2] at LC_X19_Y8_N2
+--operation mode is arithmetic
+
+Count1[2]_lut_out = Count1[2] $ (!A1L28);
+Count1[2] = DFFEAS(Count1[2]_lut_out, GLOBAL(Period1uS), VCC, , , , , A1L173, );
+
+--A1L31 is Count1[2]~163 at LC_X19_Y8_N2
+--operation mode is arithmetic
+
+A1L31_cout_0 = Count1[2] & (!A1L28);
+A1L31 = CARRY(A1L31_cout_0);
+
+--A1L32 is Count1[2]~163COUT1_169 at LC_X19_Y8_N2
+--operation mode is arithmetic
+
+A1L32_cout_1 = Count1[2] & (!A1L29);
+A1L32 = CARRY(A1L32_cout_1);
+
+
+--A1L172 is LessThan~388 at LC_X20_Y8_N5
+--operation mode is normal
+
+A1L172 = Count1[3] # Count1[2] & Count1[0] & Count1[1];
+
+
+--A1L173 is LessThan~389 at LC_X20_Y8_N2
+--operation mode is normal
+
+A1L173 = A1L171 & Count1[7] & (A1L172 # Count1[4]);
+
+
+--A1L4 is add~746 at LC_X15_Y6_N6
+--operation mode is normal
+
+A1L4_carry_eqn = (!A1L10 & A1L7) # (A1L10 & A1L8);
+A1L4 = A1L4_carry_eqn $ Count[5];
+
+
+--Count[3] is Count[3] at LC_X12_Y6_N6
+--operation mode is normal
+
+Count[3]_lut_out = A1L9 & (!Count[5] # !Count[4] # !A1L174);
+Count[3] = DFFEAS(Count[3]_lut_out, GLOBAL(GCLKP1), GLOBAL(RESET), , , , , , );
+
+
+--Count[2] is Count[2] at LC_X12_Y6_N4
+--operation mode is normal
+
+Count[2]_lut_out = A1L13 & (!Count[5] # !Count[4] # !A1L174);
+Count[2] = DFFEAS(Count[2]_lut_out, GLOBAL(GCLKP1), GLOBAL(RESET), , , , , , );
+
+
+--Count[1] is Count[1] at LC_X15_Y6_N9
+--operation mode is normal
+
+Count[1]_lut_out = A1L16 & (!Count[5] # !A1L174 # !Count[4]);
+Count[1] = DFFEAS(Count[1]_lut_out, GLOBAL(GCLKP1), GLOBAL(RESET), , , , , , );
+
+
+--Count[0] is Count[0] at LC_X15_Y6_N8
+--operation mode is normal
+
+Count[0]_lut_out = A1L19 & (!Count[5] # !A1L174 # !Count[4]);
+Count[0] = DFFEAS(Count[0]_lut_out, GLOBAL(GCLKP1), GLOBAL(RESET), , , , , , );
+
+
+--A1L174 is LessThan~390 at LC_X12_Y6_N2
+--operation mode is normal
+
+A1L174 = Count[3] # Count[0] # Count[2] # Count[1];
+
+
+--Count[5] is Count[5] at LC_X15_Y6_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+Count[5]_lut_out = GND;
+Count[5] = DFFEAS(Count[5]_lut_out, GLOBAL(GCLKP1), GLOBAL(RESET), , , A1L5, , , VCC);
+
+
+--Count[4] is Count[4] at LC_X12_Y6_N5
+--operation mode is normal
+
+Count[4]_lut_out = A1L6 & (!Count[5] # !Count[4] # !A1L174);
+Count[4] = DFFEAS(Count[4]_lut_out, GLOBAL(GCLKP1), GLOBAL(RESET), , , , , , );
+
+
+--A1L5 is add~751 at LC_X15_Y6_N7
+--operation mode is normal
+
+A1L5 = A1L4 & (!Count[5] # !A1L174 # !Count[4]);
+
+--Period1uS is Period1uS at LC_X15_Y6_N7
+--operation mode is normal
+
+Period1uS = DFFEAS(A1L5, GLOBAL(GCLKP1), VCC, , RESET, , , , );
+
+
+--A1L6 is add~752 at LC_X15_Y6_N5
+--operation mode is arithmetic
+
+A1L6_carry_eqn = (!A1L10 & GND) # (A1L10 & VCC);
+A1L6 = Count[4] $ !A1L6_carry_eqn;
+
+--A1L7 is add~754 at LC_X15_Y6_N5
+--operation mode is arithmetic
+
+A1L7_cout_0 = Count[4] & !A1L10;
+A1L7 = CARRY(A1L7_cout_0);
+
+--A1L8 is add~754COUT1_785 at LC_X15_Y6_N5
+--operation mode is arithmetic
+
+A1L8_cout_1 = Count[4] & !A1L10;
+A1L8 = CARRY(A1L8_cout_1);
+
+
+--A1L9 is add~757 at LC_X15_Y6_N4
+--operation mode is arithmetic
+
+A1L9 = Count[3] $ A1L14;
+
+--A1L10 is add~759 at LC_X15_Y6_N4
+--operation mode is arithmetic
+
+A1L10 = A1L11;
+
+
+--A1L13 is add~763 at LC_X15_Y6_N3
+--operation mode is arithmetic
+
+A1L13 = Count[2] $ !A1L17;
+
+--A1L14 is add~765 at LC_X15_Y6_N3
+--operation mode is arithmetic
+
+A1L14_cout_0 = Count[2] & !A1L17;
+A1L14 = CARRY(A1L14_cout_0);
+
+--A1L15 is add~765COUT1 at LC_X15_Y6_N3
+--operation mode is arithmetic
+
+A1L15_cout_1 = Count[2] & !A1L18;
+A1L15 = CARRY(A1L15_cout_1);
+
+
+--A1L16 is add~769 at LC_X15_Y6_N2
+--operation mode is arithmetic
+
+A1L16 = Count[1] $ (A1L20);
+
+--A1L17 is add~771 at LC_X15_Y6_N2
+--operation mode is arithmetic
+
+A1L17_cout_0 = !A1L20 # !Count[1];
+A1L17 = CARRY(A1L17_cout_0);
+
+--A1L18 is add~771COUT1_784 at LC_X15_Y6_N2
+--operation mode is arithmetic
+
+A1L18_cout_1 = !A1L21 # !Count[1];
+A1L18 = CARRY(A1L18_cout_1);
+
+
+--A1L19 is add~775 at LC_X15_Y6_N1
+--operation mode is arithmetic
+
+A1L19 = !Count[0];
+
+--A1L20 is add~777 at LC_X15_Y6_N1
+--operation mode is arithmetic
+
+A1L20_cout_0 = Count[0];
+A1L20 = CARRY(A1L20_cout_0);
+
+--A1L21 is add~777COUT1_783 at LC_X15_Y6_N1
+--operation mode is arithmetic
+
+A1L21_cout_1 = Count[0];
+A1L21 = CARRY(A1L21_cout_1);
+
+
+--RESET is RESET at PIN_144
+--operation mode is input
+
+RESET = INPUT();
+
+
+--GCLKP1 is GCLKP1 at PIN_16
+--operation mode is input
+
+GCLKP1 = INPUT();
+
+
+--light[0] is light[0] at PIN_103
+--operation mode is output
+
+light[0] = OUTPUT(LED2[0]);
+
+
+--light[1] is light[1] at PIN_100
+--operation mode is output
+
+light[1] = OUTPUT(LED2[1]);
+
+
+--light[2] is light[2] at PIN_99
+--operation mode is output
+
+light[2] = OUTPUT(LED2[2]);
+
+
+--light[3] is light[3] at PIN_98
+--operation mode is output
+
+light[3] = OUTPUT(LED2[3]);
+
+
+--light[4] is light[4] at PIN_97
+--operation mode is output
+
+light[4] = OUTPUT(LED1[0]);
+
+
+--light[5] is light[5] at PIN_96
+--operation mode is output
+
+light[5] = OUTPUT(LED1[1]);
+
+
+--light[6] is light[6] at PIN_85
+--operation mode is output
+
+light[6] = OUTPUT(LED1[2]);
+
+
+--light[7] is light[7] at PIN_84
+--operation mode is output
+
+light[7] = OUTPUT(LED1[3]);
+
+
+--LEDOut[0] is LEDOut[0] at PIN_53
+--operation mode is output
+
+LEDOut[0] = OUTPUT(!A1L184);
+
+
+--LEDOut[1] is LEDOut[1] at PIN_51
+--operation mode is output
+
+LEDOut[1] = OUTPUT(!A1L185);
+
+
+--LEDOut[2] is LEDOut[2] at PIN_57
+--operation mode is output
+
+LEDOut[2] = OUTPUT(!A1L186);
+
+
+--LEDOut[3] is LEDOut[3] at PIN_55
+--operation mode is output
+
+LEDOut[3] = OUTPUT(!A1L187);
+
+
+--LEDOut[4] is LEDOut[4] at PIN_54
+--operation mode is output
+
+LEDOut[4] = OUTPUT(!A1L188);
+
+
+--LEDOut[5] is LEDOut[5] at PIN_52
+--operation mode is output
+
+LEDOut[5] = OUTPUT(!A1L189);
+
+
+--LEDOut[6] is LEDOut[6] at PIN_58
+--operation mode is output
+
+LEDOut[6] = OUTPUT(A1L190);
+
+
+--LEDOut[7] is LEDOut[7] at PIN_56
+--operation mode is output
+
+LEDOut[7] = OUTPUT(A1L191);
+
+
+--DigitSelect[0] is DigitSelect[0] at PIN_59
+--operation mode is output
+
+DigitSelect[0] = OUTPUT(Refresh[0]);
+
+
+--DigitSelect[1] is DigitSelect[1] at PIN_60
+--operation mode is output
+
+DigitSelect[1] = OUTPUT(Refresh[1]);
+
+
+--DigitSelect[2] is DigitSelect[2] at PIN_61
+--operation mode is output
+
+DigitSelect[2] = OUTPUT(Refresh[2]);
+
+
+
+

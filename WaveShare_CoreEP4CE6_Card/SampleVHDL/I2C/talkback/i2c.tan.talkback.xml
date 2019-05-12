@@ -1,0 +1,79 @@
+
+<!--
+This XML file (created on Sat Jul 15 12:40:00 2006) contains limited information
+from the compilation of logic designs using Quartus II software (BUT NOT THE
+LOGIC DESIGN FILES) that will be transmitted to Altera Corporation through
+operation of the "TalkBack" feature.  To enable/disable this feature, run
+qtb_install.exe located in your quartus/bin folder.  For more information, go
+to license.txt.
+-->
+<talkback>
+<ver>5.0</ver>
+<schema>quartus_version_5.0_build_148.xsd</schema><license>
+	<nic_id>0007e977cc25</nic_id>
+	<cdrive_id>bc32e9a1</cdrive_id>
+</license>
+<tool>
+	<name>Quartus II</name>
+	<version>5.0</version>
+	<build>Build 148</build>
+	<module>quartus_tan.exe</module>
+	<edition>Full Version (Grace)</edition>
+	<compilation_end_time>Sat Jul 15 12:40:00 2006</compilation_end_time>
+</tool>
+<machine>
+	<os>Windows XP</os>
+	<cpu>
+		<proc_count>1</proc_count>
+		<cpu_freq units="MHz">2392</cpu_freq>
+	</cpu>
+	<ram units="MB">512</ram>
+</machine>
+<top_file>G:/work_room/PLD/Mars-7128-S Altera CPLD开发板/示例程序/VHDL/接口实验/i2c总线/i2c</top_file>
+<mep_data>
+	<command_line>quartus_tan --read_settings_files=off --write_settings_files=off i2c -c i2c</command_line>
+</mep_data>
+<software_data>
+	<smart_recompile>off</smart_recompile>
+</software_data>
+<clock_settings_summary>
+	<row>
+		<clock_node_name>clk</clock_node_name>
+		<type>User Pin</type>
+		<fmax_requirement>NONE</fmax_requirement>
+		<early_latency units="ns">0.000</early_latency>
+		<late_latency units="ns">0.000</late_latency>
+		<based_on>NONE</based_on>
+		<multiply_base_fmax_by>N/A</multiply_base_fmax_by>
+		<divide_base_fmax_by>N/A</divide_base_fmax_by>
+		<offset>N/A</offset>
+	</row>
+</clock_settings_summary>
+<performance>
+	<nonclk>
+		<type>Worst-case tsu</type>
+		<slack>N/A</slack>
+		<required>None</required>
+		<actual>30.000 ns</actual>
+	</nonclk>
+	<nonclk>
+		<type>Worst-case tco</type>
+		<slack>N/A</slack>
+		<required>None</required>
+		<actual>28.000 ns</actual>
+	</nonclk>
+	<nonclk>
+		<type>Worst-case th</type>
+		<slack>N/A</slack>
+		<required>None</required>
+		<actual>-3.000 ns</actual>
+	</nonclk>
+	<clk>
+		<name>clk</name>
+		<slack>N/A</slack>
+		<required>None</required>
+		<actual>29.41 MHz ( period = 34.000 ns )</actual>
+	</clk>
+</performance>
+<compile_id>20456DB5</compile_id>
+</talkback>

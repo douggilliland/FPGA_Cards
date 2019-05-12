@@ -1,0 +1,25 @@
+--深圳市21EDA电子
+--开发板型号:A-C8V4
+--www.21eda.com
+--学习D触发器的原理
+--按下学习板的KEY1键，LED灯会显示状态
+--按下按键，对应的I/O是低电平。所以LED灯会亮。
+--视频教程适合我们21EDA电子的所有学习板
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+entity dff1 is
+	port(    clk  :in std_logic;
+                 d    :in std_logic;
+	         q:out std_logic);
+end dff1;
+architecture rtl of dff1 is
+begin 
+	process(clk)
+		begin
+			if((clk'event) and (clk='1') )then
+					q<=d;
+			end if;
+	end process;
+end rtl;

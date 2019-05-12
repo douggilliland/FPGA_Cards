@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Period1mS'
+Slack : -2.786
+TNS   : -26.518
+
+Type  : Slow 1200mV 85C Model Setup 'Period1uS'
+Slack : -2.741
+TNS   : -25.342
+
+Type  : Slow 1200mV 85C Model Setup 'GCLKP1'
+Slack : -2.211
+TNS   : -11.421
+
+Type  : Slow 1200mV 85C Model Setup 'Period1S'
+Slack : -0.891
+TNS   : -4.118
+
+Type  : Slow 1200mV 85C Model Hold 'Period1S'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GCLKP1'
+Slack : 0.465
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Period1mS'
+Slack : 1.163
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Period1uS'
+Slack : 1.164
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GCLKP1'
+Slack : -3.000
+TNS   : -13.409
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Period1S'
+Slack : -1.487
+TNS   : -20.818
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Period1mS'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Period1uS'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 0C Model Setup 'Period1mS'
+Slack : -2.600
+TNS   : -24.151
+
+Type  : Slow 1200mV 0C Model Setup 'Period1uS'
+Slack : -2.531
+TNS   : -22.838
+
+Type  : Slow 1200mV 0C Model Setup 'GCLKP1'
+Slack : -1.944
+TNS   : -9.840
+
+Type  : Slow 1200mV 0C Model Setup 'Period1S'
+Slack : -0.730
+TNS   : -2.739
+
+Type  : Slow 1200mV 0C Model Hold 'Period1S'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GCLKP1'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Period1mS'
+Slack : 1.074
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Period1uS'
+Slack : 1.079
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GCLKP1'
+Slack : -3.000
+TNS   : -13.409
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Period1S'
+Slack : -1.487
+TNS   : -20.818
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Period1mS'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Period1uS'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Fast 1200mV 0C Model Setup 'Period1mS'
+Slack : -0.619
+TNS   : -5.020
+
+Type  : Fast 1200mV 0C Model Setup 'Period1uS'
+Slack : -0.600
+TNS   : -4.727
+
+Type  : Fast 1200mV 0C Model Setup 'GCLKP1'
+Slack : -0.373
+TNS   : -1.048
+
+Type  : Fast 1200mV 0C Model Setup 'Period1S'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Period1S'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GCLKP1'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Period1uS'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Period1mS'
+Slack : 0.461
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GCLKP1'
+Slack : -3.000
+TNS   : -12.162
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Period1S'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Period1mS'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Period1uS'
+Slack : -1.000
+TNS   : -11.000
+
+------------------------------------------------------------

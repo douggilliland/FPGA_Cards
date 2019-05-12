@@ -1,0 +1,10 @@
+
+State Machine - |LCD1602|Current_State
+Name Current_State.write_LCD_Data Current_State.set_ddram Current_State.write_cgram Current_State.set_cgram Current_State.set_dcb Current_State.set_cursor Current_State.set_dlnf 
+Current_State.set_dlnf 0 0 0 0 0 0 0 
+Current_State.set_cursor 0 0 0 0 0 1 1 
+Current_State.set_dcb 0 0 0 0 1 0 1 
+Current_State.set_cgram 0 0 0 1 0 0 1 
+Current_State.write_cgram 0 0 1 0 0 0 1 
+Current_State.set_ddram 0 1 0 0 0 0 1 
+Current_State.write_LCD_Data 1 0 0 0 0 0 1 

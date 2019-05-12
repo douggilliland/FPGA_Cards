@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+Etb_counters
+Z0 w1557020315
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Doug/Documents/GitHub/EP4CE6/SampleVHDL/Counter
+Z4 8C:/Users/Doug/Documents/GitHub/EP4CE6/SampleVHDL/Counter/UP_COUNTER_tb.vhd
+Z5 FC:/Users/Doug/Documents/GitHub/EP4CE6/SampleVHDL/Counter/UP_COUNTER_tb.vhd
+l0
+L7
+VKi[Bk;K;Vg2;iCj`bFS<O2
+!s100 2ceSFYK1CaR8hSd8YCgEh0
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1557020588
+!i10b 1
+Z8 !s108 1557020588.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Doug/Documents/GitHub/EP4CE6/SampleVHDL/Counter/UP_COUNTER_tb.vhd|
+Z10 !s107 C:/Users/Doug/Documents/GitHub/EP4CE6/SampleVHDL/Counter/UP_COUNTER_tb.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+DEx4 work 11 tb_counters 0 22 Ki[Bk;K;Vg2;iCj`bFS<O2
+l21
+L10
+V[16>2G:ATJU`H7MA:WeE81
+!s100 Xa6_:2h]RTaVTXP92]1H[3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eup_counter
+Z13 w1557020262
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R1
+R2
+R3
+Z16 8C:/Users/Doug/Documents/GitHub/EP4CE6/SampleVHDL/Counter/UP_COUNTER .vhd
+Z17 FC:/Users/Doug/Documents/GitHub/EP4CE6/SampleVHDL/Counter/UP_COUNTER .vhd
+l0
+L8
+VKbY[dYjVafRc9;mak9H];1
+!s100 PJ0nF?GO`oH?c2FCP>j3A3
+R6
+32
+R7
+!i10b 1
+R8
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Doug/Documents/GitHub/EP4CE6/SampleVHDL/Counter/UP_COUNTER .vhd|
+Z19 !s107 C:/Users/Doug/Documents/GitHub/EP4CE6/SampleVHDL/Counter/UP_COUNTER .vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R14
+R15
+R1
+R2
+DEx4 work 10 up_counter 0 22 KbY[dYjVafRc9;mak9H];1
+l17
+L15
+V:O2h_T^mS:DJzaK8i`c]W0
+!s100 MgnS6hCf4O^0cX6VT<FY^2
+R6
+32
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12

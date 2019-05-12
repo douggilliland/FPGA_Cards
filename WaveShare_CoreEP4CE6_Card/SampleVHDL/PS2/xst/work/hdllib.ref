@@ -1,0 +1,6 @@
+EN ps2_lcd1602_1 NULL F:/FPGA/ps2_lcd_1602/ps2_lcd1602_1.vhd sub00/vhpl04 1179411406
+EN lcd1602 NULL F:/FPGA/ps2_lcd_1602/LCD1602.vhd sub00/vhpl02 1179411404
+AR lcd1602 behavioral F:/FPGA/ps2_lcd_1602/LCD1602.vhd sub00/vhpl03 1179411405
+AR ps2_lcd1602_1 behavioral F:/FPGA/ps2_lcd_1602/ps2_lcd1602_1.vhd sub00/vhpl05 1179411407
+EN ps2 NULL F:/FPGA/ps2_lcd_1602/ps2.vhd sub00/vhpl00 1179411402
+AR ps2 behavioral F:/FPGA/ps2_lcd_1602/ps2.vhd sub00/vhpl01 1179411403

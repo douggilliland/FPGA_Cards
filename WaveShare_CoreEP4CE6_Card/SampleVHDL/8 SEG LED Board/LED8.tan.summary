@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.582 ns
+From           : RESET
+To             : Period1uS
+From Clock     : --
+To Clock       : GCLKP1
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 31.194 ns
+From           : LED7[2]
+To             : LEDOut[5]
+From Clock     : GCLKP1
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.053 ns
+From           : RESET
+To             : LED4[0]
+From Clock     : --
+To Clock       : GCLKP1
+Failed Paths   : 0
+
+Type           : Clock Setup: 'GCLKP1'
+Slack          : 15.268 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 211.33 MHz ( period = 4.732 ns )
+From           : Count1[3]
+To             : Count1[9]
+From Clock     : GCLKP1
+To Clock       : GCLKP1
+Failed Paths   : 0
+
+Type           : Clock Hold: 'GCLKP1'
+Slack          : 0.822 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : Glide[3]
+To             : Glide[3]
+From Clock     : GCLKP1
+To Clock       : GCLKP1
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

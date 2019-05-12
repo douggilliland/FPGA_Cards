@@ -1,0 +1,932 @@
+Timing Analyzer report for LED8
+Mon Mar 30 15:34:03 2009
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'GCLKP1'
+  6. Clock Hold: 'GCLKP1'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                       ;
++------------------------------+-----------+----------------------------------+----------------------------------+-----------+-----------+------------+----------+--------------+
+; Type                         ; Slack     ; Required Time                    ; Actual Time                      ; From      ; To        ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-----------+----------------------------------+----------------------------------+-----------+-----------+------------+----------+--------------+
+; Worst-case tsu               ; N/A       ; None                             ; 6.582 ns                         ; RESET     ; Period1uS ; --         ; GCLKP1   ; 0            ;
+; Worst-case tco               ; N/A       ; None                             ; 31.194 ns                        ; LED7[2]   ; LEDOut[5] ; GCLKP1     ; --       ; 0            ;
+; Worst-case th                ; N/A       ; None                             ; 8.053 ns                         ; RESET     ; LED4[0]   ; --         ; GCLKP1   ; 0            ;
+; Clock Setup: 'GCLKP1'        ; 15.268 ns ; 50.00 MHz ( period = 20.000 ns ) ; 211.33 MHz ( period = 4.732 ns ) ; Count1[3] ; Count1[9] ; GCLKP1     ; GCLKP1   ; 0            ;
+; Clock Hold: 'GCLKP1'         ; 0.822 ns  ; 50.00 MHz ( period = 20.000 ns ) ; N/A                              ; Glide[3]  ; Glide[3]  ; GCLKP1     ; GCLKP1   ; 0            ;
+; Total number of failed paths ;           ;                                  ;                                  ;           ;           ;            ;          ; 0            ;
++------------------------------+-----------+----------------------------------+----------------------------------+-----------+-----------+------------+----------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                 ;
++-------------------------------------------------------+--------------------+------+--------+-------------+
+; Option                                                ; Setting            ; From ; To     ; Entity Name ;
++-------------------------------------------------------+--------------------+------+--------+-------------+
+; Device Name                                           ; EP1C3T144C8        ;      ;        ;             ;
+; Timing Models                                         ; Final              ;      ;        ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;        ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;        ;             ;
+; Number of paths to report                             ; 200                ;      ;        ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;        ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;        ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;        ;             ;
+; Default hold multicycle                               ; Same As Multicycle ;      ;        ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;        ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;        ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;        ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;        ;             ;
+; fmax Requirement                                      ; 50 MHz             ;      ;        ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;        ;             ;
+; Analyze latches as synchronous elements               ; Off                ;      ;        ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;        ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;        ;             ;
+; Clock Settings                                        ; Gclkp1             ;      ; GCLKP1 ;             ;
++-------------------------------------------------------+--------------------+------+--------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; GCLKP1          ; GCLKP1             ; User Pin ; 50.0 MHz         ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'GCLKP1'                                                                                                                                                                                                             ;
++-----------------------------------------+-----------------------------------------------------+-----------+-----------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From      ; To        ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-----------+-----------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; 15.268 ns                               ; 211.33 MHz ( period = 4.732 ns )                    ; Count1[3] ; Count1[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.471 ns                ;
+; 15.268 ns                               ; 211.33 MHz ( period = 4.732 ns )                    ; Count1[3] ; Count1[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.471 ns                ;
+; 15.268 ns                               ; 211.33 MHz ( period = 4.732 ns )                    ; Count1[3] ; Count1[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.471 ns                ;
+; 15.268 ns                               ; 211.33 MHz ( period = 4.732 ns )                    ; Count1[3] ; Count1[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.471 ns                ;
+; 15.268 ns                               ; 211.33 MHz ( period = 4.732 ns )                    ; Count1[3] ; Count1[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.471 ns                ;
+; 15.268 ns                               ; 211.33 MHz ( period = 4.732 ns )                    ; Count1[3] ; Count1[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.471 ns                ;
+; 15.268 ns                               ; 211.33 MHz ( period = 4.732 ns )                    ; Count1[3] ; Count1[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.471 ns                ;
+; 15.268 ns                               ; 211.33 MHz ( period = 4.732 ns )                    ; Count1[3] ; Count1[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.471 ns                ;
+; 15.268 ns                               ; 211.33 MHz ( period = 4.732 ns )                    ; Count1[3] ; Count1[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.471 ns                ;
+; 15.268 ns                               ; 211.33 MHz ( period = 4.732 ns )                    ; Count1[3] ; Count1[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.471 ns                ;
+; 15.425 ns                               ; 218.58 MHz ( period = 4.575 ns )                    ; Count1[2] ; Count1[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.314 ns                ;
+; 15.425 ns                               ; 218.58 MHz ( period = 4.575 ns )                    ; Count1[2] ; Count1[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.314 ns                ;
+; 15.425 ns                               ; 218.58 MHz ( period = 4.575 ns )                    ; Count1[2] ; Count1[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.314 ns                ;
+; 15.425 ns                               ; 218.58 MHz ( period = 4.575 ns )                    ; Count1[2] ; Count1[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.314 ns                ;
+; 15.425 ns                               ; 218.58 MHz ( period = 4.575 ns )                    ; Count1[2] ; Count1[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.314 ns                ;
+; 15.425 ns                               ; 218.58 MHz ( period = 4.575 ns )                    ; Count1[2] ; Count1[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.314 ns                ;
+; 15.425 ns                               ; 218.58 MHz ( period = 4.575 ns )                    ; Count1[2] ; Count1[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.314 ns                ;
+; 15.425 ns                               ; 218.58 MHz ( period = 4.575 ns )                    ; Count1[2] ; Count1[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.314 ns                ;
+; 15.425 ns                               ; 218.58 MHz ( period = 4.575 ns )                    ; Count1[2] ; Count1[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.314 ns                ;
+; 15.425 ns                               ; 218.58 MHz ( period = 4.575 ns )                    ; Count1[2] ; Count1[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.314 ns                ;
+; 15.552 ns                               ; 224.82 MHz ( period = 4.448 ns )                    ; Count1[0] ; Count1[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.187 ns                ;
+; 15.552 ns                               ; 224.82 MHz ( period = 4.448 ns )                    ; Count1[0] ; Count1[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.187 ns                ;
+; 15.552 ns                               ; 224.82 MHz ( period = 4.448 ns )                    ; Count1[0] ; Count1[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.187 ns                ;
+; 15.552 ns                               ; 224.82 MHz ( period = 4.448 ns )                    ; Count1[0] ; Count1[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.187 ns                ;
+; 15.552 ns                               ; 224.82 MHz ( period = 4.448 ns )                    ; Count1[0] ; Count1[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.187 ns                ;
+; 15.552 ns                               ; 224.82 MHz ( period = 4.448 ns )                    ; Count1[0] ; Count1[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.187 ns                ;
+; 15.552 ns                               ; 224.82 MHz ( period = 4.448 ns )                    ; Count1[0] ; Count1[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.187 ns                ;
+; 15.552 ns                               ; 224.82 MHz ( period = 4.448 ns )                    ; Count1[0] ; Count1[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.187 ns                ;
+; 15.552 ns                               ; 224.82 MHz ( period = 4.448 ns )                    ; Count1[0] ; Count1[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.187 ns                ;
+; 15.552 ns                               ; 224.82 MHz ( period = 4.448 ns )                    ; Count1[0] ; Count1[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.187 ns                ;
+; 15.695 ns                               ; 232.29 MHz ( period = 4.305 ns )                    ; Count[2]  ; Count[5]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.782 ns                 ; 4.087 ns                ;
+; 15.709 ns                               ; 233.05 MHz ( period = 4.291 ns )                    ; Count[3]  ; Count[5]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.782 ns                 ; 4.073 ns                ;
+; 15.718 ns                               ; 233.54 MHz ( period = 4.282 ns )                    ; Count[2]  ; Count[4]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.021 ns                ;
+; 15.722 ns                               ; 233.75 MHz ( period = 4.278 ns )                    ; Count2[1] ; Count2[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.017 ns                ;
+; 15.722 ns                               ; 233.75 MHz ( period = 4.278 ns )                    ; Count2[1] ; Count2[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.017 ns                ;
+; 15.722 ns                               ; 233.75 MHz ( period = 4.278 ns )                    ; Count2[1] ; Count2[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.017 ns                ;
+; 15.722 ns                               ; 233.75 MHz ( period = 4.278 ns )                    ; Count2[1] ; Count2[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.017 ns                ;
+; 15.722 ns                               ; 233.75 MHz ( period = 4.278 ns )                    ; Count2[1] ; Count2[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.017 ns                ;
+; 15.722 ns                               ; 233.75 MHz ( period = 4.278 ns )                    ; Count2[1] ; Count2[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.017 ns                ;
+; 15.722 ns                               ; 233.75 MHz ( period = 4.278 ns )                    ; Count2[1] ; Count2[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.017 ns                ;
+; 15.722 ns                               ; 233.75 MHz ( period = 4.278 ns )                    ; Count2[1] ; Count2[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.017 ns                ;
+; 15.722 ns                               ; 233.75 MHz ( period = 4.278 ns )                    ; Count2[1] ; Count2[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.017 ns                ;
+; 15.722 ns                               ; 233.75 MHz ( period = 4.278 ns )                    ; Count2[1] ; Count2[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.017 ns                ;
+; 15.732 ns                               ; 234.30 MHz ( period = 4.268 ns )                    ; Count[3]  ; Count[4]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 4.007 ns                ;
+; 15.748 ns                               ; 235.18 MHz ( period = 4.252 ns )                    ; Count1[1] ; Count1[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.991 ns                ;
+; 15.748 ns                               ; 235.18 MHz ( period = 4.252 ns )                    ; Count1[1] ; Count1[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.991 ns                ;
+; 15.748 ns                               ; 235.18 MHz ( period = 4.252 ns )                    ; Count1[1] ; Count1[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.991 ns                ;
+; 15.748 ns                               ; 235.18 MHz ( period = 4.252 ns )                    ; Count1[1] ; Count1[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.991 ns                ;
+; 15.748 ns                               ; 235.18 MHz ( period = 4.252 ns )                    ; Count1[1] ; Count1[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.991 ns                ;
+; 15.748 ns                               ; 235.18 MHz ( period = 4.252 ns )                    ; Count1[1] ; Count1[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.991 ns                ;
+; 15.748 ns                               ; 235.18 MHz ( period = 4.252 ns )                    ; Count1[1] ; Count1[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.991 ns                ;
+; 15.748 ns                               ; 235.18 MHz ( period = 4.252 ns )                    ; Count1[1] ; Count1[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.991 ns                ;
+; 15.748 ns                               ; 235.18 MHz ( period = 4.252 ns )                    ; Count1[1] ; Count1[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.991 ns                ;
+; 15.748 ns                               ; 235.18 MHz ( period = 4.252 ns )                    ; Count1[1] ; Count1[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.991 ns                ;
+; 15.797 ns                               ; 237.93 MHz ( period = 4.203 ns )                    ; Count[4]  ; Count[5]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.782 ns                 ; 3.985 ns                ;
+; 15.816 ns                               ; 239.01 MHz ( period = 4.184 ns )                    ; Count1[8] ; Count1[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.923 ns                ;
+; 15.816 ns                               ; 239.01 MHz ( period = 4.184 ns )                    ; Count1[8] ; Count1[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.923 ns                ;
+; 15.816 ns                               ; 239.01 MHz ( period = 4.184 ns )                    ; Count1[8] ; Count1[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.923 ns                ;
+; 15.816 ns                               ; 239.01 MHz ( period = 4.184 ns )                    ; Count1[8] ; Count1[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.923 ns                ;
+; 15.816 ns                               ; 239.01 MHz ( period = 4.184 ns )                    ; Count1[8] ; Count1[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.923 ns                ;
+; 15.816 ns                               ; 239.01 MHz ( period = 4.184 ns )                    ; Count1[8] ; Count1[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.923 ns                ;
+; 15.816 ns                               ; 239.01 MHz ( period = 4.184 ns )                    ; Count1[8] ; Count1[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.923 ns                ;
+; 15.816 ns                               ; 239.01 MHz ( period = 4.184 ns )                    ; Count1[8] ; Count1[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.923 ns                ;
+; 15.816 ns                               ; 239.01 MHz ( period = 4.184 ns )                    ; Count1[8] ; Count1[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.923 ns                ;
+; 15.816 ns                               ; 239.01 MHz ( period = 4.184 ns )                    ; Count1[8] ; Count1[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.923 ns                ;
+; 15.838 ns                               ; 240.27 MHz ( period = 4.162 ns )                    ; Count2[6] ; Count2[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.901 ns                ;
+; 15.838 ns                               ; 240.27 MHz ( period = 4.162 ns )                    ; Count2[6] ; Count2[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.901 ns                ;
+; 15.838 ns                               ; 240.27 MHz ( period = 4.162 ns )                    ; Count2[6] ; Count2[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.901 ns                ;
+; 15.838 ns                               ; 240.27 MHz ( period = 4.162 ns )                    ; Count2[6] ; Count2[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.901 ns                ;
+; 15.838 ns                               ; 240.27 MHz ( period = 4.162 ns )                    ; Count2[6] ; Count2[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.901 ns                ;
+; 15.838 ns                               ; 240.27 MHz ( period = 4.162 ns )                    ; Count2[6] ; Count2[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.901 ns                ;
+; 15.838 ns                               ; 240.27 MHz ( period = 4.162 ns )                    ; Count2[6] ; Count2[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.901 ns                ;
+; 15.838 ns                               ; 240.27 MHz ( period = 4.162 ns )                    ; Count2[6] ; Count2[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.901 ns                ;
+; 15.838 ns                               ; 240.27 MHz ( period = 4.162 ns )                    ; Count2[6] ; Count2[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.901 ns                ;
+; 15.838 ns                               ; 240.27 MHz ( period = 4.162 ns )                    ; Count2[6] ; Count2[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.901 ns                ;
+; 15.871 ns                               ; 242.19 MHz ( period = 4.129 ns )                    ; Count[0]  ; Count[5]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.868 ns                ;
+; 15.896 ns                               ; 243.66 MHz ( period = 4.104 ns )                    ; Count[2]  ; Count[3]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.843 ns                ;
+; 15.897 ns                               ; 243.72 MHz ( period = 4.103 ns )                    ; Count2[0] ; Count2[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.842 ns                ;
+; 15.897 ns                               ; 243.72 MHz ( period = 4.103 ns )                    ; Count2[0] ; Count2[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.842 ns                ;
+; 15.897 ns                               ; 243.72 MHz ( period = 4.103 ns )                    ; Count2[0] ; Count2[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.842 ns                ;
+; 15.897 ns                               ; 243.72 MHz ( period = 4.103 ns )                    ; Count2[0] ; Count2[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.842 ns                ;
+; 15.897 ns                               ; 243.72 MHz ( period = 4.103 ns )                    ; Count2[0] ; Count2[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.842 ns                ;
+; 15.897 ns                               ; 243.72 MHz ( period = 4.103 ns )                    ; Count2[0] ; Count2[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.842 ns                ;
+; 15.897 ns                               ; 243.72 MHz ( period = 4.103 ns )                    ; Count2[0] ; Count2[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.842 ns                ;
+; 15.897 ns                               ; 243.72 MHz ( period = 4.103 ns )                    ; Count2[0] ; Count2[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.842 ns                ;
+; 15.897 ns                               ; 243.72 MHz ( period = 4.103 ns )                    ; Count2[0] ; Count2[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.842 ns                ;
+; 15.897 ns                               ; 243.72 MHz ( period = 4.103 ns )                    ; Count2[0] ; Count2[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.842 ns                ;
+; 15.992 ns                               ; 249.50 MHz ( period = 4.008 ns )                    ; Count1[9] ; Count1[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.747 ns                ;
+; 15.992 ns                               ; 249.50 MHz ( period = 4.008 ns )                    ; Count1[9] ; Count1[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.747 ns                ;
+; 15.992 ns                               ; 249.50 MHz ( period = 4.008 ns )                    ; Count1[9] ; Count1[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.747 ns                ;
+; 15.992 ns                               ; 249.50 MHz ( period = 4.008 ns )                    ; Count1[9] ; Count1[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.747 ns                ;
+; 15.992 ns                               ; 249.50 MHz ( period = 4.008 ns )                    ; Count1[9] ; Count1[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.747 ns                ;
+; 15.992 ns                               ; 249.50 MHz ( period = 4.008 ns )                    ; Count1[9] ; Count1[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.747 ns                ;
+; 15.992 ns                               ; 249.50 MHz ( period = 4.008 ns )                    ; Count1[9] ; Count1[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.747 ns                ;
+; 15.992 ns                               ; 249.50 MHz ( period = 4.008 ns )                    ; Count1[9] ; Count1[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.747 ns                ;
+; 15.992 ns                               ; 249.50 MHz ( period = 4.008 ns )                    ; Count1[9] ; Count1[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.747 ns                ;
+; 15.992 ns                               ; 249.50 MHz ( period = 4.008 ns )                    ; Count1[9] ; Count1[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.747 ns                ;
+; 16.004 ns                               ; 250.25 MHz ( period = 3.996 ns )                    ; Count2[9] ; Count2[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.735 ns                ;
+; 16.004 ns                               ; 250.25 MHz ( period = 3.996 ns )                    ; Count2[9] ; Count2[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.735 ns                ;
+; 16.004 ns                               ; 250.25 MHz ( period = 3.996 ns )                    ; Count2[9] ; Count2[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.735 ns                ;
+; 16.004 ns                               ; 250.25 MHz ( period = 3.996 ns )                    ; Count2[9] ; Count2[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.735 ns                ;
+; 16.004 ns                               ; 250.25 MHz ( period = 3.996 ns )                    ; Count2[9] ; Count2[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.735 ns                ;
+; 16.004 ns                               ; 250.25 MHz ( period = 3.996 ns )                    ; Count2[9] ; Count2[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.735 ns                ;
+; 16.004 ns                               ; 250.25 MHz ( period = 3.996 ns )                    ; Count2[9] ; Count2[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.735 ns                ;
+; 16.004 ns                               ; 250.25 MHz ( period = 3.996 ns )                    ; Count2[9] ; Count2[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.735 ns                ;
+; 16.004 ns                               ; 250.25 MHz ( period = 3.996 ns )                    ; Count2[9] ; Count2[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.735 ns                ;
+; 16.004 ns                               ; 250.25 MHz ( period = 3.996 ns )                    ; Count2[9] ; Count2[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.735 ns                ;
+; 16.009 ns                               ; 250.56 MHz ( period = 3.991 ns )                    ; Count2[3] ; Count2[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.730 ns                ;
+; 16.009 ns                               ; 250.56 MHz ( period = 3.991 ns )                    ; Count2[3] ; Count2[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.730 ns                ;
+; 16.009 ns                               ; 250.56 MHz ( period = 3.991 ns )                    ; Count2[3] ; Count2[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.730 ns                ;
+; 16.009 ns                               ; 250.56 MHz ( period = 3.991 ns )                    ; Count2[3] ; Count2[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.730 ns                ;
+; 16.009 ns                               ; 250.56 MHz ( period = 3.991 ns )                    ; Count2[3] ; Count2[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.730 ns                ;
+; 16.009 ns                               ; 250.56 MHz ( period = 3.991 ns )                    ; Count2[3] ; Count2[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.730 ns                ;
+; 16.009 ns                               ; 250.56 MHz ( period = 3.991 ns )                    ; Count2[3] ; Count2[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.730 ns                ;
+; 16.009 ns                               ; 250.56 MHz ( period = 3.991 ns )                    ; Count2[3] ; Count2[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.730 ns                ;
+; 16.009 ns                               ; 250.56 MHz ( period = 3.991 ns )                    ; Count2[3] ; Count2[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.730 ns                ;
+; 16.009 ns                               ; 250.56 MHz ( period = 3.991 ns )                    ; Count2[3] ; Count2[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.730 ns                ;
+; 16.114 ns                               ; 257.33 MHz ( period = 3.886 ns )                    ; Count[2]  ; Period1uS ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.782 ns                 ; 3.668 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count2[5] ; Count2[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count1[5] ; Count1[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count1[5] ; Count1[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count1[5] ; Count1[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count1[5] ; Count1[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count1[5] ; Count1[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count1[5] ; Count1[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count1[5] ; Count1[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count1[5] ; Count1[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count1[5] ; Count1[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count1[5] ; Count1[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count2[5] ; Count2[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count2[5] ; Count2[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count2[5] ; Count2[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count2[5] ; Count2[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count2[5] ; Count2[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count2[5] ; Count2[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count2[5] ; Count2[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count2[5] ; Count2[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.122 ns                               ; 257.86 MHz ( period = 3.878 ns )                    ; Count2[5] ; Count2[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.617 ns                ;
+; 16.128 ns                               ; 258.26 MHz ( period = 3.872 ns )                    ; Count[3]  ; Period1uS ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.782 ns                 ; 3.654 ns                ;
+; 16.177 ns                               ; 261.57 MHz ( period = 3.823 ns )                    ; Count[1]  ; Count[5]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.562 ns                ;
+; 16.197 ns                               ; 262.95 MHz ( period = 3.803 ns )                    ; Count2[2] ; Count2[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.542 ns                ;
+; 16.197 ns                               ; 262.95 MHz ( period = 3.803 ns )                    ; Count2[2] ; Count2[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.542 ns                ;
+; 16.197 ns                               ; 262.95 MHz ( period = 3.803 ns )                    ; Count2[2] ; Count2[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.542 ns                ;
+; 16.197 ns                               ; 262.95 MHz ( period = 3.803 ns )                    ; Count2[2] ; Count2[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.542 ns                ;
+; 16.197 ns                               ; 262.95 MHz ( period = 3.803 ns )                    ; Count2[2] ; Count2[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.542 ns                ;
+; 16.197 ns                               ; 262.95 MHz ( period = 3.803 ns )                    ; Count2[2] ; Count2[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.542 ns                ;
+; 16.197 ns                               ; 262.95 MHz ( period = 3.803 ns )                    ; Count2[2] ; Count2[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.542 ns                ;
+; 16.197 ns                               ; 262.95 MHz ( period = 3.803 ns )                    ; Count2[2] ; Count2[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.542 ns                ;
+; 16.197 ns                               ; 262.95 MHz ( period = 3.803 ns )                    ; Count2[2] ; Count2[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.542 ns                ;
+; 16.197 ns                               ; 262.95 MHz ( period = 3.803 ns )                    ; Count2[2] ; Count2[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.542 ns                ;
+; 16.200 ns                               ; 263.16 MHz ( period = 3.800 ns )                    ; Count[1]  ; Count[4]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.696 ns                 ; 3.496 ns                ;
+; 16.216 ns                               ; 264.27 MHz ( period = 3.784 ns )                    ; Count[4]  ; Period1uS ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.782 ns                 ; 3.566 ns                ;
+; 16.252 ns                               ; 266.81 MHz ( period = 3.748 ns )                    ; Count[0]  ; Period1uS ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.487 ns                ;
+; 16.253 ns                               ; 266.88 MHz ( period = 3.747 ns )                    ; Count[0]  ; Count[0]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.486 ns                ;
+; 16.254 ns                               ; 266.95 MHz ( period = 3.746 ns )                    ; Count[0]  ; Count[1]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.485 ns                ;
+; 16.297 ns                               ; 270.05 MHz ( period = 3.703 ns )                    ; Count[0]  ; Count[4]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.696 ns                 ; 3.399 ns                ;
+; 16.310 ns                               ; 271.00 MHz ( period = 3.690 ns )                    ; Count2[7] ; Count2[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.429 ns                ;
+; 16.310 ns                               ; 271.00 MHz ( period = 3.690 ns )                    ; Count2[7] ; Count2[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.429 ns                ;
+; 16.310 ns                               ; 271.00 MHz ( period = 3.690 ns )                    ; Count2[7] ; Count2[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.429 ns                ;
+; 16.310 ns                               ; 271.00 MHz ( period = 3.690 ns )                    ; Count2[7] ; Count2[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.429 ns                ;
+; 16.310 ns                               ; 271.00 MHz ( period = 3.690 ns )                    ; Count2[7] ; Count2[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.429 ns                ;
+; 16.310 ns                               ; 271.00 MHz ( period = 3.690 ns )                    ; Count2[7] ; Count2[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.429 ns                ;
+; 16.310 ns                               ; 271.00 MHz ( period = 3.690 ns )                    ; Count2[7] ; Count2[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.429 ns                ;
+; 16.310 ns                               ; 271.00 MHz ( period = 3.690 ns )                    ; Count2[7] ; Count2[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.429 ns                ;
+; 16.310 ns                               ; 271.00 MHz ( period = 3.690 ns )                    ; Count2[7] ; Count2[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.429 ns                ;
+; 16.310 ns                               ; 271.00 MHz ( period = 3.690 ns )                    ; Count2[7] ; Count2[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.429 ns                ;
+; 16.322 ns                               ; 271.89 MHz ( period = 3.678 ns )                    ; Count1[6] ; Count1[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.417 ns                ;
+; 16.322 ns                               ; 271.89 MHz ( period = 3.678 ns )                    ; Count1[6] ; Count1[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.417 ns                ;
+; 16.322 ns                               ; 271.89 MHz ( period = 3.678 ns )                    ; Count1[6] ; Count1[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.417 ns                ;
+; 16.322 ns                               ; 271.89 MHz ( period = 3.678 ns )                    ; Count1[6] ; Count1[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.417 ns                ;
+; 16.322 ns                               ; 271.89 MHz ( period = 3.678 ns )                    ; Count1[6] ; Count1[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.417 ns                ;
+; 16.322 ns                               ; 271.89 MHz ( period = 3.678 ns )                    ; Count1[6] ; Count1[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.417 ns                ;
+; 16.322 ns                               ; 271.89 MHz ( period = 3.678 ns )                    ; Count1[6] ; Count1[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.417 ns                ;
+; 16.322 ns                               ; 271.89 MHz ( period = 3.678 ns )                    ; Count1[6] ; Count1[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.417 ns                ;
+; 16.322 ns                               ; 271.89 MHz ( period = 3.678 ns )                    ; Count1[6] ; Count1[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.417 ns                ;
+; 16.322 ns                               ; 271.89 MHz ( period = 3.678 ns )                    ; Count1[6] ; Count1[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.417 ns                ;
+; 16.374 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count[1]  ; Count[3]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.696 ns                 ; 3.322 ns                ;
+; 16.418 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count[4]  ; Count[4]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.321 ns                ;
+; 16.447 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count[1]  ; Count[2]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.696 ns                 ; 3.249 ns                ;
+; 16.471 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count[0]  ; Count[3]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.696 ns                 ; 3.225 ns                ;
+; 16.487 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count[2]  ; Count[2]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.252 ns                ;
+; 16.490 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count[3]  ; Count[3]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.249 ns                ;
+; 16.544 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count[0]  ; Count[2]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.696 ns                 ; 3.152 ns                ;
+; 16.567 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count2[8] ; Count2[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.172 ns                ;
+; 16.567 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count2[8] ; Count2[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.172 ns                ;
+; 16.567 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count2[8] ; Count2[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.172 ns                ;
+; 16.567 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count2[8] ; Count2[3] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.172 ns                ;
+; 16.567 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count2[8] ; Count2[2] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.172 ns                ;
+; 16.567 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count2[8] ; Count2[1] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.172 ns                ;
+; 16.567 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count2[8] ; Count2[0] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.172 ns                ;
+; 16.567 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count2[8] ; Count2[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.172 ns                ;
+; 16.567 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count2[8] ; Count2[6] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.172 ns                ;
+; 16.567 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count2[8] ; Count2[5] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.172 ns                ;
+; 16.568 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count[1]  ; Period1uS ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.171 ns                ;
+; 16.569 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count[1]  ; Count[0]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.170 ns                ;
+; 16.570 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count[1]  ; Count[1]  ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.169 ns                ;
+; 16.729 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count1[4] ; Count1[9] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.010 ns                ;
+; 16.729 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count1[4] ; Count1[8] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.010 ns                ;
+; 16.729 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count1[4] ; Count1[7] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.010 ns                ;
+; 16.729 ns                               ; Restricted to 275.03 MHz ( period = 3.64 ns )       ; Count1[4] ; Count1[4] ; GCLKP1     ; GCLKP1   ; 20.000 ns                   ; 19.739 ns                 ; 3.010 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;           ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-----------+-----------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'GCLKP1'                                                                                                                                                                                                    ;
++-----------------------------------------+-----------------------------------------------------+------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                           ; From                                                ; To         ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; 0.822 ns                                ; Glide[3]                                            ; Glide[3]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.613 ns                 ;
+; 0.862 ns                                ; LED4[0]                                             ; LED5[0]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.653 ns                 ;
+; 0.865 ns                                ; LED7[1]                                             ; LED8[1]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.656 ns                 ;
+; 0.865 ns                                ; LED4[2]                                             ; LED5[2]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.656 ns                 ;
+; 0.871 ns                                ; LED3[3]                                             ; LED4[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.662 ns                 ;
+; 0.872 ns                                ; LED1[3]                                             ; LED2[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.663 ns                 ;
+; 0.874 ns                                ; LED2[1]                                             ; LED3[1]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.665 ns                 ;
+; 0.878 ns                                ; LED2[0]                                             ; LED3[0]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.669 ns                 ;
+; 0.880 ns                                ; LED6[1]                                             ; LED7[1]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.671 ns                 ;
+; 0.881 ns                                ; LED7[2]                                             ; LED8[2]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.672 ns                 ;
+; 0.885 ns                                ; LED1[0]                                             ; LED2[0]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.676 ns                 ;
+; 0.896 ns                                ; LED7[0]                                             ; LED8[0]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.687 ns                 ;
+; 0.900 ns                                ; LED6[3]                                             ; LED7[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.691 ns                 ;
+; 1.042 ns                                ; LED6[0]                                             ; LED7[0]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.833 ns                 ;
+; 1.044 ns                                ; LED6[2]                                             ; LED7[2]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.835 ns                 ;
+; 1.049 ns                                ; LED3[1]                                             ; LED4[1]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.840 ns                 ;
+; 1.050 ns                                ; LED5[3]                                             ; LED6[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.841 ns                 ;
+; 1.051 ns                                ; LED4[1]                                             ; LED5[1]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.842 ns                 ;
+; 1.055 ns                                ; LED2[2]                                             ; LED3[2]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.846 ns                 ;
+; 1.066 ns                                ; Glide[2]                                            ; LED1[2]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.857 ns                 ;
+; 1.067 ns                                ; Glide[2]                                            ; Glide[3]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.858 ns                 ;
+; 1.070 ns                                ; Glide[1]                                            ; LED1[1]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.861 ns                 ;
+; 1.089 ns                                ; Count[5]                                            ; Count[1]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.880 ns                 ;
+; 1.091 ns                                ; Count[5]                                            ; Count[0]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.882 ns                 ;
+; 1.092 ns                                ; Count[5]                                            ; Period1uS  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.883 ns                 ;
+; 1.093 ns                                ; LED2[3]                                             ; LED3[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.884 ns                 ;
+; 1.098 ns                                ; LED3[0]                                             ; LED4[0]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.889 ns                 ;
+; 1.098 ns                                ; LED7[3]                                             ; LED8[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.889 ns                 ;
+; 1.123 ns                                ; LED5[1]                                             ; LED6[1]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.914 ns                 ;
+; 1.150 ns                                ; Glide[3]                                            ; LED1[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.941 ns                 ;
+; 1.179 ns                                ; Refresh[0]                                          ; Refresh[0] ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.970 ns                 ;
+; 1.185 ns                                ; Refresh[0]                                          ; Refresh[2] ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.976 ns                 ;
+; 1.188 ns                                ; Refresh[0]                                          ; Refresh[1] ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 0.979 ns                 ;
+; 1.262 ns                                ; Glide[0]                                            ; Glide[0]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.053 ns                 ;
+; 1.263 ns                                ; Glide[0]                                            ; LED1[1]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.054 ns                 ;
+; 1.263 ns                                ; Glide[0]                                            ; LED1[2]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.054 ns                 ;
+; 1.285 ns                                ; Refresh[2]                                          ; Refresh[2] ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.076 ns                 ;
+; 1.323 ns                                ; Count1[8]                                           ; Count1[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.114 ns                 ;
+; 1.323 ns                                ; Count1[4]                                           ; Count1[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.114 ns                 ;
+; 1.323 ns                                ; Count2[8]                                           ; Count2[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.114 ns                 ;
+; 1.323 ns                                ; Count2[4]                                           ; Count2[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.114 ns                 ;
+; 1.326 ns                                ; Count1[0]                                           ; Count1[0]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.117 ns                 ;
+; 1.326 ns                                ; Count1[5]                                           ; Count1[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.117 ns                 ;
+; 1.326 ns                                ; Count2[0]                                           ; Count2[0]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.117 ns                 ;
+; 1.326 ns                                ; Count2[5]                                           ; Count2[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.117 ns                 ;
+; 1.329 ns                                ; Count1[3]                                           ; Count1[3]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.120 ns                 ;
+; 1.329 ns                                ; Count2[3]                                           ; Count2[3]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.120 ns                 ;
+; 1.339 ns                                ; Count[4]                                            ; Count[4]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.130 ns                 ;
+; 1.340 ns                                ; Count[4]                                            ; Count[3]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.131 ns                 ;
+; 1.344 ns                                ; Count[4]                                            ; Count[2]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.135 ns                 ;
+; 1.353 ns                                ; Glide[0]                                            ; Glide[3]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.144 ns                 ;
+; 1.362 ns                                ; Glide[2]                                            ; Glide[2]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.153 ns                 ;
+; 1.366 ns                                ; Glide[1]                                            ; Glide[1]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.157 ns                 ;
+; 1.411 ns                                ; Refresh[1]                                          ; Refresh[1] ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.202 ns                 ;
+; 1.420 ns                                ; Refresh[1]                                          ; Refresh[2] ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.211 ns                 ;
+; 1.435 ns                                ; Glide[2]                                            ; LED1[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.226 ns                 ;
+; 1.464 ns                                ; Count[5]                                            ; Count[5]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.255 ns                 ;
+; 1.476 ns                                ; Count1[6]                                           ; Count1[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.267 ns                 ;
+; 1.476 ns                                ; Count1[1]                                           ; Count1[1]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.267 ns                 ;
+; 1.476 ns                                ; Count2[1]                                           ; Count2[1]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.267 ns                 ;
+; 1.476 ns                                ; Count2[6]                                           ; Count2[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.267 ns                 ;
+; 1.480 ns                                ; Count1[2]                                           ; Count1[2]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.271 ns                 ;
+; 1.480 ns                                ; Count2[2]                                           ; Count2[2]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.271 ns                 ;
+; 1.481 ns                                ; Count1[7]                                           ; Count1[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.272 ns                 ;
+; 1.481 ns                                ; Count2[7]                                           ; Count2[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.272 ns                 ;
+; 1.482 ns                                ; Count2[9]                                           ; Count2[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.273 ns                 ;
+; 1.482 ns                                ; Count1[9]                                           ; Count1[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.273 ns                 ;
+; 1.499 ns                                ; LED5[2]                                             ; LED6[2]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.290 ns                 ;
+; 1.511 ns                                ; Glide[1]                                            ; Glide[3]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.302 ns                 ;
+; 1.513 ns                                ; Glide[1]                                            ; LED1[2]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.304 ns                 ;
+; 1.568 ns                                ; Glide[0]                                            ; Glide[1]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.359 ns                 ;
+; 1.568 ns                                ; Glide[0]                                            ; Glide[2]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.359 ns                 ;
+; 1.633 ns                                ; LED3[2]                                             ; LED4[2]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.424 ns                 ;
+; 1.643 ns                                ; LED1[2]                                             ; LED2[2]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.434 ns                 ;
+; 1.645 ns                                ; LED5[0]                                             ; LED6[0]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.436 ns                 ;
+; 1.651 ns                                ; LED1[1]                                             ; LED2[1]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.442 ns                 ;
+; 1.751 ns                                ; Glide[0]                                            ; LED1[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.542 ns                 ;
+; 1.775 ns                                ; LED4[3]                                             ; LED5[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.566 ns                 ;
+; 1.835 ns                                ; Glide[0]                                            ; LED1[0]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.626 ns                 ;
+; 1.856 ns                                ; Glide[1]                                            ; Glide[2]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.647 ns                 ;
+; 1.922 ns                                ; Count2[8]                                           ; Count2[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.713 ns                 ;
+; 1.922 ns                                ; Count1[8]                                           ; Count1[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.713 ns                 ;
+; 1.925 ns                                ; Count1[5]                                           ; Count1[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.716 ns                 ;
+; 1.925 ns                                ; Count1[0]                                           ; Count1[1]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.716 ns                 ;
+; 1.925 ns                                ; Count2[0]                                           ; Count2[1]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.716 ns                 ;
+; 1.925 ns                                ; Count2[5]                                           ; Count2[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.716 ns                 ;
+; 1.926 ns                                ; Glide[1]                                            ; LED1[3]    ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.717 ns                 ;
+; 1.928 ns                                ; Count1[3]                                           ; Count1[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.719 ns                 ;
+; 1.928 ns                                ; Count2[3]                                           ; Count2[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.719 ns                 ;
+; 2.003 ns                                ; Count1[5]                                           ; Count1[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.794 ns                 ;
+; 2.003 ns                                ; Count1[0]                                           ; Count1[2]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.794 ns                 ;
+; 2.003 ns                                ; Count2[0]                                           ; Count2[2]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.794 ns                 ;
+; 2.003 ns                                ; Count2[5]                                           ; Count2[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.794 ns                 ;
+; 2.059 ns                                ; Count[5]                                            ; Count[2]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.252 ns                  ; 1.807 ns                 ;
+; 2.063 ns                                ; Count[5]                                            ; Count[3]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.252 ns                  ; 1.811 ns                 ;
+; 2.064 ns                                ; Count[5]                                            ; Count[4]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.252 ns                  ; 1.812 ns                 ;
+; 2.081 ns                                ; Count1[5]                                           ; Count1[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.872 ns                 ;
+; 2.081 ns                                ; Count1[0]                                           ; Count1[3]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.872 ns                 ;
+; 2.081 ns                                ; Count2[5]                                           ; Count2[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.872 ns                 ;
+; 2.081 ns                                ; Count2[0]                                           ; Count2[3]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.872 ns                 ;
+; 2.085 ns                                ; Count1[6]                                           ; Count1[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.876 ns                 ;
+; 2.085 ns                                ; Count1[1]                                           ; Count1[2]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.876 ns                 ;
+; 2.085 ns                                ; Count2[1]                                           ; Count2[2]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.876 ns                 ;
+; 2.085 ns                                ; Count2[6]                                           ; Count2[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.876 ns                 ;
+; 2.089 ns                                ; Count1[2]                                           ; Count1[3]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.880 ns                 ;
+; 2.089 ns                                ; Count2[2]                                           ; Count2[3]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.880 ns                 ;
+; 2.090 ns                                ; Count1[7]                                           ; Count1[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.881 ns                 ;
+; 2.090 ns                                ; Count2[7]                                           ; Count2[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.881 ns                 ;
+; 2.128 ns                                ; Count[4]                                            ; Period1uS  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.166 ns                  ; 1.962 ns                 ;
+; 2.131 ns                                ; Count[4]                                            ; Count[0]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.166 ns                  ; 1.965 ns                 ;
+; 2.132 ns                                ; Count[4]                                            ; Count[1]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.166 ns                  ; 1.966 ns                 ;
+; 2.138 ns                                ; Count2[4]                                           ; Count2[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.929 ns                 ;
+; 2.138 ns                                ; Count1[4]                                           ; Count1[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.929 ns                 ;
+; 2.138 ns                                ; Count1[4]                                           ; Count1[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.929 ns                 ;
+; 2.138 ns                                ; Count1[4]                                           ; Count1[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.929 ns                 ;
+; 2.138 ns                                ; Count1[4]                                           ; Count1[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.929 ns                 ;
+; 2.138 ns                                ; Count1[4]                                           ; Count1[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.929 ns                 ;
+; 2.138 ns                                ; Count2[4]                                           ; Count2[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.929 ns                 ;
+; 2.138 ns                                ; Count2[4]                                           ; Count2[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.929 ns                 ;
+; 2.138 ns                                ; Count2[4]                                           ; Count2[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.929 ns                 ;
+; 2.138 ns                                ; Count2[4]                                           ; Count2[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.929 ns                 ;
+; 2.150 ns                                ; Count2[3]                                           ; Count2[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.941 ns                 ;
+; 2.150 ns                                ; Count1[3]                                           ; Count1[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.941 ns                 ;
+; 2.150 ns                                ; Count1[3]                                           ; Count1[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.941 ns                 ;
+; 2.150 ns                                ; Count1[3]                                           ; Count1[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.941 ns                 ;
+; 2.150 ns                                ; Count1[3]                                           ; Count1[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.941 ns                 ;
+; 2.150 ns                                ; Count1[3]                                           ; Count1[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.941 ns                 ;
+; 2.150 ns                                ; Count2[3]                                           ; Count2[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.941 ns                 ;
+; 2.150 ns                                ; Count2[3]                                           ; Count2[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.941 ns                 ;
+; 2.150 ns                                ; Count2[3]                                           ; Count2[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.941 ns                 ;
+; 2.150 ns                                ; Count2[3]                                           ; Count2[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.941 ns                 ;
+; 2.159 ns                                ; Count2[5]                                           ; Count2[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.950 ns                 ;
+; 2.159 ns                                ; Count1[5]                                           ; Count1[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.950 ns                 ;
+; 2.159 ns                                ; Count1[0]                                           ; Count1[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.950 ns                 ;
+; 2.159 ns                                ; Count2[0]                                           ; Count2[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.950 ns                 ;
+; 2.163 ns                                ; Count1[6]                                           ; Count1[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.954 ns                 ;
+; 2.163 ns                                ; Count1[1]                                           ; Count1[3]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.954 ns                 ;
+; 2.163 ns                                ; Count2[6]                                           ; Count2[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.954 ns                 ;
+; 2.163 ns                                ; Count2[1]                                           ; Count2[3]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.954 ns                 ;
+; 2.167 ns                                ; Count1[2]                                           ; Count1[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.958 ns                 ;
+; 2.167 ns                                ; Count2[2]                                           ; Count2[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.958 ns                 ;
+; 2.168 ns                                ; Count2[7]                                           ; Count2[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.959 ns                 ;
+; 2.168 ns                                ; Count1[7]                                           ; Count1[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 1.959 ns                 ;
+; 2.224 ns                                ; Count[2]                                            ; Count[2]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.015 ns                 ;
+; 2.228 ns                                ; Count[2]                                            ; Count[3]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.019 ns                 ;
+; 2.229 ns                                ; Count[2]                                            ; Count[4]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.020 ns                 ;
+; 2.241 ns                                ; Count2[6]                                           ; Count2[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.032 ns                 ;
+; 2.241 ns                                ; Count1[6]                                           ; Count1[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.032 ns                 ;
+; 2.241 ns                                ; Count1[1]                                           ; Count1[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.032 ns                 ;
+; 2.241 ns                                ; Count2[1]                                           ; Count2[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.032 ns                 ;
+; 2.321 ns                                ; Count[0]                                            ; Count[0]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.112 ns                 ;
+; 2.387 ns                                ; Count2[0]                                           ; Count2[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.178 ns                 ;
+; 2.387 ns                                ; Count1[0]                                           ; Count1[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.178 ns                 ;
+; 2.387 ns                                ; Count1[0]                                           ; Count1[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.178 ns                 ;
+; 2.387 ns                                ; Count1[0]                                           ; Count1[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.178 ns                 ;
+; 2.387 ns                                ; Count1[0]                                           ; Count1[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.178 ns                 ;
+; 2.387 ns                                ; Count1[0]                                           ; Count1[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.178 ns                 ;
+; 2.387 ns                                ; Count2[0]                                           ; Count2[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.178 ns                 ;
+; 2.387 ns                                ; Count2[0]                                           ; Count2[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.178 ns                 ;
+; 2.387 ns                                ; Count2[0]                                           ; Count2[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.178 ns                 ;
+; 2.387 ns                                ; Count2[0]                                           ; Count2[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.178 ns                 ;
+; 2.393 ns                                ; Count2[2]                                           ; Count2[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.184 ns                 ;
+; 2.393 ns                                ; Count1[2]                                           ; Count1[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.184 ns                 ;
+; 2.393 ns                                ; Count1[2]                                           ; Count1[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.184 ns                 ;
+; 2.393 ns                                ; Count1[2]                                           ; Count1[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.184 ns                 ;
+; 2.393 ns                                ; Count1[2]                                           ; Count1[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.184 ns                 ;
+; 2.393 ns                                ; Count1[2]                                           ; Count1[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.184 ns                 ;
+; 2.393 ns                                ; Count2[2]                                           ; Count2[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.184 ns                 ;
+; 2.393 ns                                ; Count2[2]                                           ; Count2[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.184 ns                 ;
+; 2.393 ns                                ; Count2[2]                                           ; Count2[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.184 ns                 ;
+; 2.393 ns                                ; Count2[2]                                           ; Count2[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.184 ns                 ;
+; 2.469 ns                                ; Count2[1]                                           ; Count2[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.260 ns                 ;
+; 2.469 ns                                ; Count1[1]                                           ; Count1[9]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.260 ns                 ;
+; 2.469 ns                                ; Count1[1]                                           ; Count1[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.260 ns                 ;
+; 2.469 ns                                ; Count1[1]                                           ; Count1[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.260 ns                 ;
+; 2.469 ns                                ; Count1[1]                                           ; Count1[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.260 ns                 ;
+; 2.469 ns                                ; Count1[1]                                           ; Count1[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.260 ns                 ;
+; 2.469 ns                                ; Count2[1]                                           ; Count2[8]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.260 ns                 ;
+; 2.469 ns                                ; Count2[1]                                           ; Count2[7]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.260 ns                 ;
+; 2.469 ns                                ; Count2[1]                                           ; Count2[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.260 ns                 ;
+; 2.469 ns                                ; Count2[1]                                           ; Count2[5]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.260 ns                 ;
+; 2.505 ns                                ; Count[1]                                            ; Count[1]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.296 ns                 ;
+; 2.514 ns                                ; Count[3]                                            ; Count[2]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.305 ns                 ;
+; 2.518 ns                                ; Count[3]                                            ; Count[3]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.309 ns                 ;
+; 2.519 ns                                ; Count[3]                                            ; Count[4]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.310 ns                 ;
+; 2.530 ns                                ; Count[4]                                            ; Count[5]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.166 ns                  ; 2.364 ns                 ;
+; 2.788 ns                                ; Count[2]                                            ; Count[1]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.166 ns                  ; 2.622 ns                 ;
+; 2.789 ns                                ; Count[2]                                            ; Count[0]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.166 ns                  ; 2.623 ns                 ;
+; 2.790 ns                                ; Count[2]                                            ; Period1uS  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.166 ns                  ; 2.624 ns                 ;
+; 2.814 ns                                ; Count[1]                                            ; Count[2]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.252 ns                  ; 2.562 ns                 ;
+; 2.818 ns                                ; Count[1]                                            ; Count[3]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.252 ns                  ; 2.566 ns                 ;
+; 2.819 ns                                ; Count[1]                                            ; Count[4]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.252 ns                  ; 2.567 ns                 ;
+; 2.904 ns                                ; Count2[4]                                           ; Count2[3]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.695 ns                 ;
+; 2.904 ns                                ; Count2[4]                                           ; Count2[2]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.695 ns                 ;
+; 2.904 ns                                ; Count2[4]                                           ; Count2[1]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.695 ns                 ;
+; 2.904 ns                                ; Count2[4]                                           ; Count2[0]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.695 ns                 ;
+; 2.908 ns                                ; Count[0]                                            ; Count[1]   ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.699 ns                 ;
+; 2.909 ns                                ; Count1[7]                                           ; Count1[4]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.700 ns                 ;
+; 2.909 ns                                ; Count1[7]                                           ; Count1[6]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.700 ns                 ;
+; 2.909 ns                                ; Count1[7]                                           ; Count1[3]  ; GCLKP1     ; GCLKP1   ; 0.000 ns                   ; -0.209 ns                  ; 2.700 ns                 ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;            ;          ;                            ;                            ;                          ;
++-----------------------------------------+-----------------------------------------------------+------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++------------------------------------------------------------------+
+; tsu                                                              ;
++-------+--------------+------------+-------+-----------+----------+
+; Slack ; Required tsu ; Actual tsu ; From  ; To        ; To Clock ;
++-------+--------------+------------+-------+-----------+----------+
+; N/A   ; None         ; 6.582 ns   ; RESET ; Period1uS ; GCLKP1   ;
+; N/A   ; None         ; -7.524 ns  ; RESET ; LED1[1]   ; GCLKP1   ;
+; N/A   ; None         ; -7.524 ns  ; RESET ; LED1[2]   ; GCLKP1   ;
+; N/A   ; None         ; -7.524 ns  ; RESET ; LED4[3]   ; GCLKP1   ;
+; N/A   ; None         ; -7.524 ns  ; RESET ; LED3[3]   ; GCLKP1   ;
+; N/A   ; None         ; -7.524 ns  ; RESET ; LED2[3]   ; GCLKP1   ;
+; N/A   ; None         ; -7.524 ns  ; RESET ; LED1[3]   ; GCLKP1   ;
+; N/A   ; None         ; -7.674 ns  ; RESET ; LED4[1]   ; GCLKP1   ;
+; N/A   ; None         ; -7.674 ns  ; RESET ; LED3[1]   ; GCLKP1   ;
+; N/A   ; None         ; -7.674 ns  ; RESET ; LED6[1]   ; GCLKP1   ;
+; N/A   ; None         ; -7.674 ns  ; RESET ; LED5[1]   ; GCLKP1   ;
+; N/A   ; None         ; -7.674 ns  ; RESET ; LED8[1]   ; GCLKP1   ;
+; N/A   ; None         ; -7.674 ns  ; RESET ; LED7[1]   ; GCLKP1   ;
+; N/A   ; None         ; -7.674 ns  ; RESET ; LED2[1]   ; GCLKP1   ;
+; N/A   ; None         ; -7.674 ns  ; RESET ; LED5[2]   ; GCLKP1   ;
+; N/A   ; None         ; -7.674 ns  ; RESET ; LED4[2]   ; GCLKP1   ;
+; N/A   ; None         ; -7.675 ns  ; RESET ; LED1[0]   ; GCLKP1   ;
+; N/A   ; None         ; -7.675 ns  ; RESET ; LED3[0]   ; GCLKP1   ;
+; N/A   ; None         ; -7.675 ns  ; RESET ; LED2[0]   ; GCLKP1   ;
+; N/A   ; None         ; -7.675 ns  ; RESET ; LED3[2]   ; GCLKP1   ;
+; N/A   ; None         ; -7.675 ns  ; RESET ; LED2[2]   ; GCLKP1   ;
+; N/A   ; None         ; -7.981 ns  ; RESET ; LED7[0]   ; GCLKP1   ;
+; N/A   ; None         ; -7.981 ns  ; RESET ; LED6[0]   ; GCLKP1   ;
+; N/A   ; None         ; -7.981 ns  ; RESET ; LED8[0]   ; GCLKP1   ;
+; N/A   ; None         ; -7.981 ns  ; RESET ; LED7[2]   ; GCLKP1   ;
+; N/A   ; None         ; -7.981 ns  ; RESET ; LED6[2]   ; GCLKP1   ;
+; N/A   ; None         ; -7.981 ns  ; RESET ; LED8[2]   ; GCLKP1   ;
+; N/A   ; None         ; -7.981 ns  ; RESET ; LED6[3]   ; GCLKP1   ;
+; N/A   ; None         ; -7.981 ns  ; RESET ; LED5[3]   ; GCLKP1   ;
+; N/A   ; None         ; -7.981 ns  ; RESET ; LED8[3]   ; GCLKP1   ;
+; N/A   ; None         ; -7.981 ns  ; RESET ; LED7[3]   ; GCLKP1   ;
+; N/A   ; None         ; -8.001 ns  ; RESET ; LED5[0]   ; GCLKP1   ;
+; N/A   ; None         ; -8.001 ns  ; RESET ; LED4[0]   ; GCLKP1   ;
++-------+--------------+------------+-------+-----------+----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                              ;
++-----------------------------------------+-----------------------------------------------------+------------+------------+-----------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From       ; To        ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+------------+-----------+------------+
+; N/A                                     ; None                                                ; 31.194 ns  ; LED7[2]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 31.181 ns  ; LED7[2]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.826 ns  ; LED7[2]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.742 ns  ; LED7[2]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.559 ns  ; LED7[2]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.557 ns  ; LED7[2]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.556 ns  ; LED5[2]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.543 ns  ; LED5[2]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.428 ns  ; LED7[0]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.425 ns  ; LED8[2]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.422 ns  ; LED7[0]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.412 ns  ; LED8[2]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.409 ns  ; LED7[2]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.276 ns  ; LED6[3]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.270 ns  ; LED6[3]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.225 ns  ; LED6[3]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.219 ns  ; LED6[3]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.188 ns  ; LED5[2]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.173 ns  ; LED7[2]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.162 ns  ; LED7[0]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.156 ns  ; LED7[0]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.104 ns  ; LED5[2]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.057 ns  ; LED8[2]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.054 ns  ; LED7[0]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.008 ns  ; LED5[0]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 30.002 ns  ; LED5[0]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.973 ns  ; LED8[2]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.969 ns  ; LED7[0]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.921 ns  ; LED5[2]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.919 ns  ; LED5[2]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.906 ns  ; LED6[3]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.835 ns  ; LED6[3]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.823 ns  ; LED6[3]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.790 ns  ; LED8[2]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.788 ns  ; LED8[2]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.771 ns  ; LED5[2]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.767 ns  ; LED7[0]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.742 ns  ; LED5[0]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.736 ns  ; LED5[0]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.651 ns  ; LED7[0]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.644 ns  ; LED8[0]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.640 ns  ; LED8[2]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.638 ns  ; LED8[0]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.634 ns  ; LED5[0]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.584 ns  ; LED6[2]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.571 ns  ; LED6[2]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.549 ns  ; LED5[0]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.535 ns  ; LED5[2]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.506 ns  ; LED8[3]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.500 ns  ; LED8[3]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.494 ns  ; LED6[3]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.455 ns  ; LED8[3]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.449 ns  ; LED8[3]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.404 ns  ; LED8[2]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.378 ns  ; LED8[0]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.372 ns  ; LED8[0]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.347 ns  ; LED5[0]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.270 ns  ; LED8[0]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.231 ns  ; LED5[0]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.216 ns  ; LED6[2]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.187 ns  ; LED5[1]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.185 ns  ; LED8[0]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.176 ns  ; LED5[1]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.136 ns  ; LED8[3]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.132 ns  ; LED6[2]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.085 ns  ; LED5[1]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.079 ns  ; LED5[1]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.072 ns  ; LED6[1]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.065 ns  ; LED8[3]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.061 ns  ; LED6[1]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 29.053 ns  ; LED8[3]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.983 ns  ; LED8[0]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.970 ns  ; LED6[1]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.964 ns  ; LED6[1]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.949 ns  ; LED6[2]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.947 ns  ; LED6[2]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.867 ns  ; LED8[0]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.819 ns  ; LED5[1]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.799 ns  ; LED6[2]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.735 ns  ; LED5[1]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.724 ns  ; LED8[3]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.704 ns  ; LED6[1]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.692 ns  ; LED5[1]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.623 ns  ; LED6[0]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.620 ns  ; LED6[1]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.617 ns  ; LED6[0]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.577 ns  ; LED6[1]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.563 ns  ; LED6[2]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.500 ns  ; LED5[3]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.494 ns  ; LED5[3]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.490 ns  ; LED8[1]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.479 ns  ; LED8[1]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.449 ns  ; LED5[3]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.443 ns  ; LED5[3]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.397 ns  ; LED5[1]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.388 ns  ; LED8[1]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.382 ns  ; LED8[1]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.357 ns  ; LED6[0]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.351 ns  ; LED6[0]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.290 ns  ; Refresh[2] ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.284 ns  ; LED4[2]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.282 ns  ; LED6[1]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.277 ns  ; Refresh[2] ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.271 ns  ; LED4[2]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.249 ns  ; LED6[0]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.226 ns  ; LED7[3]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.220 ns  ; LED7[3]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.194 ns  ; LED7[1]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.183 ns  ; LED7[1]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.180 ns  ; Refresh[0] ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.175 ns  ; LED7[3]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.169 ns  ; LED7[3]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.167 ns  ; Refresh[0] ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.164 ns  ; LED6[0]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.130 ns  ; LED5[3]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.122 ns  ; LED8[1]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.092 ns  ; LED7[1]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.086 ns  ; LED7[1]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.059 ns  ; LED5[3]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.047 ns  ; LED5[3]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 28.038 ns  ; LED8[1]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.995 ns  ; LED8[1]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.962 ns  ; LED6[0]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.922 ns  ; Refresh[2] ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.916 ns  ; LED4[2]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.856 ns  ; LED7[3]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.846 ns  ; LED6[0]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.838 ns  ; Refresh[2] ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.832 ns  ; LED4[2]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.830 ns  ; Refresh[1] ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.826 ns  ; LED7[1]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.817 ns  ; Refresh[1] ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.812 ns  ; Refresh[0] ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.785 ns  ; LED7[3]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.773 ns  ; LED7[3]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.742 ns  ; LED7[1]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.728 ns  ; Refresh[0] ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.718 ns  ; LED5[3]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.700 ns  ; LED8[1]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.699 ns  ; LED7[1]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.655 ns  ; Refresh[2] ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.653 ns  ; Refresh[2] ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.649 ns  ; LED4[2]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.647 ns  ; LED4[2]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.545 ns  ; Refresh[0] ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.543 ns  ; Refresh[0] ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.505 ns  ; Refresh[2] ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.499 ns  ; LED4[2]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.462 ns  ; Refresh[1] ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.444 ns  ; LED7[3]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.404 ns  ; LED7[1]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.395 ns  ; Refresh[0] ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.378 ns  ; Refresh[1] ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.269 ns  ; Refresh[2] ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.263 ns  ; LED4[2]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.195 ns  ; Refresh[1] ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.193 ns  ; Refresh[1] ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.159 ns  ; Refresh[0] ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.045 ns  ; Refresh[1] ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 27.006 ns  ; LED3[1]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.995 ns  ; LED3[1]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.904 ns  ; LED3[1]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.898 ns  ; LED3[1]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.817 ns  ; LED4[0]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.811 ns  ; LED4[0]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.809 ns  ; Refresh[1] ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.754 ns  ; LED3[0]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.748 ns  ; LED3[0]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.741 ns  ; LED3[2]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.728 ns  ; LED3[2]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.638 ns  ; LED3[1]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.554 ns  ; LED3[1]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.551 ns  ; LED4[0]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.545 ns  ; LED4[0]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.511 ns  ; LED3[1]    ; LEDOut[2] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.488 ns  ; LED3[0]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.482 ns  ; LED3[0]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.472 ns  ; LED2[2]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.459 ns  ; LED2[2]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.443 ns  ; LED4[0]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.436 ns  ; LED4[3]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.430 ns  ; LED4[3]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.424 ns  ; LED3[3]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.418 ns  ; LED3[3]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.385 ns  ; LED4[3]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.380 ns  ; LED3[0]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.379 ns  ; LED4[3]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.373 ns  ; LED3[2]    ; LEDOut[7] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.373 ns  ; LED3[3]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.367 ns  ; LED3[3]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.360 ns  ; LED4[1]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.358 ns  ; LED4[0]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.349 ns  ; LED4[1]    ; LEDOut[4] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.295 ns  ; LED3[0]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.289 ns  ; LED3[2]    ; LEDOut[3] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.258 ns  ; LED4[1]    ; LEDOut[1] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.252 ns  ; LED4[1]    ; LEDOut[0] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.216 ns  ; LED3[1]    ; LEDOut[6] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.209 ns  ; LED1[1]    ; LEDOut[5] ; GCLKP1     ;
+; N/A                                     ; None                                                ; 26.198 ns  ; LED1[1]    ; LEDOut[4] ; GCLKP1     ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;            ;           ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+------------+-----------+------------+
+
+
++------------------------------------------------------------------------+
+; th                                                                     ;
++---------------+-------------+-----------+-------+-----------+----------+
+; Minimum Slack ; Required th ; Actual th ; From  ; To        ; To Clock ;
++---------------+-------------+-----------+-------+-----------+----------+
+; N/A           ; None        ; 8.053 ns  ; RESET ; LED5[0]   ; GCLKP1   ;
+; N/A           ; None        ; 8.053 ns  ; RESET ; LED4[0]   ; GCLKP1   ;
+; N/A           ; None        ; 8.033 ns  ; RESET ; LED7[0]   ; GCLKP1   ;
+; N/A           ; None        ; 8.033 ns  ; RESET ; LED6[0]   ; GCLKP1   ;
+; N/A           ; None        ; 8.033 ns  ; RESET ; LED8[0]   ; GCLKP1   ;
+; N/A           ; None        ; 8.033 ns  ; RESET ; LED7[2]   ; GCLKP1   ;
+; N/A           ; None        ; 8.033 ns  ; RESET ; LED6[2]   ; GCLKP1   ;
+; N/A           ; None        ; 8.033 ns  ; RESET ; LED8[2]   ; GCLKP1   ;
+; N/A           ; None        ; 8.033 ns  ; RESET ; LED6[3]   ; GCLKP1   ;
+; N/A           ; None        ; 8.033 ns  ; RESET ; LED5[3]   ; GCLKP1   ;
+; N/A           ; None        ; 8.033 ns  ; RESET ; LED8[3]   ; GCLKP1   ;
+; N/A           ; None        ; 8.033 ns  ; RESET ; LED7[3]   ; GCLKP1   ;
+; N/A           ; None        ; 7.727 ns  ; RESET ; LED1[0]   ; GCLKP1   ;
+; N/A           ; None        ; 7.727 ns  ; RESET ; LED3[0]   ; GCLKP1   ;
+; N/A           ; None        ; 7.727 ns  ; RESET ; LED2[0]   ; GCLKP1   ;
+; N/A           ; None        ; 7.727 ns  ; RESET ; LED3[2]   ; GCLKP1   ;
+; N/A           ; None        ; 7.727 ns  ; RESET ; LED2[2]   ; GCLKP1   ;
+; N/A           ; None        ; 7.726 ns  ; RESET ; LED4[1]   ; GCLKP1   ;
+; N/A           ; None        ; 7.726 ns  ; RESET ; LED3[1]   ; GCLKP1   ;
+; N/A           ; None        ; 7.726 ns  ; RESET ; LED6[1]   ; GCLKP1   ;
+; N/A           ; None        ; 7.726 ns  ; RESET ; LED5[1]   ; GCLKP1   ;
+; N/A           ; None        ; 7.726 ns  ; RESET ; LED8[1]   ; GCLKP1   ;
+; N/A           ; None        ; 7.726 ns  ; RESET ; LED7[1]   ; GCLKP1   ;
+; N/A           ; None        ; 7.726 ns  ; RESET ; LED2[1]   ; GCLKP1   ;
+; N/A           ; None        ; 7.726 ns  ; RESET ; LED5[2]   ; GCLKP1   ;
+; N/A           ; None        ; 7.726 ns  ; RESET ; LED4[2]   ; GCLKP1   ;
+; N/A           ; None        ; 7.576 ns  ; RESET ; LED1[1]   ; GCLKP1   ;
+; N/A           ; None        ; 7.576 ns  ; RESET ; LED1[2]   ; GCLKP1   ;
+; N/A           ; None        ; 7.576 ns  ; RESET ; LED4[3]   ; GCLKP1   ;
+; N/A           ; None        ; 7.576 ns  ; RESET ; LED3[3]   ; GCLKP1   ;
+; N/A           ; None        ; 7.576 ns  ; RESET ; LED2[3]   ; GCLKP1   ;
+; N/A           ; None        ; 7.576 ns  ; RESET ; LED1[3]   ; GCLKP1   ;
+; N/A           ; None        ; -6.530 ns ; RESET ; Period1uS ; GCLKP1   ;
++---------------+-------------+-----------+-------+-----------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 5.1 Build 176 10/26/2005 SJ Full Version
+    Info: Processing started: Mon Mar 30 15:34:03 2009
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off LED8 -c LED8 --timing_analysis_only
+Warning: Found 4 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "Period1uS" as buffer
+    Info: Detected ripple clock "Count1[8]" as buffer
+    Info: Detected ripple clock "Count1[9]" as buffer
+    Info: Detected ripple clock "Count2[9]" as buffer
+Info: Slack time is 15.268 ns for clock "GCLKP1" between source register "Count1[3]" and destination register "Count1[9]"
+    Info: Fmax is 211.33 MHz (period= 4.732 ns)
+    Info: + Largest register to register requirement is 19.739 ns
+        Info: + Setup relationship between source and destination is 20.000 ns
+            Info: + Latch edge is 20.000 ns
+                Info: Clock period of Destination clock "GCLKP1" is 20.000 ns with  offset of 0.000 ns and duty cycle of 50
+                Info: Multicycle Setup factor for Destination register is 1
+            Info: - Launch edge is 0.000 ns
+                Info: Clock period of Source clock "GCLKP1" is 20.000 ns with  offset of 0.000 ns and duty cycle of 50
+                Info: Multicycle Setup factor for Source register is 1
+        Info: + Largest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "GCLKP1" to destination register is 8.057 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_16; Fanout = 7; CLK Node = 'GCLKP1'
+                Info: 2: + IC(0.601 ns) + CELL(0.935 ns) = 3.005 ns; Loc. = LC_X15_Y6_N7; Fanout = 10; REG Node = 'Period1uS'
+                Info: 3: + IC(4.341 ns) + CELL(0.711 ns) = 8.057 ns; Loc. = LC_X19_Y8_N9; Fanout = 12; REG Node = 'Count1[9]'
+                Info: Total cell delay = 3.115 ns ( 38.66 % )
+                Info: Total interconnect delay = 4.942 ns ( 61.34 % )
+            Info: - Longest clock path from clock "GCLKP1" to source register is 8.057 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_16; Fanout = 7; CLK Node = 'GCLKP1'
+                Info: 2: + IC(0.601 ns) + CELL(0.935 ns) = 3.005 ns; Loc. = LC_X15_Y6_N7; Fanout = 10; REG Node = 'Period1uS'
+                Info: 3: + IC(4.341 ns) + CELL(0.711 ns) = 8.057 ns; Loc. = LC_X19_Y8_N3; Fanout = 4; REG Node = 'Count1[3]'
+                Info: Total cell delay = 3.115 ns ( 38.66 % )
+                Info: Total interconnect delay = 4.942 ns ( 61.34 % )
+        Info: - Micro clock to output delay of source is 0.224 ns
+        Info: - Micro setup delay of destination is 0.037 ns
+    Info: - Longest register to register delay is 4.471 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X19_Y8_N3; Fanout = 4; REG Node = 'Count1[3]'
+        Info: 2: + IC(0.746 ns) + CELL(0.590 ns) = 1.336 ns; Loc. = LC_X20_Y8_N5; Fanout = 1; COMB Node = 'LessThan~388'
+        Info: 3: + IC(0.710 ns) + CELL(0.590 ns) = 2.636 ns; Loc. = LC_X20_Y8_N2; Fanout = 10; COMB Node = 'LessThan~389'
+        Info: 4: + IC(0.723 ns) + CELL(1.112 ns) = 4.471 ns; Loc. = LC_X19_Y8_N9; Fanout = 12; REG Node = 'Count1[9]'
+        Info: Total cell delay = 2.292 ns ( 51.26 % )
+        Info: Total interconnect delay = 2.179 ns ( 48.74 % )
+Info: Minimum slack time is 822 ps for clock "GCLKP1" between source register "Glide[3]" and destination register "Glide[3]"
+    Info: + Shortest register to register delay is 0.613 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X22_Y5_N2; Fanout = 2; REG Node = 'Glide[3]'
+        Info: 2: + IC(0.000 ns) + CELL(0.613 ns) = 0.613 ns; Loc. = LC_X22_Y5_N2; Fanout = 2; REG Node = 'Glide[3]'
+        Info: Total cell delay = 0.613 ns ( 100.00 % )
+    Info: - Smallest register to register requirement is -0.209 ns
+        Info: + Hold relationship between source and destination is 0.000 ns
+            Info: + Latch edge is 0.000 ns
+                Info: Clock period of Destination clock "GCLKP1" is 20.000 ns with  offset of 0.000 ns and duty cycle of 50
+                Info: Multicycle Setup factor for Destination register is 1
+                Info: Multicycle Hold factor for Destination register is 1
+            Info: - Launch edge is 0.000 ns
+                Info: Clock period of Source clock "GCLKP1" is 20.000 ns with  offset of 0.000 ns and duty cycle of 50
+                Info: Multicycle Setup factor for Source register is 1
+                Info: Multicycle Hold factor for Source register is 1
+        Info: + Smallest clock skew is 0.000 ns
+            Info: + Longest clock path from clock "GCLKP1" to destination register is 18.128 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_16; Fanout = 7; CLK Node = 'GCLKP1'
+                Info: 2: + IC(0.601 ns) + CELL(0.935 ns) = 3.005 ns; Loc. = LC_X15_Y6_N7; Fanout = 10; REG Node = 'Period1uS'
+                Info: 3: + IC(4.341 ns) + CELL(0.935 ns) = 8.281 ns; Loc. = LC_X19_Y8_N9; Fanout = 12; REG Node = 'Count1[9]'
+                Info: 4: + IC(4.740 ns) + CELL(0.935 ns) = 13.956 ns; Loc. = LC_X8_Y6_N9; Fanout = 38; REG Node = 'Count2[9]'
+                Info: 5: + IC(3.461 ns) + CELL(0.711 ns) = 18.128 ns; Loc. = LC_X22_Y5_N2; Fanout = 2; REG Node = 'Glide[3]'
+                Info: Total cell delay = 4.985 ns ( 27.50 % )
+                Info: Total interconnect delay = 13.143 ns ( 72.50 % )
+            Info: - Shortest clock path from clock "GCLKP1" to source register is 18.128 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_16; Fanout = 7; CLK Node = 'GCLKP1'
+                Info: 2: + IC(0.601 ns) + CELL(0.935 ns) = 3.005 ns; Loc. = LC_X15_Y6_N7; Fanout = 10; REG Node = 'Period1uS'
+                Info: 3: + IC(4.341 ns) + CELL(0.935 ns) = 8.281 ns; Loc. = LC_X19_Y8_N9; Fanout = 12; REG Node = 'Count1[9]'
+                Info: 4: + IC(4.740 ns) + CELL(0.935 ns) = 13.956 ns; Loc. = LC_X8_Y6_N9; Fanout = 38; REG Node = 'Count2[9]'
+                Info: 5: + IC(3.461 ns) + CELL(0.711 ns) = 18.128 ns; Loc. = LC_X22_Y5_N2; Fanout = 2; REG Node = 'Glide[3]'
+                Info: Total cell delay = 4.985 ns ( 27.50 % )
+                Info: Total interconnect delay = 13.143 ns ( 72.50 % )
+        Info: - Micro clock to output delay of source is 0.224 ns
+        Info: + Micro hold delay of destination is 0.015 ns
+Info: tsu for register "Period1uS" (data pin = "RESET", clock pin = "GCLKP1") is 6.582 ns
+    Info: + Longest pin to register delay is 9.326 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.475 ns) = 1.475 ns; Loc. = PIN_144; Fanout = 43; PIN Node = 'RESET'
+        Info: 2: + IC(6.984 ns) + CELL(0.867 ns) = 9.326 ns; Loc. = LC_X15_Y6_N7; Fanout = 10; REG Node = 'Period1uS'
+        Info: Total cell delay = 2.342 ns ( 25.11 % )
+        Info: Total interconnect delay = 6.984 ns ( 74.89 % )
+    Info: + Micro setup delay of destination is 0.037 ns
+    Info: - Shortest clock path from clock "GCLKP1" to destination register is 2.781 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_16; Fanout = 7; CLK Node = 'GCLKP1'
+        Info: 2: + IC(0.601 ns) + CELL(0.711 ns) = 2.781 ns; Loc. = LC_X15_Y6_N7; Fanout = 10; REG Node = 'Period1uS'
+        Info: Total cell delay = 2.180 ns ( 78.39 % )
+        Info: Total interconnect delay = 0.601 ns ( 21.61 % )
+Info: tco from clock "GCLKP1" to destination pin "LEDOut[5]" through register "LED7[2]" is 31.194 ns
+    Info: + Longest clock path from clock "GCLKP1" to source register is 18.128 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_16; Fanout = 7; CLK Node = 'GCLKP1'
+        Info: 2: + IC(0.601 ns) + CELL(0.935 ns) = 3.005 ns; Loc. = LC_X15_Y6_N7; Fanout = 10; REG Node = 'Period1uS'
+        Info: 3: + IC(4.341 ns) + CELL(0.935 ns) = 8.281 ns; Loc. = LC_X19_Y8_N9; Fanout = 12; REG Node = 'Count1[9]'
+        Info: 4: + IC(4.740 ns) + CELL(0.935 ns) = 13.956 ns; Loc. = LC_X8_Y6_N9; Fanout = 38; REG Node = 'Count2[9]'
+        Info: 5: + IC(3.461 ns) + CELL(0.711 ns) = 18.128 ns; Loc. = LC_X21_Y4_N7; Fanout = 2; REG Node = 'LED7[2]'
+        Info: Total cell delay = 4.985 ns ( 27.50 % )
+        Info: Total interconnect delay = 13.143 ns ( 72.50 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Longest register to pin delay is 12.842 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X21_Y4_N7; Fanout = 2; REG Node = 'LED7[2]'
+        Info: 2: + IC(0.557 ns) + CELL(0.590 ns) = 1.147 ns; Loc. = LC_X21_Y4_N4; Fanout = 1; COMB Node = 'LED[2]~382'
+        Info: 3: + IC(0.399 ns) + CELL(0.442 ns) = 1.988 ns; Loc. = LC_X21_Y4_N3; Fanout = 1; COMB Node = 'LED[2]~383'
+        Info: 4: + IC(0.710 ns) + CELL(0.590 ns) = 3.288 ns; Loc. = LC_X22_Y4_N9; Fanout = 1; COMB Node = 'LED[2]~384'
+        Info: 5: + IC(1.222 ns) + CELL(0.590 ns) = 5.100 ns; Loc. = LC_X22_Y3_N1; Fanout = 1; COMB Node = 'LED[2]~385'
+        Info: 6: + IC(1.093 ns) + CELL(0.590 ns) = 6.783 ns; Loc. = LC_X22_Y3_N3; Fanout = 8; COMB Node = 'LED[2]~386'
+        Info: 7: + IC(1.242 ns) + CELL(0.590 ns) = 8.615 ns; Loc. = LC_X18_Y3_N8; Fanout = 1; COMB Node = 'Mux~242'
+        Info: 8: + IC(2.119 ns) + CELL(2.108 ns) = 12.842 ns; Loc. = PIN_52; Fanout = 0; PIN Node = 'LEDOut[5]'
+        Info: Total cell delay = 5.500 ns ( 42.83 % )
+        Info: Total interconnect delay = 7.342 ns ( 57.17 % )
+Info: th for register "LED5[0]" (data pin = "RESET", clock pin = "GCLKP1") is 8.053 ns
+    Info: + Longest clock path from clock "GCLKP1" to destination register is 18.128 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_16; Fanout = 7; CLK Node = 'GCLKP1'
+        Info: 2: + IC(0.601 ns) + CELL(0.935 ns) = 3.005 ns; Loc. = LC_X15_Y6_N7; Fanout = 10; REG Node = 'Period1uS'
+        Info: 3: + IC(4.341 ns) + CELL(0.935 ns) = 8.281 ns; Loc. = LC_X19_Y8_N9; Fanout = 12; REG Node = 'Count1[9]'
+        Info: 4: + IC(4.740 ns) + CELL(0.935 ns) = 13.956 ns; Loc. = LC_X8_Y6_N9; Fanout = 38; REG Node = 'Count2[9]'
+        Info: 5: + IC(3.461 ns) + CELL(0.711 ns) = 18.128 ns; Loc. = LC_X21_Y3_N7; Fanout = 2; REG Node = 'LED5[0]'
+        Info: Total cell delay = 4.985 ns ( 27.50 % )
+        Info: Total interconnect delay = 13.143 ns ( 72.50 % )
+    Info: + Micro hold delay of destination is 0.015 ns
+    Info: - Shortest pin to register delay is 10.090 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.475 ns) = 1.475 ns; Loc. = PIN_144; Fanout = 43; PIN Node = 'RESET'
+        Info: 2: + IC(7.748 ns) + CELL(0.867 ns) = 10.090 ns; Loc. = LC_X21_Y3_N7; Fanout = 2; REG Node = 'LED5[0]'
+        Info: Total cell delay = 2.342 ns ( 23.21 % )
+        Info: Total interconnect delay = 7.748 ns ( 76.79 % )
+Info: All timing requirements were met. See Report window for more details.
+Info: Quartus II Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Processing ended: Mon Mar 30 15:34:03 2009
+    Info: Elapsed time: 00:00:00
+
+

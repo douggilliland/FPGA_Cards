@@ -1,0 +1,147 @@
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd
+xst -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -ifn ps2_lcd1602_1.xst -ofn ps2_lcd1602_1.syr
+ngdbuild -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -dd _ngo -nt timestamp -uc ps2_lcd1602_1.ucf -p xc3s400-pq208-5 ps2_lcd1602_1.ngc ps2_lcd1602_1.ngd
+map -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -p xc3s400-pq208-5 -cm area -pr b -k 4 -c 100 -o ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ngd ps2_lcd1602_1.pcf
+par -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -w -intstyle ise -ol std -t 1 ps2_lcd1602_1_map.ncd ps2_lcd1602_1.ncd ps2_lcd1602_1.pcf
+trce -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -e 3 -l 3 -s 5 -xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+bitgen -ise "F:/FPGA/ps2_lcd_1602/ps2_lcd_1602" -intstyle ise -f ps2_lcd1602_1.ut ps2_lcd1602_1.ncd

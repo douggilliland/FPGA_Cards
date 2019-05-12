@@ -1,0 +1,8 @@
+BLOCK		START ADDRESS		END ADDRESS
+
+OPTION BITS	0x00010000		0x0001003F
+Page_0		0x00010040		0x0001B836 
+
+
+
+NOTE:All the addresses in this file are Byte addresses

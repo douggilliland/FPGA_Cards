@@ -1,0 +1,1039 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--LED2[0] is LED2[0]
+--operation mode is normal
+
+LED2[0]_lut_out = LED1[0];
+LED2[0] = DFFEAS(LED2[0]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED2[1] is LED2[1]
+--operation mode is normal
+
+LED2[1]_lut_out = LED1[1];
+LED2[1] = DFFEAS(LED2[1]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED2[2] is LED2[2]
+--operation mode is normal
+
+LED2[2]_lut_out = LED1[2];
+LED2[2] = DFFEAS(LED2[2]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED2[3] is LED2[3]
+--operation mode is normal
+
+LED2[3]_lut_out = LED1[3];
+LED2[3] = DFFEAS(LED2[3]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED1[0] is LED1[0]
+--operation mode is normal
+
+LED1[0]_lut_out = !Glide[0];
+LED1[0] = DFFEAS(LED1[0]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED1[1] is LED1[1]
+--operation mode is normal
+
+LED1[1]_lut_out = A1L1;
+LED1[1] = DFFEAS(LED1[1]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED1[2] is LED1[2]
+--operation mode is normal
+
+LED1[2]_lut_out = A1L2;
+LED1[2] = DFFEAS(LED1[2]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED1[3] is LED1[3]
+--operation mode is normal
+
+LED1[3]_lut_out = A1L3;
+LED1[3] = DFFEAS(LED1[3]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED3[0] is LED3[0]
+--operation mode is normal
+
+LED3[0]_lut_out = LED2[0];
+LED3[0] = DFFEAS(LED3[0]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--Refresh[1] is Refresh[1]
+--operation mode is normal
+
+Refresh[1]_lut_out = Refresh[1] $ Refresh[0];
+Refresh[1] = DFFEAS(Refresh[1]_lut_out, Count1[8], VCC, , , , , , );
+
+
+--Refresh[0] is Refresh[0]
+--operation mode is normal
+
+Refresh[0]_lut_out = !Refresh[0];
+Refresh[0] = DFFEAS(Refresh[0]_lut_out, Count1[8], VCC, , , , , , );
+
+
+--Refresh[2] is Refresh[2]
+--operation mode is normal
+
+Refresh[2]_lut_out = Refresh[2] $ (Refresh[1] & Refresh[0]);
+Refresh[2] = DFFEAS(Refresh[2]_lut_out, Count1[8], VCC, , , , , , );
+
+
+--A1L113 is LED[0]~368
+--operation mode is normal
+
+A1L113 = !Refresh[2] & (Refresh[1] $ Refresh[0]);
+
+
+--LED4[0] is LED4[0]
+--operation mode is normal
+
+LED4[0]_lut_out = LED3[0];
+LED4[0] = DFFEAS(LED4[0]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L114 is LED[0]~369
+--operation mode is normal
+
+A1L114 = Refresh[0] & (!Refresh[2]);
+
+
+--LED6[0] is LED6[0]
+--operation mode is normal
+
+LED6[0]_lut_out = LED5[0];
+LED6[0] = DFFEAS(LED6[0]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L115 is LED[0]~370
+--operation mode is normal
+
+A1L115 = Refresh[2] & (!Refresh[1]);
+
+
+--LED7[0] is LED7[0]
+--operation mode is normal
+
+LED7[0]_lut_out = LED6[0];
+LED7[0] = DFFEAS(LED7[0]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L116 is LED[0]~371
+--operation mode is normal
+
+A1L116 = Refresh[2] & (!Refresh[0]);
+
+
+--LED8[0] is LED8[0]
+--operation mode is normal
+
+LED8[0]_lut_out = LED7[0];
+LED8[0] = DFFEAS(LED8[0]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L117 is LED[0]~372
+--operation mode is normal
+
+A1L117 = A1L115 & (A1L116) # !A1L115 & (A1L116 & LED7[0] # !A1L116 & (LED8[0]));
+
+
+--LED5[0] is LED5[0]
+--operation mode is normal
+
+LED5[0]_lut_out = LED4[0];
+LED5[0] = DFFEAS(LED5[0]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L118 is LED[0]~373
+--operation mode is normal
+
+A1L118 = A1L115 & (A1L117 & (LED5[0]) # !A1L117 & LED6[0]) # !A1L115 & (A1L117);
+
+
+--A1L119 is LED[0]~374
+--operation mode is normal
+
+A1L119 = A1L113 & (A1L114) # !A1L113 & (A1L114 & LED4[0] # !A1L114 & (A1L118));
+
+
+--A1L120 is LED[0]~375
+--operation mode is normal
+
+A1L120 = A1L113 & (A1L119 & (LED2[0]) # !A1L119 & LED3[0]) # !A1L113 & (A1L119);
+
+
+--A1L176 is rtl~52
+--operation mode is normal
+
+A1L176 = !Refresh[2] & !Refresh[1] & !Refresh[0];
+
+
+--A1L121 is LED[0]~376
+--operation mode is normal
+
+A1L121 = A1L176 & LED1[0] # !A1L176 & (A1L120);
+
+
+--LED4[1] is LED4[1]
+--operation mode is normal
+
+LED4[1]_lut_out = LED3[1];
+LED4[1] = DFFEAS(LED4[1]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED3[1] is LED3[1]
+--operation mode is normal
+
+LED3[1]_lut_out = LED2[1];
+LED3[1] = DFFEAS(LED3[1]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED7[1] is LED7[1]
+--operation mode is normal
+
+LED7[1]_lut_out = LED6[1];
+LED7[1] = DFFEAS(LED7[1]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED6[1] is LED6[1]
+--operation mode is normal
+
+LED6[1]_lut_out = LED5[1];
+LED6[1] = DFFEAS(LED6[1]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED8[1] is LED8[1]
+--operation mode is normal
+
+LED8[1]_lut_out = LED7[1];
+LED8[1] = DFFEAS(LED8[1]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L122 is LED[1]~377
+--operation mode is normal
+
+A1L122 = A1L116 & (A1L115) # !A1L116 & (A1L115 & LED6[1] # !A1L115 & (LED8[1]));
+
+
+--LED5[1] is LED5[1]
+--operation mode is normal
+
+LED5[1]_lut_out = LED4[1];
+LED5[1] = DFFEAS(LED5[1]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L123 is LED[1]~378
+--operation mode is normal
+
+A1L123 = A1L116 & (A1L122 & (LED5[1]) # !A1L122 & LED7[1]) # !A1L116 & (A1L122);
+
+
+--A1L124 is LED[1]~379
+--operation mode is normal
+
+A1L124 = A1L114 & (A1L113) # !A1L114 & (A1L113 & LED3[1] # !A1L113 & (A1L123));
+
+
+--A1L125 is LED[1]~380
+--operation mode is normal
+
+A1L125 = A1L114 & (A1L124 & (LED2[1]) # !A1L124 & LED4[1]) # !A1L114 & (A1L124);
+
+
+--A1L126 is LED[1]~381
+--operation mode is normal
+
+A1L126 = A1L176 & LED1[1] # !A1L176 & (A1L125);
+
+
+--LED3[2] is LED3[2]
+--operation mode is normal
+
+LED3[2]_lut_out = LED2[2];
+LED3[2] = DFFEAS(LED3[2]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED4[2] is LED4[2]
+--operation mode is normal
+
+LED4[2]_lut_out = LED3[2];
+LED4[2] = DFFEAS(LED4[2]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED6[2] is LED6[2]
+--operation mode is normal
+
+LED6[2]_lut_out = LED5[2];
+LED6[2] = DFFEAS(LED6[2]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED7[2] is LED7[2]
+--operation mode is normal
+
+LED7[2]_lut_out = LED6[2];
+LED7[2] = DFFEAS(LED7[2]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED8[2] is LED8[2]
+--operation mode is normal
+
+LED8[2]_lut_out = LED7[2];
+LED8[2] = DFFEAS(LED8[2]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L127 is LED[2]~382
+--operation mode is normal
+
+A1L127 = A1L115 & (A1L116) # !A1L115 & (A1L116 & LED7[2] # !A1L116 & (LED8[2]));
+
+
+--LED5[2] is LED5[2]
+--operation mode is normal
+
+LED5[2]_lut_out = LED4[2];
+LED5[2] = DFFEAS(LED5[2]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L128 is LED[2]~383
+--operation mode is normal
+
+A1L128 = A1L115 & (A1L127 & (LED5[2]) # !A1L127 & LED6[2]) # !A1L115 & (A1L127);
+
+
+--A1L129 is LED[2]~384
+--operation mode is normal
+
+A1L129 = A1L113 & (A1L114) # !A1L113 & (A1L114 & LED4[2] # !A1L114 & (A1L128));
+
+
+--A1L130 is LED[2]~385
+--operation mode is normal
+
+A1L130 = A1L113 & (A1L129 & (LED2[2]) # !A1L129 & LED3[2]) # !A1L113 & (A1L129);
+
+
+--A1L131 is LED[2]~386
+--operation mode is normal
+
+A1L131 = A1L176 & LED1[2] # !A1L176 & (A1L130);
+
+
+--LED4[3] is LED4[3]
+--operation mode is normal
+
+LED4[3]_lut_out = LED3[3];
+LED4[3] = DFFEAS(LED4[3]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED3[3] is LED3[3]
+--operation mode is normal
+
+LED3[3]_lut_out = LED2[3];
+LED3[3] = DFFEAS(LED3[3]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED7[3] is LED7[3]
+--operation mode is normal
+
+LED7[3]_lut_out = LED6[3];
+LED7[3] = DFFEAS(LED7[3]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED6[3] is LED6[3]
+--operation mode is normal
+
+LED6[3]_lut_out = LED5[3];
+LED6[3] = DFFEAS(LED6[3]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--LED8[3] is LED8[3]
+--operation mode is normal
+
+LED8[3]_lut_out = LED7[3];
+LED8[3] = DFFEAS(LED8[3]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L132 is LED[3]~387
+--operation mode is normal
+
+A1L132 = A1L116 & (A1L115) # !A1L116 & (A1L115 & LED6[3] # !A1L115 & (LED8[3]));
+
+
+--LED5[3] is LED5[3]
+--operation mode is normal
+
+LED5[3]_lut_out = LED4[3];
+LED5[3] = DFFEAS(LED5[3]_lut_out, Count2[9], VCC, , RESET, , , , );
+
+
+--A1L133 is LED[3]~388
+--operation mode is normal
+
+A1L133 = A1L116 & (A1L132 & (LED5[3]) # !A1L132 & LED7[3]) # !A1L116 & (A1L132);
+
+
+--A1L134 is LED[3]~389
+--operation mode is normal
+
+A1L134 = A1L114 & (A1L113) # !A1L114 & (A1L113 & LED3[3] # !A1L113 & (A1L133));
+
+
+--A1L135 is LED[3]~390
+--operation mode is normal
+
+A1L135 = A1L114 & (A1L134 & (LED2[3]) # !A1L134 & LED4[3]) # !A1L114 & (A1L134);
+
+
+--A1L136 is LED[3]~391
+--operation mode is normal
+
+A1L136 = A1L176 & LED1[3] # !A1L176 & (A1L135);
+
+
+--A1L162 is Mux~237
+--operation mode is normal
+
+A1L162 = A1L131 & !A1L126 & (A1L121 $ !A1L136) # !A1L131 & A1L121 & (A1L126 $ !A1L136);
+
+
+--A1L163 is Mux~238
+--operation mode is normal
+
+A1L163 = A1L126 & (A1L121 & (A1L136) # !A1L121 & A1L131) # !A1L126 & A1L131 & (A1L121 $ A1L136);
+
+
+--A1L164 is Mux~239
+--operation mode is normal
+
+A1L164 = A1L131 & A1L136 & (A1L126 # !A1L121) # !A1L131 & !A1L121 & A1L126 & !A1L136;
+
+
+--A1L165 is Mux~240
+--operation mode is normal
+
+A1L165 = A1L126 & (A1L121 & A1L131 # !A1L121 & !A1L131 & A1L136) # !A1L126 & !A1L136 & (A1L121 $ A1L131);
+
+
+--A1L166 is Mux~241
+--operation mode is normal
+
+A1L166 = A1L126 & A1L121 & (!A1L136) # !A1L126 & (A1L131 & (!A1L136) # !A1L131 & A1L121);
+
+
+--A1L167 is Mux~242
+--operation mode is normal
+
+A1L167 = A1L121 & (A1L136 $ (A1L126 # !A1L131)) # !A1L121 & A1L126 & !A1L131 & !A1L136;
+
+
+--A1L168 is Mux~243
+--operation mode is normal
+
+A1L168 = A1L121 & (A1L136 # A1L126 $ A1L131) # !A1L121 & (A1L126 # A1L131 $ A1L136);
+
+
+--A1L169 is Mux~244
+--operation mode is normal
+
+A1L169 = A1L121 & A1L126 & A1L131 & A1L136;
+
+
+--Count2[9] is Count2[9]
+--operation mode is normal
+
+Count2[9]_carry_eqn = A1L55;
+Count2[9]_lut_out = Count2[9] $ (Count2[9]_carry_eqn);
+Count2[9] = DFFEAS(Count2[9]_lut_out, Count1[9], VCC, , , , , A1L148, );
+
+
+--Glide[0] is Glide[0]
+--operation mode is normal
+
+Glide[0]_lut_out = !Glide[0];
+Glide[0] = DFFEAS(Glide[0]_lut_out, Count2[9], RESET, , , , , , );
+
+
+--Glide[1] is Glide[1]
+--operation mode is normal
+
+Glide[1]_lut_out = A1L1;
+Glide[1] = DFFEAS(Glide[1]_lut_out, Count2[9], RESET, , , , , , );
+
+
+--A1L1 is add~743
+--operation mode is normal
+
+A1L1 = Glide[0] $ Glide[1];
+
+
+--Glide[2] is Glide[2]
+--operation mode is normal
+
+Glide[2]_lut_out = A1L2;
+Glide[2] = DFFEAS(Glide[2]_lut_out, Count2[9], RESET, , , , , , );
+
+
+--A1L2 is add~744
+--operation mode is normal
+
+A1L2 = Glide[2] $ (Glide[0] & Glide[1]);
+
+
+--Glide[3] is Glide[3]
+--operation mode is normal
+
+Glide[3]_lut_out = A1L3;
+Glide[3] = DFFEAS(Glide[3]_lut_out, Count2[9], RESET, , , , , , );
+
+
+--A1L3 is add~745
+--operation mode is normal
+
+A1L3 = Glide[3] $ (Glide[0] & Glide[1] & Glide[2]);
+
+
+--Count1[8] is Count1[8]
+--operation mode is arithmetic
+
+Count1[8]_carry_eqn = A1L33;
+Count1[8]_lut_out = Count1[8] $ (!Count1[8]_carry_eqn);
+Count1[8] = DFFEAS(Count1[8]_lut_out, Period1uS, VCC, , , , , A1L151, );
+
+--A1L35 is Count1[8]~127
+--operation mode is arithmetic
+
+A1L35 = CARRY(Count1[8] & (!A1L33));
+
+
+--Count1[9] is Count1[9]
+--operation mode is normal
+
+Count1[9]_carry_eqn = A1L35;
+Count1[9]_lut_out = Count1[9] $ (Count1[9]_carry_eqn);
+Count1[9] = DFFEAS(Count1[9]_lut_out, Period1uS, VCC, , , , , A1L151, );
+
+
+--Count2[8] is Count2[8]
+--operation mode is arithmetic
+
+Count2[8]_carry_eqn = A1L53;
+Count2[8]_lut_out = Count2[8] $ (!Count2[8]_carry_eqn);
+Count2[8] = DFFEAS(Count2[8]_lut_out, Count1[9], VCC, , , , , A1L148, );
+
+--A1L55 is Count2[8]~131
+--operation mode is arithmetic
+
+A1L55 = CARRY(Count2[8] & (!A1L53));
+
+
+--Count2[5] is Count2[5]
+--operation mode is arithmetic
+
+Count2[5]_carry_eqn = A1L47;
+Count2[5]_lut_out = Count2[5] $ (Count2[5]_carry_eqn);
+Count2[5] = DFFEAS(Count2[5]_lut_out, Count1[9], VCC, , , , , A1L148, );
+
+--A1L49 is Count2[5]~135
+--operation mode is arithmetic
+
+A1L49 = CARRY(!A1L47 # !Count2[5]);
+
+
+--Count2[6] is Count2[6]
+--operation mode is arithmetic
+
+Count2[6]_carry_eqn = A1L49;
+Count2[6]_lut_out = Count2[6] $ (!Count2[6]_carry_eqn);
+Count2[6] = DFFEAS(Count2[6]_lut_out, Count1[9], VCC, , , , , A1L148, );
+
+--A1L51 is Count2[6]~139
+--operation mode is arithmetic
+
+A1L51 = CARRY(Count2[6] & (!A1L49));
+
+
+--Count2[7] is Count2[7]
+--operation mode is arithmetic
+
+Count2[7]_carry_eqn = A1L51;
+Count2[7]_lut_out = Count2[7] $ (Count2[7]_carry_eqn);
+Count2[7] = DFFEAS(Count2[7]_lut_out, Count1[9], VCC, , , , , A1L148, );
+
+--A1L53 is Count2[7]~143
+--operation mode is arithmetic
+
+A1L53 = CARRY(!A1L51 # !Count2[7]);
+
+
+--A1L146 is LessThan~384
+--operation mode is normal
+
+A1L146 = Count2[9] & Count2[5] & Count2[6] & Count2[7];
+
+
+--Count2[4] is Count2[4]
+--operation mode is arithmetic
+
+Count2[4]_carry_eqn = A1L45;
+Count2[4]_lut_out = Count2[4] $ (!Count2[4]_carry_eqn);
+Count2[4] = DFFEAS(Count2[4]_lut_out, Count1[9], VCC, , , , , A1L148, );
+
+--A1L47 is Count2[4]~147
+--operation mode is arithmetic
+
+A1L47 = CARRY(Count2[4] & (!A1L45));
+
+
+--Count2[3] is Count2[3]
+--operation mode is arithmetic
+
+Count2[3]_carry_eqn = A1L43;
+Count2[3]_lut_out = Count2[3] $ (Count2[3]_carry_eqn);
+Count2[3] = DFFEAS(Count2[3]_lut_out, Count1[9], VCC, , , , , A1L148, );
+
+--A1L45 is Count2[3]~151
+--operation mode is arithmetic
+
+A1L45 = CARRY(!A1L43 # !Count2[3]);
+
+
+--Count2[0] is Count2[0]
+--operation mode is arithmetic
+
+Count2[0]_lut_out = !Count2[0];
+Count2[0] = DFFEAS(Count2[0]_lut_out, Count1[9], VCC, , , , , A1L148, );
+
+--A1L39 is Count2[0]~155
+--operation mode is arithmetic
+
+A1L39 = CARRY(Count2[0]);
+
+
+--Count2[1] is Count2[1]
+--operation mode is arithmetic
+
+Count2[1]_carry_eqn = A1L39;
+Count2[1]_lut_out = Count2[1] $ (Count2[1]_carry_eqn);
+Count2[1] = DFFEAS(Count2[1]_lut_out, Count1[9], VCC, , , , , A1L148, );
+
+--A1L41 is Count2[1]~159
+--operation mode is arithmetic
+
+A1L41 = CARRY(!A1L39 # !Count2[1]);
+
+
+--Count2[2] is Count2[2]
+--operation mode is arithmetic
+
+Count2[2]_carry_eqn = A1L41;
+Count2[2]_lut_out = Count2[2] $ (!Count2[2]_carry_eqn);
+Count2[2] = DFFEAS(Count2[2]_lut_out, Count1[9], VCC, , , , , A1L148, );
+
+--A1L43 is Count2[2]~163
+--operation mode is arithmetic
+
+A1L43 = CARRY(Count2[2] & (!A1L41));
+
+
+--A1L147 is LessThan~385
+--operation mode is normal
+
+A1L147 = Count2[3] # Count2[0] & Count2[1] & Count2[2];
+
+
+--A1L148 is LessThan~386
+--operation mode is normal
+
+A1L148 = Count2[8] & A1L146 & (Count2[4] # A1L147);
+
+
+--Period1uS is Period1uS
+--operation mode is normal
+
+Period1uS_lut_out = A1L5;
+Period1uS = DFFEAS(Period1uS_lut_out, GCLKP1, VCC, , RESET, , , , );
+
+
+--Count1[7] is Count1[7]
+--operation mode is arithmetic
+
+Count1[7]_carry_eqn = A1L31;
+Count1[7]_lut_out = Count1[7] $ (Count1[7]_carry_eqn);
+Count1[7] = DFFEAS(Count1[7]_lut_out, Period1uS, VCC, , , , , A1L151, );
+
+--A1L33 is Count1[7]~135
+--operation mode is arithmetic
+
+A1L33 = CARRY(!A1L31 # !Count1[7]);
+
+
+--Count1[5] is Count1[5]
+--operation mode is arithmetic
+
+Count1[5]_carry_eqn = A1L27;
+Count1[5]_lut_out = Count1[5] $ (Count1[5]_carry_eqn);
+Count1[5] = DFFEAS(Count1[5]_lut_out, Period1uS, VCC, , , , , A1L151, );
+
+--A1L29 is Count1[5]~139
+--operation mode is arithmetic
+
+A1L29 = CARRY(!A1L27 # !Count1[5]);
+
+
+--Count1[6] is Count1[6]
+--operation mode is arithmetic
+
+Count1[6]_carry_eqn = A1L29;
+Count1[6]_lut_out = Count1[6] $ (!Count1[6]_carry_eqn);
+Count1[6] = DFFEAS(Count1[6]_lut_out, Period1uS, VCC, , , , , A1L151, );
+
+--A1L31 is Count1[6]~143
+--operation mode is arithmetic
+
+A1L31 = CARRY(Count1[6] & (!A1L29));
+
+
+--A1L149 is LessThan~387
+--operation mode is normal
+
+A1L149 = Count1[8] & Count1[9] & Count1[5] & Count1[6];
+
+
+--Count1[4] is Count1[4]
+--operation mode is arithmetic
+
+Count1[4]_carry_eqn = A1L25;
+Count1[4]_lut_out = Count1[4] $ (!Count1[4]_carry_eqn);
+Count1[4] = DFFEAS(Count1[4]_lut_out, Period1uS, VCC, , , , , A1L151, );
+
+--A1L27 is Count1[4]~147
+--operation mode is arithmetic
+
+A1L27 = CARRY(Count1[4] & (!A1L25));
+
+
+--Count1[3] is Count1[3]
+--operation mode is arithmetic
+
+Count1[3]_carry_eqn = A1L23;
+Count1[3]_lut_out = Count1[3] $ (Count1[3]_carry_eqn);
+Count1[3] = DFFEAS(Count1[3]_lut_out, Period1uS, VCC, , , , , A1L151, );
+
+--A1L25 is Count1[3]~151
+--operation mode is arithmetic
+
+A1L25 = CARRY(!A1L23 # !Count1[3]);
+
+
+--Count1[0] is Count1[0]
+--operation mode is arithmetic
+
+Count1[0]_lut_out = !Count1[0];
+Count1[0] = DFFEAS(Count1[0]_lut_out, Period1uS, VCC, , , , , A1L151, );
+
+--A1L19 is Count1[0]~155
+--operation mode is arithmetic
+
+A1L19 = CARRY(Count1[0]);
+
+
+--Count1[1] is Count1[1]
+--operation mode is arithmetic
+
+Count1[1]_carry_eqn = A1L19;
+Count1[1]_lut_out = Count1[1] $ (Count1[1]_carry_eqn);
+Count1[1] = DFFEAS(Count1[1]_lut_out, Period1uS, VCC, , , , , A1L151, );
+
+--A1L21 is Count1[1]~159
+--operation mode is arithmetic
+
+A1L21 = CARRY(!A1L19 # !Count1[1]);
+
+
+--Count1[2] is Count1[2]
+--operation mode is arithmetic
+
+Count1[2]_carry_eqn = A1L21;
+Count1[2]_lut_out = Count1[2] $ (!Count1[2]_carry_eqn);
+Count1[2] = DFFEAS(Count1[2]_lut_out, Period1uS, VCC, , , , , A1L151, );
+
+--A1L23 is Count1[2]~163
+--operation mode is arithmetic
+
+A1L23 = CARRY(Count1[2] & (!A1L21));
+
+
+--A1L150 is LessThan~388
+--operation mode is normal
+
+A1L150 = Count1[3] # Count1[0] & Count1[1] & Count1[2];
+
+
+--A1L151 is LessThan~389
+--operation mode is normal
+
+A1L151 = Count1[7] & A1L149 & (Count1[4] # A1L150);
+
+
+--A1L4 is add~746
+--operation mode is normal
+
+A1L4_carry_eqn = A1L7;
+A1L4 = Count[5] $ (A1L4_carry_eqn);
+
+
+--Count[3] is Count[3]
+--operation mode is normal
+
+Count[3]_lut_out = A1L8 & (!Count[4] # !Count[5] # !A1L152);
+Count[3] = DFFEAS(Count[3]_lut_out, GCLKP1, RESET, , , , , , );
+
+
+--Count[2] is Count[2]
+--operation mode is normal
+
+Count[2]_lut_out = A1L10 & (!Count[4] # !Count[5] # !A1L152);
+Count[2] = DFFEAS(Count[2]_lut_out, GCLKP1, RESET, , , , , , );
+
+
+--Count[1] is Count[1]
+--operation mode is normal
+
+Count[1]_lut_out = A1L12 & (!Count[4] # !Count[5] # !A1L152);
+Count[1] = DFFEAS(Count[1]_lut_out, GCLKP1, RESET, , , , , , );
+
+
+--Count[0] is Count[0]
+--operation mode is normal
+
+Count[0]_lut_out = A1L14 & (!Count[4] # !Count[5] # !A1L152);
+Count[0] = DFFEAS(Count[0]_lut_out, GCLKP1, RESET, , , , , , );
+
+
+--A1L152 is LessThan~390
+--operation mode is normal
+
+A1L152 = Count[3] # Count[2] # Count[1] # Count[0];
+
+
+--Count[5] is Count[5]
+--operation mode is normal
+
+Count[5]_lut_out = A1L5;
+Count[5] = DFFEAS(Count[5]_lut_out, GCLKP1, RESET, , , , , , );
+
+
+--Count[4] is Count[4]
+--operation mode is normal
+
+Count[4]_lut_out = A1L6 & (!Count[4] # !Count[5] # !A1L152);
+Count[4] = DFFEAS(Count[4]_lut_out, GCLKP1, RESET, , , , , , );
+
+
+--A1L5 is add~751
+--operation mode is normal
+
+A1L5 = A1L4 & (!Count[4] # !Count[5] # !A1L152);
+
+
+--A1L6 is add~752
+--operation mode is arithmetic
+
+A1L6_carry_eqn = A1L9;
+A1L6 = Count[4] $ (!A1L6_carry_eqn);
+
+--A1L7 is add~754
+--operation mode is arithmetic
+
+A1L7 = CARRY(Count[4] & (!A1L9));
+
+
+--A1L8 is add~757
+--operation mode is arithmetic
+
+A1L8_carry_eqn = A1L11;
+A1L8 = Count[3] $ (A1L8_carry_eqn);
+
+--A1L9 is add~759
+--operation mode is arithmetic
+
+A1L9 = CARRY(!A1L11 # !Count[3]);
+
+
+--A1L10 is add~763
+--operation mode is arithmetic
+
+A1L10_carry_eqn = A1L13;
+A1L10 = Count[2] $ (!A1L10_carry_eqn);
+
+--A1L11 is add~765
+--operation mode is arithmetic
+
+A1L11 = CARRY(Count[2] & (!A1L13));
+
+
+--A1L12 is add~769
+--operation mode is arithmetic
+
+A1L12_carry_eqn = A1L15;
+A1L12 = Count[1] $ (A1L12_carry_eqn);
+
+--A1L13 is add~771
+--operation mode is arithmetic
+
+A1L13 = CARRY(!A1L15 # !Count[1]);
+
+
+--A1L14 is add~775
+--operation mode is arithmetic
+
+A1L14 = !Count[0];
+
+--A1L15 is add~777
+--operation mode is arithmetic
+
+A1L15 = CARRY(Count[0]);
+
+
+--RESET is RESET
+--operation mode is input
+
+RESET = INPUT();
+
+
+--GCLKP1 is GCLKP1
+--operation mode is input
+
+GCLKP1 = INPUT();
+
+
+--light[0] is light[0]
+--operation mode is output
+
+light[0] = OUTPUT(LED2[0]);
+
+
+--light[1] is light[1]
+--operation mode is output
+
+light[1] = OUTPUT(LED2[1]);
+
+
+--light[2] is light[2]
+--operation mode is output
+
+light[2] = OUTPUT(LED2[2]);
+
+
+--light[3] is light[3]
+--operation mode is output
+
+light[3] = OUTPUT(LED2[3]);
+
+
+--light[4] is light[4]
+--operation mode is output
+
+light[4] = OUTPUT(LED1[0]);
+
+
+--light[5] is light[5]
+--operation mode is output
+
+light[5] = OUTPUT(LED1[1]);
+
+
+--light[6] is light[6]
+--operation mode is output
+
+light[6] = OUTPUT(LED1[2]);
+
+
+--light[7] is light[7]
+--operation mode is output
+
+light[7] = OUTPUT(LED1[3]);
+
+
+--LEDOut[0] is LEDOut[0]
+--operation mode is output
+
+LEDOut[0] = OUTPUT(!A1L162);
+
+
+--LEDOut[1] is LEDOut[1]
+--operation mode is output
+
+LEDOut[1] = OUTPUT(!A1L163);
+
+
+--LEDOut[2] is LEDOut[2]
+--operation mode is output
+
+LEDOut[2] = OUTPUT(!A1L164);
+
+
+--LEDOut[3] is LEDOut[3]
+--operation mode is output
+
+LEDOut[3] = OUTPUT(!A1L165);
+
+
+--LEDOut[4] is LEDOut[4]
+--operation mode is output
+
+LEDOut[4] = OUTPUT(!A1L166);
+
+
+--LEDOut[5] is LEDOut[5]
+--operation mode is output
+
+LEDOut[5] = OUTPUT(!A1L167);
+
+
+--LEDOut[6] is LEDOut[6]
+--operation mode is output
+
+LEDOut[6] = OUTPUT(A1L168);
+
+
+--LEDOut[7] is LEDOut[7]
+--operation mode is output
+
+LEDOut[7] = OUTPUT(A1L169);
+
+
+--DigitSelect[0] is DigitSelect[0]
+--operation mode is output
+
+DigitSelect[0] = OUTPUT(Refresh[0]);
+
+
+--DigitSelect[1] is DigitSelect[1]
+--operation mode is output
+
+DigitSelect[1] = OUTPUT(Refresh[1]);
+
+
+--DigitSelect[2] is DigitSelect[2]
+--operation mode is output
+
+DigitSelect[2] = OUTPUT(Refresh[2]);
+
+

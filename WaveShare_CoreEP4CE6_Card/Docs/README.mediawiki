@@ -1,0 +1,3 @@
+== EP4CE6 Documentation ==
+
+[http://land-boards.com/blwiki/index.php?title=EP4CE6E22C8N_FPGA_Board Land Boards EP4CE6 Wiki page]

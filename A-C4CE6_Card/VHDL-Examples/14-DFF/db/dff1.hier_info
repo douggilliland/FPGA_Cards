@@ -1,0 +1,5 @@
+|dff1
+clk => q~reg0.CLK
+d => q~reg0.DATAIN
+
+

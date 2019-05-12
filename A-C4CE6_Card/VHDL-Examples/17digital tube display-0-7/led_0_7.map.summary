@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Sep 07 21:19:36 2015
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : led_0_7
+Top-level Entity Name : led_0_7
+Family : Cyclone IV E
+Total logic elements : 30
+    Total combinational functions : 30
+    Dedicated logic registers : 16
+Total registers : 16
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

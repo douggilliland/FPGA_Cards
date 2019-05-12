@@ -1,0 +1,131 @@
+
+<!--
+This XML file (created on Sat Jul 15 12:39:57 2006) contains limited information
+from the compilation of logic designs using Quartus II software (BUT NOT THE
+LOGIC DESIGN FILES) that will be transmitted to Altera Corporation through
+operation of the "TalkBack" feature.  To enable/disable this feature, run
+qtb_install.exe located in your quartus/bin folder.  For more information, go
+to license.txt.
+-->
+<talkback>
+<ver>5.0</ver>
+<schema>quartus_version_5.0_build_148.xsd</schema><license>
+	<nic_id>0007e977cc25</nic_id>
+	<cdrive_id>bc32e9a1</cdrive_id>
+</license>
+<tool>
+	<name>Quartus II</name>
+	<version>5.0</version>
+	<build>Build 148</build>
+	<module>quartus_asm.exe</module>
+	<edition>Full Version (Grace)</edition>
+	<compilation_end_time>Sat Jul 15 12:39:57 2006</compilation_end_time>
+</tool>
+<machine>
+	<os>Windows XP</os>
+	<cpu>
+		<proc_count>1</proc_count>
+		<cpu_freq units="MHz">2392</cpu_freq>
+	</cpu>
+	<ram units="MB">512</ram>
+</machine>
+<top_file>G:/work_room/PLD/Mars-7128-S Altera CPLD开发板/示例程序/VHDL/接口实验/i2c总线/i2c</top_file>
+<mep_data>
+	<command_line>quartus_asm --read_settings_files=off --write_settings_files=off i2c -c i2c</command_line>
+</mep_data>
+<software_data>
+	<smart_recompile>off</smart_recompile>
+</software_data>
+<assembler_settings>
+	<row>
+		<option>Use smart compilation</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Generate Serial Vector Format File (.svf) for Target Device</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Generate a JEDEC STAPL Format File (.jam) for Target Device</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Generate an uncompressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Compression mode</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Clock source for configuration device</option>
+		<setting>Internal</setting>
+		<default_value>Internal</default_value>
+	</row>
+	<row>
+		<option>Clock frequency of the configuration device</option>
+		<setting units="MHz">10</setting>
+		<default_value units="MHz">10</default_value>
+	</row>
+	<row>
+		<option>Divide clock frequency by</option>
+		<setting>1</setting>
+		<default_value>1</default_value>
+	</row>
+	<row>
+		<option>JTAG user code for target device</option>
+		<setting>Ffff</setting>
+		<default_value>Ffff</default_value>
+	</row>
+	<row>
+		<option>Auto user code</option>
+		<setting>off</setting>
+		<default_value>off</default_value>
+	</row>
+	<row>
+		<option>Security bit</option>
+		<setting>off</setting>
+		<default_value>off</default_value>
+	</row>
+	<row>
+		<option>Configuration device auto user code</option>
+		<setting>off</setting>
+		<default_value>off</default_value>
+	</row>
+	<row>
+		<option>Generate Tabular Text File (.ttf) For Target Device</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Generate Raw Binary File (.rbf) For Target Device</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Generate Hexadecimal (Intel-Format) Output File (.hexout) for Target Device</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Hexadecimal Output File start address</option>
+		<setting>0</setting>
+		<default_value>0</default_value>
+	</row>
+	<row>
+		<option>Hexadecimal Output File count direction</option>
+		<setting>Up</setting>
+		<default_value>Up</default_value>
+	</row>
+</assembler_settings>
+</talkback>

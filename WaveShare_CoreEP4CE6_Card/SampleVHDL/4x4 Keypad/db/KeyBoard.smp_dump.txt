@@ -1,0 +1,9 @@
+
+State Machine - |KeyBoard|key44:inst1|state
+Name state.S_5 state.S_4 state.S_3 state.S_2 state.S_1 state.S_0 
+state.S_0 0 0 0 0 0 0 
+state.S_1 0 0 0 0 1 1 
+state.S_2 0 0 0 1 0 1 
+state.S_3 0 0 1 0 0 1 
+state.S_4 0 1 0 0 0 1 
+state.S_5 1 0 0 0 0 1 

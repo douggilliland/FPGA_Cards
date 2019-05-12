@@ -1,0 +1,48 @@
+--深圳市21EDA电子
+--开发板型号:A-C5FB
+--www.21eda.com
+--www.sz-21eda.com
+--www.21eda.net
+--www.21eda-bbs.com
+
+--学习按键识别，FPGA检测 
+--key1 key2 key3 key4的状态作为数据输入，数码管作为状态显示
+--当按键按下时 对应的I/O为低电平（0），没有按键的时候是高电平（1）
+--KEY1对应的是I/O口第31脚
+--KEY2对应的是I/O口第28脚
+--KEY3对应的是I/O口第40脚
+--KEY4对应的是I/O口第32脚
+--本实验。按下板上的四个key时。LED显示得到的数据。
+--视频教程适合我们21EDA电子的所有学习板
+--注意：如果是自己建立工程，一定要把没有用到的管脚设置为三态输入。
+--21EDA-Altera-FPGA开发板使用入门.PDF里面讲了的，在最后几页。
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity key_led is
+port (
+key_in : in std_logic_vector (3 downto 0);   --KEY INPUT  k1 k2 k3 k4 
+led_out : out std_logic_vector (5 downto 0)  --LED OUTPUT
+);
+end entity;
+
+architecture key_led_arch of key_led is
+
+begin
+
+process(key_in)
+begin
+led_out <= (others => '1');   --上的时候，灯都是熄灭的
+
+case key_in is
+when "1110" => led_out <= "111110"; -- key1当按下KEY1时，点亮一个LED灯
+when "1101" => led_out <= "111100"; -- key2当按下KEY2时，点亮二个LED灯
+when "1011" => led_out <= "111000"; -- key3当按下KEY3时，点亮三个LED灯
+when "0111" => led_out <= "110000"; -- key4当按下KEY4时，点亮四个LED灯
+when others => NULL;
+end case;
+end process;
+
+end architecture;

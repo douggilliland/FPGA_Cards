@@ -1,0 +1,639 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.66 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.66 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Reading design: ps2_lcd1602_1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ps2_lcd1602_1.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ps2_lcd1602_1"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-pq208
+
+---- Source Options
+Top Module Name                    : ps2_lcd1602_1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : ps2_lcd1602_1.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "F:/FPGA/ps2_lcd_1602/ps2.vhd" in Library work.
+Entity <ps2> compiled.
+Entity <ps2> (Architecture <behavioral>) compiled.
+Compiling vhdl file "F:/FPGA/ps2_lcd_1602/LCD1602.vhd" in Library work.
+Architecture behavioral of Entity lcd1602 is up to date.
+Compiling vhdl file "F:/FPGA/ps2_lcd_1602/ps2_lcd1602_1.vhd" in Library work.
+Architecture behavioral of Entity ps2_lcd1602_1 is up to date.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ps2_lcd1602_1> (Architecture <behavioral>).
+Entity <ps2_lcd1602_1> analyzed. Unit <ps2_lcd1602_1> generated.
+
+Analyzing Entity <ps2> (Architecture <behavioral>).
+WARNING:Xst:819 - "F:/FPGA/ps2_lcd_1602/ps2.vhd" line 109: The following signals are missing in the process sensitivity list:
+   parbit.
+WARNING:Xst:819 - "F:/FPGA/ps2_lcd_1602/ps2.vhd" line 165: The following signals are missing in the process sensitivity list:
+   hit_cnt.
+Entity <ps2> analyzed. Unit <ps2> generated.
+
+Analyzing Entity <LCD1602> (Architecture <behavioral>).
+WARNING:Xst:790 - "F:/FPGA/ps2_lcd_1602/LCD1602.vhd" line 95: Index value(s) does not match array range, simulation mismatch.
+Entity <LCD1602> analyzed. Unit <LCD1602> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <LCD1602>.
+    Related source file is "F:/FPGA/ps2_lcd_1602/LCD1602.vhd".
+WARNING:Xst:1780 - Signal <m> is never used or assigned.
+    Found 31x8-bit dual-port distributed RAM for signal <cgram>.
+    -----------------------------------------------------------------------
+    | aspect ratio       | 31-word x 8-bit                     |          |
+    | clock              | connected to signal <key_ready>     | rise     |
+    | write enable       | connected to internal node          | low      |
+    | address            | connected to signal <key_cnt>       |          |
+    | dual address       | connected to signal <cnt1>          |          |
+    | data in            | connected to signal <ps2_data>      |          |
+    | data out           | not connected                       |          |
+    | dual data out      | connected to internal node          |          |
+    | ram_style          | Auto                                |          |
+    -----------------------------------------------------------------------
+INFO:Xst:1442 - HDL ADVISOR - The RAM contents appears to be read asynchronously. A synchronous read would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    Found finite state machine <FSM_0> for signal <Current_State>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 7                                              |
+    | Clock              | LCD_Clk (rising_edge)                          |
+    | Reset              | Reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | set_dlnf                                       |
+    | Power Up State     | set_dlnf                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <LCD_Data>.
+    Found 1-bit register for signal <LCD_RS>.
+    Found 5-bit adder for signal <$n0026> created at line 99.
+    Found 8-bit addsub for signal <$n0027>.
+    Found 8-bit adder for signal <$n0028> created at line 106.
+    Found 5-bit comparator less for signal <$n0029> created at line 98.
+    Found 5-bit comparator lessequal for signal <$n0030> created at line 103.
+    Found 15-bit comparator less for signal <$n0031> created at line 48.
+    Found 9-bit comparator less for signal <$n0032> created at line 61.
+    Found 1-bit register for signal <CLK1>.
+    Found 1-bit register for signal <Clk_Out>.
+    Found 5-bit register for signal <cnt1>.
+    Found 5-bit up counter for signal <key_cnt>.
+    Found 15-bit up counter for signal <n1>.
+    Found 9-bit up counter for signal <n2>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 RAM(s).
+	inferred   3 Counter(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <LCD1602> synthesized.
+
+
+Synthesizing Unit <ps2>.
+    Related source file is "F:/FPGA/ps2_lcd_1602/ps2.vhd".
+    Found finite state machine <FSM_1> for signal <c_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clock (rising_edge)                            |
+    | Reset              | resetn (negative)                              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 11-bit latch for signal <hit_cnt>.
+WARNING:Xst:737 - Found 1-bit latch for signal <hit_1>.
+    Found 4x1-bit ROM for signal <hit>.
+    Found 11-bit adder for signal <$n0018> created at line 214.
+    Found 1-bit xor2 for signal <$n0088> created at line 137.
+    Found 1-bit register for signal <act_ps2_clk>.
+    Found 3-bit up counter for signal <cntval>.
+    Found 1-bit register for signal <err>.
+    Found 1-bit register for signal <latch>.
+    Found 8-bit register for signal <leds>.
+    Found 1-bit register for signal <parbit>.
+    Found 1-bit register for signal <parset>.
+    Found 1-bit register for signal <prv_ps2_clk>.
+    Found 8-bit register for signal <recdata>.
+    Found 1-bit register for signal <shift>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ps2> synthesized.
+
+
+Synthesizing Unit <ps2_lcd1602_1>.
+    Related source file is "F:/FPGA/ps2_lcd_1602/ps2_lcd1602_1.vhd".
+Unit <ps2_lcd1602_1> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# LUT RAMs                                             : 1
+ 31x8-bit dual-port distributed RAM                    : 1
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 11-bit adder                                          : 1
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 3
+ 15-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 13
+ 1-bit register                                        : 9
+ 5-bit register                                        : 1
+ 8-bit register                                        : 3
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 11-bit latch                                          : 1
+# Comparators                                          : 3
+ 15-bit comparator less                                : 1
+ 5-bit comparator less                                 : 1
+ 5-bit comparator lessequal                            : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <a0/c_state> on signal <c_state[1:2]> with sequential encoding.
+--------------------
+ State  | Encoding
+--------------------
+ idle   | 00
+ start  | 01
+ data   | 10
+ parity | 11
+--------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <a1/Current_State> on signal <Current_State[1:3]> with gray encoding.
+----------------------------
+ State          | Encoding
+----------------------------
+ set_dlnf       | 000
+ set_cursor     | 001
+ set_dcb        | 011
+ set_cgram      | 010
+ write_cgram    | 110
+ set_ddram      | 111
+ write_lcd_data | 101
+----------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# LUT RAMs                                             : 1
+ 31x8-bit dual-port distributed RAM                    : 1
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 11-bit adder                                          : 1
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 3
+ 15-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 43
+ Flip-Flops                                            : 43
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 11-bit latch                                          : 1
+# Comparators                                          : 3
+ 15-bit comparator less                                : 1
+ 5-bit comparator less                                 : 1
+ 5-bit comparator lessequal                            : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '3s400.nph' in environment C:\Xilinx.
+
+Optimizing unit <ps2_lcd1602_1> ...
+
+Optimizing unit <LCD1602> ...
+
+Optimizing unit <ps2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ps2_lcd1602_1, actual ratio is 4.
+FlipFlop a1/Current_State_FFd1 has been replicated 1 time(s)
+FlipFlop a1/cnt1_0 has been replicated 2 time(s)
+FlipFlop a1/cnt1_1 has been replicated 2 time(s)
+FlipFlop a1/cnt1_2 has been replicated 2 time(s)
+FlipFlop a1/cnt1_3 has been replicated 3 time(s)
+FlipFlop a1/cnt1_4 has been replicated 2 time(s)
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ps2_lcd1602_1.ngr
+Top Level Output File Name         : ps2_lcd1602_1
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 276
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 16
+#      LUT2                        : 33
+#      LUT2_D                      : 3
+#      LUT3                        : 28
+#      LUT3_D                      : 2
+#      LUT3_L                      : 13
+#      LUT4                        : 85
+#      LUT4_D                      : 6
+#      LUT4_L                      : 16
+#      MUXCY                       : 27
+#      MUXF5                       : 15
+#      VCC                         : 1
+#      XORCY                       : 21
+# FlipFlops/Latches                : 90
+#      FDC                         : 13
+#      FDCE                        : 11
+#      FDE                         : 9
+#      FDP                         : 16
+#      FDPE                        : 9
+#      FDR                         : 20
+#      LD                          : 11
+#      LDC                         : 1
+# RAMS                             : 16
+#      RAM16X1D                    : 16
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 15
+#      IBUF                        : 4
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-5 
+
+ Number of Slices:                     129  out of   3584     3%  
+ Number of Slice Flip Flops:            90  out of   7168     1%  
+ Number of 4 input LUTs:               234  out of   7168     3%  
+    Number used as logic: 202
+    Number used as RAMs: 32
+ Number of bonded IOBs:                 16  out of    141    11%  
+ Number of GCLKs:                        3  out of      8    37%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 44    |
+a1/Clk_Out1                        | BUFG                   | 29    |
+a0/hit_11                          | BUFG                   | 21    |
+a0/_n0017(a0/_n00171:O)            | NONE(*)(a0/hit_1)      | 1     |
+a0/N3(a0/Mrom_data_Mrom_hit:O)     | NONE(*)(a0/hit_cnt_8)  | 11    |
+-----------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.809ns (Maximum Frequency: 128.064MHz)
+   Minimum input arrival time before clock: 3.506ns
+   Maximum output required time after clock: 6.280ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 4.991ns (frequency: 200.345MHz)
+  Total number of paths / destination ports: 454 / 78
+-------------------------------------------------------------------------
+Delay:               4.991ns (Levels of Logic = 7)
+  Source:            a1/n1_0 (FF)
+  Destination:       a1/n1_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: a1/n1_0 to a1/n1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.626   1.040  a1/n1_0 (a1/n1_0)
+     LUT4:I0->O            1   0.479   0.000  a1/Mcompar__n0031_andlut (a1/N47)
+     MUXCY:S->O            1   0.435   0.000  a1/Mcompar__n0031_andcy (a1/Mcompar__n0031_and_cyo)
+     MUXCY:CI->O           1   0.056   0.000  a1/Mcompar__n0031_andcy_rn_0 (a1/Mcompar__n0031_and_cyo1)
+     MUXCY:CI->O           1   0.056   0.000  a1/Mcompar__n0031_norcy (a1/Mcompar__n0031_nor_cyo)
+     MUXCY:CI->O           1   0.056   0.000  a1/Mcompar__n0031_andcy_rn_1 (a1/Mcompar__n0031_and_cyo2)
+     MUXCY:CI->O           1   0.056   0.000  a1/Mcompar__n0031_norcy_rn_0 (a1/Mcompar__n0031_nor_cyo1)
+     MUXCY:CI->O          16   0.246   1.051  a1/Mcompar__n0031_andcy_rn_2 (a1/Mcompar__n0031_and_cyo3)
+     FDR:R                     0.892          a1/n1_0
+    ----------------------------------------
+    Total                      4.991ns (2.900ns logic, 2.092ns route)
+                                       (58.1% logic, 41.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'a1/Clk_Out1'
+  Clock period: 7.809ns (frequency: 128.064MHz)
+  Total number of paths / destination ports: 899 / 29
+-------------------------------------------------------------------------
+Delay:               7.809ns (Levels of Logic = 12)
+  Source:            a1/cnt1_2_1 (FF)
+  Destination:       a1/LCD_Data_7 (FF)
+  Source Clock:      a1/Clk_Out1 rising
+  Destination Clock: a1/Clk_Out1 rising
+
+  Data Path: a1/cnt1_2_1 to a1/LCD_Data_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.626   1.066  a1/cnt1_2_1 (a1/cnt1_2_1)
+     LUT2_D:I0->O          2   0.479   0.768  a1/_n0023<1>1_SW0 (N1045)
+     LUT4:I3->O            1   0.479   0.704  a1/LCD1602__n0027<1>lut_SW0 (N1094)
+     LUT4_L:I3->LO         1   0.479   0.000  a1/LCD1602__n0027<1>lut (a1/N42)
+     MUXCY:S->O            1   0.435   0.000  a1/LCD1602__n0027<1>cy (a1/LCD1602__n0027<1>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  a1/LCD1602__n0027<2>cy (a1/LCD1602__n0027<2>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  a1/LCD1602__n0027<3>cy (a1/LCD1602__n0027<3>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  a1/LCD1602__n0027<4>cy (a1/LCD1602__n0027<4>_cyo)
+     MUXCY:CI->O           2   0.056   0.000  a1/LCD1602__n0027<5>cy (a1/LCD1602__n0027<5>_cyo)
+     MUXCY:CI->O           0   0.056   0.000  a1/LCD1602__n0027<6>cy (a1/LCD1602__n0027<6>_cyo)
+     XORCY:CI->O           1   0.786   0.740  a1/LCD1602__n0027<7>_xor (a1/_n0027<7>)
+     LUT3_L:I2->LO         1   0.479   0.000  a1/_n0018<7>1111_G (N1158)
+     MUXF5:I1->O           1   0.314   0.000  a1/_n0018<7>1111 (a1/_n0018<7>)
+     FDE:D                     0.176          a1/LCD_Data_7
+    ----------------------------------------
+    Total                      7.809ns (4.531ns logic, 3.278ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'a0/hit_11'
+  Clock period: 5.539ns (frequency: 180.545MHz)
+  Total number of paths / destination ports: 160 / 90
+-------------------------------------------------------------------------
+Delay:               5.539ns (Levels of Logic = 2)
+  Source:            a1/key_cnt_1 (FF)
+  Destination:       a1/inst_Mram_mem81 (RAM)
+  Source Clock:      a0/hit_11 rising
+  Destination Clock: a0/hit_11 rising
+
+  Data Path: a1/key_cnt_1 to a1/inst_Mram_mem81
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             53   0.626   1.972  a1/key_cnt_1 (a1/key_cnt_1)
+     LUT4_D:I0->O          1   0.479   0.740  a1/_n00071 (a1/N53)
+     LUT3:I2->O            8   0.479   0.921  a1/write_ctrl1 (a1/N6)
+     RAM16X1D:WE               0.322          a1/inst_Mram_mem81
+    ----------------------------------------
+    Total                      5.539ns (1.906ns logic, 3.633ns route)
+                                       (34.4% logic, 65.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'a0/N3'
+  Clock period: 6.052ns (frequency: 165.244MHz)
+  Total number of paths / destination ports: 71 / 11
+-------------------------------------------------------------------------
+Delay:               6.052ns (Levels of Logic = 5)
+  Source:            a0/hit_cnt_2 (LATCH)
+  Destination:       a0/hit_cnt_10 (LATCH)
+  Source Clock:      a0/N3 falling
+  Destination Clock: a0/N3 falling
+
+  Data Path: a0/hit_cnt_2 to a0/hit_cnt_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               5   0.551   1.078  a0/hit_cnt_2 (a0/hit_cnt_2)
+     LUT2:I0->O            1   0.479   0.704  a0/Ker01_SW0 (N943)
+     LUT4_D:I3->LO         1   0.479   0.159  a0/Ker01 (N1174)
+     LUT3:I2->O            3   0.479   0.830  a0/Ker111 (a0/N11)
+     LUT3_D:I2->LO         1   0.479   0.159  a0/Ker81 (N1173)
+     LUT3_L:I2->LO         1   0.479   0.000  a0/_n0014<10>1 (a0/_n0014<10>)
+     LD:D                      0.176          a0/hit_cnt_10
+    ----------------------------------------
+    Total                      6.052ns (3.122ns logic, 2.930ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a1/Clk_Out1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.194ns (Levels of Logic = 1)
+  Source:            Reset2 (PAD)
+  Destination:       a1/LCD_Data_0 (FF)
+  Destination Clock: a1/Clk_Out1 rising
+
+  Data Path: Reset2 to a1/LCD_Data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.715   0.955  Reset2_IBUF (Reset2_IBUF)
+     FDE:CE                    0.524          a1/LCD_Data_6
+    ----------------------------------------
+    Total                      2.194ns (1.239ns logic, 0.955ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              3.506ns (Levels of Logic = 3)
+  Source:            ps2_dta (PAD)
+  Destination:       a0/parset (FF)
+  Destination Clock: CLK rising
+
+  Data Path: ps2_dta to a0/parset
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.715   0.806  ps2_dta_IBUF (ps2_dta_IBUF)
+     LUT4:I3->O            1   0.479   0.851  a0/n_parset1 (a0/N5)
+     LUT2:I1->O            1   0.479   0.000  a0/n_parset2 (a0/n_parset)
+     FDP:D                     0.176          a0/parset
+    ----------------------------------------
+    Total                      3.506ns (1.849ns logic, 1.657ns route)
+                                       (52.7% logic, 47.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            a1/Clk_Out (FF)
+  Destination:       LCD_EN (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: a1/Clk_Out to LCD_EN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  a1/Clk_Out (a1/Clk_Out1)
+     OBUF:I->O                 4.909          LCD_EN_OBUF (LCD_EN)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a1/Clk_Out1'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            a1/LCD_RS (FF)
+  Destination:       LCD_RS (PAD)
+  Source Clock:      a1/Clk_Out1 rising
+
+  Data Path: a1/LCD_RS to LCD_RS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.626   0.681  a1/LCD_RS (a1/LCD_RS)
+     OBUF:I->O                 4.909          LCD_RS_OBUF (LCD_RS)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+CPU : 18.25 / 19.00 s | Elapsed : 18.00 / 19.00 s
+ 
+--> 
+
+Total memory usage is 115348 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

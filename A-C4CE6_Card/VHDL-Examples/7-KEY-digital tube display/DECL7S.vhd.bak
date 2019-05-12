@@ -1,0 +1,34 @@
+--深圳市21EDA电子
+--开发板型号:A-C5FB
+--www.21eda.com
+--www.21eda.net
+--按下板上的四个key时。数码管显示得到的数据。
+--视频教程适合我们21EDA电子的所有学习板--本实验.
+--注意：如果是自己建立工程，一定要把没有用到的管脚设置为三态输入。
+--21EDA-Altera-FPGA开发板使用入门.PDF里面讲了的，在最后几页。
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+entity DECL7S  is
+PORT ( key_data  : IN  STD_LOGIC_VECTOR(3 DOWNTO 0); --定义按键按输入
+       LED7      : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); --定义数码管的8个驱动口
+       LED7S : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)  ) ; --定义数码管的8段码口
+end DECL7S ;
+ 
+ ARCHITECTURE behav OF DECL7S IS 
+ signal led_temp: std_logic_vector(3 downto 0);
+ BEGIN 
+  PROCESS( key_data ) 
+  BEGIN 
+     LED7 <="00000000" ;   --让数码管的8个数码管都被同时驱动。
+     led_temp<= key_data ;
+  CASE  led_temp  IS 
+   WHEN "1110" =>  LED7S <= "11111001";    --  1--按下key1数码管显示1
+   WHEN "1101" =>  LED7S <= "10100100";    --  2--按下key2数码管显示2
+   WHEN "1011" =>  LED7S <= "10110000";    --  3--按下key3数码管显示3
+   WHEN "0111" =>  LED7S <= "10011001";    --  4--按下key4数码管显示4
+   WHEN OTHERS =>  LED7S <= "10001110";    --  当没有按键时，显示FFFFFFFF
+   END CASE ; 
+  END PROCESS ; 
+ END behav; 

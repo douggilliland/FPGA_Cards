@@ -1,0 +1,76 @@
+--深圳市21EDA电子
+--开发板型号:A-C5FB
+--www.21eda.com
+--www.sz-21eda.com
+--www.21eda.net
+--www.21eda-bbs.com
+
+--学习LED控制。LED灯对应的脚为0时，点亮。为1时变暗
+--利用计数器分频，把50MHZ的频率变的更慢。我们眼睛可以分辨的出来。
+--视频教程适合我们21EDA电子的所有学习板
+
+LIBRARY IEEE;                                                  
+USE IEEE.STD_LOGIC_1164.ALL;                     
+USE IEEE.std_logic_unsigned.ALL;                   
+ENTITY LEDA is                                        
+     PORT(
+          clk:in STD_LOGIC;  --System Clk           --时钟输入                       
+          led1:out STD_LOGIC_VECTOR(7 DOWNTO 0));   --LED output定义了8个
+                                                    --我们这里实际只用了6个灯。
+END LEDA ;                                              
+ARCHITECTURE light OF LEDA IS            
+SIGNAL clk1,CLK2:std_logic;                                       
+BEGIN                                                                  
+P1:PROCESS (clk)                                              
+VARIABLE count:INTEGER RANGE  0 TO 9999999;
+BEGIN                                                                
+    IF clk'EVENT AND clk='1' THEN                            --当时钟脉冲上升沿到来时执行下面语句
+       IF count<=4999999 THEN                           
+          clk1<='0';                                          --当count<=499999时divls=0并且count加1
+          count:=count+1;                          
+        ELSIF count>=4999999 AND count<=9999999 THEN            --当ount>=499999 并且 count<=999998时
+               clk1<='1';                                            --                             
+               count:=count+1;                                --clk1=1并且count加1
+        ELSE count:=0;                                        --当count>=499999时清零count1
+        END IF;                                                      
+     END IF;                                          
+END PROCESS ;        
+P3:PROCESS(CLK1)   
+begin
+   IF clk1'event AND clk1='1'THEN  
+ clk2<=not clk2;
+ END IF; 
+END PROCESS P3;     
+---------------------------------------------------------
+P2:PROCESS(clk2)                                              
+variable count1:INTEGER RANGE 0 TO 16;                         --定义的整型变量用做计数器
+BEGIN                                                                --                                                 
+IF clk2'event AND clk2='1'THEN                                 --当时钟脉冲上升沿到来时执行下面语句
+   if count1<=16 then                                          --当COUNT1<=9时执行下面语句
+      if count1=15 then                                        --当COUNT1=8时，COUNT1清零
+         count1:=0;                                                 --
+      end if;                                                            --
+      CASE count1 IS                                             --CASE语句给输出LED1赋值
+      WHEN 0=>led1<="11111110";                        --依次点亮发光二极管
+      WHEN 1=>led1<="11111100";                        -- 
+      WHEN 2=>led1<="11111000";                        --
+      WHEN 3=>led1<="11110000";                        --
+      WHEN 4=>led1<="11100000";                        --
+      WHEN 5=>led1<="11000000";                        --
+      WHEN 6=>led1<="10000000";                        --
+      WHEN 7=>led1<="00000000"; 
+      WHEN 8=>led1<= "01111111";                        --依次点亮发光二极管
+      WHEN 9=>led1<= "00111111";                        -- 
+      WHEN 10=>led1<="00011111";                        --
+      WHEN 11=>led1<="00001111";                        --
+      WHEN 12=>led1<="00000111";                        --
+      WHEN 13=>led1<="00000011";                        --
+      WHEN 14=>led1<="00000001";                        --
+      WHEN 15=>led1<="00000000";                        --                       --
+      WHEN OTHERS=>led1<="11111111";              
+      END CASE;                                                     
+      count1:=count1+1;                                   
+    end if;                                                                     
+end if;                                                                        
+end process;                              
+END light;

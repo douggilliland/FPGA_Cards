@@ -1,0 +1,32 @@
+--深圳市21EDA电子
+--开发板型号:A-C8V4
+--www.21eda.com
+--学习分频原理，在LED上面显示出来。一亮一暗
+--输出是1Hz
+--视频教程适合我们21EDA电子的所有学习板
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity div_f is
+port(clk      :in std_logic;  --输入系统时钟
+     miao_out :out std_logic);  --输出1hz时钟信号  led display
+     end div_f ;
+     
+architecture miao of div_f is
+begin 
+ process(clk)
+variable cnt:integer range 0 to 24999999;  --分频系数为24999999
+variable ff:std_logic;
+begin
+    if clk'event and clk='1' then
+    if cnt<24999999 then
+      cnt:=cnt+1;
+    else
+    cnt:=0;
+    ff:=not ff;  --反向
+
+    end if;
+   end if;
+    miao_out<= not ff ;  --反向
+end process ;
+end miao ;

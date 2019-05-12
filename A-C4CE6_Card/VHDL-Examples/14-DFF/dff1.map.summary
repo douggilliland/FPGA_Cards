@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Sep 07 20:55:02 2015
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : dff1
+Top-level Entity Name : dff1
+Family : Cyclone IV E
+Total logic elements : 1
+    Total combinational functions : 0
+    Dedicated logic registers : 1
+Total registers : 1
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Sep 04 17:47:18 2012
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : USB_LED
+Top-level Entity Name : USB_LED
+Family : Cyclone IV E
+Total logic elements : 636
+    Total combinational functions : 423
+    Dedicated logic registers : 489
+Total registers : 489
+Total pins : 30
+Total virtual pins : 0
+Total memory bits : 16,384
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

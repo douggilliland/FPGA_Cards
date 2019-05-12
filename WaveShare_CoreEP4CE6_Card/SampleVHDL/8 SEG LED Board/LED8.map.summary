@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon May 14 10:42:13 2018
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : LED8
+Top-level Entity Name : LED8
+Family : Cyclone IV E
+Total logic elements : 83
+    Total combinational functions : 77
+    Dedicated logic registers : 43
+Total registers : 43
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

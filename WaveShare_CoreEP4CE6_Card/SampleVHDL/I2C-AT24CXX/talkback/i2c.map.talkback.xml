@@ -1,0 +1,228 @@
+
+<!--
+This XML file (created on Sat Jul 15 12:39:43 2006) contains limited information
+from the compilation of logic designs using Quartus II software (BUT NOT THE
+LOGIC DESIGN FILES) that will be transmitted to Altera Corporation through
+operation of the "TalkBack" feature.  To enable/disable this feature, run
+qtb_install.exe located in your quartus/bin folder.  For more information, go
+to license.txt.
+-->
+<talkback>
+<ver>5.0</ver>
+<schema>quartus_version_5.0_build_148.xsd</schema><license>
+	<nic_id>0007e977cc25</nic_id>
+	<cdrive_id>bc32e9a1</cdrive_id>
+</license>
+<tool>
+	<name>Quartus II</name>
+	<version>5.0</version>
+	<build>Build 148</build>
+	<module>quartus_map.exe</module>
+	<edition>Full Version (Grace)</edition>
+	<compilation_end_time>Sat Jul 15 12:39:44 2006</compilation_end_time>
+</tool>
+<machine>
+	<os>Windows XP</os>
+	<cpu>
+		<proc_count>1</proc_count>
+		<cpu_freq units="MHz">2392</cpu_freq>
+	</cpu>
+	<ram units="MB">512</ram>
+</machine>
+<top_file>G:/work_room/PLD/Mars-7128-S Altera CPLD开发板/示例程序/VHDL/接口实验/i2c总线/i2c</top_file>
+<mep_data>
+	<command_line>quartus_map --read_settings_files=on --write_settings_files=off i2c -c i2c</command_line>
+</mep_data>
+<software_data>
+	<smart_recompile>off</smart_recompile>
+</software_data>
+<analysis___synthesis_settings>
+	<row>
+		<option>Device</option>
+		<setting>EPM7128SLC84-15</setting>
+	</row>
+	<row>
+		<option>Top-level entity name</option>
+		<setting>i2c</setting>
+		<default_value>i2c</default_value>
+	</row>
+	<row>
+		<option>Family name</option>
+		<setting>MAX7000S</setting>
+		<default_value>Stratix</default_value>
+	</row>
+	<row>
+		<option>Use smart compilation</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Create Debugging Nodes for IP Cores</option>
+		<setting>off</setting>
+		<default_value>off</default_value>
+	</row>
+	<row>
+		<option>Preserve fewer node names</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Disable OpenCore Plus hardware evaluation</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Verilog Version</option>
+		<setting>Verilog_2001</setting>
+		<default_value>Verilog_2001</default_value>
+	</row>
+	<row>
+		<option>VHDL Version</option>
+		<setting>VHDL93</setting>
+		<default_value>VHDL93</default_value>
+	</row>
+	<row>
+		<option>State Machine Processing</option>
+		<setting>Auto</setting>
+		<default_value>Auto</default_value>
+	</row>
+	<row>
+		<option>Extract Verilog State Machines</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Extract VHDL State Machines</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Add Pass-Through Logic to Inferred RAMs</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>NOT Gate Push-Back</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Power-Up Don&apos;t Care</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Remove Redundant Logic Cells</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Remove Duplicate Registers</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Ignore CARRY Buffers</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Ignore CASCADE Buffers</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Ignore GLOBAL Buffers</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Ignore ROW GLOBAL Buffers</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Ignore LCELL Buffers -- MAX 7000B/7000AE/3000A/7000S/7000A</option>
+		<setting>Auto</setting>
+		<default_value>Auto</default_value>
+	</row>
+	<row>
+		<option>Ignore SOFT Buffers -- MAX 7000B/7000AE/3000A/7000S/7000A</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Limit AHDL Integers to 32 Bits</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Optimization Technique -- MAX 7000B/7000AE/3000A/7000S/7000A</option>
+		<setting>Speed</setting>
+		<default_value>Speed</default_value>
+	</row>
+	<row>
+		<option>Allow XOR Gate Usage</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Auto Logic Cell Insertion</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Parallel Expander Chain Length -- MAX 7000B/7000AE/3000A/7000S/7000A</option>
+		<setting>4</setting>
+		<default_value>4</default_value>
+	</row>
+	<row>
+		<option>Auto Parallel Expanders</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Auto Open-Drain Pins</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Remove Duplicate Logic</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Auto Resource Sharing</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Maximum Fan-in Per Macrocell -- MAX 7000B/7000AE/3000A/7000S/7000A</option>
+		<setting>100</setting>
+		<default_value>100</default_value>
+	</row>
+	<row>
+		<option>Ignore translate_off and translate_on Synthesis Directives</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Show Parameter Settings Tables in Synthesis Report</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+</analysis___synthesis_settings>
+<compilation_summary>
+	<flow_status>Successful - Sat Jul 15 12:39:43 2006</flow_status>
+	<quartus_ii_version>5.0 Build 148 04/26/2005 SJ Full Version</quartus_ii_version>
+	<revision_name>i2c</revision_name>
+	<top_level_entity_name>i2c</top_level_entity_name>
+	<family>MAX7000S</family>
+	<device>EPM7128SLC84-15</device>
+	<timing_models>Final</timing_models>
+	<met_timing_requirements>N/A</met_timing_requirements>
+	<total_macrocells>125</total_macrocells>
+	<total_pins>21</total_pins>
+</compilation_summary>
+<compile_id>9E8FBC97</compile_id>
+</talkback>

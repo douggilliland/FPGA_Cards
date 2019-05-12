@@ -1,0 +1,59 @@
+--------------------------------------------------------------------------------
+Release 8.1i Trace I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\bin\nt\trce.exe -ise ps2_lcd_1602.ise -intstyle ise -e 3 -l 3 -s 5
+-xml ps2_lcd1602_1 ps2_lcd1602_1.ncd -o ps2_lcd1602_1.twr ps2_lcd1602_1.pcf
+
+
+Design file:              ps2_lcd1602_1.ncd
+Physical constraint file: ps2_lcd1602_1.pcf
+Device,speed:             xc3s400,-5 (PRODUCTION 1.37 2005-11-04)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  |  Clock |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) |  Phase |
+------------+------------+------------+------------------+--------+
+ps2_clk     |    2.478(R)|   -0.279(R)|CLK_BUFGP         |   0.000|
+ps2_dta     |    3.250(R)|   -0.279(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+LCD_EN      |    9.226(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.783|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Analysis completed Thu May 17 22:17:45 2007
+--------------------------------------------------------------------------------
+
+
+
+Peak Memory Usage: 107 MB

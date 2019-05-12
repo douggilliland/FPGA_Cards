@@ -1,0 +1,34 @@
+|LCD1602
+CLK => Clk_Out.CLK
+CLK => n1[0].CLK
+CLK => n1[1].CLK
+CLK => n1[2].CLK
+CLK => n1[3].CLK
+CLK => n1[4].CLK
+CLK => n1[5].CLK
+CLK => n1[6].CLK
+CLK => n1[7].CLK
+CLK => n1[8].CLK
+CLK => n1[9].CLK
+CLK => n1[10].CLK
+CLK => n1[11].CLK
+CLK => n1[12].CLK
+CLK => n1[13].CLK
+CLK => n1[14].CLK
+Reset => LCD_RS~reg0.ACLR
+Reset => cnt1[0].ACLR
+Reset => cnt1[1].PRESET
+Reset => cnt1[2].PRESET
+Reset => cnt1[3].PRESET
+Reset => cnt1[4].PRESET
+Reset => Current_State~3.DATAIN
+Reset => LCD_Data[0]~reg0.ENA
+Reset => LCD_Data[7]~reg0.ENA
+Reset => LCD_Data[6]~reg0.ENA
+Reset => LCD_Data[5]~reg0.ENA
+Reset => LCD_Data[4]~reg0.ENA
+Reset => LCD_Data[3]~reg0.ENA
+Reset => LCD_Data[2]~reg0.ENA
+Reset => LCD_Data[1]~reg0.ENA
+
+

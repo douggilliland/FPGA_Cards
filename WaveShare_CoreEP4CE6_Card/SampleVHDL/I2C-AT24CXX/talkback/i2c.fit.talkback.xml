@@ -1,0 +1,506 @@
+
+<!--
+This XML file (created on Sat Jul 15 12:39:54 2006) contains limited information
+from the compilation of logic designs using Quartus II software (BUT NOT THE
+LOGIC DESIGN FILES) that will be transmitted to Altera Corporation through
+operation of the "TalkBack" feature.  To enable/disable this feature, run
+qtb_install.exe located in your quartus/bin folder.  For more information, go
+to license.txt.
+-->
+<talkback>
+<ver>5.0</ver>
+<schema>quartus_version_5.0_build_148.xsd</schema><license>
+	<nic_id>0007e977cc25</nic_id>
+	<cdrive_id>bc32e9a1</cdrive_id>
+</license>
+<tool>
+	<name>Quartus II</name>
+	<version>5.0</version>
+	<build>Build 148</build>
+	<module>quartus_fit.exe</module>
+	<edition>Full Version (Grace)</edition>
+	<compilation_end_time>Sat Jul 15 12:39:54 2006</compilation_end_time>
+</tool>
+<machine>
+	<os>Windows XP</os>
+	<cpu>
+		<proc_count>1</proc_count>
+		<cpu_freq units="MHz">2392</cpu_freq>
+	</cpu>
+	<ram units="MB">512</ram>
+</machine>
+<top_file>G:/work_room/PLD/Mars-7128-S Altera CPLD开发板/示例程序/VHDL/接口实验/i2c总线/i2c</top_file>
+<resource_usage_summary>
+	<rsc name="Logic cells" util="98" max=" 128 " type="int">126 </rsc>
+	<rsc name="Registers" util="54" max=" 128 " type="int">70 </rsc>
+	<rsc name="Number of pterms used" type="int">431</rsc>
+	<rsc name="User inserted logic elements" type="int">0</rsc>
+	<rsc name="I/O pins" util="36" max=" 68 " type="int">25 </rsc>
+	<rsc name="-- Clock pins" util="50" max=" 2 " type="int">1 </rsc>
+	<rsc name="-- Dedicated input pins" util="50" max=" 2 " type="int">1 </rsc>
+	<rsc name="Global signals" type="int">2</rsc>
+	<rsc name="Shareable expanders" util="18" max=" 128 " type="int">24 </rsc>
+	<rsc name="Parallel expanders" util="30" max=" 120 " type="int">36 </rsc>
+	<rsc name="Cells using turbo bit" util="98" max=" 128 " type="int">126 </rsc>
+	<rsc name="Maximum fan-out node" type="text">clk</rsc>
+	<rsc name="Maximum fan-out" type="int">70</rsc>
+	<rsc name="Total fan-out" type="int">1549</rsc>
+	<rsc name="Average fan-out" type="float">8.85</rsc>
+</resource_usage_summary>
+<control_signals>
+	<row>
+		<name>clk</name>
+		<location>PIN_83</location>
+		<fan_out>70</fan_out>
+		<usage>Clock</usage>
+		<global>yes</global>
+		<global_resource_used>On</global_resource_used>
+	</row>
+	<row>
+		<name>rst</name>
+		<location>PIN_1</location>
+		<fan_out>70</fan_out>
+		<usage>Async. clear</usage>
+		<global>yes</global>
+		<global_resource_used>On</global_resource_used>
+	</row>
+</control_signals>
+<non_global_high_fan_out_signals>
+	<row>
+		<name>writeData_reg[3]</name>
+		<fan_out>13</fan_out>
+	</row>
+	<row>
+		<name>writeData_reg[1]</name>
+		<fan_out>14</fan_out>
+	</row>
+	<row>
+		<name>writeData_reg[2]</name>
+		<fan_out>13</fan_out>
+	</row>
+	<row>
+		<name>writeData_reg[0]</name>
+		<fan_out>13</fan_out>
+	</row>
+	<row>
+		<name>lpm_counter:cnt_scan_rtl_0|dffs[0]</name>
+		<fan_out>24</fan_out>
+	</row>
+	<row>
+		<name>lpm_counter:cnt_scan_rtl_0|dffs[1]</name>
+		<fan_out>12</fan_out>
+	</row>
+	<row>
+		<name>cnt_delay[19]</name>
+		<fan_out>12</fan_out>
+	</row>
+	<row>
+		<name>clk_div[1]</name>
+		<fan_out>11</fan_out>
+	</row>
+	<row>
+		<name>i2c_state[1]</name>
+		<fan_out>52</fan_out>
+	</row>
+	<row>
+		<name>lpm_counter:cnt_scan_rtl_0|dffs[2]</name>
+		<fan_out>11</fan_out>
+	</row>
+</non_global_high_fan_out_signals>
+<interconnect_usage_summary>
+	<rsc name="Output enables" util="16" max=" 6 " type="int">1 </rsc>
+	<rsc name="PIA buffers" util="68" max=" 288 " type="int">196 </rsc>
+	<rsc name="PIAs" util="79" max=" 288 " type="int">229 </rsc>
+</interconnect_usage_summary>
+<mep_data>
+	<command_line>quartus_fit --read_settings_files=off --write_settings_files=off i2c -c i2c</command_line>
+</mep_data>
+<software_data>
+	<smart_recompile>off</smart_recompile>
+</software_data>
+<fitter_settings>
+	<row>
+		<option>Device</option>
+		<setting>EPM7128SLC84-15</setting>
+	</row>
+	<row>
+		<option>Fitter Effort</option>
+		<setting>Standard Fit</setting>
+		<default_value>Auto Fit</default_value>
+	</row>
+	<row>
+		<option>Use smart compilation</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Optimize Timing</option>
+		<setting>Normal compilation</setting>
+		<default_value>Normal compilation</default_value>
+	</row>
+	<row>
+		<option>Optimize IOC Register Placement for Timing</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Limit to One Fitting Attempt</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Fitter Initial Placement Seed</option>
+		<setting>1</setting>
+		<default_value>1</default_value>
+	</row>
+	<row>
+		<option>Slow Slew Rate</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+</fitter_settings>
+<fitter_device_options>
+	<row>
+		<option>Enable user-supplied start-up clock (CLKUSR)</option>
+		<setting>Off</setting>
+	</row>
+	<row>
+		<option>Enable device-wide reset (DEV_CLRn)</option>
+		<setting>Off</setting>
+	</row>
+	<row>
+		<option>Enable device-wide output enable (DEV_OE)</option>
+		<setting>Off</setting>
+	</row>
+	<row>
+		<option>Enable INIT_DONE output</option>
+		<setting>Off</setting>
+	</row>
+	<row>
+		<option>Configuration scheme</option>
+		<setting>Passive Serial</setting>
+	</row>
+	<row>
+		<option>Reserve all unused pins</option>
+		<setting>As input tri-stated</setting>
+	</row>
+	<row>
+		<option>Security bit</option>
+		<setting>Off</setting>
+	</row>
+	<row>
+		<option>Base pin-out file on sameframe device</option>
+		<setting>Off</setting>
+	</row>
+</fitter_device_options>
+<input_pins>
+	<row>
+		<name>clk</name>
+		<pin__>83</pin__>
+		<combinational_fan_out>70</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>yes</global>
+		<input_register>no</input_register>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+	<row>
+		<name>data_in[0]</name>
+		<pin__>24</pin__>
+		<lab>3</lab>
+		<combinational_fan_out>1</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+	<row>
+		<name>data_in[1]</name>
+		<pin__>22</pin__>
+		<lab>2</lab>
+		<combinational_fan_out>1</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+	<row>
+		<name>data_in[2]</name>
+		<pin__>21</pin__>
+		<lab>2</lab>
+		<combinational_fan_out>1</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+	<row>
+		<name>data_in[3]</name>
+		<pin__>20</pin__>
+		<lab>2</lab>
+		<combinational_fan_out>1</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+	<row>
+		<name>rd_input</name>
+		<pin__>36</pin__>
+		<lab>4</lab>
+		<combinational_fan_out>2</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+	<row>
+		<name>rst</name>
+		<pin__>1</pin__>
+		<combinational_fan_out>70</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>yes</global>
+		<input_register>no</input_register>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+	<row>
+		<name>wr_input</name>
+		<pin__>35</pin__>
+		<lab>4</lab>
+		<combinational_fan_out>3</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+</input_pins>
+<output_pins>
+	<row>
+		<name>en[0]</name>
+		<pin__>75</pin__>
+		<lab>8</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>en[1]</name>
+		<pin__>74</pin__>
+		<lab>8</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>lowbit</name>
+		<pin__>30</pin__>
+		<lab>3</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>scl</name>
+		<pin__>28</pin__>
+		<lab>3</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>seg_data[0]</name>
+		<pin__>61</pin__>
+		<lab>6</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>seg_data[1]</name>
+		<pin__>64</pin__>
+		<lab>7</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>seg_data[2]</name>
+		<pin__>56</pin__>
+		<lab>6</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>seg_data[3]</name>
+		<pin__>58</pin__>
+		<lab>6</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>seg_data[4]</name>
+		<pin__>60</pin__>
+		<lab>6</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>seg_data[5]</name>
+		<pin__>63</pin__>
+		<lab>7</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>seg_data[6]</name>
+		<pin__>55</pin__>
+		<lab>6</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>seg_data[7]</name>
+		<pin__>57</pin__>
+		<lab>6</lab>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+</output_pins>
+<bidir_pins>
+	<row>
+		<name>sda</name>
+		<pin__>29</pin__>
+		<lab>3</lab>
+		<combinational_fan_out>10</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<output_register>no</output_register>
+		<slow_slew_rate>no</slow_slew_rate>
+		<open_drain>no</open_drain>
+		<i_o_standard>TTL</i_o_standard>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+</bidir_pins>
+<compilation_summary>
+	<flow_status>Successful - Sat Jul 15 12:39:54 2006</flow_status>
+	<quartus_ii_version>5.0 Build 148 04/26/2005 SJ Full Version</quartus_ii_version>
+	<revision_name>i2c</revision_name>
+	<top_level_entity_name>i2c</top_level_entity_name>
+	<family>MAX7000S</family>
+	<device>EPM7128SLC84-15</device>
+	<timing_models>Final</timing_models>
+	<met_timing_requirements>N/A</met_timing_requirements>
+	<total_macrocells>126 / 128 ( 98 % )</total_macrocells>
+	<total_pins>25 / 68 ( 36 % )</total_pins>
+</compilation_summary>
+<compile_id>AB306C75</compile_id>
+<files>
+	<top>G:/work_room/PLD/Mars-7128-S Altera CPLD开发板/示例程序/VHDL/接口实验/i2c总线/i2c.vhd</top>
+	<extensions>
+		<ext ext_name="vhd">1</ext>
+		<ext ext_name="tdf">6</ext>
+		<ext ext_name="inc">19</ext>
+		<ext ext_name="lst">1</ext>
+	</extensions>
+	<sub_files>
+		<sub_file>G:/work_room/PLD/Mars-7128-S Altera CPLD开发板/示例程序/VHDL/接口实验/i2c总线/i2c.vhd</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/lpm_counter.tdf</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/lpm_constant.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/lpm_decode.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/lpm_add_sub.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/cmpconst.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/lpm_compare.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/lpm_counter.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/dffeea.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/alt_synch_counter.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/alt_synch_counter_f.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/alt_counter_f10ke.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/alt_counter_stratix.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/aglobal50.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/cbx.lst</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/lpm_add_sub.tdf</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/addcore.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/look_add.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/bypassff.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/altshift.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/alt_stratix_add_sub.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/alt_mercury_add_sub.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/addcore.tdf</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/a_csnbuffer.inc</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/a_csnbuffer.tdf</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/look_add.tdf</sub_file>
+		<sub_file>c:/altera/quartus501/libraries/megafunctions/altshift.tdf</sub_file>
+	</sub_files>
+</files>
+<architecture>
+	<family>MAX7000S</family>
+	<auto_device>OFF</auto_device>
+	<device>EPM7128SLC84-15</device>
+</architecture>
+<pkg_io>
+	<pin_std count="25">TTL</pin_std>
+</pkg_io>
+</talkback>

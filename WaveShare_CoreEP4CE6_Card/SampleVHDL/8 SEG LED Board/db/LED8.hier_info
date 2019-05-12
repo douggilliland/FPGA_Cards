@@ -1,0 +1,31 @@
+|LED8
+RESET => Glide[0].ACLR
+RESET => Glide[1].ACLR
+RESET => Glide[2].ACLR
+RESET => Glide[3].ACLR
+RESET => Count[0].ACLR
+RESET => Count[1].ACLR
+RESET => Count[2].ACLR
+RESET => Count[3].ACLR
+RESET => Count[4].ACLR
+RESET => Count[5].ACLR
+RESET => reflash[1].ENA
+RESET => reflash[0].ENA
+RESET => DigitSelect[3]~reg0.ENA
+RESET => DigitSelect[2]~reg0.ENA
+RESET => DigitSelect[1]~reg0.ENA
+RESET => DigitSelect[0]~reg0.ENA
+RESET => LED[3].ENA
+RESET => LED[2].ENA
+RESET => LED[1].ENA
+RESET => LED[0].ENA
+RESET => Period1uS.ENA
+GCLKP1 => Period1uS.CLK
+GCLKP1 => Count[0].CLK
+GCLKP1 => Count[1].CLK
+GCLKP1 => Count[2].CLK
+GCLKP1 => Count[3].CLK
+GCLKP1 => Count[4].CLK
+GCLKP1 => Count[5].CLK
+
+

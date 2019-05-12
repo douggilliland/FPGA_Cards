@@ -1,0 +1,126 @@
+--lpm_counter CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone" lpm_modulus=23 lpm_port_updown="PORT_CONNECTIVITY" lpm_width=5 clock q sclr CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 10.1 cbx_cycloneii 2010:11:29:22:18:02:SJ cbx_lpm_add_sub 2010:11:29:22:18:02:SJ cbx_lpm_compare 2010:11:29:22:18:02:SJ cbx_lpm_counter 2010:11:29:22:18:02:SJ cbx_lpm_decode 2010:11:29:22:18:02:SJ cbx_mgl 2010:11:29:22:19:52:SJ cbx_stratix 2010:11:29:22:18:02:SJ cbx_stratixii 2010:11:29:22:18:02:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2010 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION cmpr_n4c (dataa[4..0], datab[4..0])
+RETURNS ( aeb);
+FUNCTION cyclone_lcell (aclr, aload, cin, clk, dataa, datab, datac, datad, ena, inverta, regcascin, sclr, sload)
+WITH ( cin0_used, cin1_used, cin_used, lut_mask, operation_mode, output_mode, power_up, register_cascade_mode, sum_lutc_input, synch_mode, x_on_violation)
+RETURNS ( combout, cout, regout);
+
+--synthesis_resources = lut 6 
+SUBDESIGN cntr_a4i
+( 
+	clock	:	input;
+	q[4..0]	:	output;
+	sclr	:	input;
+) 
+VARIABLE 
+	cmpr1 : cmpr_n4c;
+	counter_cella0 : cyclone_lcell
+		WITH (
+			cin_used = "false",
+			lut_mask = "11AA",
+			operation_mode = "arithmetic",
+			synch_mode = "on"
+		);
+	counter_cella1 : cyclone_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "12A0",
+			operation_mode = "arithmetic",
+			sum_lutc_input = "cin",
+			synch_mode = "on"
+		);
+	counter_cella2 : cyclone_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "12A0",
+			operation_mode = "arithmetic",
+			sum_lutc_input = "cin",
+			synch_mode = "on"
+		);
+	counter_cella3 : cyclone_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "12A0",
+			operation_mode = "arithmetic",
+			sum_lutc_input = "cin",
+			synch_mode = "on"
+		);
+	counter_cella4 : cyclone_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "12A0",
+			operation_mode = "arithmetic",
+			sum_lutc_input = "cin",
+			synch_mode = "on"
+		);
+	cout_bit : cyclone_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "F8F8",
+			operation_mode = "normal",
+			sum_lutc_input = "cin",
+			synch_mode = "off"
+		);
+	aclr	: NODE;
+	aclr_actual	: WIRE;
+	clk_en	: NODE;
+	compare_result	: WIRE;
+	data[4..0]	: NODE;
+	modulus_bus[4..0]	: WIRE;
+	modulus_trigger	: WIRE;
+	safe_q[4..0]	: WIRE;
+	sload	: NODE;
+	time_to_clear	: WIRE;
+	updownDir	: WIRE;
+
+BEGIN 
+	cmpr1.dataa[] = safe_q[];
+	cmpr1.datab[] = modulus_bus[];
+	counter_cella[4..0].aclr = aclr_actual;
+	counter_cella[4..0].aload = B"00000";
+	counter_cella[1].cin = counter_cella[0].cout;
+	counter_cella[2].cin = counter_cella[1].cout;
+	counter_cella[3].cin = counter_cella[2].cout;
+	counter_cella[4].cin = counter_cella[3].cout;
+	counter_cella[4..0].clk = clock;
+	counter_cella[4..0].dataa = safe_q[];
+	counter_cella[4..0].datab = B"00000";
+	counter_cella[4..0].datac = ((sload & data[]) # (((! sload) & modulus_bus[]) & (! updownDir)));
+	counter_cella[4..0].ena = clk_en;
+	counter_cella[4..0].sclr = sclr;
+	counter_cella[4..0].sload = (sload # modulus_trigger);
+	cout_bit.cin = counter_cella[4].cout;
+	cout_bit.dataa = updownDir;
+	cout_bit.datab = time_to_clear;
+	aclr = GND;
+	aclr_actual = aclr;
+	clk_en = VCC;
+	compare_result = cmpr1.aeb;
+	data[] = GND;
+	modulus_bus[] = B"10110";
+	modulus_trigger = cout_bit.combout;
+	q[] = safe_q[];
+	safe_q[] = counter_cella[4..0].regout;
+	sload = GND;
+	time_to_clear = compare_result;
+	updownDir = B"1";
+END;
+--VALID FILE

@@ -1,0 +1,209 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'LCD1602:a1|Clk_Out'
+Slack : -5.989
+TNS   : -60.852
+
+Type  : Slow 1200mV 85C Model Setup 'ps2:a0|hit_cnt[0]'
+Slack : -4.666
+TNS   : -4.666
+
+Type  : Slow 1200mV 85C Model Setup 'ps2:a0|hit_1'
+Slack : -4.662
+TNS   : -826.898
+
+Type  : Slow 1200mV 85C Model Setup 'ps2:a0|leds[0]'
+Slack : -3.785
+TNS   : -29.537
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -3.009
+TNS   : -73.498
+
+Type  : Slow 1200mV 85C Model Hold 'ps2:a0|leds[0]'
+Slack : -4.010
+TNS   : -28.331
+
+Type  : Slow 1200mV 85C Model Hold 'ps2:a0|hit_1'
+Slack : -1.515
+TNS   : -14.039
+
+Type  : Slow 1200mV 85C Model Hold 'ps2:a0|hit_cnt[0]'
+Slack : -0.336
+TNS   : -0.336
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.083
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'LCD1602:a1|Clk_Out'
+Slack : 0.508
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CLK'
+Slack : -0.627
+TNS   : -0.627
+
+Type  : Slow 1200mV 85C Model Removal 'CLK'
+Slack : 1.116
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -71.402
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2:a0|hit_1'
+Slack : -1.487
+TNS   : -330.114
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCD1602:a1|Clk_Out'
+Slack : -1.487
+TNS   : -31.227
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2:a0|leds[0]'
+Slack : -0.790
+TNS   : -29.570
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2:a0|hit_cnt[0]'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'LCD1602:a1|Clk_Out'
+Slack : -5.709
+TNS   : -56.621
+
+Type  : Slow 1200mV 0C Model Setup 'ps2:a0|hit_cnt[0]'
+Slack : -4.404
+TNS   : -4.404
+
+Type  : Slow 1200mV 0C Model Setup 'ps2:a0|hit_1'
+Slack : -4.401
+TNS   : -758.843
+
+Type  : Slow 1200mV 0C Model Setup 'ps2:a0|leds[0]'
+Slack : -3.348
+TNS   : -26.106
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -2.734
+TNS   : -66.383
+
+Type  : Slow 1200mV 0C Model Hold 'ps2:a0|leds[0]'
+Slack : -3.761
+TNS   : -25.449
+
+Type  : Slow 1200mV 0C Model Hold 'ps2:a0|hit_1'
+Slack : -1.393
+TNS   : -21.642
+
+Type  : Slow 1200mV 0C Model Hold 'ps2:a0|hit_cnt[0]'
+Slack : -0.284
+TNS   : -0.284
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'LCD1602:a1|Clk_Out'
+Slack : 0.469
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CLK'
+Slack : -0.464
+TNS   : -0.464
+
+Type  : Slow 1200mV 0C Model Removal 'CLK'
+Slack : 1.025
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -71.674
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2:a0|hit_1'
+Slack : -1.487
+TNS   : -330.114
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCD1602:a1|Clk_Out'
+Slack : -1.487
+TNS   : -31.227
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2:a0|leds[0]'
+Slack : -0.947
+TNS   : -25.979
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2:a0|hit_cnt[0]'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'LCD1602:a1|Clk_Out'
+Slack : -2.041
+TNS   : -19.212
+
+Type  : Fast 1200mV 0C Model Setup 'ps2:a0|hit_cnt[0]'
+Slack : -1.705
+TNS   : -1.705
+
+Type  : Fast 1200mV 0C Model Setup 'ps2:a0|hit_1'
+Slack : -1.422
+TNS   : -234.698
+
+Type  : Fast 1200mV 0C Model Setup 'ps2:a0|leds[0]'
+Slack : -1.090
+TNS   : -7.952
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -0.680
+TNS   : -9.343
+
+Type  : Fast 1200mV 0C Model Hold 'ps2:a0|leds[0]'
+Slack : -1.722
+TNS   : -13.240
+
+Type  : Fast 1200mV 0C Model Hold 'ps2:a0|hit_1'
+Slack : -0.796
+TNS   : -18.323
+
+Type  : Fast 1200mV 0C Model Hold 'ps2:a0|hit_cnt[0]'
+Slack : -0.229
+TNS   : -0.229
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : -0.077
+TNS   : -0.077
+
+Type  : Fast 1200mV 0C Model Hold 'LCD1602:a1|Clk_Out'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLK'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLK'
+Slack : 0.474
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -61.482
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2:a0|hit_1'
+Slack : -1.000
+TNS   : -222.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCD1602:a1|Clk_Out'
+Slack : -1.000
+TNS   : -21.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2:a0|leds[0]'
+Slack : -0.187
+TNS   : -3.742
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2:a0|hit_cnt[0]'
+Slack : 0.356
+TNS   : 0.000
+
+------------------------------------------------------------

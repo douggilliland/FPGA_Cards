@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DS18B20_LCD1602">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DS18B20_LCD1602|cont:inst1|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_bti.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DS18B20_LCD1602|lcdm_data:inst7|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_1jm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DS18B20_LCD1602|lcdm_data:inst7|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_ecm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DS18B20_LCD1602|lcdm_data:inst7|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_ecm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DS18B20_LCD1602|lcdm_data:inst7|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_bkm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DS18B20_LCD1602|lcdm_data:inst7|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_o9m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

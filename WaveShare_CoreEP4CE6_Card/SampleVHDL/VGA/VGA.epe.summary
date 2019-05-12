@@ -1,0 +1,7 @@
+PowerPlay Early Power Estimator File Generator Status : Successful - Wed Jan 13 21:20:15 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : VGA
+Top-level Entity Name : VGA
+Family : Cyclone III
+Device : EP3C25Q240C8
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Sep 04 15:50:55 2012
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : ps2_lcd1602_1
+Top-level Entity Name : ps2_lcd1602_1
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 467 / 6,272 ( 7 % )
+    Total combinational functions : 353 / 6,272 ( 6 % )
+    Dedicated logic registers : 289 / 6,272 ( 5 % )
+Total registers : 289
+Total pins : 21 / 92 ( 23 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

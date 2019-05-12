@@ -1,0 +1,5 @@
+# begin LFP file F:\FPGA\ps2_lcd_1602\ps2_lcd1602_1.lfp
+designfile ps2_lcd1602_1.vhd
+parttype xc3s400-5-pq208
+bus_delimiter -1;
+set_busdelim_onsave 0;

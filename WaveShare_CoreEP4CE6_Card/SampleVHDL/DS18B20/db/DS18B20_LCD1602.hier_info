@@ -1,0 +1,196 @@
+|DS18B20_LCD1602
+inclk => CLK_DIV:inst.CLK
+inclk => BO:inst8.inclk
+reset => inst3.IN1
+reset => cont:inst1.clk_en
+dq <> BO:inst8.DQ
+
+
+|DS18B20_LCD1602|CLK_DIV:inst
+CLK => U9.DATAIN
+
+
+|DS18B20_LCD1602|lcdm_data:inst7
+M[0] => Mux0.IN65
+M[0] => Mux1.IN66
+M[0] => Mux2.IN69
+M[0] => Mux3.IN69
+M[0] => Mux4.IN65
+M[0] => Mux5.IN65
+M[0] => Mux6.IN65
+M[0] => Mux7.IN65
+M[0] => Mux8.IN69
+M[1] => Mux0.IN64
+M[1] => Mux1.IN65
+M[1] => Mux2.IN68
+M[1] => Mux3.IN68
+M[1] => Mux4.IN64
+M[1] => Mux5.IN64
+M[1] => Mux6.IN64
+M[1] => Mux7.IN64
+M[1] => Mux8.IN68
+M[2] => Mux0.IN63
+M[2] => Mux1.IN64
+M[2] => Mux2.IN67
+M[2] => Mux3.IN67
+M[2] => Mux4.IN63
+M[2] => Mux5.IN63
+M[2] => Mux6.IN63
+M[2] => Mux7.IN63
+M[2] => Mux8.IN67
+M[3] => Mux0.IN62
+M[3] => Mux1.IN63
+M[3] => Mux2.IN66
+M[3] => Mux3.IN66
+M[3] => Mux4.IN62
+M[3] => Mux5.IN62
+M[3] => Mux6.IN62
+M[3] => Mux7.IN62
+M[3] => Mux8.IN66
+M[4] => Mux0.IN61
+M[4] => Mux1.IN62
+M[4] => Mux2.IN65
+M[4] => Mux3.IN65
+M[4] => Mux4.IN61
+M[4] => Mux5.IN61
+M[4] => Mux6.IN61
+M[4] => Mux7.IN61
+M[4] => Mux8.IN65
+M[5] => Mux0.IN60
+M[5] => Mux1.IN61
+M[5] => Mux2.IN64
+M[5] => Mux3.IN64
+M[5] => Mux4.IN60
+M[5] => Mux5.IN60
+M[5] => Mux6.IN60
+M[5] => Mux7.IN60
+M[5] => Mux8.IN64
+clk1 => RS~reg0.CLK
+clk1 => Q[0].CLK
+clk1 => Q[1].CLK
+clk1 => Q[2].CLK
+clk1 => Q[3].CLK
+clk1 => Q[4].CLK
+clk1 => Q[5].CLK
+clk1 => Q[6].CLK
+clk1 => Q[7].CLK
+s1[0] => Div0.IN21
+s1[0] => Div1.IN18
+s1[0] => Add0.IN22
+s1[1] => Div0.IN20
+s1[1] => Div1.IN17
+s1[1] => Add0.IN21
+s1[2] => Div0.IN19
+s1[2] => Div1.IN16
+s1[2] => Add0.IN19
+s1[2] => Add0.IN20
+s1[3] => Div0.IN18
+s1[3] => Div1.IN15
+s1[3] => Add0.IN17
+s1[3] => Add0.IN18
+s1[4] => Div0.IN17
+s1[4] => Div1.IN14
+s1[4] => Mod1.IN13
+s1[4] => Add0.IN15
+s1[4] => Add0.IN16
+s1[5] => Div0.IN16
+s1[5] => Div1.IN13
+s1[5] => Mod1.IN12
+s1[5] => Add0.IN13
+s1[5] => Add0.IN14
+s1[6] => Div0.IN15
+s1[6] => Div1.IN12
+s1[6] => Mod1.IN11
+s1[6] => Add0.IN11
+s1[6] => Add0.IN12
+s1[7] => Div0.IN14
+s1[7] => Div1.IN11
+s1[7] => Mod1.IN10
+s1[7] => Add0.IN9
+s1[7] => Add0.IN10
+s1[8] => Div0.IN13
+s1[8] => Div1.IN10
+s1[8] => Mod1.IN9
+s1[8] => Add0.IN7
+s1[8] => Add0.IN8
+s1[9] => Div0.IN12
+s1[9] => Div1.IN9
+s1[9] => Mod1.IN8
+s1[9] => Add0.IN5
+s1[9] => Add0.IN6
+s1[10] => Div0.IN11
+s1[10] => Div1.IN8
+s1[10] => Mod1.IN7
+s1[10] => Add0.IN3
+s1[10] => Add0.IN4
+
+
+|DS18B20_LCD1602|cont:inst1
+aclr => aclr.IN1
+clk_en => clk_en.IN1
+clock => clock.IN1
+
+
+|DS18B20_LCD1602|cont:inst1|lpm_counter:lpm_counter_component
+clock => cntr_bti:auto_generated.clock
+clk_en => cntr_bti:auto_generated.clk_en
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => cntr_bti:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+data[8] => ~NO_FANOUT~
+data[9] => ~NO_FANOUT~
+data[10] => ~NO_FANOUT~
+data[11] => ~NO_FANOUT~
+data[12] => ~NO_FANOUT~
+data[13] => ~NO_FANOUT~
+data[14] => ~NO_FANOUT~
+data[15] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+
+
+|DS18B20_LCD1602|cont:inst1|lpm_counter:lpm_counter_component|cntr_bti:auto_generated
+aclr => counter_reg_bit[15].IN0
+clk_en => counter_reg_bit[15].IN0
+clock => counter_reg_bit[15].CLK
+clock => counter_reg_bit[14].CLK
+clock => counter_reg_bit[13].CLK
+clock => counter_reg_bit[12].CLK
+clock => counter_reg_bit[11].CLK
+clock => counter_reg_bit[10].CLK
+clock => counter_reg_bit[9].CLK
+clock => counter_reg_bit[8].CLK
+clock => counter_reg_bit[7].CLK
+clock => counter_reg_bit[6].CLK
+clock => counter_reg_bit[5].CLK
+clock => counter_reg_bit[4].CLK
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+
+
+|DS18B20_LCD1602|BO:inst8
+DQ <> DQ
+inclk => clk.CLK
+inclk => count_48[0].CLK
+inclk => count_48[1].CLK
+inclk => count_48[2].CLK
+inclk => count_48[3].CLK
+inclk => count_48[4].CLK
+
+

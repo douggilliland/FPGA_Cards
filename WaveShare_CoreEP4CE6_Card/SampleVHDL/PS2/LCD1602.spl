@@ -1,0 +1,11 @@
+[Inputs]
+CLK
+Reset
+key_ready
+=ps2_data[7:0]=
+[Outputs]
+LCD_RS
+LCD_RW
+LCD_EN
+=LCD_Data[7:0]=
+[BiDir]

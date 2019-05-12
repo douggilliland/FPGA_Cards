@@ -1,0 +1,17 @@
+
+State Machine - |ps2_lcd1602_1|LCD1602:a1|Current_State
+Name Current_State.write_LCD_Data Current_State.set_ddram Current_State.write_cgram Current_State.set_cgram Current_State.set_dcb Current_State.set_cursor Current_State.set_dlnf 
+Current_State.set_dlnf 0 0 0 0 0 0 0 
+Current_State.set_cursor 0 0 0 0 0 1 1 
+Current_State.set_dcb 0 0 0 0 1 0 1 
+Current_State.set_cgram 0 0 0 1 0 0 1 
+Current_State.write_cgram 0 0 1 0 0 0 1 
+Current_State.set_ddram 0 1 0 0 0 0 1 
+Current_State.write_LCD_Data 1 0 0 0 0 0 1 
+
+State Machine - |ps2_lcd1602_1|ps2:a0|c_state
+Name c_state.PARITY c_state.DATA c_state.START c_state.IDLE 
+c_state.IDLE 0 0 0 0 
+c_state.START 0 0 1 1 
+c_state.DATA 0 1 0 1 
+c_state.PARITY 1 0 0 1 

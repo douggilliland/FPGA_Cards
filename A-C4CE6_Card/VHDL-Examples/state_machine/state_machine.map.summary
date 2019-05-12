@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Sep 07 21:53:25 2015
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : state_machine
+Top-level Entity Name : state_machine
+Family : Cyclone IV E
+Total logic elements : 42
+    Total combinational functions : 42
+    Dedicated logic registers : 27
+Total registers : 27
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

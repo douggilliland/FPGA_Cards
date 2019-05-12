@@ -1,0 +1,1266 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--writeData_reg[3] is writeData_reg[3] at LC89
+writeData_reg[3]_or_out = data_in[3];
+writeData_reg[3]_reg_input = writeData_reg[3]_or_out;
+writeData_reg[3]_p3_out = !main_state[1] & !main_state[0];
+writeData_reg[3] = DFFE(writeData_reg[3]_reg_input, GLOBAL(clk), GLOBAL(rst), , writeData_reg[3]_p3_out);
+
+
+--writeData_reg[1] is writeData_reg[1] at LC48
+writeData_reg[1]_or_out = data_in[1];
+writeData_reg[1]_reg_input = writeData_reg[1]_or_out;
+writeData_reg[1]_p3_out = !main_state[1] & !main_state[0];
+writeData_reg[1] = DFFE(writeData_reg[1]_reg_input, GLOBAL(clk), GLOBAL(rst), , writeData_reg[1]_p3_out);
+
+
+--writeData_reg[2] is writeData_reg[2] at LC31
+writeData_reg[2]_or_out = !data_in[2];
+writeData_reg[2]_reg_input = writeData_reg[2]_or_out;
+writeData_reg[2]_p3_out = !main_state[1] & !main_state[0];
+writeData_reg[2] = DFFE(writeData_reg[2]_reg_input, GLOBAL(clk), GLOBAL(rst), , writeData_reg[2]_p3_out);
+
+
+--writeData_reg[0] is writeData_reg[0] at LC73
+writeData_reg[0]_or_out = !data_in[0];
+writeData_reg[0]_reg_input = writeData_reg[0]_or_out;
+writeData_reg[0]_p3_out = !main_state[1] & !main_state[0];
+writeData_reg[0] = DFFE(writeData_reg[0]_reg_input, GLOBAL(clk), GLOBAL(rst), , writeData_reg[0]_p3_out);
+
+
+--C1_dffs[0] is lpm_counter:cnt_scan_rtl_0|dffs[0] at LC98
+C1_dffs[0]_reg_input = VCC;
+C1_dffs[0] = TFFE(C1_dffs[0]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[1] is lpm_counter:cnt_scan_rtl_0|dffs[1] at LC83
+C1_dffs[1]_or_out = C1_dffs[0];
+C1_dffs[1]_reg_input = C1_dffs[1]_or_out;
+C1_dffs[1] = TFFE(C1_dffs[1]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--cnt_delay[19] is cnt_delay[19] at LC8
+cnt_delay[19]_p1_out = cnt_delay[18] & cnt_delay[17] & cnt_delay[16] & cnt_delay[15] & cnt_delay[14] & cnt_delay[13] & cnt_delay[12] & cnt_delay[10] & cnt_delay[11] & cnt_delay[8] & cnt_delay[9] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & A1L611;
+cnt_delay[19]_p2_out = cnt_delay[18] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & cnt_delay[13] & cnt_delay[12] & cnt_delay[10] & !cnt_delay[11] & cnt_delay[8] & !cnt_delay[9] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[19];
+cnt_delay[19]_or_out = cnt_delay[19]_p1_out # cnt_delay[19]_p2_out;
+cnt_delay[19]_reg_input = cnt_delay[19]_or_out;
+cnt_delay[19] = TFFE(cnt_delay[19]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--clk_div[1] is clk_div[1] at LC113
+clk_div[1]_or_out = clk_div[1];
+clk_div[1]_reg_input = C1_dffs[0] $ clk_div[1]_or_out;
+clk_div[1] = DFFE(clk_div[1]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--i2c_state[1] is i2c_state[1] at LC41
+i2c_state[1]_p1_out = !i2c_state[0] & inner_state[3] & !inner_state[1] & !inner_state[2] & inner_state[0] & phase3 & i2c_state[2] & !main_state[0] & main_state[1] & !i2c_state[1];
+i2c_state[1]_p2_out = i2c_state[0] & inner_state[3] & !inner_state[1] & !inner_state[2] & inner_state[0] & phase3 & !i2c_state[2] & main_state[0] & !main_state[1] & !i2c_state[1];
+i2c_state[1]_p3_out = !main_state[0] & !main_state[1] & i2c_state[1];
+i2c_state[1]_or_out = i2c_state[1]_p1_out # i2c_state[1]_p2_out # i2c_state[1]_p3_out;
+i2c_state[1]_reg_input = i2c_state[1]_or_out;
+i2c_state[1] = TFFE(i2c_state[1]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[2] is lpm_counter:cnt_scan_rtl_0|dffs[2] at LC125
+C1_dffs[2]_p1_out = C1_dffs[1] & C1_dffs[0];
+C1_dffs[2]_or_out = C1_dffs[2]_p1_out;
+C1_dffs[2]_reg_input = C1_dffs[2]_or_out;
+C1_dffs[2] = TFFE(C1_dffs[2]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[3] is lpm_counter:cnt_scan_rtl_0|dffs[3] at LC128
+C1_dffs[3]_p1_out = C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[3]_or_out = C1_dffs[3]_p1_out;
+C1_dffs[3]_reg_input = C1_dffs[3]_or_out;
+C1_dffs[3] = TFFE(C1_dffs[3]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--clk_div[2] is clk_div[2] at LC17
+clk_div[2]_p1_out = clk_div[5] & !clk_div[3] & !clk_div[7] & clk_div[6] & !clk_div[4] & C1_dffs[0] & clk_div[1];
+clk_div[2]_p2_out = !C1_dffs[0] & !clk_div[2];
+clk_div[2]_p3_out = !clk_div[1] & !clk_div[2];
+clk_div[2]_p4_out = C1_dffs[0] & clk_div[1] & clk_div[2];
+clk_div[2]_or_out = clk_div[2]_p1_out # clk_div[2]_p2_out # clk_div[2]_p3_out # clk_div[2]_p4_out;
+clk_div[2]_reg_input = !(clk_div[2]_or_out);
+clk_div[2] = DFFE(clk_div[2]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--inner_state[2] is inner_state[2] at LC66
+inner_state[2]_p0_out = !main_state[1] & !main_state[0] & inner_state[2];
+inner_state[2]_p1_out = !i2c_state[1] & inner_state[1] & !inner_state[3] & inner_state[0] & phase3 & !i2c_state[2] & !main_state[1] & main_state[0];
+inner_state[2]_p2_out = inner_state[1] & !inner_state[3] & inner_state[0] & phase3 & !i2c_state[2] & !main_state[1] & main_state[0] & !i2c_state[0];
+inner_state[2]_p3_out = inner_state[1] & !inner_state[3] & inner_state[0] & phase3 & !i2c_state[2] & main_state[1] & !main_state[0] & i2c_state[0];
+inner_state[2]_p4_out = !i2c_state[1] & inner_state[1] & !inner_state[3] & inner_state[0] & phase3 & main_state[1] & !main_state[0] & !i2c_state[0];
+inner_state[2]_or_out = A1L541 # inner_state[2]_p0_out # inner_state[2]_p1_out # inner_state[2]_p2_out # inner_state[2]_p3_out # inner_state[2]_p4_out;
+inner_state[2]_reg_input = inner_state[2]_or_out;
+inner_state[2] = TFFE(inner_state[2]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[4] is lpm_counter:cnt_scan_rtl_0|dffs[4] at LC127
+C1_dffs[4]_p1_out = C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[4]_or_out = C1_dffs[4]_p1_out;
+C1_dffs[4]_reg_input = C1_dffs[4]_or_out;
+C1_dffs[4] = TFFE(C1_dffs[4]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[5] is lpm_counter:cnt_scan_rtl_0|dffs[5] at LC126
+C1_dffs[5]_p1_out = C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[5]_or_out = C1_dffs[5]_p1_out;
+C1_dffs[5]_reg_input = C1_dffs[5]_or_out;
+C1_dffs[5] = TFFE(C1_dffs[5]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--clk_div[3] is clk_div[3] at LC114
+clk_div[3]_p1_out = clk_div[2] & C1_dffs[0] & clk_div[1];
+clk_div[3]_or_out = clk_div[3];
+clk_div[3]_reg_input = clk_div[3]_p1_out $ clk_div[3]_or_out;
+clk_div[3] = DFFE(clk_div[3]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[6] is lpm_counter:cnt_scan_rtl_0|dffs[6] at LC124
+C1_dffs[6]_p1_out = C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[6]_or_out = C1_dffs[6]_p1_out;
+C1_dffs[6]_reg_input = C1_dffs[6]_or_out;
+C1_dffs[6] = TFFE(C1_dffs[6]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[7] is lpm_counter:cnt_scan_rtl_0|dffs[7] at LC123
+C1_dffs[7]_p1_out = C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[7]_or_out = C1_dffs[7]_p1_out;
+C1_dffs[7]_reg_input = C1_dffs[7]_or_out;
+C1_dffs[7] = TFFE(C1_dffs[7]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--clk_div[4] is clk_div[4] at LC119
+clk_div[4]_p1_out = clk_div[3] & clk_div[2] & C1_dffs[0] & clk_div[1];
+clk_div[4]_or_out = clk_div[4];
+clk_div[4]_reg_input = clk_div[4]_p1_out $ clk_div[4]_or_out;
+clk_div[4] = DFFE(clk_div[4]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[8] is lpm_counter:cnt_scan_rtl_0|dffs[8] at LC122
+C1_dffs[8]_p1_out = C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[8]_or_out = C1_dffs[8]_p1_out;
+C1_dffs[8]_reg_input = C1_dffs[8]_or_out;
+C1_dffs[8] = TFFE(C1_dffs[8]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--clk_div[5] is clk_div[5] at LC32
+clk_div[5]_p1_out = !clk_div[7] & clk_div[6] & C1_dffs[0] & !clk_div[4] & !clk_div[3] & !clk_div[2] & clk_div[5] & clk_div[1];
+clk_div[5]_p2_out = C1_dffs[0] & clk_div[4] & clk_div[3] & clk_div[2] & clk_div[1];
+clk_div[5]_or_out = clk_div[5]_p1_out # clk_div[5]_p2_out;
+clk_div[5]_reg_input = clk_div[5]_or_out;
+clk_div[5] = TFFE(clk_div[5]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[9] is lpm_counter:cnt_scan_rtl_0|dffs[9] at LC121
+C1_dffs[9]_p1_out = C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[9]_or_out = C1_dffs[9]_p1_out;
+C1_dffs[9]_reg_input = C1_dffs[9]_or_out;
+C1_dffs[9] = TFFE(C1_dffs[9]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[10] is lpm_counter:cnt_scan_rtl_0|dffs[10] at LC120
+C1_dffs[10]_p1_out = C1_dffs[9] & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[10]_or_out = C1_dffs[10]_p1_out;
+C1_dffs[10]_reg_input = C1_dffs[10]_or_out;
+C1_dffs[10] = TFFE(C1_dffs[10]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--clk_div[7] is clk_div[7] at LC28
+clk_div[7]_p1_out = clk_div[6] & clk_div[5] & clk_div[4] & clk_div[3] & clk_div[2] & C1_dffs[0] & clk_div[1];
+clk_div[7]_or_out = clk_div[7];
+clk_div[7]_reg_input = clk_div[7]_p1_out $ clk_div[7]_or_out;
+clk_div[7] = DFFE(clk_div[7]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--C1_dffs[11] is lpm_counter:cnt_scan_rtl_0|dffs[11] at LC116
+C1_dffs[11]_p1_out = C1_dffs[10] & C1_dffs[9] & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[11]_or_out = C1_dffs[11]_p1_out;
+C1_dffs[11]_reg_input = C1_dffs[11]_or_out;
+C1_dffs[11] = TFFE(C1_dffs[11]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--en_xhdl3[0] is en_xhdl3[0] at LC118
+en_xhdl3[0]_p1_out = C1_dffs[11] & C1_dffs[10] & C1_dffs[9] & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+en_xhdl3[0]_or_out = en_xhdl3[0]_p1_out;
+en_xhdl3[0]_reg_input = en_xhdl3[0]_or_out;
+en_xhdl3[0] = TFFE(en_xhdl3[0]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--en_xhdl3[1] is en_xhdl3[1] at LC117
+en_xhdl3[1]_p1_out = C1_dffs[11] & C1_dffs[10] & C1_dffs[9] & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+en_xhdl3[1]_or_out = en_xhdl3[1]_p1_out;
+en_xhdl3[1]_reg_input = en_xhdl3[1]_or_out;
+en_xhdl3[1] = TFFE(en_xhdl3[1]_reg_input, GLOBAL(clk), , rst, );
+
+
+--clk_div[6] is clk_div[6] at LC25
+clk_div[6]_p1_out = !clk_div[7] & C1_dffs[0] & clk_div[5] & !clk_div[4] & !clk_div[3] & !clk_div[2] & clk_div[6] & clk_div[1];
+clk_div[6]_p2_out = C1_dffs[0] & clk_div[5] & clk_div[4] & clk_div[3] & clk_div[2] & clk_div[1];
+clk_div[6]_or_out = clk_div[6]_p1_out # clk_div[6]_p2_out;
+clk_div[6]_reg_input = clk_div[6]_or_out;
+clk_div[6] = TFFE(clk_div[6]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--phase0 is phase0 at LC30
+phase0_p1_out = !phase0 & C1_dffs[0] & clk_div[5] & !clk_div[3] & !clk_div[7] & !clk_div[2] & clk_div[6] & !clk_div[4] & clk_div[1];
+phase0_or_out = phase0_p1_out;
+phase0_reg_input = phase0_or_out;
+phase0 = DFFE(phase0_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--phase1 is phase1 at LC27
+phase1_p1_out = !phase1 & !clk_div[6] & clk_div[4] & !clk_div[1] & !C1_dffs[0] & !clk_div[5] & clk_div[3] & !clk_div[7] & !clk_div[2];
+phase1_or_out = phase1_p1_out;
+phase1_reg_input = phase1_or_out;
+phase1 = DFFE(phase1_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--phase2 is phase2 at LC26
+phase2_p1_out = !phase2 & C1_dffs[0] & clk_div[5] & !clk_div[3] & !clk_div[7] & !clk_div[2] & !clk_div[6] & clk_div[4] & !clk_div[1];
+phase2_or_out = phase2_p1_out;
+phase2_reg_input = phase2_or_out;
+phase2 = DFFE(phase2_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--phase3 is phase3 at LC29
+phase3_p1_out = !phase3 & clk_div[6] & !clk_div[4] & clk_div[1] & !C1_dffs[0] & !clk_div[5] & clk_div[3] & !clk_div[7] & !clk_div[2];
+phase3_or_out = phase3_p1_out;
+phase3_reg_input = phase3_or_out;
+phase3 = DFFE(phase3_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--inner_state[1] is inner_state[1] at LC19
+inner_state[1]_p0_out = !main_state[0] & !main_state[1] & inner_state[1];
+inner_state[1]_p1_out = !main_state[0] & i2c_state[1] & main_state[1] & inner_state[0] & phase3 & !i2c_state[2] & i2c_state[0] & !inner_state[2] & !inner_state[1];
+inner_state[1]_p2_out = main_state[0] & i2c_state[1] & !main_state[1] & inner_state[0] & phase3 & !i2c_state[2] & !i2c_state[0] & !inner_state[2] & !inner_state[1] & !phase1;
+inner_state[1]_p3_out = !main_state[0] & main_state[1] & inner_state[0] & phase3 & !i2c_state[2] & i2c_state[0] & !inner_state[3];
+inner_state[1]_p4_out = !main_state[0] & !i2c_state[1] & main_state[1] & inner_state[0] & phase3 & !i2c_state[0] & !inner_state[3];
+inner_state[1]_or_out = A1L641 # inner_state[1]_p0_out # inner_state[1]_p1_out # inner_state[1]_p2_out # inner_state[1]_p3_out # inner_state[1]_p4_out;
+inner_state[1]_reg_input = inner_state[1]_or_out;
+inner_state[1] = TFFE(inner_state[1]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--A1L65 is Mux~17742 at LC44
+A1L65_p0_out = main_state[1] & !main_state[0] & !i2c_state[1] & !i2c_state[0] & !inner_state[0] & !inner_state[3] & phase1 & !inner_state[1] & !inner_state[2];
+A1L65_p1_out = link & main_state[1] & !main_state[0] & i2c_state[1];
+A1L65_p2_out = link & main_state[1] & !main_state[0] & i2c_state[2] & i2c_state[0];
+A1L65_p3_out = link & main_state[1] & !main_state[0] & !phase3;
+A1L65_p4_out = main_state[1] & !main_state[0] & !i2c_state[1] & !i2c_state[0] & phase3 & inner_state[0] & !inner_state[3];
+A1L65_or_out = A1L67 # A1L65_p0_out # A1L65_p1_out # A1L65_p2_out # A1L65_p3_out # A1L65_p4_out;
+A1L65 = A1L65_or_out;
+
+
+--A1L75 is Mux~17743 at LC54
+A1L75_p0_out = phase3 & !inner_state[0] & inner_state[3] & !i2c_state[0] & !main_state[1] & !i2c_state[2] & link & !inner_state[2] & !inner_state[1];
+A1L75_p2_out = main_state[0] & phase3 & inner_state[0] & !inner_state[3] & !i2c_state[0] & !main_state[1] & !i2c_state[2] & !link;
+A1L75_p3_out = !main_state[0] & link;
+A1L75_p4_out = phase3 & !inner_state[0] & inner_state[3] & !main_state[1] & !i2c_state[2] & link & !i2c_state[1] & !inner_state[2] & !inner_state[1];
+A1L75_or_out = A1L87 # A1L75_p0_out # A1L75_p2_out # A1L75_p3_out # A1L75_p4_out;
+A1L75 = link $ A1L75_or_out;
+
+
+--link is link at LC24
+link_p1_out = !A1L65 & !A1L75;
+link_or_out = link_p1_out;
+link_reg_input = !(link_or_out);
+link = DFFE(link_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--A1L85 is Mux~17753 at SEXP60
+A1L85 = EXP(!i2c_state[1] & !i2c_state[0] & link);
+
+
+--A1L95 is Mux~17754 at SEXP55
+A1L95 = EXP(i2c_state[1] & i2c_state[0]);
+
+
+--A1L06 is Mux~17755 at SEXP52
+A1L06 = EXP(main_state[1] & !i2c_state[0]);
+
+
+--A1L16 is Mux~17756 at SEXP49
+A1L16 = EXP(!inner_state[1] & !inner_state[2]);
+
+
+--inner_state[0] is inner_state[0] at LC51
+inner_state[0]_p0_out = !inner_state[0] & inner_state[3] & A1L16;
+inner_state[0]_p1_out = i2c_state[1] & !inner_state[0] & i2c_state[0] & !main_state[1];
+inner_state[0]_p2_out = !inner_state[0] & A1L85 & !inner_state[3] & !inner_state[2] & !inner_state[1];
+inner_state[0]_p3_out = inner_state[0] & !main_state[1] & !inner_state[3] & A1L95 & phase3 & !i2c_state[2];
+inner_state[0]_p4_out = !inner_state[0] & i2c_state[2] & A1L06;
+inner_state[0]_or_out = A1L08 # inner_state[0]_p0_out # inner_state[0]_p1_out # inner_state[0]_p2_out # inner_state[0]_p3_out # inner_state[0]_p4_out;
+inner_state[0]_reg_input = !(inner_state[0]_or_out);
+inner_state[0] = DFFE(inner_state[0]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--inner_state[3] is inner_state[3] at LC5
+inner_state[3]_p0_out = !main_state[0] & !main_state[1] & inner_state[3];
+inner_state[3]_p1_out = !i2c_state[0] & inner_state[1] & inner_state[2] & inner_state[0] & phase3 & !i2c_state[1] & !main_state[0] & main_state[1] & !inner_state[3];
+inner_state[3]_p2_out = !i2c_state[0] & !inner_state[1] & !inner_state[2] & inner_state[0] & phase3 & !i2c_state[1] & !main_state[0] & inner_state[3];
+inner_state[3]_p3_out = !inner_state[1] & !inner_state[2] & inner_state[0] & phase3 & !i2c_state[1] & !main_state[0] & inner_state[3] & !i2c_state[2];
+inner_state[3]_p4_out = !inner_state[1] & !inner_state[2] & inner_state[0] & phase3 & !i2c_state[1] & !main_state[1] & inner_state[3] & !i2c_state[2];
+inner_state[3]_or_out = A1L741 # inner_state[3]_p0_out # inner_state[3]_p1_out # inner_state[3]_p2_out # inner_state[3]_p3_out # inner_state[3]_p4_out;
+inner_state[3]_reg_input = inner_state[3]_or_out;
+inner_state[3] = TFFE(inner_state[3]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--i2c_state[0] is i2c_state[0] at LC7
+i2c_state[0]_p1_out = main_state[1] & !i2c_state[1] & inner_state[3] & !inner_state[1] & !inner_state[2] & inner_state[0] & !main_state[0] & phase3 & !i2c_state[2];
+i2c_state[0]_p2_out = main_state[1] & !i2c_state[1] & inner_state[3] & !inner_state[1] & !inner_state[2] & inner_state[0] & !main_state[0] & phase3 & !i2c_state[0];
+i2c_state[0]_p3_out = !main_state[1] & !i2c_state[1] & inner_state[3] & !inner_state[1] & !inner_state[2] & inner_state[0] & main_state[0] & phase3 & !i2c_state[2];
+i2c_state[0]_p4_out = !main_state[1] & !main_state[0] & i2c_state[0];
+i2c_state[0]_or_out = i2c_state[0]_p1_out # i2c_state[0]_p2_out # i2c_state[0]_p3_out # i2c_state[0]_p4_out;
+i2c_state[0]_reg_input = i2c_state[0]_or_out;
+i2c_state[0] = TFFE(i2c_state[0]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--i2c_state[2] is i2c_state[2] at LC82
+i2c_state[2]_p1_out = main_state[1] & !main_state[0] & inner_state[3] & !inner_state[1] & !inner_state[2] & inner_state[0] & phase3 & !i2c_state[1] & i2c_state[0] & !i2c_state[2];
+i2c_state[2]_p2_out = !main_state[1] & !main_state[0] & i2c_state[2];
+i2c_state[2]_p3_out = !main_state[0] & inner_state[3] & !inner_state[1] & !inner_state[2] & inner_state[0] & phase3 & !i2c_state[1] & !i2c_state[0] & i2c_state[2];
+i2c_state[2]_or_out = i2c_state[2]_p1_out # i2c_state[2]_p2_out # i2c_state[2]_p3_out;
+i2c_state[2]_reg_input = i2c_state[2]_or_out;
+i2c_state[2] = TFFE(i2c_state[2]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--readData_reg[0] is readData_reg[0] at LC61
+readData_reg[0]_p0_out = !A1L251 & phase1 & i2c_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[0] & !inner_state[0] & !inner_state[1];
+readData_reg[0]_p1_out = A1L251 & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[0];
+readData_reg[0]_p2_out = !A1L251 & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[0] & inner_state[0];
+readData_reg[0]_p3_out = !A1L251 & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[0] & inner_state[1];
+readData_reg[0]_p4_out = !A1L251 & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[0];
+readData_reg[0]_or_out = A1L351 # readData_reg[0]_p0_out # readData_reg[0]_p1_out # readData_reg[0]_p2_out # readData_reg[0]_p3_out # readData_reg[0]_p4_out;
+readData_reg[0]_reg_input = readData_reg[0]_or_out;
+readData_reg[0] = TFFE(readData_reg[0]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--readData_reg[1] is readData_reg[1] at LC104
+readData_reg[1]_p0_out = !readData_reg[0] & phase1 & i2c_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[1] & !inner_state[0] & !inner_state[1];
+readData_reg[1]_p1_out = readData_reg[0] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[1];
+readData_reg[1]_p2_out = !readData_reg[0] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[1] & inner_state[0];
+readData_reg[1]_p3_out = !readData_reg[0] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[1] & inner_state[1];
+readData_reg[1]_p4_out = !readData_reg[0] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[1];
+readData_reg[1]_or_out = A1L201 # readData_reg[1]_p0_out # readData_reg[1]_p1_out # readData_reg[1]_p2_out # readData_reg[1]_p3_out # readData_reg[1]_p4_out;
+readData_reg[1]_reg_input = readData_reg[1]_or_out;
+readData_reg[1] = TFFE(readData_reg[1]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--readData_reg[2] is readData_reg[2] at LC70
+readData_reg[2]_p0_out = !readData_reg[1] & phase1 & i2c_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[2] & !inner_state[0] & !inner_state[1];
+readData_reg[2]_p1_out = readData_reg[1] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[2];
+readData_reg[2]_p2_out = !readData_reg[1] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[2] & inner_state[0];
+readData_reg[2]_p3_out = !readData_reg[1] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[2] & inner_state[1];
+readData_reg[2]_p4_out = !readData_reg[1] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[2];
+readData_reg[2]_or_out = A1L401 # readData_reg[2]_p0_out # readData_reg[2]_p1_out # readData_reg[2]_p2_out # readData_reg[2]_p3_out # readData_reg[2]_p4_out;
+readData_reg[2]_reg_input = readData_reg[2]_or_out;
+readData_reg[2] = TFFE(readData_reg[2]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--A1L26 is Mux~17780 at LC64
+A1L26_p0_out = !i2c_state[1] & !i2c_state[0] & !inner_state[3] & phase3 & !inner_state[2] & !inner_state[0] & link;
+A1L26_p1_out = sda_buf & !i2c_state[1] & !i2c_state[0] & inner_state[3] & !phase3 & !phase0;
+A1L26_p2_out = !i2c_state[1] & !i2c_state[0] & inner_state[3] & !phase3 & phase0 & !inner_state[1] & !inner_state[2] & inner_state[0] & A1L251;
+A1L26_p3_out = sda_buf & !i2c_state[1] & !i2c_state[0] & !inner_state[3] & !phase3 & inner_state[0];
+A1L26_p4_out = !i2c_state[1] & !i2c_state[0] & !inner_state[3] & phase3 & inner_state[1] & !inner_state[2] & !inner_state[0];
+A1L26_or_out = A1L28 # A1L26_p0_out # A1L26_p1_out # A1L26_p2_out # A1L26_p3_out # A1L26_p4_out;
+A1L26 = A1L26_or_out;
+
+
+--A1L36 is Mux~17786 at LC59
+A1L36_p0_out = i2c_state[1] & inner_state[3] & sda_buf & !inner_state[0];
+A1L36_p1_out = !phase0 & phase1 & i2c_state[1] & inner_state[3] & sda_buf;
+A1L36_p2_out = phase1 & i2c_state[1] & inner_state[3] & inner_state[1] & !inner_state[2] & !inner_state[0];
+A1L36_p3_out = i2c_state[1] & inner_state[3] & sda_buf & inner_state[1];
+A1L36_p4_out = i2c_state[1] & inner_state[3] & sda_buf & inner_state[2];
+A1L36_or_out = A1L48 # A1L36_p0_out # A1L36_p1_out # A1L36_p2_out # A1L36_p3_out # A1L36_p4_out;
+A1L36 = A1L36_or_out;
+
+
+--A1L46 is Mux~17790 at LC81
+A1L46_p1_out = inner_state[1] & inner_state[3] & i2c_state[0];
+A1L46_p2_out = inner_state[3] & i2c_state[0] & inner_state[2];
+A1L46_p3_out = inner_state[3] & i2c_state[0] & !inner_state[0];
+A1L46_or_out = A1L46_p1_out # A1L46_p2_out # A1L46_p3_out;
+A1L46 = A1L46_or_out;
+
+
+--A1L56 is Mux~17795 at LC95
+A1L56_p1_out = inner_state[3] & inner_state[0];
+A1L56_p2_out = !inner_state[3] & !inner_state[0] & inner_state[2] & phase3;
+A1L56_p3_out = !inner_state[3] & !phase3 & sda_buf;
+A1L56_p4_out = !inner_state[3] & !inner_state[0] & sda_buf & !inner_state[1];
+A1L56_or_out = A1L56_p1_out # A1L56_p2_out # A1L56_p3_out # A1L56_p4_out;
+A1L56 = A1L56_or_out;
+
+
+--A1L66 is Mux~17798 at LC33
+A1L66_p1_out = A1L251 & !inner_state[1] & !inner_state[2] & !phase3 & phase0;
+A1L66_p2_out = !inner_state[1] & !inner_state[2] & !phase3 & !phase0 & sda_buf;
+A1L66_or_out = A1L66_p1_out # A1L66_p2_out # !inner_state[3];
+A1L66 = A1L66_or_out;
+
+
+--A1L76 is Mux~17805 at LC56
+A1L76_p0_out = !A1L36 & !i2c_state[2] & i2c_state[0] & !A1L26 & A1L56 & A1L66;
+A1L76_p1_out = sda_buf & A1L36;
+A1L76_p2_out = sda_buf & A1L46;
+A1L76_p3_out = !i2c_state[2] & !i2c_state[0] & A1L26;
+A1L76_p4_out = A1L36 & !i2c_state[2] & !i2c_state[0];
+A1L76_or_out = A1L58 # A1L76_p0_out # A1L76_p1_out # A1L76_p2_out # A1L76_p3_out # A1L76_p4_out;
+A1L76 = A1L76_or_out;
+
+
+--A1L86 is Mux~17806 at SEXP26
+A1L86 = EXP(!inner_state[2] & !inner_state[0] & !inner_state[1]);
+
+
+--A1L96 is Mux~17808 at SEXP25
+A1L96 = EXP(!i2c_state[0] & !inner_state[0]);
+
+
+--A1L07 is Mux~17809 at SEXP24
+A1L07 = EXP(phase0 & i2c_state[1]);
+
+
+--A1L17 is Mux~17810 at SEXP20
+A1L17 = EXP(!inner_state[1] & !link);
+
+
+--A1L27 is Mux~17811 at SEXP18
+A1L27 = EXP(phase0 & !A1L251);
+
+
+--A1L37 is Mux~17817 at LC23
+A1L37_p0_out = sda_buf & !phase3 & A1L27 & A1L96;
+A1L37_p1_out = A1L49 & !i2c_state[1] & sda_buf & !phase3;
+A1L37_p2_out = sda_buf & A1L07 & !inner_state[0] & inner_state[3];
+A1L37_p3_out = !i2c_state[1] & phase3 & !inner_state[0] & !inner_state[3] & A1L17 & !i2c_state[0] & !inner_state[2];
+A1L37_p4_out = A1L49 & sda_buf & inner_state[3];
+A1L37_or_out = A1L88 # A1L37_p0_out # A1L37_p1_out # A1L37_p2_out # A1L37_p3_out # A1L37_p4_out;
+A1L37 = A1L37_or_out;
+
+
+--A1L47 is Mux~17823 at LC36
+A1L47_p0_out = !inner_state[3] & !inner_state[0] & !i2c_state[1] & !i2c_state[0] & !inner_state[2] & phase3 & link;
+A1L47_p1_out = sda_buf & inner_state[3] & !inner_state[0];
+A1L47_p2_out = inner_state[3] & inner_state[0] & A1L251 & phase0 & !inner_state[1] & !i2c_state[1] & !i2c_state[0] & !inner_state[2];
+A1L47_p3_out = !inner_state[3] & inner_state[0] & inner_state[1] & !i2c_state[1] & !i2c_state[0] & inner_state[2] & phase3;
+A1L47_p4_out = !inner_state[3] & !inner_state[0] & inner_state[1] & !i2c_state[1] & !i2c_state[0] & !inner_state[2] & phase3;
+A1L47_or_out = A1L09 # A1L47_p0_out # A1L47_p1_out # A1L47_p2_out # A1L47_p3_out # A1L47_p4_out;
+A1L47 = A1L47_or_out;
+
+
+--sda_buf is sda_buf at LC38
+sda_buf_p0_out = !main_state[0] & main_state[1] & i2c_state[2] & !A1L47;
+sda_buf_p1_out = !A1L76 & main_state[0] & !main_state[1];
+sda_buf_p2_out = main_state[0] & main_state[1] & !sda_buf;
+sda_buf_p3_out = !main_state[0] & main_state[1] & !A1L37 & !i2c_state[2];
+sda_buf_or_out = sda_buf_p0_out # sda_buf_p1_out # sda_buf_p2_out # sda_buf_p3_out;
+sda_buf_reg_input = !(sda_buf_or_out);
+sda_buf = DFFE(sda_buf_reg_input, GLOBAL(clk), , rst, );
+
+
+--readData_reg[3] is readData_reg[3] at LC68
+readData_reg[3]_p0_out = !readData_reg[2] & phase1 & i2c_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[3] & !inner_state[0] & !inner_state[1];
+readData_reg[3]_p1_out = readData_reg[2] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[3];
+readData_reg[3]_p2_out = !readData_reg[2] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[3] & inner_state[0];
+readData_reg[3]_p3_out = !readData_reg[2] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[3] & inner_state[1];
+readData_reg[3]_p4_out = !readData_reg[2] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[3];
+readData_reg[3]_or_out = A1L601 # readData_reg[3]_p0_out # readData_reg[3]_p1_out # readData_reg[3]_p2_out # readData_reg[3]_p3_out # readData_reg[3]_p4_out;
+readData_reg[3]_reg_input = readData_reg[3]_or_out;
+readData_reg[3] = TFFE(readData_reg[3]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--readData_reg[4] is readData_reg[4] at LC108
+readData_reg[4]_p0_out = !readData_reg[3] & phase1 & i2c_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[4] & !inner_state[0] & !inner_state[1];
+readData_reg[4]_p1_out = readData_reg[3] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[4];
+readData_reg[4]_p2_out = !readData_reg[3] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[4] & inner_state[0];
+readData_reg[4]_p3_out = !readData_reg[3] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[4] & inner_state[1];
+readData_reg[4]_p4_out = !readData_reg[3] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[4];
+readData_reg[4]_or_out = A1L801 # readData_reg[4]_p0_out # readData_reg[4]_p1_out # readData_reg[4]_p2_out # readData_reg[4]_p3_out # readData_reg[4]_p4_out;
+readData_reg[4]_reg_input = readData_reg[4]_or_out;
+readData_reg[4] = TFFE(readData_reg[4]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--readData_reg[5] is readData_reg[5] at LC106
+readData_reg[5]_p0_out = !readData_reg[4] & phase1 & i2c_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[5] & !inner_state[0] & !inner_state[1];
+readData_reg[5]_p1_out = readData_reg[4] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[5];
+readData_reg[5]_p2_out = !readData_reg[4] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[5] & inner_state[0];
+readData_reg[5]_p3_out = !readData_reg[4] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[5] & inner_state[1];
+readData_reg[5]_p4_out = !readData_reg[4] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[5];
+readData_reg[5]_or_out = A1L011 # readData_reg[5]_p0_out # readData_reg[5]_p1_out # readData_reg[5]_p2_out # readData_reg[5]_p3_out # readData_reg[5]_p4_out;
+readData_reg[5]_reg_input = readData_reg[5]_or_out;
+readData_reg[5] = TFFE(readData_reg[5]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--main_state[0] is main_state[0] at LC15
+main_state[0]_p0_out = main_state[0] & !i2c_state[2] & !i2c_state[0] & inner_state[0] & inner_state[1];
+main_state[0]_p1_out = main_state[0] & !i2c_state[1] & !i2c_state[2] & inner_state[2];
+main_state[0]_p2_out = main_state[0] & !i2c_state[2] & !inner_state[3] & !i2c_state[0];
+main_state[0]_p3_out = main_state[0] & !i2c_state[2] & inner_state[2] & !i2c_state[0];
+main_state[0]_p4_out = main_state[0] & !i2c_state[2] & !i2c_state[0] & !inner_state[0] & !inner_state[1];
+main_state[0]_or_out = A1L29 # main_state[0]_p0_out # main_state[0]_p1_out # main_state[0]_p2_out # main_state[0]_p3_out # main_state[0]_p4_out;
+main_state[0]_reg_input = main_state[0]_or_out;
+main_state[0] = DFFE(main_state[0]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--readData_reg[6] is readData_reg[6] at LC110
+readData_reg[6]_p0_out = !readData_reg[5] & phase1 & i2c_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[6] & !inner_state[0] & !inner_state[1];
+readData_reg[6]_p1_out = readData_reg[5] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[6];
+readData_reg[6]_p2_out = !readData_reg[5] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[6] & inner_state[0];
+readData_reg[6]_p3_out = !readData_reg[5] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[6] & inner_state[1];
+readData_reg[6]_p4_out = !readData_reg[5] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[6];
+readData_reg[6]_or_out = A1L211 # readData_reg[6]_p0_out # readData_reg[6]_p1_out # readData_reg[6]_p2_out # readData_reg[6]_p3_out # readData_reg[6]_p4_out;
+readData_reg[6]_reg_input = readData_reg[6]_or_out;
+readData_reg[6] = TFFE(readData_reg[6]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--start_delaycnt is start_delaycnt at LC3
+start_delaycnt_p1_out = !rd_input & !cnt_delay[18] & !cnt_delay[10] & !cnt_delay[8] & !cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & !cnt_delay[11] & !cnt_delay[9] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & !cnt_delay[13] & !cnt_delay[12] & !start_delaycnt;
+start_delaycnt_p2_out = !cnt_delay[18] & !cnt_delay[10] & !cnt_delay[8] & !cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & !cnt_delay[11] & !cnt_delay[9] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & !cnt_delay[13] & !cnt_delay[12] & !start_delaycnt & !wr_input;
+start_delaycnt_p4_out = cnt_delay[18] & cnt_delay[10] & cnt_delay[8] & cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & !cnt_delay[11] & !cnt_delay[9] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[13] & cnt_delay[12] & start_delaycnt;
+start_delaycnt_or_out = start_delaycnt_p1_out # start_delaycnt_p2_out # start_delaycnt_p4_out;
+start_delaycnt_reg_input = start_delaycnt_or_out;
+start_delaycnt_p3_out = !main_state[1] & !main_state[0];
+start_delaycnt = TFFE(start_delaycnt_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt_p3_out);
+
+
+--cnt_delay[0] is cnt_delay[0] at LC11
+cnt_delay[0]_p1_out = cnt_delay[18] & cnt_delay[10] & cnt_delay[8] & cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & !cnt_delay[11] & !cnt_delay[9] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & cnt_delay[13] & cnt_delay[12] & !cnt_delay[0];
+cnt_delay[0]_or_out = cnt_delay[0]_p1_out;
+cnt_delay[0]_reg_input = !cnt_delay[0]_or_out;
+cnt_delay[0] = TFFE(cnt_delay[0]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--readData_reg[7] is readData_reg[7] at LC112
+readData_reg[7]_p0_out = !readData_reg[6] & phase1 & i2c_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[7] & !inner_state[0] & !inner_state[1];
+readData_reg[7]_p1_out = readData_reg[6] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[7];
+readData_reg[7]_p2_out = !readData_reg[6] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[7] & inner_state[0];
+readData_reg[7]_p3_out = !readData_reg[6] & phase1 & i2c_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[7] & inner_state[1];
+readData_reg[7]_p4_out = !readData_reg[6] & phase1 & i2c_state[1] & inner_state[2] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & readData_reg[7];
+readData_reg[7]_or_out = A1L411 # readData_reg[7]_p0_out # readData_reg[7]_p1_out # readData_reg[7]_p2_out # readData_reg[7]_p3_out # readData_reg[7]_p4_out;
+readData_reg[7]_reg_input = readData_reg[7]_or_out;
+readData_reg[7] = TFFE(readData_reg[7]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--A1L811 is reduce_or~2460 at LC102
+A1L811_p0_out = en_xhdl3[0] & readData_reg[7];
+A1L811_p1_out = en_xhdl3[1] & writeData_reg[1] & !writeData_reg[3] & !writeData_reg[2] & !writeData_reg[0];
+A1L811_p2_out = !en_xhdl3[1] & readData_reg[2] & !readData_reg[1] & readData_reg[3] & !readData_reg[0];
+A1L811_p3_out = readData_reg[2] & readData_reg[1] & !readData_reg[3] & readData_reg[0] & en_xhdl3[0];
+A1L811_p4_out = !en_xhdl3[1] & !en_xhdl3[0];
+A1L811_or_out = A1L631 # A1L811_p0_out # A1L811_p1_out # A1L811_p2_out # A1L811_p3_out # A1L811_p4_out;
+A1L811 = A1L811_or_out;
+
+
+--cnt_delay[1] is cnt_delay[1] at LC12
+cnt_delay[1]_or_out = cnt_delay[0];
+cnt_delay[1]_reg_input = cnt_delay[1] $ cnt_delay[1]_or_out;
+cnt_delay[1] = DFFE(cnt_delay[1]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--A1L911 is reduce_or~2461 at SEXP96
+A1L911 = EXP(readData_reg[1] & !readData_reg[2]);
+
+
+--A1L021 is reduce_or~2462 at SEXP95
+A1L021 = EXP(!readData_reg[1] & readData_reg[2]);
+
+
+--A1L121 is reduce_or~2463 at SEXP94
+A1L121 = EXP(!writeData_reg[2] & !writeData_reg[1]);
+
+
+--A1L221 is reduce_or~2464 at SEXP92
+A1L221 = EXP(writeData_reg[2] & writeData_reg[1]);
+
+
+--A1L321 is reduce_or~2465 at SEXP89
+A1L321 = EXP(!readData_reg[1] & !readData_reg[4] & !readData_reg[5] & !readData_reg[6] & !readData_reg[7] & readData_reg[2] & en_xhdl3[0] & !readData_reg[3]);
+
+
+--A1L421 is reduce_or~2466 at SEXP87
+A1L421 = EXP(!en_xhdl3[0] & !en_xhdl3[1]);
+
+
+--A1L521 is reduce_or~2467 at SEXP83
+A1L521 = EXP(en_xhdl3[0] & en_xhdl3[1]);
+
+
+--A1L621 is reduce_or~2468 at SEXP82
+A1L621 = EXP(!writeData_reg[2] & !writeData_reg[3] & !writeData_reg[1] & !en_xhdl3[0]);
+
+
+--A1L721 is reduce_or~2473 at LC86
+A1L721_p1_out = A1L321 & A1L421 & A1L521 & A1L621;
+A1L721_p0_out = A1L321 & A1L421 & A1L521 & A1L621 & !en_xhdl3[0] & A1L221 & writeData_reg[0];
+A1L721_p2_out = A1L321 & A1L421 & A1L521 & A1L621 & A1L911 & !readData_reg[4] & !readData_reg[5] & !readData_reg[6] & !readData_reg[7] & !readData_reg[0] & en_xhdl3[0];
+A1L721_p3_out = A1L321 & A1L421 & A1L521 & A1L621 & !readData_reg[4] & !readData_reg[5] & !readData_reg[6] & !readData_reg[7] & en_xhdl3[0] & A1L021 & readData_reg[3];
+A1L721_p4_out = A1L321 & A1L421 & A1L521 & A1L621 & !en_xhdl3[0] & A1L121 & writeData_reg[3];
+A1L721_or_out = A1L721_p0_out # A1L721_p2_out # A1L721_p3_out # A1L721_p4_out;
+A1L721 = A1L721_p1_out $ A1L721_or_out;
+
+
+--A1L821 is reduce_or~2476 at SEXP100
+A1L821 = EXP(!readData_reg[4] & !readData_reg[5] & !readData_reg[6] & !readData_reg[7]);
+
+
+--A1L921 is reduce_or~2477 at SEXP99
+A1L921 = EXP(readData_reg[0] & !readData_reg[1]);
+
+
+--A1L031 is reduce_or~2478 at SEXP98
+A1L031 = EXP(!writeData_reg[0] & !writeData_reg[1]);
+
+
+--A1L131 is reduce_or~2484 at LC97
+A1L131_p0_out = !en_xhdl3[0] & en_xhdl3[1] & writeData_reg[3] & !writeData_reg[2] & A1L031;
+A1L131_p1_out = !readData_reg[3] & readData_reg[1] & !readData_reg[0] & !readData_reg[2] & en_xhdl3[0] & !en_xhdl3[1];
+A1L131_p2_out = !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[3] & writeData_reg[1] & writeData_reg[0] & writeData_reg[2];
+A1L131_p3_out = en_xhdl3[0] & !en_xhdl3[1] & A1L821;
+A1L131_p4_out = readData_reg[3] & readData_reg[2] & en_xhdl3[0] & !en_xhdl3[1] & A1L921;
+A1L131_or_out = A1L131_p0_out # A1L131_p1_out # A1L131_p2_out # A1L131_p3_out # A1L131_p4_out;
+A1L131 = A1L131_or_out;
+
+
+--A1L231 is reduce_or~2485 at LC85
+A1L231_p1_out = en_xhdl3[0] & !en_xhdl3[1];
+A1L231_p0_out = !readData_reg[4] & !readData_reg[5] & !readData_reg[6] & !readData_reg[7] & !readData_reg[0] & en_xhdl3[0] & !en_xhdl3[1] & !readData_reg[2];
+A1L231_p2_out = !readData_reg[1] & readData_reg[3] & !readData_reg[4] & !readData_reg[5] & !readData_reg[6] & !readData_reg[7] & readData_reg[0] & en_xhdl3[0] & !en_xhdl3[1];
+A1L231_p3_out = readData_reg[1] & !readData_reg[3] & !readData_reg[4] & !readData_reg[5] & !readData_reg[6] & !readData_reg[7] & readData_reg[0] & en_xhdl3[0] & !en_xhdl3[1];
+A1L231_p4_out = !readData_reg[1] & !readData_reg[3] & !readData_reg[4] & !readData_reg[5] & !readData_reg[6] & !readData_reg[7] & !readData_reg[0] & en_xhdl3[0] & !en_xhdl3[1];
+A1L231_or_out = A1L731 # A1L231_p0_out # A1L231_p2_out # A1L231_p3_out # A1L231_p4_out;
+A1L231 = A1L231_p1_out $ A1L231_or_out;
+
+
+--A1L331 is reduce_or~2498 at LC93
+A1L331_p0_out = en_xhdl3[0] & !en_xhdl3[1] & A1L341;
+A1L331_p1_out = readData_reg[3] & !readData_reg[2] & !readData_reg[0] & readData_reg[1] & en_xhdl3[0] & !en_xhdl3[1];
+A1L331_p2_out = !readData_reg[2] & readData_reg[0] & !readData_reg[1] & en_xhdl3[0] & !en_xhdl3[1];
+A1L331_p3_out = !en_xhdl3[0] & en_xhdl3[1] & writeData_reg[2] & writeData_reg[3] & writeData_reg[1] & writeData_reg[0];
+A1L331_p4_out = !en_xhdl3[0] & en_xhdl3[1] & writeData_reg[2] & !writeData_reg[1] & !writeData_reg[0];
+A1L331_or_out = A1L831 # A1L331_p0_out # A1L331_p1_out # A1L331_p2_out # A1L331_p3_out # A1L331_p4_out;
+A1L331 = A1L331_or_out;
+
+
+--A1L431 is reduce_or~2505 at LC88
+A1L431_p0_out = en_xhdl3[0] & !en_xhdl3[1] & A1L341;
+A1L431_p1_out = readData_reg[0] & readData_reg[3] & !readData_reg[1] & readData_reg[2] & en_xhdl3[0] & !en_xhdl3[1];
+A1L431_p2_out = readData_reg[0] & readData_reg[3] & readData_reg[1] & !readData_reg[2] & en_xhdl3[0] & !en_xhdl3[1];
+A1L431_p3_out = !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[0] & writeData_reg[3] & !writeData_reg[1] & !writeData_reg[2];
+A1L431_p4_out = !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[0] & writeData_reg[3] & writeData_reg[1] & writeData_reg[2];
+A1L431_or_out = A1L931 # A1L431_p0_out # A1L431_p1_out # A1L431_p2_out # A1L431_p3_out # A1L431_p4_out;
+A1L431 = A1L431_or_out;
+
+
+--A1L531 is reduce_or~2511 at LC91
+A1L531_p0_out = !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[0] & !writeData_reg[3];
+A1L531_p1_out = readData_reg[5] & en_xhdl3[0] & !en_xhdl3[1];
+A1L531_p2_out = en_xhdl3[0] & !en_xhdl3[1] & readData_reg[6];
+A1L531_p3_out = en_xhdl3[0] & !en_xhdl3[1] & readData_reg[7];
+A1L531_p4_out = en_xhdl3[0] & !en_xhdl3[1] & readData_reg[0] & !readData_reg[3];
+A1L531_or_out = A1L041 # A1L531_p0_out # A1L531_p1_out # A1L531_p2_out # A1L531_p3_out # A1L531_p4_out;
+A1L531 = A1L531_or_out;
+
+
+--cnt_delay[2] is cnt_delay[2] at LC115
+cnt_delay[2]_p1_out = cnt_delay[1] & cnt_delay[0];
+cnt_delay[2]_or_out = cnt_delay[2];
+cnt_delay[2]_reg_input = cnt_delay[2]_p1_out $ cnt_delay[2]_or_out;
+cnt_delay[2] = DFFE(cnt_delay[2]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[3] is cnt_delay[3] at LC16
+cnt_delay[3]_p1_out = cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[3]_or_out = cnt_delay[3];
+cnt_delay[3]_reg_input = cnt_delay[3]_p1_out $ cnt_delay[3]_or_out;
+cnt_delay[3] = DFFE(cnt_delay[3]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[4] is cnt_delay[4] at LC71
+cnt_delay[4]_p1_out = cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[4]_or_out = cnt_delay[4];
+cnt_delay[4]_reg_input = cnt_delay[4]_p1_out $ cnt_delay[4]_or_out;
+cnt_delay[4] = DFFE(cnt_delay[4]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[5] is cnt_delay[5] at LC45
+cnt_delay[5]_p1_out = cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[5]_or_out = cnt_delay[5];
+cnt_delay[5]_reg_input = cnt_delay[5]_p1_out $ cnt_delay[5]_or_out;
+cnt_delay[5] = DFFE(cnt_delay[5]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[6] is cnt_delay[6] at LC46
+cnt_delay[6]_p1_out = cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[6]_or_out = cnt_delay[6];
+cnt_delay[6]_reg_input = cnt_delay[6]_p1_out $ cnt_delay[6]_or_out;
+cnt_delay[6] = DFFE(cnt_delay[6]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[7] is cnt_delay[7] at LC72
+cnt_delay[7]_p1_out = cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[7]_or_out = cnt_delay[7];
+cnt_delay[7]_reg_input = cnt_delay[7]_p1_out $ cnt_delay[7]_or_out;
+cnt_delay[7] = DFFE(cnt_delay[7]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[8] is cnt_delay[8] at LC1
+cnt_delay[8]_p1_out = cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & A1L611;
+cnt_delay[8]_p2_out = !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[8] & cnt_delay[18] & cnt_delay[10] & cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & !cnt_delay[11] & !cnt_delay[9] & cnt_delay[13] & cnt_delay[12];
+cnt_delay[8]_or_out = cnt_delay[8]_p1_out # cnt_delay[8]_p2_out;
+cnt_delay[8]_reg_input = cnt_delay[8]_or_out;
+cnt_delay[8] = TFFE(cnt_delay[8]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[9] is cnt_delay[9] at LC47
+cnt_delay[9]_p1_out = cnt_delay[8] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[9]_or_out = cnt_delay[9];
+cnt_delay[9]_reg_input = cnt_delay[9]_p1_out $ cnt_delay[9]_or_out;
+cnt_delay[9] = DFFE(cnt_delay[9]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[10] is cnt_delay[10] at LC6
+cnt_delay[10]_p1_out = cnt_delay[9] & cnt_delay[8] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & A1L611;
+cnt_delay[10]_p2_out = !cnt_delay[9] & cnt_delay[8] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[10] & cnt_delay[18] & cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & !cnt_delay[11] & cnt_delay[13] & cnt_delay[12];
+cnt_delay[10]_or_out = cnt_delay[10]_p1_out # cnt_delay[10]_p2_out;
+cnt_delay[10]_reg_input = cnt_delay[10]_or_out;
+cnt_delay[10] = TFFE(cnt_delay[10]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[11] is cnt_delay[11] at LC78
+cnt_delay[11]_p1_out = cnt_delay[10] & cnt_delay[9] & cnt_delay[8] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[11]_or_out = cnt_delay[11];
+cnt_delay[11]_reg_input = cnt_delay[11]_p1_out $ cnt_delay[11]_or_out;
+cnt_delay[11] = DFFE(cnt_delay[11]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[12] is cnt_delay[12] at LC74
+cnt_delay[12]_p1_out = cnt_delay[11] & cnt_delay[10] & cnt_delay[9] & cnt_delay[8] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & A1L711;
+cnt_delay[12]_p2_out = !cnt_delay[11] & cnt_delay[10] & !cnt_delay[9] & cnt_delay[8] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[12] & cnt_delay[18] & cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & cnt_delay[13];
+cnt_delay[12]_or_out = cnt_delay[12]_p1_out # cnt_delay[12]_p2_out;
+cnt_delay[12]_reg_input = cnt_delay[12]_or_out;
+cnt_delay[12] = TFFE(cnt_delay[12]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[13] is cnt_delay[13] at LC80
+cnt_delay[13]_p1_out = cnt_delay[12] & cnt_delay[11] & cnt_delay[10] & cnt_delay[9] & cnt_delay[8] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & A1L711;
+cnt_delay[13]_p2_out = cnt_delay[12] & !cnt_delay[11] & cnt_delay[10] & !cnt_delay[9] & cnt_delay[8] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[13] & cnt_delay[18] & cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14];
+cnt_delay[13]_or_out = cnt_delay[13]_p1_out # cnt_delay[13]_p2_out;
+cnt_delay[13]_reg_input = cnt_delay[13]_or_out;
+cnt_delay[13] = TFFE(cnt_delay[13]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[14] is cnt_delay[14] at LC79
+cnt_delay[14]_p1_out = cnt_delay[13] & cnt_delay[12] & cnt_delay[11] & cnt_delay[10] & cnt_delay[9] & cnt_delay[8] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[14]_or_out = cnt_delay[14];
+cnt_delay[14]_reg_input = cnt_delay[14]_p1_out $ cnt_delay[14]_or_out;
+cnt_delay[14] = DFFE(cnt_delay[14]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[15] is cnt_delay[15] at LC2
+cnt_delay[15]_p1_out = cnt_delay[14] & cnt_delay[13] & cnt_delay[12] & cnt_delay[11] & cnt_delay[10] & cnt_delay[9] & cnt_delay[8] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[15]_or_out = cnt_delay[15];
+cnt_delay[15]_reg_input = cnt_delay[15]_p1_out $ cnt_delay[15]_or_out;
+cnt_delay[15] = DFFE(cnt_delay[15]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[16] is cnt_delay[16] at LC75
+cnt_delay[16]_p1_out = cnt_delay[15] & cnt_delay[14] & cnt_delay[13] & cnt_delay[12] & cnt_delay[10] & cnt_delay[11] & cnt_delay[8] & cnt_delay[9] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[16]_or_out = cnt_delay[16]_p1_out;
+cnt_delay[16]_reg_input = cnt_delay[16]_or_out;
+cnt_delay[16] = TFFE(cnt_delay[16]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[17] is cnt_delay[17] at LC76
+cnt_delay[17]_p1_out = cnt_delay[16] & cnt_delay[15] & cnt_delay[14] & cnt_delay[13] & cnt_delay[12] & cnt_delay[10] & cnt_delay[11] & cnt_delay[8] & cnt_delay[9] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0];
+cnt_delay[17]_or_out = cnt_delay[17];
+cnt_delay[17]_reg_input = cnt_delay[17]_p1_out $ cnt_delay[17]_or_out;
+cnt_delay[17] = DFFE(cnt_delay[17]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--cnt_delay[18] is cnt_delay[18] at LC77
+cnt_delay[18]_p1_out = cnt_delay[17] & cnt_delay[16] & cnt_delay[15] & cnt_delay[14] & cnt_delay[13] & cnt_delay[12] & cnt_delay[10] & cnt_delay[11] & cnt_delay[8] & cnt_delay[9] & cnt_delay[7] & cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & A1L711;
+cnt_delay[18]_p2_out = !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & cnt_delay[13] & cnt_delay[12] & cnt_delay[10] & !cnt_delay[11] & cnt_delay[8] & !cnt_delay[9] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[18] & cnt_delay[19];
+cnt_delay[18]_or_out = cnt_delay[18]_p1_out # cnt_delay[18]_p2_out;
+cnt_delay[18]_reg_input = cnt_delay[18]_or_out;
+cnt_delay[18] = TFFE(cnt_delay[18]_reg_input, GLOBAL(clk), GLOBAL(rst), , start_delaycnt);
+
+
+--main_state[1] is main_state[1] at LC10
+main_state[1]_p1_out = !rd_input & wr_input & cnt_delay[18] & cnt_delay[10] & cnt_delay[8] & cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & !cnt_delay[11] & !cnt_delay[9] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[13] & cnt_delay[12] & !main_state[0] & !main_state[1];
+main_state[1]_p2_out = !main_state[0] & main_state[1] & phase1 & sda_buf & !i2c_state[2] & !i2c_state[1] & inner_state[0] & inner_state[3] & !inner_state[1] & !inner_state[2];
+main_state[1]_p3_out = !main_state[0] & main_state[1] & phase1 & sda_buf & !i2c_state[1] & inner_state[0] & inner_state[3] & !inner_state[1] & !inner_state[2] & !i2c_state[0];
+main_state[1]_p4_out = !main_state[0] & main_state[1] & !i2c_state[2] & i2c_state[1] & !inner_state[0] & inner_state[3] & inner_state[1] & !inner_state[2] & i2c_state[0] & phase3;
+main_state[1]_or_out = main_state[1]_p1_out # main_state[1]_p2_out # main_state[1]_p3_out # main_state[1]_p4_out;
+main_state[1]_reg_input = main_state[1]_or_out;
+main_state[1] = TFFE(main_state[1]_reg_input, GLOBAL(clk), GLOBAL(rst), , );
+
+
+--scl_xhdl1 is scl_xhdl1 at LC40
+scl_xhdl1_p0_out = scl_xhdl1 & !phase2;
+scl_xhdl1_p1_out = phase0 & !main_state[0];
+scl_xhdl1_p2_out = phase0 & !main_state[1];
+scl_xhdl1_p3_out = main_state[0] & main_state[1] & scl_xhdl1;
+scl_xhdl1_or_out = A1L39 # scl_xhdl1_p0_out # scl_xhdl1_p1_out # scl_xhdl1_p2_out # scl_xhdl1_p3_out;
+scl_xhdl1_reg_input = scl_xhdl1_or_out;
+scl_xhdl1 = DFFE(scl_xhdl1_reg_input, GLOBAL(clk), , rst, );
+
+
+--A1L541 is rtl~1331 at LC65
+A1L541_p1_out = !i2c_state[1] & inner_state[1] & !inner_state[3] & inner_state[0] & phase3 & !i2c_state[2] & !main_state[0] & inner_state[2];
+A1L541 = A1L541_p1_out;
+
+
+--A1L641 is rtl~1333 at LC18
+A1L641_p1_out = !main_state[0] & !i2c_state[1] & !inner_state[3] & inner_state[0] & phase3 & !i2c_state[2] & inner_state[1];
+A1L641_p2_out = main_state[0] & !i2c_state[1] & !inner_state[3] & inner_state[0] & phase3 & !i2c_state[2] & !main_state[1];
+A1L641_p3_out = main_state[0] & !inner_state[3] & inner_state[0] & phase3 & !i2c_state[2] & !main_state[1] & !i2c_state[0];
+A1L641 = A1L641_p1_out # A1L641_p2_out # A1L641_p3_out;
+
+
+--A1L57 is Mux~17849 at LC42
+A1L57_p1_out = link & main_state[1] & !main_state[0] & inner_state[1];
+A1L57_p2_out = main_state[1] & !main_state[0] & inner_state[1] & !i2c_state[2] & phase3 & !inner_state[3] & !i2c_state[1];
+A1L57_p3_out = main_state[1] & !main_state[0] & inner_state[1] & phase3 & !inner_state[3] & !i2c_state[1] & !i2c_state[0];
+A1L57_p4_out = link & main_state[1] & !main_state[0] & inner_state[2];
+A1L57 = A1L57_p1_out # A1L57_p2_out # A1L57_p3_out # A1L57_p4_out;
+
+
+--A1L67 is Mux~17854 at LC43
+A1L67_p0_out = main_state[1] & !main_state[0] & !inner_state[3] & link;
+A1L67_p1_out = !i2c_state[2] & phase3 & main_state[1] & !main_state[0] & inner_state[2] & !inner_state[3] & !i2c_state[1];
+A1L67_p2_out = phase3 & main_state[1] & !main_state[0] & inner_state[2] & !inner_state[3] & !i2c_state[1] & !i2c_state[0];
+A1L67_p3_out = !i2c_state[2] & phase3 & main_state[1] & !main_state[0] & !inner_state[2] & !i2c_state[1] & inner_state[0] & !inner_state[1];
+A1L67_p4_out = !i2c_state[2] & phase3 & main_state[1] & !main_state[0] & !inner_state[2] & inner_state[3] & i2c_state[0] & inner_state[0] & !inner_state[1];
+A1L67 = A1L57 # A1L67_p0_out # A1L67_p1_out # A1L67_p2_out # A1L67_p3_out # A1L67_p4_out;
+
+
+--A1L77 is Mux~17860 at LC52
+A1L77_p1_out = phase1 & main_state[0] & !i2c_state[1] & !inner_state[2] & !inner_state[1] & !inner_state[0] & !inner_state[3] & !i2c_state[0] & !main_state[1] & !i2c_state[2] & !link;
+A1L77_p2_out = main_state[0] & !i2c_state[1] & !inner_state[2] & !inner_state[1] & inner_state[0] & !main_state[1] & !i2c_state[2] & !link & phase3;
+A1L77 = A1L77_p1_out # A1L77_p2_out;
+
+
+--A1L87 is Mux~17863 at LC53
+A1L87_p0_out = main_state[0] & phase3 & inner_state[2] & !i2c_state[0] & !main_state[1] & !i2c_state[2] & !link & !inner_state[3];
+A1L87_p1_out = !phase1 & main_state[0] & phase3 & !inner_state[2] & !inner_state[1] & inner_state[0] & !i2c_state[0] & !main_state[1] & !i2c_state[2] & !link;
+A1L87_p2_out = main_state[0] & phase3 & inner_state[1] & !main_state[1] & !i2c_state[2] & !link & !i2c_state[1] & !inner_state[3];
+A1L87_p3_out = main_state[0] & phase3 & inner_state[1] & !i2c_state[0] & !main_state[1] & !i2c_state[2] & !link & !inner_state[3];
+A1L87_p4_out = main_state[0] & phase3 & inner_state[2] & !main_state[1] & !i2c_state[2] & !link & !i2c_state[1] & !inner_state[3];
+A1L87 = A1L77 # A1L87_p0_out # A1L87_p1_out # A1L87_p2_out # A1L87_p3_out # A1L87_p4_out;
+
+
+--A1L97 is Mux~17869 at LC49
+A1L97_p1_out = phase3 & !i2c_state[2] & !inner_state[3] & inner_state[0] & !main_state[0] & i2c_state[0];
+A1L97_p2_out = phase3 & !inner_state[3] & inner_state[0] & !main_state[0] & !i2c_state[0] & !i2c_state[1];
+A1L97_p3_out = phase3 & !i2c_state[2] & inner_state[0] & !main_state[0] & i2c_state[0] & !inner_state[2] & !inner_state[1];
+A1L97 = A1L97_p1_out # A1L97_p2_out # A1L97_p3_out;
+
+
+--A1L08 is Mux~17873 at LC50
+A1L08_p0_out = main_state[0] & main_state[1] & !inner_state[0];
+A1L08_p1_out = !main_state[0] & !main_state[1];
+A1L08_p2_out = !main_state[1] & i2c_state[1] & phase3 & !i2c_state[2] & inner_state[0] & !i2c_state[0] & !inner_state[2] & !inner_state[1] & !phase1;
+A1L08_p3_out = !phase3 & !inner_state[0];
+A1L08_p4_out = main_state[1] & i2c_state[1] & !inner_state[0] & !i2c_state[0];
+A1L08 = A1L97 # A1L08_p0_out # A1L08_p1_out # A1L08_p2_out # A1L08_p3_out # A1L08_p4_out;
+
+
+--A1L741 is rtl~1337 at LC4
+A1L741_p1_out = inner_state[1] & inner_state[2] & inner_state[0] & phase3 & !i2c_state[1] & !i2c_state[2] & main_state[0] & !main_state[1] & !inner_state[3];
+A1L741_p2_out = inner_state[1] & inner_state[2] & inner_state[0] & phase3 & !i2c_state[2] & main_state[0] & !main_state[1] & !inner_state[3] & !i2c_state[0];
+A1L741_p3_out = inner_state[1] & inner_state[2] & inner_state[0] & phase3 & !i2c_state[2] & !main_state[0] & main_state[1] & !inner_state[3] & i2c_state[0];
+A1L741 = A1L741_p1_out # A1L741_p2_out # A1L741_p3_out;
+
+
+--A1L351 is sda~14 at LC60
+A1L351_p1_out = A1L251 & phase1 & i2c_state[1] & !inner_state[0] & !inner_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[0];
+A1L351_p2_out = A1L251 & phase1 & i2c_state[1] & inner_state[0] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[0];
+A1L351_p3_out = A1L251 & phase1 & i2c_state[1] & inner_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[0];
+A1L351 = A1L351_p1_out # A1L351_p2_out # A1L351_p3_out;
+
+
+--A1L201 is readData_reg[0]~297 at LC103
+A1L201_p1_out = readData_reg[0] & phase1 & i2c_state[1] & !inner_state[0] & !inner_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[1];
+A1L201_p2_out = readData_reg[0] & phase1 & i2c_state[1] & inner_state[0] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[1];
+A1L201_p3_out = readData_reg[0] & phase1 & i2c_state[1] & inner_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[1];
+A1L201 = A1L201_p1_out # A1L201_p2_out # A1L201_p3_out;
+
+
+--A1L401 is readData_reg[1]~301 at LC69
+A1L401_p1_out = readData_reg[1] & phase1 & i2c_state[1] & !inner_state[0] & !inner_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[2];
+A1L401_p2_out = readData_reg[1] & phase1 & i2c_state[1] & inner_state[0] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[2];
+A1L401_p3_out = readData_reg[1] & phase1 & i2c_state[1] & inner_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[2];
+A1L401 = A1L401_p1_out # A1L401_p2_out # A1L401_p3_out;
+
+
+--A1L18 is Mux~17879 at LC62
+A1L18_p1_out = sda_buf & inner_state[1] & !i2c_state[1] & !i2c_state[0] & inner_state[3];
+A1L18 = A1L18_p1_out;
+
+
+--A1L28 is Mux~17881 at LC63
+A1L28_p0_out = sda_buf & !i2c_state[1] & !i2c_state[0] & !inner_state[2] & !inner_state[0] & !phase1;
+A1L28_p1_out = sda_buf & inner_state[1] & !i2c_state[1] & !i2c_state[0] & !phase3;
+A1L28_p2_out = sda_buf & !i2c_state[1] & !i2c_state[0] & inner_state[3] & inner_state[2];
+A1L28_p3_out = sda_buf & !i2c_state[1] & !i2c_state[0] & !phase3 & inner_state[2];
+A1L28_p4_out = sda_buf & !i2c_state[1] & !i2c_state[0] & inner_state[3] & !inner_state[0];
+A1L28 = A1L18 # A1L28_p0_out # A1L28_p1_out # A1L28_p2_out # A1L28_p3_out # A1L28_p4_out;
+
+
+--A1L38 is Mux~17887 at LC57
+A1L38_p0_out = i2c_state[1] & phase3 & inner_state[1] & inner_state[2] & !inner_state[3] & inner_state[0] & !writeData_reg[0];
+A1L38_p1_out = i2c_state[0] & i2c_state[1];
+A1L38_p2_out = i2c_state[1] & writeData_reg[3] & phase3 & !inner_state[1] & inner_state[2] & !inner_state[3] & !inner_state[0];
+A1L38_p3_out = i2c_state[1] & phase3 & inner_state[1] & inner_state[2] & !inner_state[3] & !inner_state[0] & writeData_reg[1];
+A1L38_p4_out = i2c_state[1] & phase3 & !inner_state[1] & inner_state[2] & !inner_state[3] & inner_state[0] & !writeData_reg[2];
+A1L38 = A1L38_p0_out # A1L38_p1_out # A1L38_p2_out # A1L38_p3_out # A1L38_p4_out;
+
+
+--A1L48 is Mux~17893 at LC58
+A1L48_p0_out = !inner_state[1] & !inner_state[2] & i2c_state[1] & inner_state[0] & inner_state[3] & A1L251 & phase0 & phase1;
+A1L48_p1_out = !inner_state[1] & !inner_state[2] & i2c_state[1] & sda_buf & !inner_state[0];
+A1L48_p2_out = i2c_state[1] & sda_buf & !phase3 & !inner_state[3];
+A1L48_p3_out = !inner_state[1] & !inner_state[2] & i2c_state[1] & inner_state[0] & !phase3 & inner_state[3] & A1L251 & phase0;
+A1L48_p4_out = i2c_state[1] & sda_buf & !phase3 & !phase0;
+A1L48 = A1L38 # A1L48_p0_out # A1L48_p1_out # A1L48_p2_out # A1L48_p3_out # A1L48_p4_out;
+
+
+--A1L58 is Mux~17899 at LC55
+A1L58_p1_out = sda_buf & i2c_state[2];
+A1L58_p2_out = sda_buf & A1L26;
+A1L58 = A1L58_p1_out # A1L58_p2_out;
+
+
+--A1L68 is Mux~17902 at LC20
+A1L68_p1_out = !inner_state[0] & i2c_state[1] & sda_buf & A1L251;
+A1L68_p2_out = inner_state[0] & !i2c_state[1] & sda_buf & !inner_state[3] & !phase3;
+A1L68_p3_out = !inner_state[0] & sda_buf & A1L251 & i2c_state[0] & !inner_state[1];
+A1L68_p4_out = !inner_state[0] & sda_buf & !inner_state[3] & i2c_state[0] & !inner_state[1] & !inner_state[2];
+A1L68 = A1L68_p1_out # A1L68_p2_out # A1L68_p3_out # A1L68_p4_out;
+
+
+--A1L78 is Mux~17907 at LC21
+A1L78_p0_out = !inner_state[0] & i2c_state[1] & inner_state[3] & i2c_state[0] & !inner_state[2] & !inner_state[1] & A1L251 & phase0;
+A1L78_p1_out = inner_state[0] & !i2c_state[1] & inner_state[3] & i2c_state[0] & !inner_state[2] & phase3 & !inner_state[1];
+A1L78_p2_out = !inner_state[0] & !i2c_state[1] & !inner_state[3] & i2c_state[0] & inner_state[2] & phase3;
+A1L78_p3_out = !inner_state[0] & !i2c_state[0] & !inner_state[2] & sda_buf & !phase1;
+A1L78_p4_out = inner_state[0] & !i2c_state[1] & inner_state[3] & !inner_state[2] & !phase3 & !inner_state[1] & A1L251 & phase0;
+A1L78 = A1L68 # A1L78_p0_out # A1L78_p1_out # A1L78_p2_out # A1L78_p3_out # A1L78_p4_out;
+
+
+--A1L88 is Mux~17913 at LC22
+A1L88_p0_out = i2c_state[1] & !inner_state[3] & i2c_state[0] & phase0 & A1L86 & A1L251;
+A1L88_p1_out = !inner_state[0] & i2c_state[1] & inner_state[3] & i2c_state[0] & !inner_state[2] & inner_state[1] & phase1;
+A1L88_p2_out = i2c_state[1] & !i2c_state[0] & sda_buf;
+A1L88_p3_out = i2c_state[1] & !inner_state[3] & sda_buf & !phase0;
+A1L88_p4_out = inner_state[0] & i2c_state[1] & inner_state[3] & sda_buf & !phase3;
+A1L88 = A1L78 # A1L88_p0_out # A1L88_p1_out # A1L88_p2_out # A1L88_p3_out # A1L88_p4_out;
+
+
+--A1L98 is Mux~17919 at LC34
+A1L98_p1_out = sda_buf & i2c_state[1];
+A1L98_p2_out = sda_buf & i2c_state[0];
+A1L98_p3_out = sda_buf & !inner_state[3] & !phase3 & inner_state[0];
+A1L98_p4_out = sda_buf & !inner_state[0] & !phase1 & !inner_state[2];
+A1L98 = A1L98_p1_out # A1L98_p2_out # A1L98_p3_out # A1L98_p4_out;
+
+
+--A1L09 is Mux~17924 at LC35
+A1L09_p0_out = sda_buf & inner_state[3] & !phase0;
+A1L09_p1_out = sda_buf & inner_state[1] & inner_state[3];
+A1L09_p2_out = sda_buf & inner_state[1] & !phase3;
+A1L09_p3_out = sda_buf & inner_state[3] & inner_state[2];
+A1L09_p4_out = sda_buf & !phase3 & inner_state[2];
+A1L09 = A1L98 # A1L09_p0_out # A1L09_p1_out # A1L09_p2_out # A1L09_p3_out # A1L09_p4_out;
+
+
+--A1L601 is readData_reg[2]~305 at LC67
+A1L601_p1_out = readData_reg[2] & phase1 & i2c_state[1] & !inner_state[0] & !inner_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[3];
+A1L601_p2_out = readData_reg[2] & phase1 & i2c_state[1] & inner_state[0] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[3];
+A1L601_p3_out = readData_reg[2] & phase1 & i2c_state[1] & inner_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[3];
+A1L601 = A1L601_p1_out # A1L601_p2_out # A1L601_p3_out;
+
+
+--A1L801 is readData_reg[3]~309 at LC107
+A1L801_p1_out = readData_reg[3] & phase1 & i2c_state[1] & !inner_state[0] & !inner_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[4];
+A1L801_p2_out = readData_reg[3] & phase1 & i2c_state[1] & inner_state[0] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[4];
+A1L801_p3_out = readData_reg[3] & phase1 & i2c_state[1] & inner_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[4];
+A1L801 = A1L801_p1_out # A1L801_p2_out # A1L801_p3_out;
+
+
+--A1L011 is readData_reg[4]~313 at LC105
+A1L011_p1_out = readData_reg[4] & phase1 & i2c_state[1] & !inner_state[0] & !inner_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[5];
+A1L011_p2_out = readData_reg[4] & phase1 & i2c_state[1] & inner_state[0] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[5];
+A1L011_p3_out = readData_reg[4] & phase1 & i2c_state[1] & inner_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[5];
+A1L011 = A1L011_p1_out # A1L011_p2_out # A1L011_p3_out;
+
+
+--A1L19 is Mux~17930 at LC13
+A1L19_p0_out = main_state[0] & main_state[1];
+A1L19_p1_out = main_state[0] & !i2c_state[2] & !inner_state[0] & !i2c_state[0] & !phase3;
+A1L19_p2_out = main_state[0] & !i2c_state[2] & inner_state[0] & !i2c_state[0] & !sda_buf;
+A1L19_p3_out = main_state[0] & !i2c_state[2] & inner_state[0] & !i2c_state[0] & !phase1;
+A1L19_p4_out = !main_state[0] & !wr_input & cnt_delay[18] & cnt_delay[10] & cnt_delay[8] & cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & !cnt_delay[11] & !cnt_delay[9] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[13] & cnt_delay[12] & !main_state[1];
+A1L19 = A1L19_p0_out # A1L19_p1_out # A1L19_p2_out # A1L19_p3_out # A1L19_p4_out;
+
+
+--A1L29 is Mux~17936 at LC14
+A1L29_p0_out = main_state[0] & !i2c_state[1] & !i2c_state[2] & inner_state[1];
+A1L29_p1_out = main_state[0] & !i2c_state[1] & !phase1 & !i2c_state[2];
+A1L29_p2_out = main_state[0] & !i2c_state[1] & !i2c_state[2] & !sda_buf;
+A1L29_p3_out = main_state[0] & !i2c_state[1] & !i2c_state[2] & !inner_state[0];
+A1L29_p4_out = main_state[0] & !i2c_state[1] & !i2c_state[2] & !inner_state[3];
+A1L29 = A1L19 # A1L29_p0_out # A1L29_p1_out # A1L29_p2_out # A1L29_p3_out # A1L29_p4_out;
+
+
+--A1L211 is readData_reg[5]~317 at LC109
+A1L211_p1_out = readData_reg[5] & phase1 & i2c_state[1] & !inner_state[0] & !inner_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[6];
+A1L211_p2_out = readData_reg[5] & phase1 & i2c_state[1] & inner_state[0] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[6];
+A1L211_p3_out = readData_reg[5] & phase1 & i2c_state[1] & inner_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[6];
+A1L211 = A1L211_p1_out # A1L211_p2_out # A1L211_p3_out;
+
+
+--A1L411 is readData_reg[6]~321 at LC111
+A1L411_p1_out = readData_reg[6] & phase1 & i2c_state[1] & !inner_state[0] & !inner_state[1] & !inner_state[2] & inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[7];
+A1L411_p2_out = readData_reg[6] & phase1 & i2c_state[1] & inner_state[0] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[7];
+A1L411_p3_out = readData_reg[6] & phase1 & i2c_state[1] & inner_state[1] & !inner_state[3] & main_state[1] & !main_state[0] & !i2c_state[2] & i2c_state[0] & !readData_reg[7];
+A1L411 = A1L411_p1_out # A1L411_p2_out # A1L411_p3_out;
+
+
+--A1L631 is reduce_or~2512 at LC101
+A1L631_p0_out = en_xhdl3[0] & readData_reg[5];
+A1L631_p1_out = !readData_reg[2] & !readData_reg[1] & !readData_reg[3] & !en_xhdl3[1];
+A1L631_p2_out = !writeData_reg[1] & !writeData_reg[3] & writeData_reg[2] & !en_xhdl3[0];
+A1L631_p3_out = !writeData_reg[1] & writeData_reg[3] & !writeData_reg[2] & !en_xhdl3[0] & writeData_reg[0];
+A1L631_p4_out = en_xhdl3[0] & readData_reg[6];
+A1L631 = A1L141 # A1L631_p0_out # A1L631_p1_out # A1L631_p2_out # A1L631_p3_out # A1L631_p4_out;
+
+
+--A1L731 is reduce_or~2516 at LC84
+A1L731_p0_out = en_xhdl3[0] & !en_xhdl3[1] & !readData_reg[1] & !readData_reg[4] & !readData_reg[5] & !readData_reg[6] & !readData_reg[7] & !readData_reg[2];
+A1L731_p1_out = writeData_reg[1] & !writeData_reg[0] & writeData_reg[3] & !en_xhdl3[0] & en_xhdl3[1];
+A1L731_p2_out = !writeData_reg[1] & !writeData_reg[0] & !writeData_reg[3] & !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[2];
+A1L731_p3_out = writeData_reg[1] & writeData_reg[0] & !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[2];
+A1L731_p4_out = writeData_reg[0] & writeData_reg[3] & !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[2];
+A1L731 = A1L731_p0_out # A1L731_p1_out # A1L731_p2_out # A1L731_p3_out # A1L731_p4_out;
+
+
+--A1L831 is reduce_or~2522 at LC92
+A1L831_p1_out = !readData_reg[3] & readData_reg[2] & !readData_reg[0] & !readData_reg[1] & en_xhdl3[0] & !en_xhdl3[1];
+A1L831_p2_out = !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[2] & !writeData_reg[3] & !writeData_reg[1] & writeData_reg[0];
+A1L831_p3_out = readData_reg[2] & readData_reg[0] & readData_reg[1] & en_xhdl3[0] & !en_xhdl3[1];
+A1L831_p4_out = !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[2] & writeData_reg[1] & !writeData_reg[0];
+A1L831 = A1L831_p1_out # A1L831_p2_out # A1L831_p3_out # A1L831_p4_out;
+
+
+--A1L931 is reduce_or~2527 at LC87
+A1L931_p1_out = !readData_reg[0] & !readData_reg[3] & !readData_reg[1] & readData_reg[2] & en_xhdl3[0] & !en_xhdl3[1];
+A1L931_p2_out = !en_xhdl3[0] & en_xhdl3[1] & writeData_reg[0] & !writeData_reg[3] & !writeData_reg[1] & !writeData_reg[2];
+A1L931_p3_out = readData_reg[0] & !readData_reg[3] & !readData_reg[1] & !readData_reg[2] & en_xhdl3[0] & !en_xhdl3[1];
+A1L931_p4_out = !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[0] & !writeData_reg[3] & !writeData_reg[1] & writeData_reg[2];
+A1L931 = A1L931_p1_out # A1L931_p2_out # A1L931_p3_out # A1L931_p4_out;
+
+
+--A1L041 is reduce_or~2532 at LC90
+A1L041_p0_out = en_xhdl3[0] & !en_xhdl3[1] & readData_reg[4];
+A1L041_p1_out = readData_reg[0] & !readData_reg[1] & !readData_reg[2] & en_xhdl3[0] & !en_xhdl3[1];
+A1L041_p2_out = !en_xhdl3[0] & en_xhdl3[1] & writeData_reg[2] & !writeData_reg[1] & !writeData_reg[0];
+A1L041_p3_out = !readData_reg[1] & readData_reg[2] & en_xhdl3[0] & !en_xhdl3[1] & !readData_reg[3];
+A1L041_p4_out = !en_xhdl3[0] & en_xhdl3[1] & !writeData_reg[2] & !writeData_reg[1] & !writeData_reg[3];
+A1L041 = A1L041_p0_out # A1L041_p1_out # A1L041_p2_out # A1L041_p3_out # A1L041_p4_out;
+
+
+--A1L39 is Mux~17942 at LC39
+A1L39_p1_out = !main_state[1] & !main_state[0];
+A1L39 = A1L39_p1_out;
+
+
+--~GND~0 is ~GND~0 at LC37
+~GND~0_or_out = GND;
+~GND~0 = ~GND~0_or_out;
+
+
+--~VCC~0 is ~VCC~0 at LC94
+~VCC~0_or_out = GND;
+~VCC~0 = !(~VCC~0_or_out);
+
+
+--A1L611 is reduce_nor~56sexp at SEXP1
+A1L611 = EXP(cnt_delay[18] & cnt_delay[10] & cnt_delay[8] & cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & !cnt_delay[11] & !cnt_delay[9] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[13] & cnt_delay[12]);
+
+
+--A1L141 is reduce_or~2542 at LC100
+A1L141_p1_out = readData_reg[4] & en_xhdl3[0];
+A1L141_p2_out = en_xhdl3[0] & en_xhdl3[1];
+A1L141 = A1L141_p1_out # A1L141_p2_out;
+
+
+--clk is clk at PIN_83
+--operation mode is input
+
+clk = INPUT();
+
+
+--rst is rst at PIN_1
+--operation mode is input
+
+rst = INPUT();
+
+
+--data_in[0] is data_in[0] at PIN_24
+--operation mode is input
+
+data_in[0] = INPUT();
+
+
+--data_in[1] is data_in[1] at PIN_22
+--operation mode is input
+
+data_in[1] = INPUT();
+
+
+--data_in[2] is data_in[2] at PIN_21
+--operation mode is input
+
+data_in[2] = INPUT();
+
+
+--data_in[3] is data_in[3] at PIN_20
+--operation mode is input
+
+data_in[3] = INPUT();
+
+
+--wr_input is wr_input at PIN_35
+--operation mode is input
+
+wr_input = INPUT();
+
+
+--rd_input is rd_input at PIN_36
+--operation mode is input
+
+rd_input = INPUT();
+
+
+--A1L251 is sda~0 at PIN_29
+--operation mode is bidir
+
+A1L251 = sda;
+
+--sda is sda at PIN_29
+--operation mode is bidir
+
+sda_tri_out = TRI(sda_buf, link);
+sda = BIDIR(sda_tri_out);
+
+
+--lowbit is lowbit at PIN_30
+--operation mode is output
+
+lowbit = OUTPUT(~GND~0);
+
+
+--seg_data[0] is seg_data[0] at PIN_61
+--operation mode is output
+
+seg_data[0] = OUTPUT(~VCC~0);
+
+
+--en[0] is en[0] at PIN_75
+--operation mode is output
+
+en[0] = OUTPUT(en_xhdl3[0]);
+
+
+--en[1] is en[1] at PIN_74
+--operation mode is output
+
+en[1] = OUTPUT(en_xhdl3[1]);
+
+
+--seg_data[1] is seg_data[1] at PIN_64
+--operation mode is output
+
+seg_data[1] = OUTPUT(A1L241);
+
+
+--seg_data[2] is seg_data[2] at PIN_56
+--operation mode is output
+
+seg_data[2] = OUTPUT(A1L721);
+
+
+--seg_data[5] is seg_data[5] at PIN_63
+--operation mode is output
+
+seg_data[5] = OUTPUT(A1L131);
+
+
+--seg_data[6] is seg_data[6] at PIN_55
+--operation mode is output
+
+seg_data[6] = OUTPUT(A1L231);
+
+
+--seg_data[3] is seg_data[3] at PIN_58
+--operation mode is output
+
+seg_data[3] = OUTPUT(A1L531);
+
+
+--seg_data[4] is seg_data[4] at PIN_60
+--operation mode is output
+
+seg_data[4] = OUTPUT(A1L331);
+
+
+--seg_data[7] is seg_data[7] at PIN_57
+--operation mode is output
+
+seg_data[7] = OUTPUT(A1L431);
+
+
+--scl is scl at PIN_28
+--operation mode is output
+
+scl = OUTPUT(scl_xhdl1);
+
+
+
+
+
+
+--A1L241 is reduce_or~2543 at LC99
+A1L241_or_out = A1L811;
+A1L241 = A1L241_or_out;
+
+
+--A1L49 is Mux~17947 at SEXP17
+A1L49 = EXP(!inner_state[1] & !inner_state[2]);
+
+
+--A1L341 is reduce_or~2547 at SEXP81
+A1L341 = EXP(!readData_reg[4] & !readData_reg[5] & !readData_reg[6] & !readData_reg[7]);
+
+
+--A1L711 is reduce_nor~58 at SEXP65
+A1L711 = EXP(cnt_delay[18] & cnt_delay[10] & cnt_delay[8] & cnt_delay[19] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[15] & !cnt_delay[14] & !cnt_delay[11] & !cnt_delay[9] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[5] & !cnt_delay[4] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[1] & !cnt_delay[0] & cnt_delay[13] & cnt_delay[12]);
+
+

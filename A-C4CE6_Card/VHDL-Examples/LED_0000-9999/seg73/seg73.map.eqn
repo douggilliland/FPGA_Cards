@@ -1,0 +1,758 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--cntthird[0] is cntthird[0]
+--operation mode is normal
+
+cntthird[0]_lut_out = !cntthird[0];
+cntthird[0] = DFFEAS(cntthird[0]_lut_out, second_over, rst, , , , , , );
+
+
+--en_xhdl[3] is en_xhdl[3]
+--operation mode is normal
+
+en_xhdl[3]_lut_out = div_cnt[18] & div_cnt[19];
+en_xhdl[3] = DFFEAS(en_xhdl[3]_lut_out, clk, rst, , , , , , );
+
+
+--cntlast[0] is cntlast[0]
+--operation mode is normal
+
+cntlast[0]_lut_out = !cntlast[0];
+cntlast[0] = DFFEAS(cntlast[0]_lut_out, third_over, rst, , , , , , );
+
+
+--en_xhdl[0] is en_xhdl[0]
+--operation mode is normal
+
+en_xhdl[0]_lut_out = div_cnt[18] # div_cnt[19];
+en_xhdl[0] = DFFEAS(en_xhdl[0]_lut_out, clk, rst, , , , , , );
+
+
+--en_xhdl[1] is en_xhdl[1]
+--operation mode is normal
+
+en_xhdl[1]_lut_out = !div_cnt[19] & (div_cnt[18]);
+en_xhdl[1] = DFFEAS(en_xhdl[1]_lut_out, clk, rst, , , , , , );
+
+
+--A1L23 is data4[0]~362
+--operation mode is normal
+
+A1L23 = en_xhdl[0] & (!en_xhdl[1]);
+
+
+--cntfirst[0] is cntfirst[0]
+--operation mode is normal
+
+cntfirst[0]_lut_out = !cntfirst[0] & !last_over;
+cntfirst[0] = DFFEAS(cntfirst[0]_lut_out, div_cnt[24], rst, , , , , , );
+
+
+--cntsecond[0] is cntsecond[0]
+--operation mode is normal
+
+cntsecond[0]_lut_out = !cntsecond[0];
+cntsecond[0] = DFFEAS(cntsecond[0]_lut_out, first_over, rst, , , , , , );
+
+
+--en_xhdl[2] is en_xhdl[2]
+--operation mode is normal
+
+en_xhdl[2]_lut_out = !div_cnt[18] & (div_cnt[19]);
+en_xhdl[2] = DFFEAS(en_xhdl[2]_lut_out, clk, rst, , , , , , );
+
+
+--A1L24 is data4[0]~363
+--operation mode is normal
+
+A1L24 = cntsecond[0] & (!en_xhdl[3] & !en_xhdl[2]);
+
+
+--A1L25 is data4[0]~364
+--operation mode is normal
+
+A1L25 = en_xhdl[1] & en_xhdl[0] # !en_xhdl[1] & !en_xhdl[0] & !en_xhdl[3] & !en_xhdl[2];
+
+
+--A1L26 is data4[0]~365
+--operation mode is normal
+
+A1L26 = en_xhdl[0] & (en_xhdl[1] # !en_xhdl[2]);
+
+
+--A1L27 is data4[0]~366
+--operation mode is normal
+
+A1L27 = A1L25 & (A1L26 & (A1L24) # !A1L26 & cntfirst[0]) # !A1L25 & (A1L26);
+
+
+--cntthird[1] is cntthird[1]
+--operation mode is normal
+
+cntthird[1]_lut_out = cntthird[1] & (!cntthird[0]) # !cntthird[1] & cntthird[0] & (cntthird[2] # !cntthird[3]);
+cntthird[1] = DFFEAS(cntthird[1]_lut_out, second_over, rst, , , , , , );
+
+
+--cntlast[1] is cntlast[1]
+--operation mode is normal
+
+cntlast[1]_lut_out = cntlast[1] & (!cntlast[0]) # !cntlast[1] & cntlast[0] & (cntlast[2] # !cntlast[3]);
+cntlast[1] = DFFEAS(cntlast[1]_lut_out, third_over, rst, , , , , , );
+
+
+--cntfirst[1] is cntfirst[1]
+--operation mode is normal
+
+cntfirst[1]_lut_out = !A1L120 & (cntfirst[0] $ cntfirst[1]);
+cntfirst[1] = DFFEAS(cntfirst[1]_lut_out, div_cnt[24], rst, , , , , , );
+
+
+--cntsecond[1] is cntsecond[1]
+--operation mode is normal
+
+cntsecond[1]_lut_out = cntsecond[1] & (!cntsecond[0]) # !cntsecond[1] & cntsecond[0] & (cntsecond[2] # !cntsecond[3]);
+cntsecond[1] = DFFEAS(cntsecond[1]_lut_out, first_over, rst, , , , , , );
+
+
+--A1L30 is data4[1]~367
+--operation mode is normal
+
+A1L30 = en_xhdl[3] # en_xhdl[2] # cntsecond[1];
+
+
+--A1L31 is data4[1]~368
+--operation mode is normal
+
+A1L31 = A1L25 & (A1L26 & (A1L30) # !A1L26 & cntfirst[1]) # !A1L25 & (!A1L26);
+
+
+--cntthird[2] is cntthird[2]
+--operation mode is normal
+
+cntthird[2]_lut_out = cntthird[2] $ (cntthird[0] & cntthird[1]);
+cntthird[2] = DFFEAS(cntthird[2]_lut_out, second_over, rst, , , , , , );
+
+
+--cntlast[2] is cntlast[2]
+--operation mode is normal
+
+cntlast[2]_lut_out = cntlast[2] $ (cntlast[0] & cntlast[1]);
+cntlast[2] = DFFEAS(cntlast[2]_lut_out, third_over, rst, , , , , , );
+
+
+--cntfirst[2] is cntfirst[2]
+--operation mode is normal
+
+cntfirst[2]_lut_out = !A1L120 & (cntfirst[2] $ (cntfirst[0] & cntfirst[1]));
+cntfirst[2] = DFFEAS(cntfirst[2]_lut_out, div_cnt[24], rst, , , , , , );
+
+
+--cntsecond[2] is cntsecond[2]
+--operation mode is normal
+
+cntsecond[2]_lut_out = cntsecond[2] $ (cntsecond[0] & cntsecond[1]);
+cntsecond[2] = DFFEAS(cntsecond[2]_lut_out, first_over, rst, , , , , , );
+
+
+--A1L34 is data4[2]~369
+--operation mode is normal
+
+A1L34 = cntsecond[2] & (!en_xhdl[3] & !en_xhdl[2]);
+
+
+--A1L35 is data4[2]~370
+--operation mode is normal
+
+A1L35 = A1L25 & (A1L26 & (A1L34) # !A1L26 & cntfirst[2]) # !A1L25 & (A1L26);
+
+
+--cntthird[3] is cntthird[3]
+--operation mode is normal
+
+cntthird[3]_lut_out = cntthird[3] & (cntthird[1] $ cntthird[2] # !cntthird[0]) # !cntthird[3] & cntthird[1] & cntthird[2] & cntthird[0];
+cntthird[3] = DFFEAS(cntthird[3]_lut_out, second_over, rst, , , , , , );
+
+
+--cntlast[3] is cntlast[3]
+--operation mode is normal
+
+cntlast[3]_lut_out = cntlast[3] & (cntlast[1] $ cntlast[2] # !cntlast[0]) # !cntlast[3] & cntlast[1] & cntlast[2] & cntlast[0];
+cntlast[3] = DFFEAS(cntlast[3]_lut_out, third_over, rst, , , , , , );
+
+
+--cntfirst[3] is cntfirst[3]
+--operation mode is normal
+
+cntfirst[3]_lut_out = !A1L120 & (cntfirst[3] $ (cntfirst[2] & A1L1));
+cntfirst[3] = DFFEAS(cntfirst[3]_lut_out, div_cnt[24], rst, , , , , , );
+
+
+--cntsecond[3] is cntsecond[3]
+--operation mode is normal
+
+cntsecond[3]_lut_out = cntsecond[3] & (cntsecond[1] $ cntsecond[2] # !cntsecond[0]) # !cntsecond[3] & cntsecond[1] & cntsecond[2] & cntsecond[0];
+cntsecond[3] = DFFEAS(cntsecond[3]_lut_out, first_over, rst, , , , , , );
+
+
+--A1L38 is data4[3]~371
+--operation mode is normal
+
+A1L38 = en_xhdl[3] # en_xhdl[2] # cntsecond[3];
+
+
+--A1L39 is data4[3]~372
+--operation mode is normal
+
+A1L39 = A1L25 & (A1L26 & (A1L38) # !A1L26 & cntfirst[3]) # !A1L25 & (!A1L26);
+
+
+--A1L113 is Mux~188
+--operation mode is normal
+
+A1L113 = A1L29 & (A1L41 # A1L33 $ A1L37) # !A1L29 & (A1L33 # A1L37 $ A1L41);
+
+
+--A1L114 is Mux~189
+--operation mode is normal
+
+A1L114 = A1L29 & (A1L41 $ (A1L33 # !A1L37)) # !A1L29 & A1L33 & !A1L37 & !A1L41;
+
+
+--A1L115 is Mux~190
+--operation mode is normal
+
+A1L115 = A1L33 & A1L29 & (!A1L41) # !A1L33 & (A1L37 & (!A1L41) # !A1L37 & A1L29);
+
+
+--A1L116 is Mux~191
+--operation mode is normal
+
+A1L116 = A1L29 & (A1L33 $ !A1L37) # !A1L29 & (A1L33 & !A1L37 & A1L41 # !A1L33 & A1L37 & !A1L41);
+
+
+--A1L117 is Mux~192
+--operation mode is normal
+
+A1L117 = A1L37 & A1L41 & (A1L33 # !A1L29) # !A1L37 & !A1L29 & A1L33 & !A1L41;
+
+
+--A1L118 is Mux~193
+--operation mode is normal
+
+A1L118 = A1L33 & (A1L29 & (A1L41) # !A1L29 & A1L37) # !A1L33 & A1L37 & (A1L29 $ A1L41);
+
+
+--A1L119 is Mux~194
+--operation mode is normal
+
+A1L119 = A1L37 & !A1L33 & (A1L29 $ !A1L41) # !A1L37 & A1L29 & (A1L33 $ !A1L41);
+
+
+--second_over is second_over
+--operation mode is normal
+
+second_over_lut_out = cntsecond[0] & cntsecond[3] & !cntsecond[1] & !cntsecond[2];
+second_over = DFFEAS(second_over_lut_out, first_over, rst, , , , , , );
+
+
+--div_cnt[18] is div_cnt[18]
+--operation mode is arithmetic
+
+div_cnt[18]_carry_eqn = A1L87;
+div_cnt[18]_lut_out = div_cnt[18] $ (!div_cnt[18]_carry_eqn);
+div_cnt[18] = DFFEAS(div_cnt[18]_lut_out, clk, rst, , , , , , );
+
+--A1L89 is div_cnt[18]~208
+--operation mode is arithmetic
+
+A1L89 = CARRY(div_cnt[18] & (!A1L87));
+
+
+--div_cnt[19] is div_cnt[19]
+--operation mode is arithmetic
+
+div_cnt[19]_carry_eqn = A1L89;
+div_cnt[19]_lut_out = div_cnt[19] $ (div_cnt[19]_carry_eqn);
+div_cnt[19] = DFFEAS(div_cnt[19]_lut_out, clk, rst, , , , , , );
+
+--A1L91 is div_cnt[19]~212
+--operation mode is arithmetic
+
+A1L91 = CARRY(!A1L89 # !div_cnt[19]);
+
+
+--third_over is third_over
+--operation mode is normal
+
+third_over_lut_out = cntthird[0] & cntthird[3] & !cntthird[1] & !cntthird[2];
+third_over = DFFEAS(third_over_lut_out, second_over, rst, , , , , , );
+
+
+--last_over is last_over
+--operation mode is normal
+
+last_over_lut_out = cntlast[0] & cntlast[3] & !cntlast[1] & !cntlast[2];
+last_over = DFFEAS(last_over_lut_out, third_over, rst, , , , , , );
+
+
+--div_cnt[24] is div_cnt[24]
+--operation mode is normal
+
+div_cnt[24]_carry_eqn = A1L99;
+div_cnt[24]_lut_out = div_cnt[24] $ (!div_cnt[24]_carry_eqn);
+div_cnt[24] = DFFEAS(div_cnt[24]_lut_out, clk, rst, , , , , , );
+
+
+--first_over is first_over
+--operation mode is normal
+
+first_over_lut_out = A1L120;
+first_over = DFFEAS(first_over_lut_out, div_cnt[24], rst, , , , , , );
+
+
+--A1L122 is rtl~93
+--operation mode is normal
+
+A1L122 = cntfirst[0] & (!cntfirst[1]);
+
+
+--A1L120 is process1~0
+--operation mode is normal
+
+A1L120 = last_over # cntfirst[3] & A1L122 & !cntfirst[2];
+
+
+--A1L1 is add~647
+--operation mode is normal
+
+A1L1 = cntfirst[0] & cntfirst[1];
+
+
+--div_cnt[17] is div_cnt[17]
+--operation mode is arithmetic
+
+div_cnt[17]_carry_eqn = A1L85;
+div_cnt[17]_lut_out = div_cnt[17] $ (div_cnt[17]_carry_eqn);
+div_cnt[17] = DFFEAS(div_cnt[17]_lut_out, clk, rst, , , , , , );
+
+--A1L87 is div_cnt[17]~220
+--operation mode is arithmetic
+
+A1L87 = CARRY(!A1L85 # !div_cnt[17]);
+
+
+--div_cnt[23] is div_cnt[23]
+--operation mode is arithmetic
+
+div_cnt[23]_carry_eqn = A1L97;
+div_cnt[23]_lut_out = div_cnt[23] $ (div_cnt[23]_carry_eqn);
+div_cnt[23] = DFFEAS(div_cnt[23]_lut_out, clk, rst, , , , , , );
+
+--A1L99 is div_cnt[23]~224
+--operation mode is arithmetic
+
+A1L99 = CARRY(!A1L97 # !div_cnt[23]);
+
+
+--div_cnt[16] is div_cnt[16]
+--operation mode is arithmetic
+
+div_cnt[16]_carry_eqn = A1L83;
+div_cnt[16]_lut_out = div_cnt[16] $ (!div_cnt[16]_carry_eqn);
+div_cnt[16] = DFFEAS(div_cnt[16]_lut_out, clk, rst, , , , , , );
+
+--A1L85 is div_cnt[16]~228
+--operation mode is arithmetic
+
+A1L85 = CARRY(div_cnt[16] & (!A1L83));
+
+
+--div_cnt[22] is div_cnt[22]
+--operation mode is arithmetic
+
+div_cnt[22]_carry_eqn = A1L95;
+div_cnt[22]_lut_out = div_cnt[22] $ (!div_cnt[22]_carry_eqn);
+div_cnt[22] = DFFEAS(div_cnt[22]_lut_out, clk, rst, , , , , , );
+
+--A1L97 is div_cnt[22]~232
+--operation mode is arithmetic
+
+A1L97 = CARRY(div_cnt[22] & (!A1L95));
+
+
+--div_cnt[15] is div_cnt[15]
+--operation mode is arithmetic
+
+div_cnt[15]_carry_eqn = A1L81;
+div_cnt[15]_lut_out = div_cnt[15] $ (div_cnt[15]_carry_eqn);
+div_cnt[15] = DFFEAS(div_cnt[15]_lut_out, clk, rst, , , , , , );
+
+--A1L83 is div_cnt[15]~236
+--operation mode is arithmetic
+
+A1L83 = CARRY(!A1L81 # !div_cnt[15]);
+
+
+--div_cnt[21] is div_cnt[21]
+--operation mode is arithmetic
+
+div_cnt[21]_carry_eqn = A1L93;
+div_cnt[21]_lut_out = div_cnt[21] $ (div_cnt[21]_carry_eqn);
+div_cnt[21] = DFFEAS(div_cnt[21]_lut_out, clk, rst, , , , , , );
+
+--A1L95 is div_cnt[21]~240
+--operation mode is arithmetic
+
+A1L95 = CARRY(!A1L93 # !div_cnt[21]);
+
+
+--div_cnt[14] is div_cnt[14]
+--operation mode is arithmetic
+
+div_cnt[14]_carry_eqn = A1L79;
+div_cnt[14]_lut_out = div_cnt[14] $ (!div_cnt[14]_carry_eqn);
+div_cnt[14] = DFFEAS(div_cnt[14]_lut_out, clk, rst, , , , , , );
+
+--A1L81 is div_cnt[14]~244
+--operation mode is arithmetic
+
+A1L81 = CARRY(div_cnt[14] & (!A1L79));
+
+
+--div_cnt[20] is div_cnt[20]
+--operation mode is arithmetic
+
+div_cnt[20]_carry_eqn = A1L91;
+div_cnt[20]_lut_out = div_cnt[20] $ (!div_cnt[20]_carry_eqn);
+div_cnt[20] = DFFEAS(div_cnt[20]_lut_out, clk, rst, , , , , , );
+
+--A1L93 is div_cnt[20]~248
+--operation mode is arithmetic
+
+A1L93 = CARRY(div_cnt[20] & (!A1L91));
+
+
+--div_cnt[13] is div_cnt[13]
+--operation mode is arithmetic
+
+div_cnt[13]_carry_eqn = A1L77;
+div_cnt[13]_lut_out = div_cnt[13] $ (div_cnt[13]_carry_eqn);
+div_cnt[13] = DFFEAS(div_cnt[13]_lut_out, clk, rst, , , , , , );
+
+--A1L79 is div_cnt[13]~252
+--operation mode is arithmetic
+
+A1L79 = CARRY(!A1L77 # !div_cnt[13]);
+
+
+--div_cnt[12] is div_cnt[12]
+--operation mode is arithmetic
+
+div_cnt[12]_carry_eqn = A1L75;
+div_cnt[12]_lut_out = div_cnt[12] $ (!div_cnt[12]_carry_eqn);
+div_cnt[12] = DFFEAS(div_cnt[12]_lut_out, clk, rst, , , , , , );
+
+--A1L77 is div_cnt[12]~256
+--operation mode is arithmetic
+
+A1L77 = CARRY(div_cnt[12] & (!A1L75));
+
+
+--div_cnt[11] is div_cnt[11]
+--operation mode is arithmetic
+
+div_cnt[11]_carry_eqn = A1L73;
+div_cnt[11]_lut_out = div_cnt[11] $ (div_cnt[11]_carry_eqn);
+div_cnt[11] = DFFEAS(div_cnt[11]_lut_out, clk, rst, , , , , , );
+
+--A1L75 is div_cnt[11]~260
+--operation mode is arithmetic
+
+A1L75 = CARRY(!A1L73 # !div_cnt[11]);
+
+
+--div_cnt[10] is div_cnt[10]
+--operation mode is arithmetic
+
+div_cnt[10]_carry_eqn = A1L71;
+div_cnt[10]_lut_out = div_cnt[10] $ (!div_cnt[10]_carry_eqn);
+div_cnt[10] = DFFEAS(div_cnt[10]_lut_out, clk, rst, , , , , , );
+
+--A1L73 is div_cnt[10]~264
+--operation mode is arithmetic
+
+A1L73 = CARRY(div_cnt[10] & (!A1L71));
+
+
+--div_cnt[9] is div_cnt[9]
+--operation mode is arithmetic
+
+div_cnt[9]_carry_eqn = A1L69;
+div_cnt[9]_lut_out = div_cnt[9] $ (div_cnt[9]_carry_eqn);
+div_cnt[9] = DFFEAS(div_cnt[9]_lut_out, clk, rst, , , , , , );
+
+--A1L71 is div_cnt[9]~268
+--operation mode is arithmetic
+
+A1L71 = CARRY(!A1L69 # !div_cnt[9]);
+
+
+--div_cnt[8] is div_cnt[8]
+--operation mode is arithmetic
+
+div_cnt[8]_carry_eqn = A1L67;
+div_cnt[8]_lut_out = div_cnt[8] $ (!div_cnt[8]_carry_eqn);
+div_cnt[8] = DFFEAS(div_cnt[8]_lut_out, clk, rst, , , , , , );
+
+--A1L69 is div_cnt[8]~272
+--operation mode is arithmetic
+
+A1L69 = CARRY(div_cnt[8] & (!A1L67));
+
+
+--div_cnt[7] is div_cnt[7]
+--operation mode is arithmetic
+
+div_cnt[7]_carry_eqn = A1L65;
+div_cnt[7]_lut_out = div_cnt[7] $ (div_cnt[7]_carry_eqn);
+div_cnt[7] = DFFEAS(div_cnt[7]_lut_out, clk, rst, , , , , , );
+
+--A1L67 is div_cnt[7]~276
+--operation mode is arithmetic
+
+A1L67 = CARRY(!A1L65 # !div_cnt[7]);
+
+
+--div_cnt[6] is div_cnt[6]
+--operation mode is arithmetic
+
+div_cnt[6]_carry_eqn = A1L63;
+div_cnt[6]_lut_out = div_cnt[6] $ (!div_cnt[6]_carry_eqn);
+div_cnt[6] = DFFEAS(div_cnt[6]_lut_out, clk, rst, , , , , , );
+
+--A1L65 is div_cnt[6]~280
+--operation mode is arithmetic
+
+A1L65 = CARRY(div_cnt[6] & (!A1L63));
+
+
+--div_cnt[5] is div_cnt[5]
+--operation mode is arithmetic
+
+div_cnt[5]_carry_eqn = A1L61;
+div_cnt[5]_lut_out = div_cnt[5] $ (div_cnt[5]_carry_eqn);
+div_cnt[5] = DFFEAS(div_cnt[5]_lut_out, clk, rst, , , , , , );
+
+--A1L63 is div_cnt[5]~284
+--operation mode is arithmetic
+
+A1L63 = CARRY(!A1L61 # !div_cnt[5]);
+
+
+--div_cnt[4] is div_cnt[4]
+--operation mode is arithmetic
+
+div_cnt[4]_carry_eqn = A1L59;
+div_cnt[4]_lut_out = div_cnt[4] $ (!div_cnt[4]_carry_eqn);
+div_cnt[4] = DFFEAS(div_cnt[4]_lut_out, clk, rst, , , , , , );
+
+--A1L61 is div_cnt[4]~288
+--operation mode is arithmetic
+
+A1L61 = CARRY(div_cnt[4] & (!A1L59));
+
+
+--div_cnt[3] is div_cnt[3]
+--operation mode is arithmetic
+
+div_cnt[3]_carry_eqn = A1L57;
+div_cnt[3]_lut_out = div_cnt[3] $ (div_cnt[3]_carry_eqn);
+div_cnt[3] = DFFEAS(div_cnt[3]_lut_out, clk, rst, , , , , , );
+
+--A1L59 is div_cnt[3]~292
+--operation mode is arithmetic
+
+A1L59 = CARRY(!A1L57 # !div_cnt[3]);
+
+
+--div_cnt[2] is div_cnt[2]
+--operation mode is arithmetic
+
+div_cnt[2]_carry_eqn = A1L55;
+div_cnt[2]_lut_out = div_cnt[2] $ (!div_cnt[2]_carry_eqn);
+div_cnt[2] = DFFEAS(div_cnt[2]_lut_out, clk, rst, , , , , , );
+
+--A1L57 is div_cnt[2]~296
+--operation mode is arithmetic
+
+A1L57 = CARRY(div_cnt[2] & (!A1L55));
+
+
+--div_cnt[1] is div_cnt[1]
+--operation mode is arithmetic
+
+div_cnt[1]_carry_eqn = A1L53;
+div_cnt[1]_lut_out = div_cnt[1] $ (div_cnt[1]_carry_eqn);
+div_cnt[1] = DFFEAS(div_cnt[1]_lut_out, clk, rst, , , , , , );
+
+--A1L55 is div_cnt[1]~300
+--operation mode is arithmetic
+
+A1L55 = CARRY(!A1L53 # !div_cnt[1]);
+
+
+--div_cnt[0] is div_cnt[0]
+--operation mode is arithmetic
+
+div_cnt[0]_lut_out = !div_cnt[0];
+div_cnt[0] = DFFEAS(div_cnt[0]_lut_out, clk, rst, , , , , , );
+
+--A1L53 is div_cnt[0]~304
+--operation mode is arithmetic
+
+A1L53 = CARRY(div_cnt[0]);
+
+
+--A1L40 is data4[3]~373
+--operation mode is normal
+
+A1L40 = A1L39 & (en_xhdl[3] # !A1L23) # !A1L39 & A1L23 & (cntlast[3] # !en_xhdl[3]);
+
+
+--A1L41 is data4[3]~374
+--operation mode is normal
+
+A1L41 = A1L40 # A1L39 & cntthird[3];
+
+
+--A1L36 is data4[2]~375
+--operation mode is normal
+
+A1L36 = A1L35 & (!A1L23) # !A1L35 & cntthird[2] & A1L23;
+
+
+--A1L37 is data4[2]~376
+--operation mode is normal
+
+A1L37 = en_xhdl[3] & A1L35 & (cntlast[2] # A1L36) # !en_xhdl[3] & (A1L36);
+
+
+--A1L32 is data4[1]~377
+--operation mode is normal
+
+A1L32 = A1L31 & (en_xhdl[3] # !A1L23) # !A1L31 & A1L23 & (cntlast[1] # !en_xhdl[3]);
+
+
+--A1L33 is data4[1]~378
+--operation mode is normal
+
+A1L33 = A1L32 # A1L31 & cntthird[1];
+
+
+--A1L28 is data4[0]~379
+--operation mode is normal
+
+A1L28 = A1L27 & (!A1L23) # !A1L27 & cntthird[0] & A1L23;
+
+
+--A1L29 is data4[0]~380
+--operation mode is normal
+
+A1L29 = en_xhdl[3] & A1L27 & (cntlast[0] # A1L28) # !en_xhdl[3] & (A1L28);
+
+
+--rst is rst
+--operation mode is input
+
+rst = INPUT();
+
+
+--clk is clk
+--operation mode is input
+
+clk = INPUT();
+
+
+--dataout[0] is dataout[0]
+--operation mode is output
+
+dataout[0] = OUTPUT(VCC);
+
+
+--dataout[1] is dataout[1]
+--operation mode is output
+
+dataout[1] = OUTPUT(!A1L113);
+
+
+--dataout[2] is dataout[2]
+--operation mode is output
+
+dataout[2] = OUTPUT(A1L114);
+
+
+--dataout[3] is dataout[3]
+--operation mode is output
+
+dataout[3] = OUTPUT(A1L115);
+
+
+--dataout[4] is dataout[4]
+--operation mode is output
+
+dataout[4] = OUTPUT(A1L116);
+
+
+--dataout[5] is dataout[5]
+--operation mode is output
+
+dataout[5] = OUTPUT(A1L117);
+
+
+--dataout[6] is dataout[6]
+--operation mode is output
+
+dataout[6] = OUTPUT(A1L118);
+
+
+--dataout[7] is dataout[7]
+--operation mode is output
+
+dataout[7] = OUTPUT(A1L119);
+
+
+--en[0] is en[0]
+--operation mode is output
+
+en[0] = OUTPUT(en_xhdl[0]);
+
+
+--en[1] is en[1]
+--operation mode is output
+
+en[1] = OUTPUT(!en_xhdl[1]);
+
+
+--en[2] is en[2]
+--operation mode is output
+
+en[2] = OUTPUT(!en_xhdl[2]);
+
+
+--en[3] is en[3]
+--operation mode is output
+
+en[3] = OUTPUT(!en_xhdl[3]);
+
+

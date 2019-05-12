@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="LIT" num="243" delta="unknown" >Logical network <arg fmt="%s" index="1">a1/inst_Mram_mem16/SPO</arg> has no load.
+</msg>
+
+<msg type="warning" file="LIT" num="395" delta="unknown" >The above <arg fmt="%s" index="1">warning</arg> message <arg fmt="%s" index="2">base_net_load_rule</arg> is repeated <arg fmt="%d" index="3">15</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="4">a1/inst_Mram_mem17/SPO,
+a1/inst_Mram_mem21/SPO,
+a1/inst_Mram_mem31/SPO,
+a1/inst_Mram_mem41/SPO,
+a1/inst_Mram_mem51/SPO</arg>
+To see the details of these <arg fmt="%s" index="5">warning</arg> messages, please use the -detail switch.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="unknown" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="MapLib" num="535" delta="unknown" >The following Virtex BUFG(s) is/are being retargetted to Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+<arg fmt="%s" index="1">BUFGP symbol &quot;CLK_BUFGP&quot; (output signal=CLK_BUFGP),
+BUFG symbol &quot;a0/hit_1_BUFG&quot; (output signal=a0/hit_1),
+BUFG symbol &quot;a1/Clk_Out_BUFG&quot; (output signal=a1/Clk_Out)</arg>
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="unknown" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs in the schematic.
+</msg>
+
+<msg type="warning" file="LIT" num="176" delta="unknown" >Clock buffer is designated to drive clock loads. <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_a1/Clk_Out/a1/Clk_Out_BUFG&quot; (output signal=a1/Clk_Out)</arg> has a mix of clock and non-clock loads. The non-clock loads are:
+<arg fmt="%s" index="2">Pin D of a1/Clk_Out</arg>
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372">Gated clock. Clock net a0/_n0017 is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372">Gated clock. Clock net a0/N3 is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+</messages>

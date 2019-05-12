@@ -1,0 +1,147 @@
+Flow report for VGA
+Tue Jul 31 18:08:21 2012
+Quartus II Version 10.1 Build 153 11/29/2010 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Flow Summary                                                                   ;
++------------------------------------+-------------------------------------------+
+; Flow Status                        ; Successful - Tue Jul 31 18:08:21 2012     ;
+; Quartus II Version                 ; 10.1 Build 153 11/29/2010 SJ Full Version ;
+; Revision Name                      ; VGA                                       ;
+; Top-level Entity Name              ; VGA                                       ;
+; Family                             ; Cyclone II                                ;
+; Device                             ; EP2C8Q208C8                               ;
+; Timing Models                      ; Final                                     ;
+; Total logic elements               ; 50 / 8,256 ( < 1 % )                      ;
+;     Total combinational functions  ; 50 / 8,256 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 24 / 8,256 ( < 1 % )                      ;
+; Total registers                    ; 24                                        ;
+; Total pins                         ; 7 / 138 ( 5 % )                           ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 0 / 165,888 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 36 ( 0 % )                            ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                             ;
++------------------------------------+-------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 07/31/2012 18:08:11 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; VGA                 ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                           ;
++--------------------------------------+----------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                                                ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+----------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 154522815254864.134372929102928                                      ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                   ; --            ; --          ; --             ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; VGA                                                                  ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                          ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                            ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                                      ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/VGA.vt                                           ; --            ; --          ; --             ;
+; EDA_TEST_BENCH_MODULE_NAME           ; VGA_vlg_tst                                                          ; --            ; --          ; --             ;
+; EDA_TEST_BENCH_NAME                  ; VGA                                                                  ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ns                                                                 ; --            ; --          ; eda_simulation ;
+; ENABLE_SIGNALTAP                     ; On                                                                   ; --            ; --          ; --             ;
+; FMAX_REQUIREMENT                     ; 50 MHz                                                               ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                                   ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                                    ; --            ; --          ; --             ;
+; MISC_FILE                            ; C:/Documents and Settings/Administrator/×ÀÃæ/EP3C16_VHDL/VGA/VGA.dpf ; --            ; --          ; --             ;
+; MISC_FILE                            ; F:/ICDev/EP3C25/EP3C25_Program/EP3C25_VHDL/VGA/VGA.dpf               ; --            ; --          ; --             ;
+; MISC_FILE                            ; E:/Program_CD/CD/CD_FPGA/data/Program/EX-EP3C40/VHDL/VGA/VGA.dpf     ; --            ; --          ; --             ;
+; MISC_FILE                            ; E:/Program_CD/CD/CD_FPGA/data/Program/EX-EP3C40/VHDL/VGA2/VGA.dpf    ; --            ; --          ; --             ;
+; MISC_FILE                            ; D:/Work/FPGA/Su/VHDL/VGA/VGA.dpf                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; D:/xiaoguang/FPGA data/FPGA receive/FPGA/VHDL/VGA/VGA.dpf            ; --            ; --          ; --             ;
+; MISC_FILE                            ; D:/fpga_files/Vhdl/VGA/VGA.dpf                                       ; --            ; --          ; --             ;
+; MISC_FILE                            ; D:/xiaoguang/FPGA data/EPM1270/program/VHDL/VGA/VGA.dpf              ; --            ; --          ; --             ;
+; MISC_FILE                            ; D:/fpga_project/EP3C40/vhdl/VGA/VGA.dpf                              ; --            ; --          ; --             ;
+; MISC_FILE                            ; E:/Program/EP2C8Q/vhdl/VGA/VGA.dpf                                   ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; 16764057                                                             ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                                                ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                                               ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                                  ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                ; --            ; --          ; --             ;
+; TIMEQUEST_DO_CCPP_REMOVAL            ; On                                                                   ; Off           ; --          ; --             ;
+; USE_SIGNALTAP_FILE                   ; stp1.stp                                                             ; --            ; --          ; --             ;
++--------------------------------------+----------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 257 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:02     ; 1.0                     ; 289 MB              ; 00:00:03                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 229 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 220 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 198 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:07     ; --                      ; --                  ; 00:00:08                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; ZHOUJIE          ; Windows 7 ; 6.1        ; i686           ;
+; Fitter                    ; ZHOUJIE          ; Windows 7 ; 6.1        ; i686           ;
+; Assembler                 ; ZHOUJIE          ; Windows 7 ; 6.1        ; i686           ;
+; TimeQuest Timing Analyzer ; ZHOUJIE          ; Windows 7 ; 6.1        ; i686           ;
+; EDA Netlist Writer        ; ZHOUJIE          ; Windows 7 ; 6.1        ; i686           ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
+quartus_fit --read_settings_files=off --write_settings_files=off VGA -c VGA
+quartus_asm --read_settings_files=off --write_settings_files=off VGA -c VGA
+quartus_sta VGA -c VGA
+quartus_eda --read_settings_files=off --write_settings_files=off VGA -c VGA
+
+
+

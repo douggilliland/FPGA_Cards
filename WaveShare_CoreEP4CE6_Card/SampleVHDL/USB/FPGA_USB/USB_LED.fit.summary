@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Sep 04 17:47:24 2012
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : USB_LED
+Top-level Entity Name : USB_LED
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 613 / 6,272 ( 10 % )
+    Total combinational functions : 425 / 6,272 ( 7 % )
+    Dedicated logic registers : 489 / 6,272 ( 8 % )
+Total registers : 489
+Total pins : 30 / 92 ( 33 % )
+Total virtual pins : 0
+Total memory bits : 16,384 / 276,480 ( 6 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

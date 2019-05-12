@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Sep 04 14:08:28 2012
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : i2c
+Top-level Entity Name : i2c
+Family : Cyclone IV E
+Total logic elements : 234
+    Total combinational functions : 224
+    Dedicated logic registers : 68
+Total registers : 68
+Total pins : 27
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

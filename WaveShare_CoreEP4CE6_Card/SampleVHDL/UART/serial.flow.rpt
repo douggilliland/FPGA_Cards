@@ -1,0 +1,133 @@
+Flow report for serial
+Tue Sep 04 16:24:51 2012
+Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Flow Summary                                                                   ;
++------------------------------------+-------------------------------------------+
+; Flow Status                        ; Successful - Tue Sep 04 16:24:49 2012     ;
+; Quartus II Version                 ; 11.0 Build 157 04/27/2011 SJ Full Version ;
+; Revision Name                      ; serial                                    ;
+; Top-level Entity Name              ; serial                                    ;
+; Family                             ; Cyclone IV E                              ;
+; Device                             ; EP4CE6E22C8                               ;
+; Timing Models                      ; Final                                     ;
+; Total logic elements               ; 169 / 6,272 ( 3 % )                       ;
+;     Total combinational functions  ; 166 / 6,272 ( 3 % )                       ;
+;     Dedicated logic registers      ; 79 / 6,272 ( 1 % )                        ;
+; Total registers                    ; 79                                        ;
+; Total pins                         ; 17 / 92 ( 18 % )                          ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                            ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                             ;
++------------------------------------+-------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 09/04/2012 16:24:40 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; serial              ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                  ;
++-------------------------------------+------------------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                                        ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+------------------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 154522815254864.134674708004968                                              ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                           ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; G:/做视频教材要用的/VHDL/com/serial.dpf                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; G:/做视频教材要用的/VHDL/串口与电脑通信1/serial.dpf                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; F:/fan/serial.dpf                                                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; F:/test_done_uart/uart_done/fan/serial.dpf                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; F:/Test_Done_uart/uart_done/put_key_seg/serial.dpf                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; D:/xiaoguang/FPGA data/EPM1270/program/VHDL/uart_done/put_key_seg/serial.dpf ; --            ; --          ; --             ;
+; MISC_FILE                           ; D:/fpga_project/EP3C40/vhdl/uart_done/put_key_seg/serial.dpf                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; E:/Program/EP2C8Q/vhdl/UART/put_key_seg/serial.dpf                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; E:/Program/EP2C8Q/vhdl/UART/serial.dpf                                       ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                            ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                            ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                                   ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                                   ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                                     ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                        ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                       ; --            ; --          ; Top            ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                                                          ; --            ; --          ; eda_blast_fpga ;
++-------------------------------------+------------------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 248 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:04     ; 1.4                     ; 319 MB              ; 00:00:04                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 217 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 245 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:09                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; PC--20120818EXH  ; Windows XP ; 5.1        ; i686           ;
+; Fitter                    ; PC--20120818EXH  ; Windows XP ; 5.1        ; i686           ;
+; Assembler                 ; PC--20120818EXH  ; Windows XP ; 5.1        ; i686           ;
+; TimeQuest Timing Analyzer ; PC--20120818EXH  ; Windows XP ; 5.1        ; i686           ;
++---------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off serial -c serial
+quartus_fit --read_settings_files=off --write_settings_files=off serial -c serial
+quartus_asm --read_settings_files=off --write_settings_files=off serial -c serial
+quartus_sta serial -c serial
+
+
+

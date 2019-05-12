@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Sep 27 21:27:52 2015
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : i2c
+Top-level Entity Name : i2c
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 229 / 6,272 ( 4 % )
+    Total combinational functions : 224 / 6,272 ( 4 % )
+    Dedicated logic registers : 68 / 6,272 ( 1 % )
+Total registers : 68
+Total pins : 21 / 92 ( 23 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

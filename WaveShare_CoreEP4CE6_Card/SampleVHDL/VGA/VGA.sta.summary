@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLK'
+Slack : -3.286
+TNS   : -24.044
+
+Type  : Slow Model Setup 'HsyncB'
+Slack : -2.449
+TNS   : -24.099
+
+Type  : Slow Model Setup 'GCLKP2'
+Slack : 2.367
+TNS   : 0.000
+
+Type  : Slow Model Hold 'GCLKP2'
+Slack : -2.133
+TNS   : -2.133
+
+Type  : Slow Model Hold 'HsyncB'
+Slack : 0.766
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLK'
+Slack : 0.970
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'GCLKP2'
+Slack : -1.941
+TNS   : -3.425
+
+Type  : Slow Model Minimum Pulse Width 'CLK'
+Slack : -0.742
+TNS   : -17.808
+
+Type  : Slow Model Minimum Pulse Width 'HsyncB'
+Slack : -0.742
+TNS   : -16.324
+
+Type  : Fast Model Setup 'CLK'
+Slack : -0.722
+TNS   : -0.952
+
+Type  : Fast Model Setup 'HsyncB'
+Slack : -0.125
+TNS   : -0.975
+
+Type  : Fast Model Setup 'GCLKP2'
+Slack : 1.383
+TNS   : 0.000
+
+Type  : Fast Model Hold 'GCLKP2'
+Slack : -1.003
+TNS   : -1.003
+
+Type  : Fast Model Hold 'HsyncB'
+Slack : 0.249
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLK'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'GCLKP2'
+Slack : -1.380
+TNS   : -2.380
+
+Type  : Fast Model Minimum Pulse Width 'CLK'
+Slack : -0.500
+TNS   : -12.000
+
+Type  : Fast Model Minimum Pulse Width 'HsyncB'
+Slack : -0.500
+TNS   : -11.000
+
+------------------------------------------------------------

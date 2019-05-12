@@ -1,0 +1,129 @@
+Quartus II
+Version 11.0 Build 157 04/27/2011 SJ Full Version
+15
+1165
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+ps2_lcd1602_1
+# storage
+db|ps2_lcd1602_1.(0).cnf
+db|ps2_lcd1602_1.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ps2_lcd1602_1.vhd
+b54c2356598724f58c275b55df3c6843
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+ps2
+# storage
+db|ps2_lcd1602_1.(1).cnf
+db|ps2_lcd1602_1.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ps2.vhd
+71d152a82ced7d73a12282dde2545d79
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(ascii)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ps2:a0
+}
+# macro_sequence
+
+# end
+# entity
+LCD1602
+# storage
+db|ps2_lcd1602_1.(2).cnf
+db|ps2_lcd1602_1.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lcd1602.vhd
+ebf3de583b84adc05edf85dbdfe762
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(ps2_data)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(lcd_data)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+LCD1602:a1
+}
+# macro_sequence
+
+# end
+# complete
+

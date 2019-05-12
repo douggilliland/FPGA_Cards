@@ -1,0 +1,19 @@
+|key_led
+key_in[0] => Mux0.IN19
+key_in[0] => Mux1.IN19
+key_in[0] => Mux2.IN19
+key_in[0] => Mux3.IN19
+key_in[1] => Mux0.IN18
+key_in[1] => Mux1.IN18
+key_in[1] => Mux2.IN18
+key_in[1] => Mux3.IN18
+key_in[2] => Mux0.IN17
+key_in[2] => Mux1.IN17
+key_in[2] => Mux2.IN17
+key_in[2] => Mux3.IN17
+key_in[3] => Mux0.IN16
+key_in[3] => Mux1.IN16
+key_in[3] => Mux2.IN16
+key_in[3] => Mux3.IN16
+
+

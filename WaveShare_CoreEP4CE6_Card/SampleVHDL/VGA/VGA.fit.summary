@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Jul 31 18:08:15 2012
+Quartus II Version : 10.1 Build 153 11/29/2010 SJ Full Version
+Revision Name : VGA
+Top-level Entity Name : VGA
+Family : Cyclone II
+Device : EP2C8Q208C8
+Timing Models : Final
+Total logic elements : 50 / 8,256 ( < 1 % )
+    Total combinational functions : 50 / 8,256 ( < 1 % )
+    Dedicated logic registers : 24 / 8,256 ( < 1 % )
+Total registers : 24
+Total pins : 7 / 138 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 0 / 165,888 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 36 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

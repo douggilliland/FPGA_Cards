@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Sep 08 10:47:42 2015
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : keyboardVhdl
+Top-level Entity Name : keyboardVhdl
+Family : Cyclone IV E
+Total logic elements : 60
+    Total combinational functions : 27
+    Dedicated logic registers : 46
+Total registers : 46
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

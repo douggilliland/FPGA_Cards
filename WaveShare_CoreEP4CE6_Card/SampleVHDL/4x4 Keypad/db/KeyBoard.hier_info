@@ -1,0 +1,108 @@
+|KeyBoard
+RESET => Frequency:inst.RESET
+RESET => key44:inst1.rst
+RESET => LED8:inst2.RESET
+GCLKP1 => Frequency:inst.GCLKP1
+ROW[0] => key44:inst1.row[0]
+ROW[1] => key44:inst1.row[1]
+ROW[2] => key44:inst1.row[2]
+ROW[3] => key44:inst1.row[3]
+
+
+|KeyBoard|key44:inst1
+row[0] => always3.IN0
+row[0] => valid.IN1
+row[0] => Equal0.IN3
+row[0] => Equal1.IN3
+row[0] => row_reg[0].DATAIN
+row[1] => always3.IN1
+row[1] => valid.IN1
+row[1] => Equal0.IN2
+row[1] => Equal1.IN2
+row[1] => row_reg[1].DATAIN
+row[2] => always3.IN1
+row[2] => valid.IN0
+row[2] => Equal0.IN1
+row[2] => Equal1.IN1
+row[2] => row_reg[2].DATAIN
+row[3] => always3.IN1
+row[3] => valid.IN1
+row[3] => Equal0.IN0
+row[3] => Equal1.IN0
+row[3] => row_reg[3].DATAIN
+sys_clk => Mega_cnt[0].CLK
+sys_clk => Mega_cnt[1].CLK
+sys_clk => Mega_cnt[2].CLK
+sys_clk => Mega_cnt[3].CLK
+sys_clk => Mega_cnt[4].CLK
+rst => Mega_cnt[0].ACLR
+rst => Mega_cnt[1].ACLR
+rst => Mega_cnt[2].ACLR
+rst => Mega_cnt[3].ACLR
+rst => Mega_cnt[4].ACLR
+rst => S_row.ACLR
+rst => count[0].ACLR
+rst => count[1].ACLR
+rst => count[2].ACLR
+rst => count[3].ACLR
+rst => state~3.DATAIN
+
+
+|KeyBoard|Frequency:inst
+RESET => ~NO_FANOUT~
+GCLKP1 => Period1uS.CLK
+GCLKP1 => \CLK:Count[0].CLK
+GCLKP1 => \CLK:Count[1].CLK
+GCLKP1 => \CLK:Count[2].CLK
+GCLKP1 => \CLK:Count[3].CLK
+GCLKP1 => \CLK:Count[4].CLK
+GCLKP1 => \CLK:Count[5].CLK
+
+
+|KeyBoard|LED8:inst2
+RESET => ~NO_FANOUT~
+ClockScan => Refresh[0].CLK
+ClockScan => Refresh[1].CLK
+ClockScan => Refresh[2].CLK
+LED1[0] => LED[0].DATAB
+LED1[0] => light[4].DATAIN
+LED1[1] => LED[1].DATAB
+LED1[1] => light[5].DATAIN
+LED1[2] => LED[2].DATAB
+LED1[2] => light[6].DATAIN
+LED1[3] => LED[3].DATAB
+LED1[3] => light[7].DATAIN
+LED2[0] => LED.DATAB
+LED2[0] => light[0].DATAIN
+LED2[1] => LED.DATAB
+LED2[1] => light[1].DATAIN
+LED2[2] => LED.DATAB
+LED2[2] => light[2].DATAIN
+LED2[3] => LED.DATAB
+LED2[3] => light[3].DATAIN
+LED3[0] => LED.DATAB
+LED3[1] => LED.DATAB
+LED3[2] => LED.DATAB
+LED3[3] => LED.DATAB
+LED4[0] => LED.DATAB
+LED4[1] => LED.DATAB
+LED4[2] => LED.DATAB
+LED4[3] => LED.DATAB
+LED5[0] => LED.DATAB
+LED5[1] => LED.DATAB
+LED5[2] => LED.DATAB
+LED5[3] => LED.DATAB
+LED6[0] => LED.DATAB
+LED6[1] => LED.DATAB
+LED6[2] => LED.DATAB
+LED6[3] => LED.DATAB
+LED7[0] => LED.DATAB
+LED7[1] => LED.DATAB
+LED7[2] => LED.DATAB
+LED7[3] => LED.DATAB
+LED8[0] => LED.DATAA
+LED8[1] => LED.DATAA
+LED8[2] => LED.DATAA
+LED8[3] => LED.DATAA
+
+

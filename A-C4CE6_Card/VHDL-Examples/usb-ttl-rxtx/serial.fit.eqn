@@ -1,0 +1,1169 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1_dffs[0] is lpm_counter:div_reg_rtl_0|dffs[0] at LC84
+C1_dffs[0]_p1_out = rst & !C1_dffs[0];
+C1_dffs[0]_or_out = C1_dffs[0]_p1_out;
+C1_dffs[0]_reg_input = C1_dffs[0]_or_out;
+C1_dffs[0] = DFFE(C1_dffs[0]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[1] is lpm_counter:div_reg_rtl_0|dffs[1] at LC20
+C1_dffs[1]_p1_out = rst & !C1_dffs[1] & C1_dffs[0];
+C1_dffs[1]_p2_out = rst & C1_dffs[1] & !C1_dffs[0];
+C1_dffs[1]_or_out = C1_dffs[1]_p1_out # C1_dffs[1]_p2_out;
+C1_dffs[1]_reg_input = C1_dffs[1]_or_out;
+C1_dffs[1] = DFFE(C1_dffs[1]_reg_input, GLOBAL(clk), , , );
+
+
+--cnt_delay[0] is cnt_delay[0] at LC1
+cnt_delay[0]_p1_out = !cnt_delay[4] & !cnt_delay[5] & !cnt_delay[7] & !cnt_delay[15] & !cnt_delay[17] & !cnt_delay[9] & !cnt_delay[1] & !cnt_delay[6] & !cnt_delay[14] & !cnt_delay[2] & !cnt_delay[16] & !cnt_delay[3] & !cnt_delay[11] & cnt_delay[19] & cnt_delay[10] & cnt_delay[13] & cnt_delay[12] & cnt_delay[8] & cnt_delay[18] & start_delaycnt;
+cnt_delay[0]_p2_out = !start_delaycnt & !cnt_delay[0];
+cnt_delay[0]_p3_out = start_delaycnt & cnt_delay[0];
+cnt_delay[0]_or_out = cnt_delay[0]_p1_out # cnt_delay[0]_p2_out # cnt_delay[0]_p3_out # !rst;
+cnt_delay[0]_reg_input = !(cnt_delay[0]_or_out);
+cnt_delay[0] = DFFE(cnt_delay[0]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[2] is lpm_counter:div_reg_rtl_0|dffs[2] at LC21
+C1_dffs[2]_p1_out = !C1_dffs[13] & !C1_dffs[15] & !C1_dffs[12] & C1_dffs[8] & !C1_dffs[3] & !C1_dffs[10] & !C1_dffs[4] & !C1_dffs[5] & !C1_dffs[9] & !C1_dffs[6] & !C1_dffs[7] & !C1_dffs[11] & !C1_dffs[14] & !C1_dffs[2];
+C1_dffs[2]_p2_out = C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[2]_p3_out = !C1_dffs[2] & !C1_dffs[1];
+C1_dffs[2]_p4_out = !C1_dffs[2] & !C1_dffs[0];
+C1_dffs[2]_or_out = !rst # C1_dffs[2]_p1_out # C1_dffs[2]_p2_out # C1_dffs[2]_p3_out # C1_dffs[2]_p4_out;
+C1_dffs[2]_reg_input = !(C1_dffs[2]_or_out);
+C1_dffs[2] = DFFE(C1_dffs[2]_reg_input, GLOBAL(clk), , , );
+
+
+--cnt_delay[1] is cnt_delay[1] at LC81
+cnt_delay[1]_p1_out = cnt_delay[0] & start_delaycnt & rst;
+cnt_delay[1]_p2_out = !rst & cnt_delay[1];
+cnt_delay[1]_or_out = cnt_delay[1]_p1_out # cnt_delay[1]_p2_out;
+cnt_delay[1]_reg_input = cnt_delay[1]_or_out;
+cnt_delay[1] = TFFE(cnt_delay[1]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[3] is lpm_counter:div_reg_rtl_0|dffs[3] at LC22
+C1_dffs[3]_p1_out = rst & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[3]_p2_out = !rst & C1_dffs[3];
+C1_dffs[3]_or_out = C1_dffs[3]_p1_out # C1_dffs[3]_p2_out;
+C1_dffs[3]_reg_input = C1_dffs[3]_or_out;
+C1_dffs[3] = TFFE(C1_dffs[3]_reg_input, GLOBAL(clk), , , );
+
+
+--cnt_delay[2] is cnt_delay[2] at LC89
+cnt_delay[2]_p1_out = cnt_delay[1] & cnt_delay[0] & start_delaycnt & rst;
+cnt_delay[2]_p2_out = !rst & cnt_delay[2];
+cnt_delay[2]_or_out = cnt_delay[2]_p1_out # cnt_delay[2]_p2_out;
+cnt_delay[2]_reg_input = cnt_delay[2]_or_out;
+cnt_delay[2] = TFFE(cnt_delay[2]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[4] is lpm_counter:div_reg_rtl_0|dffs[4] at LC25
+C1_dffs[4]_p1_out = rst & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[4]_p2_out = !rst & C1_dffs[4];
+C1_dffs[4]_or_out = C1_dffs[4]_p1_out # C1_dffs[4]_p2_out;
+C1_dffs[4]_reg_input = C1_dffs[4]_or_out;
+C1_dffs[4] = TFFE(C1_dffs[4]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[5] is lpm_counter:div_reg_rtl_0|dffs[5] at LC26
+C1_dffs[5]_p1_out = rst & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[5]_p2_out = !rst & C1_dffs[5];
+C1_dffs[5]_or_out = C1_dffs[5]_p1_out # C1_dffs[5]_p2_out;
+C1_dffs[5]_reg_input = C1_dffs[5]_or_out;
+C1_dffs[5] = TFFE(C1_dffs[5]_reg_input, GLOBAL(clk), , , );
+
+
+--cnt_delay[3] is cnt_delay[3] at LC48
+cnt_delay[3]_p1_out = cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & start_delaycnt & rst;
+cnt_delay[3]_p2_out = !rst & cnt_delay[3];
+cnt_delay[3]_or_out = cnt_delay[3]_p1_out # cnt_delay[3]_p2_out;
+cnt_delay[3]_reg_input = cnt_delay[3]_or_out;
+cnt_delay[3] = TFFE(cnt_delay[3]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[6] is lpm_counter:div_reg_rtl_0|dffs[6] at LC27
+C1_dffs[6]_p1_out = rst & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[6]_p2_out = !rst & C1_dffs[6];
+C1_dffs[6]_or_out = C1_dffs[6]_p1_out # C1_dffs[6]_p2_out;
+C1_dffs[6]_reg_input = C1_dffs[6]_or_out;
+C1_dffs[6] = TFFE(C1_dffs[6]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[7] is lpm_counter:div_reg_rtl_0|dffs[7] at LC28
+C1_dffs[7]_p1_out = rst & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[7]_p2_out = !rst & C1_dffs[7];
+C1_dffs[7]_or_out = C1_dffs[7]_p1_out # C1_dffs[7]_p2_out;
+C1_dffs[7]_reg_input = C1_dffs[7]_or_out;
+C1_dffs[7] = TFFE(C1_dffs[7]_reg_input, GLOBAL(clk), , , );
+
+
+--cnt_delay[5] is cnt_delay[5] at LC45
+cnt_delay[5]_p1_out = cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & start_delaycnt & rst;
+cnt_delay[5]_p2_out = !rst & cnt_delay[5];
+cnt_delay[5]_or_out = cnt_delay[5]_p1_out # cnt_delay[5]_p2_out;
+cnt_delay[5]_reg_input = cnt_delay[5]_or_out;
+cnt_delay[5] = TFFE(cnt_delay[5]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[8] is lpm_counter:div_reg_rtl_0|dffs[8] at LC30
+C1_dffs[8]_p1_out = rst & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0] & A1L15;
+C1_dffs[8]_p2_out = !rst & C1_dffs[8];
+C1_dffs[8]_p3_out = !C1_dffs[7] & !C1_dffs[6] & !C1_dffs[5] & !C1_dffs[4] & !C1_dffs[3] & !C1_dffs[2] & C1_dffs[1] & C1_dffs[0] & C1_dffs[8] & !C1_dffs[13] & !C1_dffs[15] & !C1_dffs[12] & !C1_dffs[10] & !C1_dffs[9] & !C1_dffs[11] & !C1_dffs[14];
+C1_dffs[8]_or_out = C1_dffs[8]_p1_out # C1_dffs[8]_p2_out # C1_dffs[8]_p3_out;
+C1_dffs[8]_reg_input = C1_dffs[8]_or_out;
+C1_dffs[8] = TFFE(C1_dffs[8]_reg_input, GLOBAL(clk), , , );
+
+
+--cnt_delay[6] is cnt_delay[6] at LC39
+cnt_delay[6]_p1_out = cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & start_delaycnt & rst;
+cnt_delay[6]_p2_out = !rst & cnt_delay[6];
+cnt_delay[6]_or_out = cnt_delay[6]_p1_out # cnt_delay[6]_p2_out;
+cnt_delay[6]_reg_input = cnt_delay[6]_or_out;
+cnt_delay[6] = TFFE(cnt_delay[6]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[9] is lpm_counter:div_reg_rtl_0|dffs[9] at LC18
+C1_dffs[9]_p1_out = rst & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[9]_p2_out = !rst & C1_dffs[9];
+C1_dffs[9]_or_out = C1_dffs[9]_p1_out # C1_dffs[9]_p2_out;
+C1_dffs[9]_reg_input = C1_dffs[9]_or_out;
+C1_dffs[9] = TFFE(C1_dffs[9]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[10] is lpm_counter:div_reg_rtl_0|dffs[10] at LC32
+C1_dffs[10]_p1_out = rst & C1_dffs[9] & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[10]_p2_out = !rst & C1_dffs[10];
+C1_dffs[10]_or_out = C1_dffs[10]_p1_out # C1_dffs[10]_p2_out;
+C1_dffs[10]_reg_input = C1_dffs[10]_or_out;
+C1_dffs[10] = TFFE(C1_dffs[10]_reg_input, GLOBAL(clk), , , );
+
+
+--cnt_delay[7] is cnt_delay[7] at LC12
+cnt_delay[7]_p1_out = cnt_delay[6] & cnt_delay[5] & cnt_delay[4] & cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & start_delaycnt & rst;
+cnt_delay[7]_p2_out = !rst & cnt_delay[7];
+cnt_delay[7]_or_out = cnt_delay[7]_p1_out # cnt_delay[7]_p2_out;
+cnt_delay[7]_reg_input = cnt_delay[7]_or_out;
+cnt_delay[7] = TFFE(cnt_delay[7]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[11] is lpm_counter:div_reg_rtl_0|dffs[11] at LC31
+C1_dffs[11]_p1_out = rst & C1_dffs[10] & C1_dffs[9] & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[11]_p2_out = !rst & C1_dffs[11];
+C1_dffs[11]_or_out = C1_dffs[11]_p1_out # C1_dffs[11]_p2_out;
+C1_dffs[11]_reg_input = C1_dffs[11]_or_out;
+C1_dffs[11] = TFFE(C1_dffs[11]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[12] is lpm_counter:div_reg_rtl_0|dffs[12] at LC29
+C1_dffs[12]_p1_out = rst & C1_dffs[11] & C1_dffs[10] & C1_dffs[9] & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[12]_p2_out = !rst & C1_dffs[12];
+C1_dffs[12]_or_out = C1_dffs[12]_p1_out # C1_dffs[12]_p2_out;
+C1_dffs[12]_reg_input = C1_dffs[12]_or_out;
+C1_dffs[12] = TFFE(C1_dffs[12]_reg_input, GLOBAL(clk), , , );
+
+
+--cnt_delay[8] is cnt_delay[8] at LC11
+cnt_delay[8]_p1_out = cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & start_delaycnt & rst & A1L25;
+cnt_delay[8]_p2_out = !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[1] & !cnt_delay[0] & !cnt_delay[5] & !cnt_delay[4] & start_delaycnt & cnt_delay[8] & !cnt_delay[15] & !cnt_delay[17] & !cnt_delay[9] & !cnt_delay[14] & !cnt_delay[16] & !cnt_delay[11] & cnt_delay[19] & cnt_delay[10] & cnt_delay[13] & cnt_delay[12] & cnt_delay[18];
+cnt_delay[8]_p3_out = !rst & cnt_delay[8];
+cnt_delay[8]_or_out = cnt_delay[8]_p1_out # cnt_delay[8]_p2_out # cnt_delay[8]_p3_out;
+cnt_delay[8]_reg_input = cnt_delay[8]_or_out;
+cnt_delay[8] = TFFE(cnt_delay[8]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[13] is lpm_counter:div_reg_rtl_0|dffs[13] at LC24
+C1_dffs[13]_p1_out = rst & C1_dffs[12] & C1_dffs[11] & C1_dffs[10] & C1_dffs[9] & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[13]_p2_out = !rst & C1_dffs[13];
+C1_dffs[13]_or_out = C1_dffs[13]_p1_out # C1_dffs[13]_p2_out;
+C1_dffs[13]_reg_input = C1_dffs[13]_or_out;
+C1_dffs[13] = TFFE(C1_dffs[13]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[14] is lpm_counter:div_reg_rtl_0|dffs[14] at LC23
+C1_dffs[14]_p1_out = rst & C1_dffs[13] & C1_dffs[12] & C1_dffs[11] & C1_dffs[10] & C1_dffs[9] & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[14]_p2_out = !rst & C1_dffs[14];
+C1_dffs[14]_or_out = C1_dffs[14]_p1_out # C1_dffs[14]_p2_out;
+C1_dffs[14]_reg_input = C1_dffs[14]_or_out;
+C1_dffs[14] = TFFE(C1_dffs[14]_reg_input, GLOBAL(clk), , , );
+
+
+--cnt_delay[9] is cnt_delay[9] at LC15
+cnt_delay[9]_p1_out = cnt_delay[8] & cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & start_delaycnt & rst;
+cnt_delay[9]_p2_out = !rst & cnt_delay[9];
+cnt_delay[9]_or_out = cnt_delay[9]_p1_out # cnt_delay[9]_p2_out;
+cnt_delay[9]_reg_input = cnt_delay[9]_or_out;
+cnt_delay[9] = TFFE(cnt_delay[9]_reg_input, GLOBAL(clk), , , );
+
+
+--C1_dffs[15] is lpm_counter:div_reg_rtl_0|dffs[15] at LC19
+C1_dffs[15]_p1_out = rst & C1_dffs[14] & C1_dffs[13] & C1_dffs[12] & C1_dffs[11] & C1_dffs[10] & C1_dffs[9] & C1_dffs[8] & C1_dffs[7] & C1_dffs[6] & C1_dffs[5] & C1_dffs[4] & C1_dffs[3] & C1_dffs[2] & C1_dffs[1] & C1_dffs[0];
+C1_dffs[15]_p2_out = !rst & C1_dffs[15];
+C1_dffs[15]_or_out = C1_dffs[15]_p1_out # C1_dffs[15]_p2_out;
+C1_dffs[15]_reg_input = C1_dffs[15]_or_out;
+C1_dffs[15] = TFFE(C1_dffs[15]_reg_input, GLOBAL(clk), , , );
+
+
+--cnt_delay[10] is cnt_delay[10] at LC10
+cnt_delay[10]_p1_out = cnt_delay[9] & cnt_delay[8] & cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & start_delaycnt & rst & A1L25;
+cnt_delay[10]_p2_out = !cnt_delay[9] & cnt_delay[8] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[1] & !cnt_delay[0] & !cnt_delay[5] & !cnt_delay[4] & start_delaycnt & cnt_delay[10] & !cnt_delay[15] & !cnt_delay[17] & !cnt_delay[14] & !cnt_delay[16] & !cnt_delay[11] & cnt_delay[19] & cnt_delay[13] & cnt_delay[12] & cnt_delay[18];
+cnt_delay[10]_p3_out = !rst & cnt_delay[10];
+cnt_delay[10]_or_out = cnt_delay[10]_p1_out # cnt_delay[10]_p2_out # cnt_delay[10]_p3_out;
+cnt_delay[10]_reg_input = cnt_delay[10]_or_out;
+cnt_delay[10] = TFFE(cnt_delay[10]_reg_input, GLOBAL(clk), , , );
+
+
+--clkbaud8x is clkbaud8x at LC17
+clkbaud8x_p1_out = !rst & clkbaud8x;
+clkbaud8x_p2_out = rst & C1_dffs[1] & C1_dffs[0] & !C1_dffs[13] & !C1_dffs[15] & !C1_dffs[12] & C1_dffs[8] & !C1_dffs[3] & !C1_dffs[10] & !C1_dffs[4] & !C1_dffs[5] & !C1_dffs[2] & !C1_dffs[9] & !C1_dffs[6] & !C1_dffs[7] & !C1_dffs[11] & !C1_dffs[14];
+clkbaud8x_or_out = clkbaud8x_p1_out # clkbaud8x_p2_out;
+clkbaud8x_reg_input = clkbaud8x_or_out;
+clkbaud8x = TFFE(clkbaud8x_reg_input, GLOBAL(clk), , , );
+
+
+--send_state[0] is send_state[0] at LC44
+send_state[0]_p1_out = div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & state_tras[2] & state_tras[0] & state_tras[1] & key_entry2 & state_tras[3];
+send_state[0]_or_out = send_state[0]_p1_out;
+send_state[0]_reg_input = send_state[0]_or_out;
+send_state[0] = TFFE(send_state[0]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--A1L801 is state_rec[0]~711 at SEXP65
+A1L801 = EXP(recstart_tmp & !state_rec[2] & !state_rec[1] & !state_rec[0] & !state_rec[3]);
+
+
+--A1L901 is state_rec[0]~712 at SEXP66
+A1L901 = EXP(!state_rec[2] & !state_rec[1] & state_rec[3] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1]);
+
+
+--A1L011 is state_rec[0]~713 at SEXP67
+A1L011 = EXP(state_rec[2] & !state_rec[3] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1]);
+
+
+--A1L111 is state_rec[0]~714 at SEXP68
+A1L111 = EXP(state_rec[1] & !state_rec[3] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1]);
+
+
+--A1L211 is state_rec[0]~715 at SEXP69
+A1L211 = EXP(!state_rec[2] & !state_rec[1] & state_rec[0] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1]);
+
+
+--state_rec[0] is state_rec[0] at LC71
+state_rec[0]_p1_out = A1L801 & A1L901 & A1L011 & A1L111 & A1L211;
+state_rec[0]_or_out = state_rec[0]_p1_out;
+state_rec[0]_reg_input = !state_rec[0]_or_out;
+state_rec[0] = TFFE(state_rec[0]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--rxd_reg1 is rxd_reg1 at LC127
+rxd_reg1_or_out = rxd;
+rxd_reg1_reg_input = rxd_reg1_or_out;
+rxd_reg1 = DFFE(rxd_reg1_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--cnt_delay[11] is cnt_delay[11] at LC6
+cnt_delay[11]_p1_out = cnt_delay[10] & cnt_delay[9] & cnt_delay[8] & cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & start_delaycnt & rst;
+cnt_delay[11]_p2_out = !rst & cnt_delay[11];
+cnt_delay[11]_or_out = cnt_delay[11]_p1_out # cnt_delay[11]_p2_out;
+cnt_delay[11]_reg_input = cnt_delay[11]_or_out;
+cnt_delay[11] = TFFE(cnt_delay[11]_reg_input, GLOBAL(clk), , , );
+
+
+--rxd_reg2 is rxd_reg2 at LC78
+rxd_reg2_or_out = rxd_reg1;
+rxd_reg2_reg_input = rxd_reg2_or_out;
+rxd_reg2 = DFFE(rxd_reg2_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--state_rec[1] is state_rec[1] at LC80
+state_rec[1]_p1_out = state_rec[0] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1] & !state_rec[3];
+state_rec[1]_or_out = state_rec[1]_p1_out;
+state_rec[1]_reg_input = state_rec[1]_or_out;
+state_rec[1] = TFFE(state_rec[1]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--send_state[1] is send_state[1] at LC63
+send_state[1]_p1_out = div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & send_state[0] & state_tras[2] & state_tras[0] & state_tras[1] & key_entry2 & state_tras[3];
+send_state[1]_or_out = send_state[1]_p1_out;
+send_state[1]_reg_input = send_state[1]_or_out;
+send_state[1] = TFFE(send_state[1]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--cnt_delay[12] is cnt_delay[12] at LC14
+cnt_delay[12]_p1_out = cnt_delay[11] & cnt_delay[10] & cnt_delay[9] & cnt_delay[8] & cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & start_delaycnt & rst & A1L25;
+cnt_delay[12]_p2_out = !cnt_delay[11] & cnt_delay[10] & !cnt_delay[9] & cnt_delay[8] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[1] & !cnt_delay[0] & !cnt_delay[5] & !cnt_delay[4] & start_delaycnt & cnt_delay[12] & !cnt_delay[15] & !cnt_delay[17] & !cnt_delay[14] & !cnt_delay[16] & cnt_delay[19] & cnt_delay[13] & cnt_delay[18];
+cnt_delay[12]_p3_out = !rst & cnt_delay[12];
+cnt_delay[12]_or_out = cnt_delay[12]_p1_out # cnt_delay[12]_p2_out # cnt_delay[12]_p3_out;
+cnt_delay[12]_reg_input = cnt_delay[12]_or_out;
+cnt_delay[12] = TFFE(cnt_delay[12]_reg_input, GLOBAL(clk), , , );
+
+
+--send_state[2] is send_state[2] at LC62
+send_state[2]_p1_out = send_state[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & send_state[0] & state_tras[2] & state_tras[0] & state_tras[1] & key_entry2 & state_tras[3];
+send_state[2]_or_out = send_state[2]_p1_out;
+send_state[2]_reg_input = send_state[2]_or_out;
+send_state[2] = TFFE(send_state[2]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--recstart_tmp is recstart_tmp at LC68
+recstart_tmp_p1_out = rxd_reg2 & !rxd_reg1 & !state_rec[3] & !state_rec[0] & !state_rec[2] & !state_rec[1];
+recstart_tmp_p2_out = !state_rec[3] & !state_rec[0] & !state_rec[2] & !state_rec[1] & recstart_tmp;
+recstart_tmp_or_out = recstart_tmp_p1_out # recstart_tmp_p2_out;
+recstart_tmp_reg_input = recstart_tmp_or_out;
+recstart_tmp = TFFE(recstart_tmp_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--cnt_delay[13] is cnt_delay[13] at LC13
+cnt_delay[13]_p1_out = cnt_delay[12] & cnt_delay[11] & cnt_delay[10] & cnt_delay[9] & cnt_delay[8] & cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & start_delaycnt & rst & A1L25;
+cnt_delay[13]_p2_out = cnt_delay[12] & !cnt_delay[11] & cnt_delay[10] & !cnt_delay[9] & cnt_delay[8] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[1] & !cnt_delay[0] & !cnt_delay[5] & !cnt_delay[4] & start_delaycnt & cnt_delay[13] & !cnt_delay[15] & !cnt_delay[17] & !cnt_delay[14] & !cnt_delay[16] & cnt_delay[19] & cnt_delay[18];
+cnt_delay[13]_p3_out = !rst & cnt_delay[13];
+cnt_delay[13]_or_out = cnt_delay[13]_p1_out # cnt_delay[13]_p2_out # cnt_delay[13]_p3_out;
+cnt_delay[13]_reg_input = cnt_delay[13]_or_out;
+cnt_delay[13] = TFFE(cnt_delay[13]_reg_input, GLOBAL(clk), , , );
+
+
+--recstart is recstart at LC67
+recstart_p1_out = !state_rec[0] & recstart_tmp & !state_rec[3] & !state_rec[2] & !state_rec[1] & !recstart;
+recstart_p2_out = state_rec[0] & state_rec[3] & !state_rec[2] & !state_rec[1] & recstart & div8_rec_reg[1] & div8_rec_reg[0] & div8_rec_reg[2];
+recstart_or_out = recstart_p1_out # recstart_p2_out;
+recstart_reg_input = recstart_or_out;
+recstart = TFFE(recstart_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--div8_rec_reg[0] is div8_rec_reg[0] at LC66
+div8_rec_reg[0]_or_out = recstart;
+div8_rec_reg[0]_reg_input = div8_rec_reg[0]_or_out;
+div8_rec_reg[0] = TFFE(div8_rec_reg[0]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--cnt_delay[14] is cnt_delay[14] at LC9
+cnt_delay[14]_p1_out = cnt_delay[13] & cnt_delay[12] & cnt_delay[11] & cnt_delay[10] & cnt_delay[9] & cnt_delay[8] & cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & start_delaycnt & rst;
+cnt_delay[14]_p2_out = !rst & cnt_delay[14];
+cnt_delay[14]_or_out = cnt_delay[14]_p1_out # cnt_delay[14]_p2_out;
+cnt_delay[14]_reg_input = cnt_delay[14]_or_out;
+cnt_delay[14] = TFFE(cnt_delay[14]_reg_input, GLOBAL(clk), , , );
+
+
+--div8_rec_reg[1] is div8_rec_reg[1] at LC75
+div8_rec_reg[1]_p1_out = div8_rec_reg[0] & recstart;
+div8_rec_reg[1]_or_out = div8_rec_reg[1]_p1_out;
+div8_rec_reg[1]_reg_input = div8_rec_reg[1]_or_out;
+div8_rec_reg[1] = TFFE(div8_rec_reg[1]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--div8_rec_reg[2] is div8_rec_reg[2] at LC76
+div8_rec_reg[2]_p1_out = div8_rec_reg[1] & div8_rec_reg[0] & recstart;
+div8_rec_reg[2]_or_out = div8_rec_reg[2]_p1_out;
+div8_rec_reg[2]_reg_input = div8_rec_reg[2]_or_out;
+div8_rec_reg[2] = TFFE(div8_rec_reg[2]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--cnt_delay[15] is cnt_delay[15] at LC16
+cnt_delay[15]_p1_out = cnt_delay[14] & cnt_delay[13] & cnt_delay[12] & cnt_delay[11] & cnt_delay[10] & cnt_delay[9] & cnt_delay[8] & cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & start_delaycnt & rst;
+cnt_delay[15]_p2_out = !rst & cnt_delay[15];
+cnt_delay[15]_or_out = cnt_delay[15]_p1_out # cnt_delay[15]_p2_out;
+cnt_delay[15]_reg_input = cnt_delay[15]_or_out;
+cnt_delay[15] = TFFE(cnt_delay[15]_reg_input, GLOBAL(clk), , , );
+
+
+--state_rec[2] is state_rec[2] at LC77
+state_rec[2]_p1_out = state_rec[1] & state_rec[0] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1] & !state_rec[3];
+state_rec[2]_or_out = state_rec[2]_p1_out;
+state_rec[2]_reg_input = state_rec[2]_or_out;
+state_rec[2] = TFFE(state_rec[2]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--cnt_delay[16] is cnt_delay[16] at LC2
+cnt_delay[16]_p1_out = cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & cnt_delay[10] & cnt_delay[11] & cnt_delay[15] & cnt_delay[14] & cnt_delay[8] & cnt_delay[9] & cnt_delay[13] & cnt_delay[12] & start_delaycnt & rst;
+cnt_delay[16]_p2_out = !rst & cnt_delay[16];
+cnt_delay[16]_or_out = cnt_delay[16]_p1_out # cnt_delay[16]_p2_out;
+cnt_delay[16]_reg_input = cnt_delay[16]_or_out;
+cnt_delay[16] = TFFE(cnt_delay[16]_reg_input, GLOBAL(clk), , , );
+
+
+--state_rec[3] is state_rec[3] at LC79
+state_rec[3]_p1_out = state_rec[0] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1] & state_rec[2] & state_rec[1] & !state_rec[3];
+state_rec[3]_p2_out = state_rec[0] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1] & !state_rec[2] & !state_rec[1] & state_rec[3];
+state_rec[3]_or_out = state_rec[3]_p1_out # state_rec[3]_p2_out;
+state_rec[3]_reg_input = state_rec[3]_or_out;
+state_rec[3] = TFFE(state_rec[3]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--cnt_delay[17] is cnt_delay[17] at LC3
+cnt_delay[17]_p1_out = cnt_delay[16] & cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & cnt_delay[10] & cnt_delay[11] & cnt_delay[15] & cnt_delay[14] & cnt_delay[8] & cnt_delay[9] & cnt_delay[13] & cnt_delay[12] & start_delaycnt & rst;
+cnt_delay[17]_p2_out = !rst & cnt_delay[17];
+cnt_delay[17]_or_out = cnt_delay[17]_p1_out # cnt_delay[17]_p2_out;
+cnt_delay[17]_reg_input = cnt_delay[17]_or_out;
+cnt_delay[17] = TFFE(cnt_delay[17]_reg_input, GLOBAL(clk), , , );
+
+
+--A1L98 is rxd_buf~439 at LC74
+A1L98_p1_out = !state_rec[3] & state_rec[0] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1];
+A1L98_p2_out = !state_rec[3] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1] & state_rec[2];
+A1L98_p3_out = !state_rec[3] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1] & state_rec[1];
+A1L98_p4_out = state_rec[3] & !state_rec[0] & div8_rec_reg[2] & div8_rec_reg[0] & div8_rec_reg[1] & !state_rec[2] & !state_rec[1];
+A1L98_or_out = A1L98_p1_out # A1L98_p2_out # A1L98_p3_out # A1L98_p4_out;
+A1L98 = A1L98_or_out;
+
+
+--rxd_buf[7] is rxd_buf[7] at LC69
+rxd_buf[7]_p1_out = rxd_reg2 & A1L98;
+rxd_buf[7]_p2_out = !A1L98 & rxd_buf[7];
+rxd_buf[7]_or_out = rxd_buf[7]_p1_out # rxd_buf[7]_p2_out;
+rxd_buf[7]_reg_input = rxd_buf[7]_or_out;
+rxd_buf[7] = DFFE(rxd_buf[7]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--rxd_buf[6] is rxd_buf[6] at LC70
+rxd_buf[6]_p1_out = rxd_buf[7] & A1L98;
+rxd_buf[6]_p2_out = !A1L98 & rxd_buf[6];
+rxd_buf[6]_or_out = rxd_buf[6]_p1_out # rxd_buf[6]_p2_out;
+rxd_buf[6]_reg_input = rxd_buf[6]_or_out;
+rxd_buf[6] = DFFE(rxd_buf[6]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--cnt_delay[18] is cnt_delay[18] at LC5
+cnt_delay[18]_p1_out = cnt_delay[17] & cnt_delay[16] & cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & cnt_delay[10] & cnt_delay[11] & cnt_delay[15] & cnt_delay[14] & cnt_delay[8] & cnt_delay[9] & cnt_delay[13] & cnt_delay[12] & start_delaycnt & rst & A1L25;
+cnt_delay[18]_p2_out = !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[1] & !cnt_delay[0] & !cnt_delay[5] & !cnt_delay[4] & cnt_delay[10] & !cnt_delay[11] & !cnt_delay[15] & !cnt_delay[14] & cnt_delay[8] & !cnt_delay[9] & cnt_delay[13] & cnt_delay[12] & start_delaycnt & cnt_delay[18] & cnt_delay[19];
+cnt_delay[18]_p3_out = !rst & cnt_delay[18];
+cnt_delay[18]_or_out = cnt_delay[18]_p1_out # cnt_delay[18]_p2_out # cnt_delay[18]_p3_out;
+cnt_delay[18]_reg_input = cnt_delay[18]_or_out;
+cnt_delay[18] = TFFE(cnt_delay[18]_reg_input, GLOBAL(clk), , , );
+
+
+--rxd_buf[5] is rxd_buf[5] at LC73
+rxd_buf[5]_p1_out = rxd_buf[6] & A1L98;
+rxd_buf[5]_p2_out = !A1L98 & rxd_buf[5];
+rxd_buf[5]_or_out = rxd_buf[5]_p1_out # rxd_buf[5]_p2_out;
+rxd_buf[5]_reg_input = rxd_buf[5]_or_out;
+rxd_buf[5] = DFFE(rxd_buf[5]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--rxd_buf[4] is rxd_buf[4] at LC72
+rxd_buf[4]_p1_out = rxd_buf[5] & A1L98;
+rxd_buf[4]_p2_out = !A1L98 & rxd_buf[4];
+rxd_buf[4]_or_out = rxd_buf[4]_p1_out # rxd_buf[4]_p2_out;
+rxd_buf[4]_reg_input = rxd_buf[4]_or_out;
+rxd_buf[4] = DFFE(rxd_buf[4]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--cnt_delay[19] is cnt_delay[19] at LC7
+cnt_delay[19]_p1_out = cnt_delay[18] & cnt_delay[17] & cnt_delay[16] & cnt_delay[3] & cnt_delay[2] & cnt_delay[7] & cnt_delay[6] & cnt_delay[1] & cnt_delay[0] & cnt_delay[5] & cnt_delay[4] & cnt_delay[10] & cnt_delay[11] & cnt_delay[15] & cnt_delay[14] & cnt_delay[8] & cnt_delay[9] & cnt_delay[13] & cnt_delay[12] & start_delaycnt & rst & A1L25;
+cnt_delay[19]_p2_out = cnt_delay[18] & !cnt_delay[17] & !cnt_delay[16] & !cnt_delay[3] & !cnt_delay[2] & !cnt_delay[7] & !cnt_delay[6] & !cnt_delay[1] & !cnt_delay[0] & !cnt_delay[5] & !cnt_delay[4] & cnt_delay[10] & !cnt_delay[11] & !cnt_delay[15] & !cnt_delay[14] & cnt_delay[8] & !cnt_delay[9] & cnt_delay[13] & cnt_delay[12] & start_delaycnt & cnt_delay[19];
+cnt_delay[19]_p3_out = !rst & cnt_delay[19];
+cnt_delay[19]_or_out = cnt_delay[19]_p1_out # cnt_delay[19]_p2_out # cnt_delay[19]_p3_out;
+cnt_delay[19]_reg_input = cnt_delay[19]_or_out;
+cnt_delay[19] = TFFE(cnt_delay[19]_reg_input, GLOBAL(clk), , , );
+
+
+--rxd_buf[3] is rxd_buf[3] at LC65
+rxd_buf[3]_p1_out = rxd_buf[4] & A1L98;
+rxd_buf[3]_p2_out = !A1L98 & rxd_buf[3];
+rxd_buf[3]_or_out = rxd_buf[3]_p1_out # rxd_buf[3]_p2_out;
+rxd_buf[3]_reg_input = rxd_buf[3]_or_out;
+rxd_buf[3] = DFFE(rxd_buf[3]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--rxd_buf[2] is rxd_buf[2] at LC126
+rxd_buf[2]_p1_out = rxd_buf[3] & A1L98;
+rxd_buf[2]_p2_out = !A1L98 & rxd_buf[2];
+rxd_buf[2]_or_out = rxd_buf[2]_p1_out # rxd_buf[2]_p2_out;
+rxd_buf[2]_reg_input = rxd_buf[2]_or_out;
+rxd_buf[2] = DFFE(rxd_buf[2]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--rxd_buf[1] is rxd_buf[1] at LC125
+rxd_buf[1]_p1_out = rxd_buf[2] & A1L98;
+rxd_buf[1]_p2_out = !A1L98 & rxd_buf[1];
+rxd_buf[1]_or_out = rxd_buf[1]_p1_out # rxd_buf[1]_p2_out;
+rxd_buf[1]_reg_input = rxd_buf[1]_or_out;
+rxd_buf[1] = DFFE(rxd_buf[1]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--start_delaycnt is start_delaycnt at LC8
+start_delaycnt_p1_out = !key_input & rst & !cnt_delay[4] & !cnt_delay[5] & !cnt_delay[0] & !cnt_delay[7] & !cnt_delay[15] & !cnt_delay[17] & !cnt_delay[9] & !cnt_delay[1] & !cnt_delay[6] & !cnt_delay[14] & !cnt_delay[2] & !cnt_delay[16] & !cnt_delay[3] & !cnt_delay[11] & !cnt_delay[19] & !cnt_delay[10] & !cnt_delay[13] & !cnt_delay[12] & !cnt_delay[8] & !cnt_delay[18] & !start_delaycnt;
+start_delaycnt_p2_out = !rst & start_delaycnt;
+start_delaycnt_p3_out = !cnt_delay[4] & !cnt_delay[5] & !cnt_delay[0] & !cnt_delay[7] & !cnt_delay[15] & !cnt_delay[17] & !cnt_delay[9] & !cnt_delay[1] & !cnt_delay[6] & !cnt_delay[14] & !cnt_delay[2] & !cnt_delay[16] & !cnt_delay[3] & !cnt_delay[11] & cnt_delay[19] & cnt_delay[10] & cnt_delay[13] & cnt_delay[12] & cnt_delay[8] & cnt_delay[18] & start_delaycnt;
+start_delaycnt_or_out = start_delaycnt_p1_out # start_delaycnt_p2_out # start_delaycnt_p3_out;
+start_delaycnt_reg_input = start_delaycnt_or_out;
+start_delaycnt = TFFE(start_delaycnt_reg_input, GLOBAL(clk), , , );
+
+
+--rxd_buf[0] is rxd_buf[0] at LC124
+rxd_buf[0]_p1_out = rxd_buf[1] & A1L98;
+rxd_buf[0]_p2_out = !A1L98 & rxd_buf[0];
+rxd_buf[0]_or_out = rxd_buf[0]_p1_out # rxd_buf[0]_p2_out;
+rxd_buf[0]_reg_input = rxd_buf[0]_or_out;
+rxd_buf[0] = DFFE(rxd_buf[0]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--cnt_delay[4] is cnt_delay[4] at LC46
+cnt_delay[4]_p1_out = cnt_delay[3] & cnt_delay[2] & cnt_delay[1] & cnt_delay[0] & start_delaycnt & rst;
+cnt_delay[4]_p2_out = !rst & cnt_delay[4];
+cnt_delay[4]_or_out = cnt_delay[4]_p1_out # cnt_delay[4]_p2_out;
+cnt_delay[4]_reg_input = cnt_delay[4]_or_out;
+cnt_delay[4] = TFFE(cnt_delay[4]_reg_input, GLOBAL(clk), , , );
+
+
+--A1L45 is reduce_or~5244 at SEXP101
+A1L45 = EXP(rxd_buf[0] & rxd_buf[2]);
+
+
+--A1L55 is reduce_or~5245 at SEXP104
+A1L55 = EXP(!rxd_buf[1] & !rxd_buf[2]);
+
+
+--A1L65 is reduce_or~5251 at LC99
+A1L65_p0_out = !rxd_buf[4] & rxd_buf[6] & !rxd_buf[5] & !rxd_buf[7] & !rxd_buf[3] & !rxd_buf[0] & A1L55;
+A1L65_p1_out = rxd_buf[4] & !rxd_buf[6] & rxd_buf[5] & !rxd_buf[1] & !rxd_buf[7] & !rxd_buf[3] & rxd_buf[2];
+A1L65_p2_out = rxd_buf[4] & !rxd_buf[6] & rxd_buf[5] & !rxd_buf[1] & !rxd_buf[7] & rxd_buf[3] & !rxd_buf[2];
+A1L65_p3_out = !rxd_buf[4] & rxd_buf[6] & !rxd_buf[5] & !rxd_buf[1] & !rxd_buf[7] & !rxd_buf[3] & rxd_buf[0];
+A1L65_p4_out = rxd_buf[4] & !rxd_buf[6] & rxd_buf[5] & rxd_buf[1] & !rxd_buf[7] & !rxd_buf[3] & A1L45;
+A1L65_or_out = A1L65_p0_out # A1L65_p1_out # A1L65_p2_out # A1L65_p3_out # A1L65_p4_out;
+A1L65 = !(A1L65_or_out);
+
+
+--A1L75 is reduce_or~5259 at LC93
+A1L75_p0_out = !rxd_buf[7] & !rxd_buf[6] & rxd_buf[4] & rxd_buf[5] & rxd_buf[1] & !rxd_buf[3] & A1L17;
+A1L75_p1_out = !rxd_buf[2] & !rxd_buf[7] & !rxd_buf[0] & !rxd_buf[6] & rxd_buf[4] & rxd_buf[5] & !rxd_buf[1];
+A1L75_p2_out = rxd_buf[2] & !rxd_buf[7] & rxd_buf[6] & !rxd_buf[4] & !rxd_buf[5] & !rxd_buf[1] & !rxd_buf[3];
+A1L75_p3_out = rxd_buf[2] & !rxd_buf[7] & rxd_buf[0] & !rxd_buf[6] & rxd_buf[4] & rxd_buf[5] & !rxd_buf[1] & !rxd_buf[3];
+A1L75_p4_out = !rxd_buf[2] & !rxd_buf[7] & rxd_buf[6] & !rxd_buf[4] & !rxd_buf[5] & rxd_buf[1] & !rxd_buf[3];
+A1L75_or_out = A1L75_p0_out # A1L75_p1_out # A1L75_p2_out # A1L75_p3_out # A1L75_p4_out;
+A1L75 = !(A1L75_or_out);
+
+
+--A1L85 is reduce_or~5261 at SEXP105
+A1L85 = EXP(!rxd_buf[2] & !rxd_buf[0]);
+
+
+--A1L95 is reduce_or~5267 at LC97
+A1L95_p0_out = !rxd_buf[7] & rxd_buf[5] & !rxd_buf[6] & rxd_buf[4] & !rxd_buf[3] & A1L85;
+A1L95_p1_out = !rxd_buf[7] & rxd_buf[5] & !rxd_buf[2] & !rxd_buf[6] & rxd_buf[4] & !rxd_buf[1];
+A1L95_p2_out = !rxd_buf[7] & !rxd_buf[5] & !rxd_buf[2] & rxd_buf[6] & !rxd_buf[4] & !rxd_buf[1] & !rxd_buf[3] & rxd_buf[0];
+A1L95_p3_out = !rxd_buf[7] & !rxd_buf[5] & !rxd_buf[2] & rxd_buf[6] & !rxd_buf[4] & rxd_buf[1] & !rxd_buf[3] & !rxd_buf[0];
+A1L95_p4_out = !rxd_buf[7] & !rxd_buf[5] & rxd_buf[2] & rxd_buf[6] & !rxd_buf[4] & !rxd_buf[1] & !rxd_buf[3] & !rxd_buf[0];
+A1L95_or_out = A1L95_p0_out # A1L95_p1_out # A1L95_p2_out # A1L95_p3_out # A1L95_p4_out;
+A1L95 = !(A1L95_or_out);
+
+
+--A1L06 is reduce_or~5269 at SEXP84
+A1L06 = EXP(rxd_buf[1] & rxd_buf[3]);
+
+
+--A1L16 is reduce_or~5275 at LC85
+A1L16_p0_out = !rxd_buf[2] & !rxd_buf[6] & !rxd_buf[7] & rxd_buf[5] & rxd_buf[4] & A1L06;
+A1L16_p1_out = rxd_buf[2] & rxd_buf[6] & !rxd_buf[7] & !rxd_buf[5] & !rxd_buf[3] & !rxd_buf[0] & !rxd_buf[1] & !rxd_buf[4];
+A1L16_p2_out = !rxd_buf[2] & rxd_buf[6] & !rxd_buf[7] & !rxd_buf[5] & !rxd_buf[3] & rxd_buf[0] & !rxd_buf[1] & !rxd_buf[4];
+A1L16_p3_out = !rxd_buf[6] & !rxd_buf[7] & rxd_buf[5] & !rxd_buf[3] & rxd_buf[0] & rxd_buf[1] & rxd_buf[4];
+A1L16_p4_out = !rxd_buf[6] & !rxd_buf[7] & rxd_buf[5] & !rxd_buf[3] & !rxd_buf[0] & !rxd_buf[1] & rxd_buf[4];
+A1L16_or_out = A1L16_p0_out # A1L16_p1_out # A1L16_p2_out # A1L16_p3_out # A1L16_p4_out;
+A1L16 = !(A1L16_or_out);
+
+
+--A1L26 is reduce_or~5282 at LC88
+A1L26_p0_out = rxd_buf[3] & !rxd_buf[7] & rxd_buf[4] & rxd_buf[5] & !rxd_buf[6] & !rxd_buf[1] & !rxd_buf[2];
+A1L26_p1_out = !rxd_buf[3] & !rxd_buf[7] & !rxd_buf[4] & !rxd_buf[5] & rxd_buf[6] & !rxd_buf[1] & rxd_buf[0];
+A1L26_p2_out = !rxd_buf[3] & !rxd_buf[7] & rxd_buf[4] & rxd_buf[5] & !rxd_buf[6] & !rxd_buf[0] & !rxd_buf[2];
+A1L26_p3_out = !rxd_buf[3] & !rxd_buf[7] & rxd_buf[4] & rxd_buf[5] & !rxd_buf[6] & rxd_buf[1];
+A1L26_p4_out = !rxd_buf[3] & !rxd_buf[7] & rxd_buf[4] & rxd_buf[5] & !rxd_buf[6] & rxd_buf[0] & rxd_buf[2];
+A1L26_or_out = A1L07 # A1L26_p0_out # A1L26_p1_out # A1L26_p2_out # A1L26_p3_out # A1L26_p4_out;
+A1L26 = !(A1L26_or_out);
+
+
+--A1L36 is reduce_or~5284 at SEXP87
+A1L36 = EXP(rxd_buf[2] & !rxd_buf[3] & !rxd_buf[1] & !rxd_buf[7] & rxd_buf[5] & rxd_buf[4] & !rxd_buf[6]);
+
+
+--A1L46 is reduce_or~5285 at SEXP89
+A1L46 = EXP(rxd_buf[2] & !rxd_buf[3] & !rxd_buf[7] & rxd_buf[5] & rxd_buf[4] & !rxd_buf[6] & !rxd_buf[0]);
+
+
+--A1L56 is reduce_or~5286 at SEXP91
+A1L56 = EXP(!rxd_buf[3] & !rxd_buf[1] & !rxd_buf[7] & rxd_buf[5] & rxd_buf[4] & !rxd_buf[6] & !rxd_buf[0]);
+
+
+--A1L66 is reduce_or~5291 at LC86
+A1L66_p1_out = A1L36 & A1L46 & A1L56;
+A1L66_p0_out = A1L36 & A1L46 & A1L56 & !rxd_buf[3] & rxd_buf[1] & !rxd_buf[7] & !rxd_buf[5] & !rxd_buf[4] & rxd_buf[6] & !rxd_buf[0];
+A1L66_p2_out = A1L36 & A1L46 & A1L56 & !rxd_buf[2] & rxd_buf[3] & !rxd_buf[1] & !rxd_buf[7] & rxd_buf[5] & rxd_buf[4] & !rxd_buf[6];
+A1L66_p3_out = A1L36 & A1L46 & A1L56 & !rxd_buf[2] & !rxd_buf[3] & rxd_buf[1] & !rxd_buf[7] & !rxd_buf[5] & !rxd_buf[4] & rxd_buf[6];
+A1L66_p4_out = A1L36 & A1L46 & A1L56 & !rxd_buf[3] & !rxd_buf[1] & !rxd_buf[7] & !rxd_buf[5] & !rxd_buf[4] & rxd_buf[6] & rxd_buf[0];
+A1L66_or_out = A1L66_p0_out # A1L66_p2_out # A1L66_p3_out # A1L66_p4_out;
+A1L66 = A1L66_p1_out $ A1L66_or_out;
+
+
+--A1L76 is reduce_or~5294 at SEXP94
+A1L76 = EXP(!rxd_buf[1] & !rxd_buf[0]);
+
+
+--A1L86 is reduce_or~5295 at SEXP82
+A1L86 = EXP(rxd_buf[1] & rxd_buf[0]);
+
+
+--A1L96 is reduce_or~5300 at LC91
+A1L96_p1_out = !rxd_buf[2] & !rxd_buf[6] & rxd_buf[4] & !rxd_buf[1] & rxd_buf[5] & !rxd_buf[7] & !rxd_buf[0];
+A1L96_p2_out = !rxd_buf[6] & rxd_buf[4] & rxd_buf[1] & rxd_buf[5] & !rxd_buf[7] & !rxd_buf[0] & !rxd_buf[3];
+A1L96_p3_out = !rxd_buf[2] & rxd_buf[6] & !rxd_buf[4] & !rxd_buf[5] & !rxd_buf[7] & !rxd_buf[3] & A1L76;
+A1L96_p4_out = rxd_buf[2] & rxd_buf[6] & !rxd_buf[4] & !rxd_buf[5] & !rxd_buf[7] & !rxd_buf[3] & A1L86;
+A1L96_or_out = A1L96_p1_out # A1L96_p2_out # A1L96_p3_out # A1L96_p4_out;
+A1L96 = !(A1L96_or_out);
+
+
+--key_entry1 is key_entry1 at LC4
+key_entry1_p1_out = key_entry1 & !key_entry2 & rst;
+key_entry1_p2_out = !key_entry2 & rst & !key_input & !cnt_delay[4] & !cnt_delay[5] & !cnt_delay[0] & !cnt_delay[7] & !cnt_delay[15] & !cnt_delay[17] & !cnt_delay[9] & !cnt_delay[1] & !cnt_delay[6] & !cnt_delay[14] & !cnt_delay[2] & !cnt_delay[16] & !cnt_delay[3] & !cnt_delay[11] & cnt_delay[19] & cnt_delay[10] & cnt_delay[13] & cnt_delay[12] & cnt_delay[8] & cnt_delay[18];
+key_entry1_or_out = key_entry1_p1_out # key_entry1_p2_out;
+key_entry1_reg_input = key_entry1_or_out;
+key_entry1 = DFFE(key_entry1_reg_input, GLOBAL(clk), , , );
+
+
+--key_entry2 is key_entry2 at LC64
+key_entry2_p1_out = !key_entry1 & !key_entry2;
+key_entry2_p2_out = key_entry2 & send_state[2] & send_state[0] & send_state[1] & !state_tras[2] & !state_tras[1] & !state_tras[0] & !state_tras[3];
+key_entry2_or_out = key_entry2_p1_out # key_entry2_p2_out;
+key_entry2_reg_input = !(key_entry2_or_out);
+key_entry2 = DFFE(key_entry2_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--state_tras[3] is state_tras[3] at LC38
+state_tras[3]_p1_out = state_tras[2] & state_tras[1] & state_tras[0] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2;
+state_tras[3]_or_out = state_tras[3]_p1_out;
+state_tras[3]_reg_input = state_tras[3]_or_out;
+state_tras[3] = TFFE(state_tras[3]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--A1L221 is trasstart~45 at SEXP35
+A1L221 = EXP(state_tras[3] & state_tras[2] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2);
+
+
+--A1L421 is trasstart~47 at SEXP36
+A1L421 = EXP(state_tras[0] & state_tras[1]);
+
+
+--trasstart is trasstart at LC47
+trasstart_p0_out = div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & state_tras[3] & state_tras[2] & key_entry2 & A1L421;
+trasstart_p1_out = div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & state_tras[3] & !state_tras[2] & state_tras[1] & key_entry2;
+trasstart_p2_out = A1L221 & trasstart;
+trasstart_p4_out = !state_tras[3] & !state_tras[2] & !state_tras[1] & key_entry2 & A1L321 & !state_tras[0];
+trasstart_or_out = trasstart_p0_out # trasstart_p1_out # trasstart_p2_out # trasstart_p4_out;
+trasstart_reg_input = trasstart_or_out;
+trasstart = DFFE(trasstart_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--div8_tras_reg[0] is div8_tras_reg[0] at LC41
+div8_tras_reg[0]_or_out = trasstart;
+div8_tras_reg[0]_reg_input = div8_tras_reg[0]_or_out;
+div8_tras_reg[0] = TFFE(div8_tras_reg[0]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--div8_tras_reg[1] is div8_tras_reg[1] at LC40
+div8_tras_reg[1]_p1_out = div8_tras_reg[0] & trasstart;
+div8_tras_reg[1]_or_out = div8_tras_reg[1]_p1_out;
+div8_tras_reg[1]_reg_input = div8_tras_reg[1]_or_out;
+div8_tras_reg[1] = TFFE(div8_tras_reg[1]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--div8_tras_reg[2] is div8_tras_reg[2] at LC36
+div8_tras_reg[2]_p1_out = div8_tras_reg[1] & div8_tras_reg[0] & trasstart;
+div8_tras_reg[2]_or_out = div8_tras_reg[2]_p1_out;
+div8_tras_reg[2]_reg_input = div8_tras_reg[2]_or_out;
+div8_tras_reg[2] = TFFE(div8_tras_reg[2]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--state_tras[0] is state_tras[0] at LC123
+state_tras[0]_p1_out = key_entry2 & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+state_tras[0]_p2_out = send_state[2] & send_state[0] & send_state[1] & !state_tras[2] & !state_tras[1] & !state_tras[3] & key_entry2 & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+state_tras[0]_p4_out = !state_tras[2] & !state_tras[1] & !state_tras[3] & key_entry2 & !trasstart & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+state_tras[0]_or_out = state_tras[0] # state_tras[0]_p2_out # state_tras[0]_p4_out;
+state_tras[0]_reg_input = state_tras[0]_p1_out $ state_tras[0]_or_out;
+state_tras[0] = DFFE(state_tras[0]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--state_tras[1] is state_tras[1] at LC34
+state_tras[1]_p1_out = state_tras[0] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2;
+state_tras[1]_or_out = state_tras[1]_p1_out;
+state_tras[1]_reg_input = state_tras[1]_or_out;
+state_tras[1] = TFFE(state_tras[1]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--state_tras[2] is state_tras[2] at LC33
+state_tras[2]_p1_out = state_tras[1] & state_tras[0] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2;
+state_tras[2]_or_out = state_tras[2]_p1_out;
+state_tras[2]_reg_input = state_tras[2]_or_out;
+state_tras[2] = TFFE(state_tras[2]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--txd_buf[6] is txd_buf[6] at LC120
+txd_buf[6]_p0_out = div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2 & state_tras[2] & txd_buf[6] & !state_tras[3];
+txd_buf[6]_p1_out = send_state[1] & send_state[2] & state_tras[0] & state_tras[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2 & state_tras[2] & txd_buf[6];
+txd_buf[6]_p2_out = state_tras[0] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2 & txd_buf[6] & !state_tras[3];
+txd_buf[6]_p4_out = state_tras[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2 & txd_buf[6] & !state_tras[3];
+txd_buf[6]_or_out = A1L251 # txd_buf[6]_p0_out # txd_buf[6]_p1_out # txd_buf[6]_p2_out # txd_buf[6]_p4_out;
+txd_buf[6]_reg_input = txd_buf[6]_or_out;
+txd_buf[6] = TFFE(txd_buf[6]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--A1L441 is txd_buf[5]~355 at SEXP60
+A1L441 = EXP(!state_tras[2] & !state_tras[1] & !state_tras[0]);
+
+
+--A1L541 is txd_buf[5]~356 at SEXP118
+A1L541 = EXP(key_entry2 & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1]);
+
+
+--A1L641 is txd_buf[5]~357 at SEXP121
+A1L641 = EXP(send_state[1] & send_state[2]);
+
+
+--txd_buf[5] is txd_buf[5] at LC114
+txd_buf[5]_p0_out = !key_entry2 & key_entry1;
+txd_buf[5]_p1_out = A1L541 & txd_buf[5];
+txd_buf[5]_p2_out = A1L641 & key_entry2 & state_tras[0] & state_tras[1] & state_tras[3] & state_tras[2] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+txd_buf[5]_p4_out = txd_buf[5] & state_tras[3] & state_tras[2] & A1L521;
+txd_buf[5]_or_out = A1L741 # txd_buf[5]_p0_out # txd_buf[5]_p1_out # txd_buf[5]_p2_out # txd_buf[5]_p4_out;
+txd_buf[5]_reg_input = txd_buf[5]_or_out;
+txd_buf[5] = DFFE(txd_buf[5]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--A1L041 is txd_buf[4]~367 at SEXP61
+A1L041 = EXP(!state_tras[1] & !state_tras[2]);
+
+
+--txd_buf[4] is txd_buf[4] at LC52
+txd_buf[4]_p0_out = state_tras[3] & key_entry2 & !txd_buf[4] & A1L041;
+txd_buf[4]_p1_out = !state_tras[1] & !state_tras[3] & key_entry2 & !state_tras[2] & !state_tras[0] & !txd_buf[4];
+txd_buf[4]_p2_out = !key_entry2 & !txd_buf[4] & !key_entry1;
+txd_buf[4]_p4_out = !state_tras[3] & key_entry2 & A1L441 & !txd_buf[5] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+txd_buf[4]_or_out = A1L141 # txd_buf[4]_p0_out # txd_buf[4]_p1_out # txd_buf[4]_p2_out # txd_buf[4]_p4_out;
+txd_buf[4]_reg_input = !(txd_buf[4]_or_out);
+txd_buf[4] = DFFE(txd_buf[4]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--txd_buf[3] is txd_buf[3] at LC55
+txd_buf[3]_p0_out = key_entry2 & state_tras[3] & state_tras[2] & txd_buf[3] & A1L621;
+txd_buf[3]_p1_out = key_entry2 & state_tras[3] & !state_tras[2] & state_tras[1] & txd_buf[3];
+txd_buf[3]_p2_out = !key_entry2 & txd_buf[3] & !key_entry1;
+txd_buf[3]_p4_out = key_entry2 & !state_tras[3] & A1L441 & txd_buf[4] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+txd_buf[3]_or_out = A1L831 # txd_buf[3]_p0_out # txd_buf[3]_p1_out # txd_buf[3]_p2_out # txd_buf[3]_p4_out;
+txd_buf[3]_reg_input = txd_buf[3]_or_out;
+txd_buf[3] = DFFE(txd_buf[3]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--txd_buf[2] is txd_buf[2] at LC59
+txd_buf[2]_p0_out = txd_buf[2] & !send_state[1] & txd_buf[3];
+txd_buf[2]_p1_out = txd_buf[2] & A1L35;
+txd_buf[2]_p2_out = state_tras[0] & state_tras[3] & !state_tras[2] & txd_buf[2];
+txd_buf[2]_p4_out = state_tras[3] & state_tras[2] & txd_buf[2] & !send_state[1];
+txd_buf[2]_or_out = A1L531 # txd_buf[2]_p0_out # txd_buf[2]_p1_out # txd_buf[2]_p2_out # txd_buf[2]_p4_out;
+txd_buf[2]_reg_input = txd_buf[2]_or_out;
+txd_buf[2] = DFFE(txd_buf[2]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--txd_buf[1] is txd_buf[1] at LC50
+txd_buf[1]_p0_out = !key_entry2 & key_entry1;
+txd_buf[1]_p1_out = A1L441 & txd_buf[2] & key_entry2 & !state_tras[3] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+txd_buf[1]_p2_out = A1L841 & txd_buf[1];
+txd_buf[1]_p4_out = state_tras[3] & txd_buf[1] & A1L621 & state_tras[2];
+txd_buf[1]_or_out = A1L131 # txd_buf[1]_p0_out # txd_buf[1]_p1_out # txd_buf[1]_p2_out # txd_buf[1]_p4_out;
+txd_buf[1]_reg_input = txd_buf[1]_or_out;
+txd_buf[1] = DFFE(txd_buf[1]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--A1L37 is rtl~4791 at LC60
+A1L37_p1_out = !state_tras[2] & !state_tras[1] & !state_tras[0];
+A1L37_p2_out = state_tras[2] & state_tras[1] & state_tras[0] & div8_tras_reg[1] & div8_tras_reg[0] & div8_tras_reg[2] & send_state[1] & send_state[2];
+A1L37_p3_out = state_tras[2] & state_tras[1] & state_tras[0] & div8_tras_reg[1] & div8_tras_reg[0] & div8_tras_reg[2] & !send_state[1] & !send_state[2] & send_state[0];
+A1L37_or_out = A1L37_p1_out # A1L37_p2_out # A1L37_p3_out # !state_tras[3];
+A1L37 = A1L37_or_out;
+
+
+--A1L47 is rtl~4797 at LC35
+A1L47_p1_out = state_tras[0] & key_entry2;
+A1L47_p2_out = key_entry2 & state_tras[3];
+A1L47_p3_out = key_entry2 & state_tras[2];
+A1L47_p4_out = key_entry2 & state_tras[1];
+A1L47_or_out = A1L47_p1_out # A1L47_p2_out # A1L47_p3_out # A1L47_p4_out;
+A1L47 = A1L47_or_out;
+
+
+--A1L77 is rtl~4807 at LC122
+A1L77_p0_out = key_entry2 & !state_tras[3] & state_tras[2];
+A1L77_p1_out = key_entry1 & !key_entry2;
+A1L77_p2_out = key_entry2 & state_tras[3] & !state_tras[0] & !state_tras[2] & !state_tras[1];
+A1L77_p3_out = key_entry2 & state_tras[0] & !state_tras[2] & !state_tras[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L77_p4_out = key_entry2 & state_tras[0] & state_tras[2] & state_tras[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L77_or_out = A1L87 # A1L77_p0_out # A1L77_p1_out # A1L77_p2_out # A1L77_p3_out # A1L77_p4_out;
+A1L77 = A1L77_or_out;
+
+
+--txd_buf[0] is txd_buf[0] at LC61
+txd_buf[0]_p1_out = A1L37 & A1L47 & A1L77 & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & A1L57 & A1L67;
+txd_buf[0]_p2_out = A1L37 & A1L47 & !txd_buf[0] & A1L57 & A1L67;
+txd_buf[0]_p4_out = !A1L77 & !txd_buf[0];
+txd_buf[0]_or_out = txd_buf[0]_p1_out # txd_buf[0]_p2_out # txd_buf[0]_p4_out;
+txd_buf[0]_reg_input = !(txd_buf[0]_or_out);
+txd_buf[0] = DFFE(txd_buf[0]_reg_input, clkbaud8x, GLOBAL(rst), , );
+
+
+--A1L451 is txd_reg~60 at SEXP37
+A1L451 = EXP(div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2);
+
+
+--txd_reg is txd_reg at LC43
+txd_reg_p0_out = state_tras[3] & A1L241 & !txd_reg;
+txd_reg_p1_out = A1L941 & div8_tras_reg[2] & div8_tras_reg[0] & !state_tras[3] & div8_tras_reg[1] & !txd_buf[0] & key_entry2;
+txd_reg_p2_out = div8_tras_reg[2] & div8_tras_reg[0] & !state_tras[3] & div8_tras_reg[1] & key_entry2 & A1L321 & !state_tras[2] & !state_tras[1] & trasstart & !state_tras[0];
+txd_reg_or_out = A1L551 # txd_reg_p0_out # txd_reg_p1_out # txd_reg_p2_out;
+txd_reg_reg_input = !(txd_reg_or_out);
+txd_reg = DFFE(txd_reg_reg_input, clkbaud8x, , rst, );
+
+
+--A1L07 is reduce_or~5302 at LC87
+A1L07_p1_out = !rxd_buf[3] & !rxd_buf[7] & !rxd_buf[4] & !rxd_buf[5] & rxd_buf[6] & rxd_buf[2] & rxd_buf[1] & !rxd_buf[0];
+A1L07_p2_out = !rxd_buf[3] & !rxd_buf[7] & !rxd_buf[4] & !rxd_buf[5] & rxd_buf[6] & !rxd_buf[2] & rxd_buf[0];
+A1L07 = A1L07_p1_out # A1L07_p2_out;
+
+
+--A1L251 is txd_buf[6]~405 at LC119
+A1L251_p0_out = !state_tras[0] & !state_tras[1] & state_tras[3] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2 & !state_tras[2] & txd_buf[6];
+A1L251_p1_out = !send_state[1] & state_tras[0] & state_tras[1] & state_tras[3] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2 & state_tras[2] & !txd_buf[6];
+A1L251_p2_out = state_tras[0] & state_tras[1] & state_tras[3] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2 & state_tras[2] & !txd_buf[6] & !send_state[2];
+A1L251_p3_out = state_tras[0] & !state_tras[1] & state_tras[3] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & key_entry2 & !state_tras[2] & !txd_buf[6];
+A1L251_p4_out = !key_entry2 & !txd_buf[6] & key_entry1;
+A1L251 = A1L251_p0_out # A1L251_p1_out # A1L251_p2_out # A1L251_p3_out # A1L251_p4_out;
+
+
+--A1L741 is txd_buf[5]~411 at LC113
+A1L741_p0_out = txd_buf[6] & key_entry2 & !state_tras[3] & A1L051 & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L741_p1_out = !state_tras[0] & txd_buf[6] & txd_buf[5];
+A1L741_p2_out = !state_tras[0] & txd_buf[6] & key_entry2 & !state_tras[1] & state_tras[3] & !state_tras[2] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L741_p3_out = !state_tras[0] & txd_buf[5] & !state_tras[1] & !state_tras[3] & !state_tras[2];
+A1L741_p4_out = txd_buf[5] & state_tras[1] & state_tras[3] & !state_tras[2];
+A1L741 = A1L741_p0_out # A1L741_p1_out # A1L741_p2_out # A1L741_p3_out # A1L741_p4_out;
+
+
+--A1L141 is txd_buf[4]~417 at LC51
+A1L141_p1_out = !txd_buf[5] & !state_tras[1] & state_tras[3] & key_entry2 & !state_tras[2] & !state_tras[0] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L141_p2_out = state_tras[1] & state_tras[3] & key_entry2 & state_tras[2] & state_tras[0] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L141_p3_out = !txd_buf[5] & !state_tras[3] & key_entry2 & !txd_buf[4];
+A1L141_p4_out = key_entry2 & !txd_buf[4] & A1L35;
+A1L141 = A1L141_p1_out # A1L141_p2_out # A1L141_p3_out # A1L141_p4_out;
+
+
+--A1L731 is txd_buf[3]~422 at LC53
+A1L731_p1_out = key_entry2 & txd_buf[3] & A1L35;
+A1L731_p2_out = key_entry2 & txd_buf[3] & txd_buf[4] & !state_tras[0];
+A1L731_p3_out = txd_buf[3] & state_tras[3] & state_tras[2] & send_state[0] & !send_state[2] & !key_entry1;
+A1L731 = A1L731_p1_out # A1L731_p2_out # A1L731_p3_out;
+
+
+--A1L831 is txd_buf[3]~426 at LC54
+A1L831_p0_out = !state_tras[3] & !state_tras[2] & txd_buf[3] & key_entry2 & !state_tras[0] & !state_tras[1];
+A1L831_p1_out = state_tras[3] & state_tras[2] & txd_buf[3] & !send_state[0] & send_state[2] & !send_state[1] & !key_entry1;
+A1L831_p2_out = state_tras[3] & !state_tras[2] & txd_buf[4] & key_entry2 & !state_tras[0] & !state_tras[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L831_p3_out = state_tras[3] & state_tras[2] & send_state[0] & !send_state[2] & key_entry2 & state_tras[0] & state_tras[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L831_p4_out = state_tras[3] & state_tras[2] & !send_state[0] & send_state[2] & !send_state[1] & key_entry2 & state_tras[0] & state_tras[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L831 = A1L731 # A1L831_p0_out # A1L831_p1_out # A1L831_p2_out # A1L831_p3_out # A1L831_p4_out;
+
+
+--A1L331 is txd_buf[2]~432 at LC56
+A1L331_p0_out = txd_buf[2] & !state_tras[1] & !state_tras[3] & !state_tras[2] & !state_tras[0];
+A1L331_p1_out = !key_entry2 & key_entry1;
+A1L331_p2_out = txd_buf[2] & !key_entry2;
+A1L331_p3_out = txd_buf[2] & state_tras[1] & state_tras[3] & !state_tras[0];
+A1L331_p4_out = txd_buf[2] & state_tras[3] & state_tras[2] & !state_tras[0];
+A1L331 = A1L331_p0_out # A1L331_p1_out # A1L331_p2_out # A1L331_p3_out # A1L331_p4_out;
+
+
+--A1L431 is txd_buf[2]~438 at LC57
+A1L431_p0_out = !state_tras[1] & state_tras[3] & !state_tras[2] & key_entry2 & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & txd_buf[3];
+A1L431_p1_out = state_tras[0] & !state_tras[1] & state_tras[3] & txd_buf[2];
+A1L431_p2_out = state_tras[0] & !state_tras[3] & key_entry2 & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & txd_buf[3];
+A1L431_p3_out = state_tras[1] & !state_tras[3] & key_entry2 & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & txd_buf[3];
+A1L431_p4_out = !state_tras[3] & state_tras[2] & key_entry2 & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & txd_buf[3];
+A1L431 = A1L331 # A1L431_p0_out # A1L431_p1_out # A1L431_p2_out # A1L431_p3_out # A1L431_p4_out;
+
+
+--A1L531 is txd_buf[2]~444 at LC58
+A1L531_p0_out = state_tras[3] & state_tras[2] & txd_buf[2] & !send_state[2] & send_state[0];
+A1L531_p1_out = !state_tras[1] & txd_buf[3] & txd_buf[2];
+A1L531_p2_out = key_entry2 & state_tras[1] & state_tras[3] & state_tras[2] & state_tras[0] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & !send_state[1];
+A1L531_p3_out = key_entry2 & state_tras[1] & state_tras[3] & state_tras[2] & state_tras[0] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & !send_state[2] & send_state[0];
+A1L531_p4_out = key_entry2 & !state_tras[1] & state_tras[3] & !state_tras[2] & state_tras[0] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L531 = A1L431 # A1L531_p0_out # A1L531_p1_out # A1L531_p2_out # A1L531_p3_out # A1L531_p4_out;
+
+
+--A1L131 is txd_buf[1]~450 at LC49
+A1L131_p0_out = txd_buf[1] & state_tras[1] & state_tras[3] & !state_tras[2];
+A1L131_p1_out = txd_buf[2] & !state_tras[0] & txd_buf[1];
+A1L131_p2_out = txd_buf[2] & !state_tras[0] & key_entry2 & !state_tras[1] & state_tras[3] & !state_tras[2] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L131_p3_out = state_tras[0] & key_entry2 & state_tras[1] & state_tras[3] & state_tras[2] & !send_state[2] & send_state[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1];
+A1L131_p4_out = !state_tras[0] & txd_buf[1] & !state_tras[1] & !state_tras[3] & !state_tras[2];
+A1L131 = A1L131_p0_out # A1L131_p1_out # A1L131_p2_out # A1L131_p3_out # A1L131_p4_out;
+
+
+--A1L551 is txd_reg~71 at LC42
+A1L551_p1_out = !state_tras[2] & !state_tras[3] & !txd_reg & !state_tras[1] & !state_tras[0];
+A1L551_p2_out = !state_tras[2] & state_tras[3] & !state_tras[1] & !state_tras[0] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & !txd_buf[0] & key_entry2;
+A1L551_p3_out = !txd_reg & A1L451;
+A1L551 = A1L551_p1_out # A1L551_p2_out # A1L551_p3_out;
+
+
+--~GND~9 is ~GND~9 at LC118
+~GND~9_or_out = GND;
+~GND~9 = ~GND~9_or_out;
+
+
+--~GND~10 is ~GND~10 at LC117
+~GND~10_or_out = GND;
+~GND~10 = ~GND~10_or_out;
+
+
+--~GND~11 is ~GND~11 at LC115
+~GND~11_or_out = GND;
+~GND~11 = ~GND~11_or_out;
+
+
+--~GND~12 is ~GND~12 at LC109
+~GND~12_or_out = GND;
+~GND~12 = ~GND~12_or_out;
+
+
+--~GND~13 is ~GND~13 at LC107
+~GND~13_or_out = GND;
+~GND~13 = ~GND~13_or_out;
+
+
+--~GND~14 is ~GND~14 at LC105
+~GND~14_or_out = GND;
+~GND~14 = ~GND~14_or_out;
+
+
+--~GND~15 is ~GND~15 at LC104
+~GND~15_or_out = GND;
+~GND~15 = ~GND~15_or_out;
+
+
+--~GND~16 is ~GND~16 at LC101
+~GND~16_or_out = GND;
+~GND~16 = ~GND~16_or_out;
+
+
+--~VCC~1 is ~VCC~1 at LC94
+~VCC~1_or_out = GND;
+~VCC~1 = !(~VCC~1_or_out);
+
+
+--~GND~17 is ~GND~17 at LC37
+~GND~17_or_out = GND;
+~GND~17 = ~GND~17_or_out;
+
+
+--A1L15 is reduce_nor~133sexp at SEXP17
+A1L15 = EXP(C1_dffs[1] & C1_dffs[0] & !C1_dffs[13] & !C1_dffs[15] & !C1_dffs[12] & C1_dffs[8] & !C1_dffs[3] & !C1_dffs[10] & !C1_dffs[4] & !C1_dffs[5] & !C1_dffs[2] & !C1_dffs[9] & !C1_dffs[6] & !C1_dffs[7] & !C1_dffs[11] & !C1_dffs[14]);
+
+
+--A1L25 is reduce_nor~136sexp at SEXP1
+A1L25 = EXP(!cnt_delay[4] & !cnt_delay[5] & !cnt_delay[0] & !cnt_delay[7] & !cnt_delay[15] & !cnt_delay[17] & !cnt_delay[9] & !cnt_delay[1] & !cnt_delay[6] & !cnt_delay[14] & !cnt_delay[2] & !cnt_delay[16] & !cnt_delay[3] & !cnt_delay[11] & cnt_delay[19] & cnt_delay[10] & cnt_delay[13] & cnt_delay[12] & cnt_delay[8] & cnt_delay[18]);
+
+
+--A1L35 is reduce_nor~138sexp at SEXP62
+A1L35 = EXP(div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1]);
+
+
+--A1L57 is rtl~4800sexp1 at SEXP63
+A1L57 = EXP(txd_buf[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & !state_tras[0]);
+
+
+--A1L67 is rtl~4800sexp2 at SEXP64
+A1L67 = EXP(txd_buf[1] & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1] & !state_tras[3]);
+
+
+--A1L87 is rtl~4810 at LC121
+A1L87_p1_out = state_tras[1] & !state_tras[3] & key_entry2;
+A1L87_p2_out = !state_tras[3] & key_entry2 & state_tras[0];
+A1L87 = A1L87_p1_out # A1L87_p2_out;
+
+
+--A1L321 is trasstart~46bal at LC128
+A1L321_p1_out = send_state[2] & send_state[0] & send_state[1];
+A1L321_or_out = A1L321_p1_out;
+A1L321 = !(A1L321_or_out);
+
+
+--rst is rst at PIN_1
+--operation mode is input
+
+rst = INPUT();
+
+
+--clk is clk at PIN_83
+--operation mode is input
+
+clk = INPUT();
+
+
+--key_input is key_input at PIN_35
+--operation mode is input
+
+key_input = INPUT();
+
+
+--rxd is rxd at PIN_25
+--operation mode is input
+
+rxd = INPUT();
+
+
+--en[0] is en[0] at PIN_75
+--operation mode is output
+
+en[0] = OUTPUT(~GND~9);
+
+
+--en[1] is en[1] at PIN_74
+--operation mode is output
+
+en[1] = OUTPUT(~GND~10);
+
+
+--en[2] is en[2] at PIN_73
+--operation mode is output
+
+en[2] = OUTPUT(~GND~11);
+
+
+--en[3] is en[3] at PIN_70
+--operation mode is output
+
+en[3] = OUTPUT(~GND~12);
+
+
+--en[4] is en[4] at PIN_69
+--operation mode is output
+
+en[4] = OUTPUT(~GND~13);
+
+
+--en[5] is en[5] at PIN_68
+--operation mode is output
+
+en[5] = OUTPUT(~GND~14);
+
+
+--en[6] is en[6] at PIN_67
+--operation mode is output
+
+en[6] = OUTPUT(~GND~15);
+
+
+--en[7] is en[7] at PIN_65
+--operation mode is output
+
+en[7] = OUTPUT(~GND~16);
+
+
+--seg_data[0] is seg_data[0] at PIN_61
+--operation mode is output
+
+seg_data[0] = OUTPUT(~VCC~1);
+
+
+--lowbit is lowbit at PIN_30
+--operation mode is output
+
+lowbit = OUTPUT(~GND~17);
+
+
+--seg_data[1] is seg_data[1] at PIN_64
+--operation mode is output
+
+seg_data[1] = OUTPUT(A1L65);
+
+
+--seg_data[4] is seg_data[4] at PIN_60
+--operation mode is output
+
+seg_data[4] = OUTPUT(A1L75);
+
+
+--seg_data[5] is seg_data[5] at PIN_63
+--operation mode is output
+
+seg_data[5] = OUTPUT(A1L95);
+
+
+--seg_data[6] is seg_data[6] at PIN_55
+--operation mode is output
+
+seg_data[6] = OUTPUT(A1L16);
+
+
+--seg_data[7] is seg_data[7] at PIN_57
+--operation mode is output
+
+seg_data[7] = OUTPUT(A1L26);
+
+
+--seg_data[2] is seg_data[2] at PIN_56
+--operation mode is output
+
+seg_data[2] = OUTPUT(A1L66);
+
+
+--seg_data[3] is seg_data[3] at PIN_58
+--operation mode is output
+
+seg_data[3] = OUTPUT(A1L96);
+
+
+--txd is txd at PIN_27
+--operation mode is output
+
+txd = OUTPUT(txd_reg);
+
+
+
+
+
+
+--A1L17 is reduce_or~5305 at SEXP81
+A1L17 = EXP(rxd_buf[0] & rxd_buf[2]);
+
+
+--A1L521 is trasstart~54 at SEXP115
+A1L521 = EXP(state_tras[0] & state_tras[1]);
+
+
+--A1L621 is trasstart~55 at SEXP51
+A1L621 = EXP(state_tras[0] & state_tras[1]);
+
+
+--A1L841 is txd_buf[5]~456 at SEXP53
+A1L841 = EXP(key_entry2 & div8_tras_reg[2] & div8_tras_reg[0] & div8_tras_reg[1]);
+
+
+--A1L941 is txd_buf[5]~457 at SEXP33
+A1L941 = EXP(!state_tras[2] & !state_tras[1] & !state_tras[0]);
+
+
+--A1L241 is txd_buf[4]~458 at SEXP34
+A1L241 = EXP(!state_tras[1] & !state_tras[2]);
+
+
+--A1L051 is txd_buf[5]~459 at SEXP117
+A1L051 = EXP(!state_tras[2] & !state_tras[1] & !state_tras[0]);
+
+

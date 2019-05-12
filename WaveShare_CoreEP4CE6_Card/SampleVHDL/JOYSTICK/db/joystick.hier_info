@@ -1,0 +1,30 @@
+|joystick
+CLK => ~NO_FANOUT~
+RESET => ~NO_FANOUT~
+DATA[0] => Equal0.IN9
+DATA[0] => Equal1.IN9
+DATA[0] => Equal2.IN9
+DATA[0] => Equal3.IN9
+DATA[0] => Equal4.IN9
+DATA[1] => Equal0.IN8
+DATA[1] => Equal1.IN8
+DATA[1] => Equal2.IN8
+DATA[1] => Equal3.IN8
+DATA[1] => Equal4.IN8
+DATA[2] => Equal0.IN7
+DATA[2] => Equal1.IN7
+DATA[2] => Equal2.IN7
+DATA[2] => Equal3.IN7
+DATA[2] => Equal4.IN7
+DATA[3] => Equal0.IN6
+DATA[3] => Equal1.IN6
+DATA[3] => Equal2.IN6
+DATA[3] => Equal3.IN6
+DATA[3] => Equal4.IN6
+DATA[4] => Equal0.IN5
+DATA[4] => Equal1.IN5
+DATA[4] => Equal2.IN5
+DATA[4] => Equal3.IN5
+DATA[4] => Equal4.IN5
+
+

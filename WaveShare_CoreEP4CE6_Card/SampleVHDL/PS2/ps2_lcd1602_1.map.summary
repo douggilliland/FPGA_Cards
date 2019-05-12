@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Sep 04 15:50:49 2012
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : ps2_lcd1602_1
+Top-level Entity Name : ps2_lcd1602_1
+Family : Cyclone IV E
+Total logic elements : 578
+    Total combinational functions : 352
+    Dedicated logic registers : 289
+Total registers : 289
+Total pins : 21
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

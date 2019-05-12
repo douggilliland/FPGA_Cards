@@ -1,0 +1,371 @@
+PowerPlay Early Power Estimator File Generator report for VGA
+Wed Jan 13 21:20:15 2010
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. PowerPlay Early Power Estimator File Generator Summary
+  3. PowerPlay Early Power Estimator File Generator Settings
+  4. Indeterminate Toggle Rates
+  5. PowerPlay Early Power Estimator File Generator Generated Files
+  6. Confidence Metric Details
+  7. Signal Activities
+  8. PowerPlay Early Power Estimator File Generator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------+
+; PowerPlay Early Power Estimator File Generator Summary                                                   ;
++-------------------------------------------------------+--------------------------------------------------+
+; PowerPlay Early Power Estimator File Generator Status ; Successful - Wed Jan 13 21:20:15 2010            ;
+; Quartus II Version                                    ; 9.0 Build 235 06/17/2009 SP 2 SJ Full Version    ;
+; Revision Name                                         ; VGA                                              ;
+; Top-level Entity Name                                 ; VGA                                              ;
+; Family                                                ; Cyclone III                                      ;
+; Device                                                ; EP3C25Q240C8                                     ;
+; Power Estimation Confidence                           ; Low: user provided insufficient toggle rate data ;
++-------------------------------------------------------+--------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; PowerPlay Early Power Estimator File Generator Settings                       ;
++-----------------------------------------------------+---------+---------------+
+; Option                                              ; Setting ; Default Value ;
++-----------------------------------------------------+---------+---------------+
+; Use smart compilation                               ; Off     ; Off           ;
+; Maximum processors allowed for parallel compilation ; 1       ; 1             ;
+; Default Power Toggle Rate                           ; 12.5%   ; 12.5%         ;
+; Default Power Input I/O Toggle Rate                 ; 12.5%   ; 12.5%         ;
+; Use vectorless estimation                           ; On      ; On            ;
+; Use Input Files                                     ; Off     ; Off           ;
+; Filter Glitches in VCD File Reader                  ; On      ; On            ;
+; Power Analyzer Report Signal Activity               ; On      ; On            ;
+; Power Analyzer Report Power Dissipation             ; On      ; On            ;
+; Device Power Characteristics                        ; TYPICAL ; TYPICAL       ;
+; Automatically Compute Junction Temperature          ; On      ; On            ;
+; Specified Junction Temperature                      ; 25      ; 25            ;
+; Ambient Temperature                                 ; 25      ; 25            ;
+; Use Custom Cooling Solution                         ; Off     ; Off           ;
+; Board Temperature                                   ; 25      ; 25            ;
++-----------------------------------------------------+---------+---------------+
+
+
++--------------------------------------+
+; Indeterminate Toggle Rates           ;
++--------+-----------------------------+
+; Node   ; Reason                      ;
++--------+-----------------------------+
+; RESET  ; No valid clock domain found ;
+; GCLKP1 ; No valid clock domain found ;
+; GCLKP2 ; No valid clock domain found ;
++--------+-----------------------------+
+
+
++------------------------------------------------------------------------------------+
+; PowerPlay Early Power Estimator File Generator Generated Files                     ;
++----------------------------------------------------------------+-------------------+
+; Description                                                    ; Filename          ;
++----------------------------------------------------------------+-------------------+
+; Design summary for PowerPlay Early Power Estimator spreadsheet ; VGA_early_pwr.csv ;
++----------------------------------------------------------------+-------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                       ;
++----------------------------------------------------------------------------------------+-------------+------------+-------------+---------------+
+; Data Source                                                                            ; Total       ; Pin        ; Registered  ; Combinational ;
++----------------------------------------------------------------------------------------+-------------+------------+-------------+---------------+
+; Simulation (from file)                                                                 ;             ;            ;             ;               ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)    ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)    ; 0 (0.0%)      ;
+;                                                                                        ;             ;            ;             ;               ;
+; Node, entity or clock assignment                                                       ;             ;            ;             ;               ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)    ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)    ; 0 (0.0%)      ;
+;                                                                                        ;             ;            ;             ;               ;
+; Vectorless estimation                                                                  ;             ;            ;             ;               ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 219 (97.8%) ; 16 (76.2%) ; 53 (100.0%) ; 150 (100.0%)  ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 168 (75.0%) ; 1 (4.8%)   ; 49 (92.5%)  ; 118 (78.7%)   ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 219 (97.8%) ; 16 (76.2%) ; 53 (100.0%) ; 150 (100.0%)  ;
+;                                                                                        ;             ;            ;             ;               ;
+; Default assignment                                                                     ;             ;            ;             ;               ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)    ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 5 (2.2%)    ; 5 (23.8%)  ; 0 (0.0%)    ; 0 (0.0%)      ;
+;                                                                                        ;             ;            ;             ;               ;
+; Assumed 0                                                                              ;             ;            ;             ;               ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 5 (2.2%)    ; 5 (23.8%)  ; 0 (0.0%)    ; 0 (0.0%)      ;
++----------------------------------------------------------------------------------------+-------------+------------+-------------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Activities                                                                                                                                                          ;
++------------------------------+---------------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+; Signal                       ; Type          ; Toggle Rate (millions of transitions / sec) ; Toggle Rate Data Source ; Static Probability ; Static Probability Data Source ;
++------------------------------+---------------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+; \GlobleClk:Count1[0]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[0]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[0]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[1]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[1]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[1]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; \GlobleClk:Count1[2]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[2]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[2]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; \GlobleClk:Count1[3]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[3]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[3]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.063              ; Vectorless estimation          ;
+; \GlobleClk:Count1[4]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[4]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[4]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.031              ; Vectorless estimation          ;
+; \GlobleClk:Count1[5]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[5]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[5]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.016              ; Vectorless estimation          ;
+; \GlobleClk:Count1[6]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[6]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[6]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.008              ; Vectorless estimation          ;
+; \GlobleClk:Count1[7]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[7]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[7]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.004              ; Vectorless estimation          ;
+; \GlobleClk:Count1[8]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[8]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[8]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.002              ; Vectorless estimation          ;
+; \GlobleClk:Count1[9]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[9]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count1[9]~clkctrl ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[0]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[0]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[0]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[1]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[1]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[1]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; \GlobleClk:Count2[2]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[2]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[2]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; \GlobleClk:Count2[3]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[3]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[3]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.063              ; Vectorless estimation          ;
+; \GlobleClk:Count2[4]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[4]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[4]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.031              ; Vectorless estimation          ;
+; \GlobleClk:Count2[5]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[5]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[5]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.016              ; Vectorless estimation          ;
+; \GlobleClk:Count2[6]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[6]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[6]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.008              ; Vectorless estimation          ;
+; \GlobleClk:Count2[7]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[7]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[7]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.004              ; Vectorless estimation          ;
+; \GlobleClk:Count2[8]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[8]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[8]~2       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.002              ; Vectorless estimation          ;
+; \GlobleClk:Count2[8]~clkctrl ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[9]         ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count2[9]~1       ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[0]          ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[0]~1        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[0]~2        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[1]          ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[1]~1        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[1]~2        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; \GlobleClk:Count[2]          ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[2]~1        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[2]~2        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; \GlobleClk:Count[3]          ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[3]~1        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[3]~2        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.063              ; Vectorless estimation          ;
+; \GlobleClk:Count[4]          ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[4]~1        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[4]~2        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.031              ; Vectorless estimation          ;
+; \GlobleClk:Count[5]          ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[5]~1        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; \GlobleClk:Count[5]~clkctrl  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; B[0]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; B[1]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; B[2]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; B[3]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; B~7                          ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; B~8                          ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; B~9                          ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; B~10                         ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; CLK                          ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; CLK~0                        ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; CLK~clkctrl                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; CLK~feeder                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Count[0]                     ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Count[0]~8                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Count[1]                     ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Count[1]~6                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Count[2]                     ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Count[2]~7                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Enable                       ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; G[0]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; G[1]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; G[2]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; G[3]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; GCLKP1                       ; Input Pin     ;    0.000                                    ; Assumed 0               ; 0.500              ; Default assignment             ;
+; GCLKP2                       ; Input Pin     ;    0.000                                    ; Assumed 0               ; 0.500              ; Default assignment             ;
+; GCLKP2~inputclkctrl          ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; G~7                          ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; G~8                          ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; G~9                          ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; G~10                         ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; Hcnt[0]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[0]~20                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[0]~21                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[1]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[1]~22                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[1]~23                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; Hcnt[2]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[2]~24                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[2]~25                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; Hcnt[3]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[3]~26                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[3]~27                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.063              ; Vectorless estimation          ;
+; Hcnt[4]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[4]~28                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[4]~29                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.031              ; Vectorless estimation          ;
+; Hcnt[5]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[5]~30                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[5]~31                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.016              ; Vectorless estimation          ;
+; Hcnt[6]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[6]~32                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[6]~33                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.008              ; Vectorless estimation          ;
+; Hcnt[7]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[7]~34                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[7]~35                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.004              ; Vectorless estimation          ;
+; Hcnt[8]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[8]~36                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[8]~37                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.002              ; Vectorless estimation          ;
+; Hcnt[9]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Hcnt[9]~38                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; HS                           ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; HsyncB                       ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; HsyncB~clkctrl               ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; LessThan0~0                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.938              ; Vectorless estimation          ;
+; LessThan0~1                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.234              ; Vectorless estimation          ;
+; LessThan1~0                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.063              ; Vectorless estimation          ;
+; LessThan1~1                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.563              ; Vectorless estimation          ;
+; LessThan1~2                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.024              ; Vectorless estimation          ;
+; LessThan2~0                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.063              ; Vectorless estimation          ;
+; LessThan2~1                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.563              ; Vectorless estimation          ;
+; LessThan2~2                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.024              ; Vectorless estimation          ;
+; LessThan3~0                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.219              ; Vectorless estimation          ;
+; LessThan4~0                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.063              ; Vectorless estimation          ;
+; LessThan4~1                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.487              ; Vectorless estimation          ;
+; LessThan8~0                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; LessThan8~1                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.406              ; Vectorless estimation          ;
+; LessThan10~0                 ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.063              ; Vectorless estimation          ;
+; process_3~1                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; process_3~2                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; process_3~3                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.094              ; Vectorless estimation          ;
+; process_4~1                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.688              ; Vectorless estimation          ;
+; process_4~2                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.004              ; Vectorless estimation          ;
+; process_5~1                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.750              ; Vectorless estimation          ;
+; process_5~2                  ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.293              ; Vectorless estimation          ;
+; R[0]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.313              ; Vectorless estimation          ;
+; R[1]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.156              ; Vectorless estimation          ;
+; R[2]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.156              ; Vectorless estimation          ;
+; R[3]                         ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.156              ; Vectorless estimation          ;
+; RESET                        ; Input Pin     ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; RESET~inputclkctrl           ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; R~7                          ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.313              ; Vectorless estimation          ;
+; R~8                          ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.156              ; Vectorless estimation          ;
+; R~9                          ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.156              ; Vectorless estimation          ;
+; R~10                         ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.156              ; Vectorless estimation          ;
+; Vcnt[0]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[0]~20                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[0]~21                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[1]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[1]~22                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[1]~23                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.250              ; Vectorless estimation          ;
+; Vcnt[2]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[2]~24                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[2]~25                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.125              ; Vectorless estimation          ;
+; Vcnt[3]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[3]~26                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[3]~27                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.063              ; Vectorless estimation          ;
+; Vcnt[4]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[4]~28                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[4]~29                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.031              ; Vectorless estimation          ;
+; Vcnt[5]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[5]~30                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[5]~31                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.016              ; Vectorless estimation          ;
+; Vcnt[6]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[6]~32                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[6]~33                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.008              ; Vectorless estimation          ;
+; Vcnt[7]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[7]~34                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[7]~35                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.004              ; Vectorless estimation          ;
+; Vcnt[8]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[8]~36                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[8]~37                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.002              ; Vectorless estimation          ;
+; Vcnt[9]                      ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; Vcnt[9]~38                   ; Combinational ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; VS                           ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; VsyncB                       ; Registered    ;    0.000                                    ; Vectorless estimation   ; 0.500              ; Vectorless estimation          ;
+; ~ALTERA_ASDO_DATA1~          ; Input Pin     ;    0.000                                    ; Assumed 0               ; 0.500              ; Default assignment             ;
+; ~ALTERA_DATA0~               ; Input Pin     ;    0.000                                    ; Assumed 0               ; 0.500              ; Default assignment             ;
+; ~ALTERA_DCLK~                ; Output Pin    ;    0.000                                    ; Vectorless estimation   ; 0.000              ; Vectorless estimation          ;
+; ~ALTERA_FLASH_nCE_nCSO~      ; Input Pin     ;    0.000                                    ; Assumed 0               ; 0.500              ; Default assignment             ;
++------------------------------+---------------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+
+
++---------------------------------------------------------+
+; PowerPlay Early Power Estimator File Generator Messages ;
++---------------------------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II PowerPlay Early Power Estimator File Generator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+    Info: Processing started: Wed Jan 13 21:20:11 2010
+Info: Command: quartus_pow --read_settings_files=on --write_settings_files=off VGA -c VGA --estimate_power=off --output_epe=VGA_early_pwr.csv
+Info: Default assignment values were changed in the current version of the Quartus II software -- changes to default assignments values are contained in file d:/altera90/quartus/bin/assignment_defaults.qdf
+Critical Warning: Synopsys Design Constraints File file not found: 'VGA.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Warning: Node: CLK was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: GCLKP1 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: HsyncB was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: \GlobleClk:Count2[8] was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: \GlobleClk:Count1[9] was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: \GlobleClk:Count[5] was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: GCLKP2 was determined to be a clock but was found without an associated clock assignment.
+Warning: No clocks defined in design.
+Info: Starting Vectorless Power Activity Estimation
+Warning: Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
+Info: Completed Vectorless Power Activity Estimation
+Info: Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
+Info: Core supply voltage is 1.2V
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Warning: No board thermal model was selected.  Analyzing without board thermal modeling.
+Info: Created PowerPlay Early Power Estimation file "VGA_early_pwr.csv"
+Info: No power estimate will be produced.
+Info: The average toggle rate for this design is 0.000 millions of transitions / sec.
+Info: Quartus II PowerPlay Early Power Estimator File Generator was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 219 megabytes
+    Info: Processing ended: Wed Jan 13 21:20:15 2010
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

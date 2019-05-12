@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Sep 04 14:53:28 2012
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : DS18B20_LCD1602
+Top-level Entity Name : DS18B20_LCD1602
+Family : Cyclone IV E
+Total logic elements : 734
+    Total combinational functions : 726
+    Dedicated logic registers : 146
+Total registers : 146
+Total pins : 29
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

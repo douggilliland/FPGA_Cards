@@ -1,0 +1,221 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'GCLKP1'
+Slack : -2.210
+TNS   : -12.362
+
+Type  : Slow 1200mV 85C Model Setup 'Frequency:inst|Period1uS'
+Slack : -2.105
+TNS   : -24.380
+
+Type  : Slow 1200mV 85C Model Setup 'key44:inst1|clk4'
+Slack : -1.795
+TNS   : -9.943
+
+Type  : Slow 1200mV 85C Model Setup 'key44:inst1|Mega_cnt[4]'
+Slack : -0.490
+TNS   : -3.920
+
+Type  : Slow 1200mV 85C Model Setup 'Frequency:inst|\CLK:Count1[8]'
+Slack : -0.317
+TNS   : -0.328
+
+Type  : Slow 1200mV 85C Model Setup 'key44:inst1|clk2'
+Slack : 0.055
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Frequency:inst|Period1uS'
+Slack : -0.680
+TNS   : -1.143
+
+Type  : Slow 1200mV 85C Model Hold 'key44:inst1|Mega_cnt[4]'
+Slack : -0.564
+TNS   : -0.564
+
+Type  : Slow 1200mV 85C Model Hold 'key44:inst1|clk2'
+Slack : 0.097
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Frequency:inst|\CLK:Count1[8]'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'key44:inst1|clk4'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GCLKP1'
+Slack : 0.465
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GCLKP1'
+Slack : -3.000
+TNS   : -13.409
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Frequency:inst|Period1uS'
+Slack : -1.487
+TNS   : -22.305
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'key44:inst1|clk4'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'key44:inst1|Mega_cnt[4]'
+Slack : -1.487
+TNS   : -13.383
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Frequency:inst|\CLK:Count1[8]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'key44:inst1|clk2'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Setup 'GCLKP1'
+Slack : -1.942
+TNS   : -10.634
+
+Type  : Slow 1200mV 0C Model Setup 'Frequency:inst|Period1uS'
+Slack : -1.930
+TNS   : -21.937
+
+Type  : Slow 1200mV 0C Model Setup 'key44:inst1|clk4'
+Slack : -1.510
+TNS   : -8.202
+
+Type  : Slow 1200mV 0C Model Setup 'key44:inst1|Mega_cnt[4]'
+Slack : -0.457
+TNS   : -3.656
+
+Type  : Slow 1200mV 0C Model Setup 'Frequency:inst|\CLK:Count1[8]'
+Slack : -0.186
+TNS   : -0.186
+
+Type  : Slow 1200mV 0C Model Setup 'key44:inst1|clk2'
+Slack : 0.106
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'key44:inst1|Mega_cnt[4]'
+Slack : -0.552
+TNS   : -0.552
+
+Type  : Slow 1200mV 0C Model Hold 'Frequency:inst|Period1uS'
+Slack : -0.527
+TNS   : -0.764
+
+Type  : Slow 1200mV 0C Model Hold 'key44:inst1|clk2'
+Slack : 0.109
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Frequency:inst|\CLK:Count1[8]'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'key44:inst1|clk4'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GCLKP1'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GCLKP1'
+Slack : -3.000
+TNS   : -13.409
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Frequency:inst|Period1uS'
+Slack : -1.487
+TNS   : -22.305
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'key44:inst1|clk4'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'key44:inst1|Mega_cnt[4]'
+Slack : -1.487
+TNS   : -13.383
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Frequency:inst|\CLK:Count1[8]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'key44:inst1|clk2'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Fast 1200mV 0C Model Setup 'GCLKP1'
+Slack : -0.376
+TNS   : -1.382
+
+Type  : Fast 1200mV 0C Model Setup 'Frequency:inst|Period1uS'
+Slack : -0.313
+TNS   : -3.130
+
+Type  : Fast 1200mV 0C Model Setup 'key44:inst1|clk4'
+Slack : -0.207
+TNS   : -0.589
+
+Type  : Fast 1200mV 0C Model Setup 'key44:inst1|Mega_cnt[4]'
+Slack : 0.214
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'key44:inst1|clk2'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Frequency:inst|\CLK:Count1[8]'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Frequency:inst|Period1uS'
+Slack : -0.404
+TNS   : -1.766
+
+Type  : Fast 1200mV 0C Model Hold 'key44:inst1|Mega_cnt[4]'
+Slack : -0.278
+TNS   : -0.278
+
+Type  : Fast 1200mV 0C Model Hold 'key44:inst1|clk2'
+Slack : -0.002
+TNS   : -0.002
+
+Type  : Fast 1200mV 0C Model Hold 'Frequency:inst|\CLK:Count1[8]'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'key44:inst1|clk4'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GCLKP1'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GCLKP1'
+Slack : -3.000
+TNS   : -12.226
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Frequency:inst|Period1uS'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'key44:inst1|clk4'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'key44:inst1|Mega_cnt[4]'
+Slack : -1.000
+TNS   : -9.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Frequency:inst|\CLK:Count1[8]'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'key44:inst1|clk2'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------
