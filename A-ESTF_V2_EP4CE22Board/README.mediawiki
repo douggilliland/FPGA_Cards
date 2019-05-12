@@ -1,3 +1,3 @@
-= A-ESTF V2 EP4CE22Board FPGA Card =
+= A-ESTF V2 EP4CE22 Board FPGA Card =
 
 <img src="http://land-boards.com/blwiki/images/b/b3/A-ESTF_V2_EP4CE22_Board-01.png"></img>
