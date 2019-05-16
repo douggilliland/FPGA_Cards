@@ -1,0 +1,70 @@
+-- COUNTER Test Bench
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity testbench is
+end entity testbench;
+
+architecture BENCH of testbench is
+
+signal Clk32MHz, RST : STD_LOGIC;
+signal Count : STD_LOGIC_VECTOR(3 downto 0);
+signal Q2MHz : STD_LOGIC;
+signal Q1MHz : STD_LOGIC;
+signal Cnt2  : STD_LOGIC_VECTOR(1 downto 0);
+signal Stop : BOOLEAN;
+----------------------------------------
+  
+  -- the component instantiated below
+
+  component COUNTER
+    port (CLK, RESET: in STD_LOGIC;
+          UpDown: in STD_LOGIC := '0'; -- default value
+          Q: out STD_LOGIC_VECTOR(3 downto 0));
+  end component;
+
+----------------------------------------
+begin
+	ClockGen: process
+		begin
+			while not Stop loop
+				Clk32MHz <= '0';
+				wait for 15.625 NS;
+				Clk32MHz <= '1';
+				wait for 15.625 NS;
+			end loop;
+			wait;
+		end process ClockGen;
+
+	ResetGen: process
+		begin
+			RST <= '1';CLEAR
+			wait for 10 NS;
+			RST <= '0';
+			wait for 90 NS;
+			RST <= '1';
+			wait for 20 NS;
+			RST <= '0';
+			wait for 180 NS;
+			Stop <= TRUE;
+			wait;
+		end process ResetGen;
+----------------------------------------
+
+  -- EXAMPLE 1 : positional association
+  
+  G1: COUNTER port map (Clk32MHz, RST, open, Count);
+
+  
+  -- EXAMPLE 2 : named association
+  
+  G2: COUNTER port map (RESET => RST,
+	CLK => Clk32MHz,
+	Q(3) => Q2MHz,
+	Q(2) => Q1MHz,
+	Q(1 downto 0) => Cnt2,
+	UpDown => open); -- unconnected  
+  
+----------------------------------------
+end architecture BENCH;
