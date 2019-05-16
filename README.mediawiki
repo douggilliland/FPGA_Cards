@@ -14,7 +14,7 @@
 
 * [https://www.aliexpress.com/item/E22-core-bottom-board-fpga-development-board-cyclone-iv-board-EP4CE22F17C8N-altera-fpga-board-altera-board/32859908966.html?spm=2114.search0104.3.60.54a0455fElsvmW&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=a276ebc6-3063-476e-be29-e462a6377577-9&algo_pvid=a276ebc6-3063-476e-be29-e462a6377577&transAbTest=ae803_3 AliExpress FPGA Card Webpage]
 
-= EP2C5_Cyclone_II_Mini_Board ==
+== EP2C5_Cyclone_II_Mini_Board ==
 
 * [https://www.aliexpress.com/item/Drop-Ship-Wholesale-ALTERA-FPGA-CycloneII-EP2C5T144-Learning-Board-Mini-System-Development-Board-New-APR29/33012725261.html?spm=2114.search0104.3.28.10d4455fEsWiEC&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=d185b0be-ba9d-4bdc-a62b-1b7edca60141-4&algo_pvid=d185b0be-ba9d-4bdc-a62b-1b7edca60141&transAbTest=ae803_3 FPGA Card Webpage]]
 
