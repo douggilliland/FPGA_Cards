@@ -1,5 +1,5 @@
 = A-C4CE6 FPGA Card =
 
-* <a href="http://land-boards.com/blwiki/index.php?title=A-C4E6_Cyclone_IV_FPGA_EP4CE6E22C8N_Development_Board">Land Boards EP4CE6E22C8N Development Board</a>
+* <a href="http://land-boards.com/blwiki/index.php?title=A-C4E6_Cyclone_IV_FPGA_EP4CE6E22C8N_Development_Board">Land Boards EP4CE6E22C8N Development Board Wiki Page</a>
 
 <img src="http://land-boards.com/blwiki/images/b/bb/A-C4CE6_Card_001.PNG"></img>
