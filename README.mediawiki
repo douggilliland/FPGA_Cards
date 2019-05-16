@@ -10,12 +10,12 @@
 == A-C4E10_Card ==
 
 * AliExpress Card
-* [https://www.aliexpress.com/item/usb-blaster-EP4CE10E22C8N-altera-fpga-board-altera-board-fpga-development-board-cyclone-IV-board/32813736111.html?spm=a2g0s.9042311.0.0.2f0f4c4d85I6EW]
+* [https://www.aliexpress.com/item/usb-blaster-EP4CE10E22C8N-altera-fpga-board-altera-board-fpga-development-board-cyclone-IV-board/32813736111.html?spm=a2g0s.9042311.0.0.2f0f4c4d85I6EW FPGA Card]
 
 == A-ESTF_V2_EP4CE22Board ==
 
 * AliExpress Card
-* [https://www.aliexpress.com/item/E22-core-bottom-board-fpga-development-board-cyclone-iv-board-EP4CE22F17C8N-altera-fpga-board-altera-board/32859908966.html?spm=2114.search0104.3.60.54a0455fElsvmW&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=a276ebc6-3063-476e-be29-e462a6377577-9&algo_pvid=a276ebc6-3063-476e-be29-e462a6377577&transAbTest=ae803_3]
+* [https://www.aliexpress.com/item/E22-core-bottom-board-fpga-development-board-cyclone-iv-board-EP4CE22F17C8N-altera-fpga-board-altera-board/32859908966.html?spm=2114.search0104.3.60.54a0455fElsvmW&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=a276ebc6-3063-476e-be29-e462a6377577-9&algo_pvid=a276ebc6-3063-476e-be29-e462a6377577&transAbTest=ae803_3 FPGA Card]
 
 = EP2C5_Cyclone_II_Mini_Board ==
 
