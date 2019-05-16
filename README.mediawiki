@@ -27,3 +27,5 @@
 * [https://www.aliexpress.com/item/CoreEP4CE6-EP4CE6E22C8N-EP4CE6-ALTERA-Cyclone-IV-CPLD-FPGA-Development-Core-Board-with-Full-IO-Expanders/709604488.html?spm=2114.search0104.3.1.70eb36f9SEHIXv&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=2221f691-7fe4-475e-8530-48bb9adf3f21-0&algo_pvid=2221f691-7fe4-475e-8530-48bb9adf3f21&transAbTest=ae803_3 AliExpress Card Webpage]
 
 == zrTech_V2_C4E6_Card ==
+
+* [https://www.ebay.com/itm/New-2018-Altera-Cyclone-IV-FPGA-EP4CE6E22C8N-Development-Board-USB-V2-0-CPLD/163044282291?hash=item25f6324fb3:g:QlgAAOSwCGVX5KLz Ebay listing]
