@@ -1,5 +1,7 @@
 = FPGA_Cards =
 
+These are purchased FPGA cards. Many of them are directly suitable for retro computing. See [https://github.com/douggilliland/MultiCompMulticomp Multicomp] for more details.
+
 <img src="http://land-boards.com/blwiki/images/9/95/FPGA_Cards-720.jpg"></img>
 
 == A-C4CE6_Card ==
