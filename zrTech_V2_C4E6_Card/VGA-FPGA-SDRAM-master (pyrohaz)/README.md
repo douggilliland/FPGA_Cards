@@ -1,6 +1,6 @@
 # VGA-FPGA-SDRAM (pyrohaze)
 
-VGA and SDRAM on the zrTech card by PyroHaze
+VGA and SDRAM on the zrTech card by PyroHaz
 
 From: https://github.com/pyrohaz/VGA-FPGA-SDRAM/blob/master/sdramctrl.vhd
 
