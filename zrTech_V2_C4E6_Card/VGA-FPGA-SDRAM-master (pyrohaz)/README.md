@@ -1,4 +1,4 @@
-# VGA-FPGA-SDRAM
+# VGA-FPGA-SDRAM (pyrohaze)
 
 VGA and SDRAM on the zrTech card
 
