@@ -1,6 +1,6 @@
 Analysis & Synthesis report for VGASDRAM1
-Tue May 10 19:33:02 2016
-Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Wed May 22 15:38:54 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -34,28 +34,27 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Altera and sold by Altera or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 10 19:33:02 2016       ;
-; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed May 22 15:38:54 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; VGASDRAM1                                   ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
@@ -71,91 +70,90 @@ agreement for further details.
 +------------------------------------+---------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                     ; Setting            ; Default Value      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP4CE6E22C8        ;                    ;
-; Top-level entity name                                                      ; top                ; VGASDRAM1          ;
-; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                                      ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                                ; Off                ; Off                ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
-; Preserve fewer node names                                                  ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto               ; Auto               ;
-; Safe State Machine                                                         ; Off                ; Off                ;
-; Extract Verilog State Machines                                             ; On                 ; On                 ;
-; Extract VHDL State Machines                                                ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
-; DSP Block Balancing                                                        ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                 ; On                 ;
-; Power-Up Don't Care                                                        ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
-; Remove Duplicate Registers                                                 ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                         ; 70                 ; 70                 ;
-; Auto Carry Chains                                                          ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
-; Auto ROM Replacement                                                       ; On                 ; On                 ;
-; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
-; Strict RAM Replacement                                                     ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                      ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
-; Clock MUX Protection                                                       ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
-; Block Design Naming                                                        ; Auto               ; Auto               ;
-; SDC constraint protection                                                  ; Off                ; Off                ;
-; Synthesis Effort                                                           ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-; Synthesis Seed                                                             ; 1                  ; 1                  ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                            ; top                ; VGASDRAM1          ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -171,31 +169,32 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
-; vga.vhd                          ; yes             ; User VHDL File               ; C:/FPGAProjects/VGASDRAM1/vga.vhd                                     ;         ;
-; top.vhd                          ; yes             ; User VHDL File               ; C:/FPGAProjects/VGASDRAM1/top.vhd                                     ;         ;
-; seg7.vhd                         ; yes             ; User VHDL File               ; C:/FPGAProjects/VGASDRAM1/seg7.vhd                                    ;         ;
-; sdramctrl.vhd                    ; yes             ; User VHDL File               ; C:/FPGAProjects/VGASDRAM1/sdramctrl.vhd                               ;         ;
-; rsthandler.vhd                   ; yes             ; User VHDL File               ; C:/FPGAProjects/VGASDRAM1/rsthandler.vhd                              ;         ;
-; pll.vhd                          ; yes             ; User Wizard-Generated File   ; C:/FPGAProjects/VGASDRAM1/pll.vhd                                     ;         ;
-; memhandler.vhd                   ; yes             ; User VHDL File               ; C:/FPGAProjects/VGASDRAM1/memhandler.vhd                              ;         ;
-; vpll.vhd                         ; yes             ; User Wizard-Generated File   ; C:/FPGAProjects/VGASDRAM1/vpll.vhd                                    ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altpll.tdf        ;         ;
-; aglobal151.inc                   ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/aglobal151.inc    ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
-; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction  ; C:/FPGAProjects/VGASDRAM1/db/pll_altpll.v                             ;         ;
-; db/vpll_altpll.v                 ; yes             ; Auto-Generated Megafunction  ; C:/FPGAProjects/VGASDRAM1/db/vpll_altpll.v                            ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                         ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; vga.vhd                          ; yes             ; User VHDL File               ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/vga.vhd          ;         ;
+; top.vhd                          ; yes             ; User VHDL File               ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/top.vhd          ;         ;
+; seg7.vhd                         ; yes             ; User VHDL File               ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/seg7.vhd         ;         ;
+; sdramctrl.vhd                    ; yes             ; User VHDL File               ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/sdramctrl.vhd    ;         ;
+; rsthandler.vhd                   ; yes             ; User VHDL File               ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/rsthandler.vhd   ;         ;
+; pll.vhd                          ; yes             ; User Wizard-Generated File   ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/pll.vhd          ;         ;
+; memhandler.vhd                   ; yes             ; User VHDL File               ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/memhandler.vhd   ;         ;
+; vpll.vhd                         ; yes             ; User Wizard-Generated File   ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/vpll.vhd         ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf                                                    ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc                                               ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc                                             ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                             ;         ;
+; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/db/pll_altpll.v  ;         ;
+; db/vpll_altpll.v                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/db/vpll_altpll.v ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -233,24 +232,24 @@ agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
-+---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Library Name ;
-+---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
-; |top                                  ; 433 (1)           ; 580 (0)      ; 0           ; 0            ; 0       ; 0         ; 72   ; 0            ; |top                                                               ; work         ;
-;    |memhandler:imh|                   ; 86 (86)           ; 229 (229)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|memhandler:imh                                                ; work         ;
-;    |pll:ipll|                         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll:ipll                                                      ; work         ;
-;       |altpll:altpll_component|       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll:ipll|altpll:altpll_component                              ; work         ;
-;          |pll_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll:ipll|altpll:altpll_component|pll_altpll:auto_generated    ; work         ;
-;    |rsthandler:irsth|                 ; 28 (28)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|rsthandler:irsth                                              ; work         ;
-;    |sdramctrl:isdramctrl|             ; 149 (149)         ; 280 (280)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sdramctrl:isdramctrl                                          ; work         ;
-;    |seg7:iseg|                        ; 42 (42)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg7:iseg                                                     ; work         ;
-;    |vga:ivga|                         ; 127 (127)         ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga:ivga                                                      ; work         ;
-;    |vpll:ivpll|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vpll:ivpll                                                    ; work         ;
-;       |altpll:altpll_component|       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vpll:ivpll|altpll:altpll_component                            ; work         ;
-;          |vpll_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vpll:ivpll|altpll:altpll_component|vpll_altpll:auto_generated ; work         ;
-+---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Entity Name ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+-------------+--------------+
+; |top                                  ; 433 (1)             ; 580 (0)                   ; 0           ; 0            ; 0       ; 0         ; 72   ; 0            ; |top                                                               ; top         ; work         ;
+;    |memhandler:imh|                   ; 86 (86)             ; 229 (229)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|memhandler:imh                                                ; memhandler  ; work         ;
+;    |pll:ipll|                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll:ipll                                                      ; pll         ; work         ;
+;       |altpll:altpll_component|       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll:ipll|altpll:altpll_component                              ; altpll      ; work         ;
+;          |pll_altpll:auto_generated|  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll:ipll|altpll:altpll_component|pll_altpll:auto_generated    ; pll_altpll  ; work         ;
+;    |rsthandler:irsth|                 ; 28 (28)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|rsthandler:irsth                                              ; rsthandler  ; work         ;
+;    |sdramctrl:isdramctrl|             ; 149 (149)           ; 280 (280)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sdramctrl:isdramctrl                                          ; sdramctrl   ; work         ;
+;    |seg7:iseg|                        ; 42 (42)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg7:iseg                                                     ; seg7        ; work         ;
+;    |vga:ivga|                         ; 127 (127)           ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga:ivga                                                      ; vga         ; work         ;
+;    |vpll:ivpll|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vpll:ivpll                                                    ; vpll        ; work         ;
+;       |altpll:altpll_component|       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vpll:ivpll|altpll:altpll_component                            ; altpll      ; work         ;
+;          |vpll_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vpll:ivpll|altpll:altpll_component|vpll_altpll:auto_generated ; vpll_altpll ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -259,8 +258,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
-; Altera ; ALTPLL       ; 15.1    ; N/A          ; N/A          ; |top|pll:ipll   ; pll.vhd         ;
-; Altera ; ALTPLL       ; 15.1    ; N/A          ; N/A          ; |top|vpll:ivpll ; vpll.vhd        ;
+; Altera ; ALTPLL       ; 18.1    ; N/A          ; N/A          ; |top|pll:ipll   ; pll.vhd         ;
+; Altera ; ALTPLL       ; 18.1    ; N/A          ; N/A          ; |top|vpll:ivpll ; vpll.vhd        ;
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
 
 
@@ -1313,7 +1312,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1322,39 +1321,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Tue May 10 19:32:43 2016
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed May 22 15:38:40 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGASDRAM1 -c VGASDRAM1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file vga.vhd
-    Info (12022): Found design unit 1: vga-rtl File: C:/FPGAProjects/VGASDRAM1/vga.vhd Line: 16
-    Info (12023): Found entity 1: vga File: C:/FPGAProjects/VGASDRAM1/vga.vhd Line: 5
+    Info (12022): Found design unit 1: vga-rtl File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/vga.vhd Line: 16
+    Info (12023): Found entity 1: vga File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/vga.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
-    Info (12022): Found design unit 1: top-rtl File: C:/FPGAProjects/VGASDRAM1/top.vhd Line: 26
-    Info (12023): Found entity 1: top File: C:/FPGAProjects/VGASDRAM1/top.vhd Line: 5
+    Info (12022): Found design unit 1: top-rtl File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/top.vhd Line: 26
+    Info (12023): Found entity 1: top File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/top.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file seg7.vhd
-    Info (12022): Found design unit 1: seg7-rtl File: C:/FPGAProjects/VGASDRAM1/seg7.vhd Line: 15
-    Info (12023): Found entity 1: seg7 File: C:/FPGAProjects/VGASDRAM1/seg7.vhd Line: 5
+    Info (12022): Found design unit 1: seg7-rtl File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/seg7.vhd Line: 15
+    Info (12023): Found entity 1: seg7 File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/seg7.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file sdramctrl.vhd
-    Info (12022): Found design unit 1: sdramctrl-rtl File: C:/FPGAProjects/VGASDRAM1/sdramctrl.vhd Line: 28
-    Info (12023): Found entity 1: sdramctrl File: C:/FPGAProjects/VGASDRAM1/sdramctrl.vhd Line: 5
+    Info (12022): Found design unit 1: sdramctrl-rtl File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/sdramctrl.vhd Line: 28
+    Info (12023): Found entity 1: sdramctrl File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/sdramctrl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rsthandler.vhd
-    Info (12022): Found design unit 1: rsthandler-rtl File: C:/FPGAProjects/VGASDRAM1/rsthandler.vhd Line: 12
-    Info (12023): Found entity 1: rsthandler File: C:/FPGAProjects/VGASDRAM1/rsthandler.vhd Line: 5
+    Info (12022): Found design unit 1: rsthandler-rtl File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/rsthandler.vhd Line: 12
+    Info (12023): Found entity 1: rsthandler File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/rsthandler.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
-    Info (12022): Found design unit 1: pll-SYN File: C:/FPGAProjects/VGASDRAM1/pll.vhd Line: 52
-    Info (12023): Found entity 1: pll File: C:/FPGAProjects/VGASDRAM1/pll.vhd Line: 43
+    Info (12022): Found design unit 1: pll-SYN File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/pll.vhd Line: 51
+    Info (12023): Found entity 1: pll File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/pll.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file memhandler.vhd
-    Info (12022): Found design unit 1: memhandler-rtl File: C:/FPGAProjects/VGASDRAM1/memhandler.vhd Line: 23
-    Info (12023): Found entity 1: memhandler File: C:/FPGAProjects/VGASDRAM1/memhandler.vhd Line: 5
+    Info (12022): Found design unit 1: memhandler-rtl File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/memhandler.vhd Line: 23
+    Info (12023): Found entity 1: memhandler File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/memhandler.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file vpll.vhd
-    Info (12022): Found design unit 1: vpll-SYN File: C:/FPGAProjects/VGASDRAM1/vpll.vhd Line: 52
-    Info (12023): Found entity 1: vpll File: C:/FPGAProjects/VGASDRAM1/vpll.vhd Line: 43
+    Info (12022): Found design unit 1: vpll-SYN File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/vpll.vhd Line: 51
+    Info (12023): Found entity 1: vpll File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/vpll.vhd Line: 42
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "pll" for hierarchy "pll:ipll" File: C:/FPGAProjects/VGASDRAM1/top.vhd Line: 126
-Info (12128): Elaborating entity "altpll" for hierarchy "pll:ipll|altpll:altpll_component" File: C:/FPGAProjects/VGASDRAM1/pll.vhd Line: 134
-Info (12130): Elaborated megafunction instantiation "pll:ipll|altpll:altpll_component" File: C:/FPGAProjects/VGASDRAM1/pll.vhd Line: 134
-Info (12133): Instantiated megafunction "pll:ipll|altpll:altpll_component" with the following parameter: File: C:/FPGAProjects/VGASDRAM1/pll.vhd Line: 134
+Info (12128): Elaborating entity "pll" for hierarchy "pll:ipll" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/top.vhd Line: 126
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:ipll|altpll:altpll_component" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/pll.vhd Line: 133
+Info (12130): Elaborated megafunction instantiation "pll:ipll|altpll:altpll_component" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/pll.vhd Line: 133
+Info (12133): Instantiated megafunction "pll:ipll|altpll:altpll_component" with the following parameter: File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/pll.vhd Line: 133
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1410,12 +1410,12 @@ Info (12133): Instantiated megafunction "pll:ipll|altpll:altpll_component" with 
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: pll_altpll File: C:/FPGAProjects/VGASDRAM1/db/pll_altpll.v Line: 30
-Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:ipll|altpll:altpll_component|pll_altpll:auto_generated" File: c:/altera_lite/15.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "vpll" for hierarchy "vpll:ivpll" File: C:/FPGAProjects/VGASDRAM1/top.vhd Line: 132
-Info (12128): Elaborating entity "altpll" for hierarchy "vpll:ivpll|altpll:altpll_component" File: C:/FPGAProjects/VGASDRAM1/vpll.vhd Line: 134
-Info (12130): Elaborated megafunction instantiation "vpll:ivpll|altpll:altpll_component" File: C:/FPGAProjects/VGASDRAM1/vpll.vhd Line: 134
-Info (12133): Instantiated megafunction "vpll:ivpll|altpll:altpll_component" with the following parameter: File: C:/FPGAProjects/VGASDRAM1/vpll.vhd Line: 134
+    Info (12023): Found entity 1: pll_altpll File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/db/pll_altpll.v Line: 29
+Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:ipll|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "vpll" for hierarchy "vpll:ivpll" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/top.vhd Line: 132
+Info (12128): Elaborating entity "altpll" for hierarchy "vpll:ivpll|altpll:altpll_component" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/vpll.vhd Line: 133
+Info (12130): Elaborated megafunction instantiation "vpll:ivpll|altpll:altpll_component" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/vpll.vhd Line: 133
+Info (12133): Instantiated megafunction "vpll:ivpll|altpll:altpll_component" with the following parameter: File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/vpll.vhd Line: 133
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "48"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1471,14 +1471,14 @@ Info (12133): Instantiated megafunction "vpll:ivpll|altpll:altpll_component" wit
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/vpll_altpll.v
-    Info (12023): Found entity 1: vpll_altpll File: C:/FPGAProjects/VGASDRAM1/db/vpll_altpll.v Line: 30
-Info (12128): Elaborating entity "vpll_altpll" for hierarchy "vpll:ivpll|altpll:altpll_component|vpll_altpll:auto_generated" File: c:/altera_lite/15.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "rsthandler" for hierarchy "rsthandler:irsth" File: C:/FPGAProjects/VGASDRAM1/top.vhd Line: 138
-Info (12128): Elaborating entity "sdramctrl" for hierarchy "sdramctrl:isdramctrl" File: C:/FPGAProjects/VGASDRAM1/top.vhd Line: 145
-Info (12128): Elaborating entity "memhandler" for hierarchy "memhandler:imh" File: C:/FPGAProjects/VGASDRAM1/top.vhd Line: 172
-Info (12128): Elaborating entity "seg7" for hierarchy "seg7:iseg" File: C:/FPGAProjects/VGASDRAM1/top.vhd Line: 191
-Info (12128): Elaborating entity "vga" for hierarchy "vga:ivga" File: C:/FPGAProjects/VGASDRAM1/top.vhd Line: 200
-Info (13000): Registers with preset signals will power-up high File: C:/FPGAProjects/VGASDRAM1/sdramctrl.vhd Line: 19
+    Info (12023): Found entity 1: vpll_altpll File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/db/vpll_altpll.v Line: 29
+Info (12128): Elaborating entity "vpll_altpll" for hierarchy "vpll:ivpll|altpll:altpll_component|vpll_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "rsthandler" for hierarchy "rsthandler:irsth" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/top.vhd Line: 138
+Info (12128): Elaborating entity "sdramctrl" for hierarchy "sdramctrl:isdramctrl" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/top.vhd Line: 145
+Info (12128): Elaborating entity "memhandler" for hierarchy "memhandler:imh" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/top.vhd Line: 172
+Info (12128): Elaborating entity "seg7" for hierarchy "seg7:iseg" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/top.vhd Line: 191
+Info (12128): Elaborating entity "vga" for hierarchy "vga:ivga" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/top.vhd Line: 200
+Info (13000): Registers with preset signals will power-up high File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/zrTech_V2_C4E6_Card/VGA-FPGA-SDRAM-master (pyrohaz)/sdramctrl.vhd Line: 19
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -1489,10 +1489,10 @@ Info (21057): Implemented 874 device resources after synthesis - the final resou
     Info (21060): Implemented 16 bidirectional pins
     Info (21061): Implemented 800 logic cells
     Info (21065): Implemented 2 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 836 megabytes
-    Info: Processing ended: Tue May 10 19:33:02 2016
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:40
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Wed May 22 15:38:54 2019
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:29
 
 
