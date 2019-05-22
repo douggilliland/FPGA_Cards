@@ -1,0 +1,29 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\FPGAProjects\VGASDRAM1\asmi.qsys --block-symbol-file --output-directory=C:\FPGAProjects\VGASDRAM1\asmi --family="Cyclone IV E" --part=EP4CE6E22C8
+Progress: Loading VGASDRAM1/asmi.qsys
+Progress: Reading input file
+Progress: Adding serial_flash_loader_0 [altera_serial_flash_loader 15.1]
+Progress: Parameterizing module serial_flash_loader_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\FPGAProjects\VGASDRAM1\asmi.qsys --synthesis=VHDL --output-directory=C:\FPGAProjects\VGASDRAM1\asmi\synthesis --family="Cyclone IV E" --part=EP4CE6E22C8
+Progress: Loading VGASDRAM1/asmi.qsys
+Progress: Reading input file
+Progress: Adding serial_flash_loader_0 [altera_serial_flash_loader 15.1]
+Progress: Parameterizing module serial_flash_loader_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: asmi: Generating asmi "asmi" for QUARTUS_SYNTH
+Info: serial_flash_loader_0: generating top-level entity altera_serial_flash_loader
+Info: serial_flash_loader_0: "asmi" instantiated altera_serial_flash_loader "serial_flash_loader_0"
+Info: asmi: Done "asmi" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

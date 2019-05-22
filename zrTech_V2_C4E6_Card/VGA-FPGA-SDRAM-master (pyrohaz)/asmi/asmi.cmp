@@ -1,0 +1,12 @@
+	component asmi is
+		port (
+			asdo_in             : in  std_logic := 'X'; -- sdoin
+			asmi_access_granted : in  std_logic := 'X'; -- asmi_access_granted
+			asmi_access_request : out std_logic;        -- asmi_access_request
+			data0_out           : out std_logic;        -- data0out
+			dclk_in             : in  std_logic := 'X'; -- dclkin
+			ncso_in             : in  std_logic := 'X'; -- scein
+			noe_in              : in  std_logic := 'X'  -- noe
+		);
+	end component asmi;
+

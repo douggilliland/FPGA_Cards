@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue May 10 19:33:19 2016
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : VGASDRAM1
+Top-level Entity Name : top
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 734 / 6,272 ( 12 % )
+    Total combinational functions : 433 / 6,272 ( 7 % )
+    Dedicated logic registers : 580 / 6,272 ( 9 % )
+Total registers : 580
+Total pins : 72 / 92 ( 78 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 2 / 2 ( 100 % )
