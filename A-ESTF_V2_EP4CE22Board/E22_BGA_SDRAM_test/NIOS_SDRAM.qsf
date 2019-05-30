@@ -28,22 +28,16 @@ set_global_assignment -name DEVICE EP4CE22F17C8
 set_global_assignment -name TOP_LEVEL_ENTITY NIOS_SDRAM
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 6.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:40:16  OCTOBER 25, 2009"
-set_global_assignment -name LAST_QUARTUS_VERSION 11.0
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 256
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
 set_global_assignment -name VHDL_FILE altera_europa_support.vhd
 set_global_assignment -name BDF_FILE NIOS_SDRAM.bdf
 set_global_assignment -name CDF_FILE Chain1.cdf
 set_global_assignment -name QIP_FILE SDRAM_NIOS.qip
-set_global_assignment -name MISC_FILE "G:/111111/8.0/FLASH/FLASH/NIOS_SDRAM.dpf"
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_global_assignment -name MISC_FILE "G:/111111/8.0/TIMER/NIOS_SDRAM.dpf"
-set_global_assignment -name MISC_FILE "G:/111111/8.0/nios_256/NIOS_SDRAM.dpf"
-set_global_assignment -name MISC_FILE "G:/111111/8.0/A-C8V4/SDRAM/nios_256/NIOS_SDRAM.dpf"
-set_global_assignment -name MISC_FILE "M:/NIOS_SOPC/M_SDRAM_50M_PLL/NIOS_SDRAM.dpf"
-set_global_assignment -name MISC_FILE "M:/NIOS_SOPC/N_SDRAM_100M_HZ/NIOS_SDRAM.dpf"
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top

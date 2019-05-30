@@ -1,6 +1,6 @@
 Flow report for NIOS_SDRAM
-Sat Feb 10 10:17:15 2018
-Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
+Wed May 29 18:48:00 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -13,48 +13,50 @@ Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
   5. Flow Elapsed Time
   6. Flow OS Summary
   7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2011 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------+
-; Flow Summary                                                                   ;
-+------------------------------------+-------------------------------------------+
-; Flow Status                        ; Successful - Sat Feb 10 10:17:10 2018     ;
-; Quartus II Version                 ; 11.0 Build 157 04/27/2011 SJ Full Version ;
-; Revision Name                      ; NIOS_SDRAM                                ;
-; Top-level Entity Name              ; NIOS_SDRAM                                ;
-; Family                             ; Cyclone IV E                              ;
-; Device                             ; EP4CE22F17C8                              ;
-; Timing Models                      ; Final                                     ;
-; Total logic elements               ; 2,441 / 22,320 ( 11 % )                   ;
-;     Total combinational functions  ; 2,253 / 22,320 ( 10 % )                   ;
-;     Dedicated logic registers      ; 1,208 / 22,320 ( 5 % )                    ;
-; Total registers                    ; 1310                                      ;
-; Total pins                         ; 78 / 154 ( 51 % )                         ;
-; Total virtual pins                 ; 0                                         ;
-; Total memory bits                  ; 19,456 / 608,256 ( 3 % )                  ;
-; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                           ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                            ;
-+------------------------------------+-------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Wed May 29 18:47:55 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; NIOS_SDRAM                                  ;
+; Top-level Entity Name              ; NIOS_SDRAM                                  ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE22F17C8                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 2,469 / 22,320 ( 11 % )                     ;
+;     Total combinational functions  ; 2,274 / 22,320 ( 10 % )                     ;
+;     Dedicated logic registers      ; 1,222 / 22,320 ( 5 % )                      ;
+; Total registers                    ; 1324                                        ;
+; Total pins                         ; 78 / 154 ( 51 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 19,456 / 608,256 ( 3 % )                    ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -62,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/10/2018 10:16:05 ;
+; Start date & time ; 05/29/2019 18:46:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; NIOS_SDRAM          ;
 +-------------------+---------------------+
@@ -73,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                              ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 22930451700440.151822896503868                     ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 198690285320223.155917000304136                    ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                 ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                  ; --            ; --          ; --         ;
 ; MISC_FILE                           ; G:/111111/8.0/FLASH/FLASH/NIOS_SDRAM.dpf           ; --            ; --          ; --         ;
@@ -86,36 +88,36 @@ applicable agreement for further details.
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                  ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                         ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                         ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                                           ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                              ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                             ; --            ; --          ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)             ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)             ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)             ; --            ; --          ; Top        ;
 ; SOPC_BUILDER_SIGNATURE_ID           ; 23C4DBBF738F0000015A63E4CB37                       ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------------------+---------------+-------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:35     ; 1.0                     ; 302 MB              ; 00:00:32                           ;
-; Fitter                    ; 00:00:20     ; 1.4                     ; 366 MB              ; 00:00:20                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 256 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 282 MB              ; 00:00:08                           ;
-; Total                     ; 00:01:07     ; --                      ; --                  ; 00:01:02                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:48     ; 1.0                     ; 4907 MB             ; 00:01:16                           ;
+; Fitter               ; 00:00:16     ; 1.1                     ; 5593 MB             ; 00:00:20                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4704 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 4825 MB             ; 00:00:04                           ;
+; Total                ; 00:01:11     ; --                      ; --                  ; 00:01:42                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+---------------------------+------------------+------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; 9a698f7c2e45429  ; Windows XP ; 5.1        ; i686           ;
-; Fitter                    ; 9a698f7c2e45429  ; Windows XP ; 5.1        ; i686           ;
-; Assembler                 ; 9a698f7c2e45429  ; Windows XP ; 5.1        ; i686           ;
-; TimeQuest Timing Analyzer ; 9a698f7c2e45429  ; Windows XP ; 5.1        ; i686           ;
-+---------------------------+------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-2UF8LNB  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-2UF8LNB  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-2UF8LNB  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-2UF8LNB  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------

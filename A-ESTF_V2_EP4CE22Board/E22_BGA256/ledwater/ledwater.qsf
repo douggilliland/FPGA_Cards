@@ -27,7 +27,7 @@
 # ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 5.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:35:58  SEPTEMBER 01, 2005"
-set_global_assignment -name LAST_QUARTUS_VERSION 11.0
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name VERILOG_FILE ledwater.v
 set_global_assignment -name CDF_FILE ledwater.cdf
 

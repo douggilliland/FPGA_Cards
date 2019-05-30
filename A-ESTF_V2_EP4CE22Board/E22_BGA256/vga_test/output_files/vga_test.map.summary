@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Feb 10 15:41:00 2018
-Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Analysis & Synthesis Status : Successful - Wed May 29 19:17:05 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : vga_test
 Top-level Entity Name : vga_test
 Family : Cyclone IV E
-Total logic elements : 202
-    Total combinational functions : 202
+Total logic elements : 215
+    Total combinational functions : 215
     Dedicated logic registers : 75
 Total registers : 75
 Total pins : 21

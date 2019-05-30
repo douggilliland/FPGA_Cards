@@ -1,10 +1,10 @@
-/* Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version */
+/* Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE15) Path("E:/E15K_ESTF_SDRAM/") File("E15_TEST.jic") MfrSpec(OpMask(1) SEC_Device(EPCS64) Child_OpMask(1 1));
+		Device PartName(EP4CE22F17) Path("C:/Users/HPz420/Documents/GitHub/FPGA_Cards/A-ESTF_V2_EP4CE22Board/E22_BGA_SDRAM_test/") File("NIOS_SDRAM.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -26,5 +26,13 @@ clk_50M => count[23].CLK
 clk_50M => count[24].CLK
 clk_50M => count[25].CLK
 rst => ~NO_FANOUT~
+dataout[0] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[1] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[2] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[3] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[4] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[5] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[6] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[7] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
 
 

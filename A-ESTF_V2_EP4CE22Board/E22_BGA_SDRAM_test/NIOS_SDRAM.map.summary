@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sat Feb 10 10:16:41 2018
-Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Analysis & Synthesis Status : Successful - Wed May 29 18:47:32 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : NIOS_SDRAM
 Top-level Entity Name : NIOS_SDRAM
 Family : Cyclone IV E
-Total logic elements : 2,588
-    Total combinational functions : 2,250
-    Dedicated logic registers : 1,292
-Total registers : 1292
+Total logic elements : 2,620
+    Total combinational functions : 2,271
+    Dedicated logic registers : 1,306
+Total registers : 1306
 Total pins : 78
 Total virtual pins : 0
 Total memory bits : 19,456

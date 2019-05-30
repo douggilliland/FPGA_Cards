@@ -1,0 +1,325 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED_D8",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_rd",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_cs",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_wr",
+					"strict" : false
+				},
+				{
+					"name" : "EPCS_SDO",
+					"strict" : false
+				},
+				{
+					"name" : "EPCS_CS",
+					"strict" : false
+				},
+				{
+					"name" : "EPCS_DCLK",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[21]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[20]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[19]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[18]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[17]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[16]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[15]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[14]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[13]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[12]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[11]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[10]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[9]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[8]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[7]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[4]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_add[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cfi_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_WE",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_RAS",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_CAS",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_CS",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_AD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_BA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_BA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DQM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_DQM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EPCS_DATA0",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

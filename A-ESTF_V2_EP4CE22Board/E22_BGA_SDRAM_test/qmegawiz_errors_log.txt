@@ -1,0 +1,46 @@
+
+
+C:/Users/HPz420/Documents/GitHub/FPGA_Cards/A-ESTF_V2_EP4CE22Board/E22_BGA_SDRAM_test/sdram_nios.vhd
+
+May 29 06PM:50:54>: Megafunction Altera SOPC Builder is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/HPz420/Documents/GitHub/FPGA_Cards/A-ESTF_V2_EP4CE22Board/E22_BGA_SDRAM_test/sdram_nios.vhd
+
+May 29 06PM:50:56>: Megafunction Altera SOPC Builder is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/HPz420/Documents/GitHub/FPGA_Cards/A-ESTF_V2_EP4CE22Board/E22_BGA_SDRAM_test/sdram_nios.vhd
+
+May 29 06PM:50:58>: Megafunction Altera SOPC Builder is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/HPz420/Documents/GitHub/FPGA_Cards/A-ESTF_V2_EP4CE22Board/E22_BGA_SDRAM_test/SDRAM_NIOS.vhd
+
+May 29 07PM:09:53>: Megafunction Altera SOPC Builder is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/HPz420/Documents/GitHub/FPGA_Cards/A-ESTF_V2_EP4CE22Board/E22_BGA_SDRAM_test/SDRAM_NIOS.vhd
+
+May 29 07PM:09:54>: Megafunction Altera SOPC Builder is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/HPz420/Documents/GitHub/FPGA_Cards/A-ESTF_V2_EP4CE22Board/E22_BGA_SDRAM_test/sdram_nios.vhd
+
+May 29 07PM:11:10>: Megafunction Altera SOPC Builder is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/HPz420/Documents/GitHub/FPGA_Cards/A-ESTF_V2_EP4CE22Board/E22_BGA_SDRAM_test/sdram_nios.vhd
+
+May 29 07PM:11:14>: Megafunction Altera SOPC Builder is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/HPz420/Documents/GitHub/FPGA_Cards/A-ESTF_V2_EP4CE22Board/E22_BGA_SDRAM_test/sdram_nios.vhd
+
+May 29 07PM:11:16>: Megafunction Altera SOPC Builder is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/HPz420/Documents/GitHub/FPGA_Cards/A-ESTF_V2_EP4CE22Board/E22_BGA_SDRAM_test/sdram_nios.vhd
+
+May 29 07PM:11:20>: Megafunction Altera SOPC Builder is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
