@@ -1,0 +1,49 @@
+Windows 8/8.1/10 are NOT supported in PL-2303HXA and PL-2303X EOL (End Of Life) chip versions.
+
+http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=155&pcid=41
+
+Warning Letter on Counterfeit Products   Hot News
+
+Warning Notice:
+
+It is confirmed that counterfeit (fake) PL-2303HX Rev A USB to Serial Controller ICs using 
+Prolific's trademark logo and device drivers were being sold in the China market. 
+Counterfeit IC products show exactly the same outside chip markings but generally 
+are of poor quality and causes driver compatibility issues. We issue this warning 
+to all our customers and consumers to avoid confusion and false purchase. 
+Only buy from Prolific authorized distributors.
+
+Please be warned also that selling counterfeit products are illegal and punishable by 
+civil and criminal courts according to the trademark, copyright, and intellectual properties laws 
+and regulations. Prolific will take proper and severe actions to cease and confiscate these counterfeit products. 
+Prolific also prohibits the distribution of any PL-2303 drivers (including download links) 
+without written permission from Prolific.
+
+Prolific advices end-users to only purchase branded cable products with company name contact 
+information for service and support in case you suspect a counterfeit chip inside. 
+You may also contact Prolific to provide the vendor information.
+
+PL-2303HX Rev A (or PL-2303HXA) also has been discontinued (EOL) since October 2012 and does not support Windows 8 onwards. Prolific advises users to purchase cables/adapters with PL2303HXD (HX Rev D) chip.
+
+**********************************************************************************************
+Prolific has followed the lead of FTDI and disabled these older chips in their newer drivers
+This leaves people with the chip stranded.
+It's not a matter of buying a new adapter cable when the part is built onto a board.
+
+From: https://answers.microsoft.com/en-us/windows/forum/windows_10-hardware/prolific-usb-to-serial-comm-port-windows-10/0a4f8e48-7135-4434-9d10-349c9ce87fcf
+Tested on W10 family and pro, 32/64 bits.
+The solution for old PL-2303 HXA/X : use a driver release older than 3.4.
+
+Edit: The procedure above works, but only temporary. Each time you turn your computer off, 
+the latest driver is reloaded due to windows auto-update (or if you unplug and plug again the device into USB port).
+
+To avoid that, a recent turnaround exist and has been published by Microsoft. 
+It's a tool named wushowhide.diagcab ("Show and Hide Update"). 
+It allow to inhibit the auto-update for a particular program or driver (Prolific in our case).
+For more informations and where to download this tool, take a look at this article : KB3073930
+
+I have tested it and it work fine. The only problem with it, is that, 
+it reload the latest driver when you plug the device on a never used USB port. 
+So, if you change place of connection, you should manually set the driver to 3.3, 
+but you have to do that only the first time you used this port. 
+Next time, the driver remain to 3.3 and never upgrade to 3.6.
