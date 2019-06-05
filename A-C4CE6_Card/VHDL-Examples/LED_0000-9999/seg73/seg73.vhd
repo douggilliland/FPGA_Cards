@@ -1,5 +1,5 @@
 -- 7 digital tube experiment 2: incremental manner in the 4 digital tube counting up from 0000-0001->0002...... ..9999... .0000... .0001... .
--- Design: a 4 bit decimal counter using CPLD, and digital tube display the current count value
+-- Design: a 4 bit decimal counter using FPGA, and digital tube display the current count value
 
 -- http://www.aliexpress.com/store/620372
 -- Email: sz21eda@126.com
@@ -13,8 +13,8 @@ ENTITY seg73 IS
    PORT (
       clk                     : IN std_logic;   
       rst                     : IN std_logic;   
-      dataout                 : OUT std_logic_vector(7 DOWNTO 0);   --各段数据输出
-      en                      : OUT std_logic_vector(3 DOWNTO 0));  --COM使能输出    
+      dataout                 : OUT std_logic_vector(7 DOWNTO 0);
+      en                      : OUT std_logic_vector(3 DOWNTO 0));
 END seg73;
 
 ARCHITECTURE arch OF seg73 IS
@@ -110,14 +110,7 @@ begin
   end if;
 end process;
 
-
-
-
-
-
-
----****************显示部分***************--
-
+---
  
  process(rst,clk,div_cnt(19 downto 18))
  begin

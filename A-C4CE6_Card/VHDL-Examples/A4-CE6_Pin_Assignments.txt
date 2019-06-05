@@ -1,0 +1,82 @@
+-- A4_CE6 Pin assignments
+set_location_assignment PIN_23 -to clk
+set_location_assignment PIN_24 -to usr_clk
+-- Buttons
+-- K2=Pin_90, K3=Pin_91, K4=Pin_87, K5=Pin_86
+set_location_assignment PIN_86 -to rst
+set_location_assignment PIN_87 -to key_data[1]
+set_location_assignment PIN_91 -to key_data[2]
+set_location_assignment PIN_90 -to key_data[3]
+-- Seven Segment Display
+-- Segment A=Pin_127, DP=Pin_115
+set_location_assignment PIN_115 -to seg_data[7]
+set_location_assignment PIN_119 -to seg_data[6]
+set_location_assignment PIN_120 -to seg_data[5]
+set_location_assignment PIN_121 -to seg_data[4]
+set_location_assignment PIN_124 -to seg_data[3]
+set_location_assignment PIN_125 -to seg_data[2]
+set_location_assignment PIN_126 -to seg_data[1]
+set_location_assignment PIN_127 -to seg_data[0]
+-- Seven Segment Digit (Right=Pin_128, Left=Pin_138)
+set_location_assignment PIN_138 -to en[7]
+set_location_assignment PIN_137 -to en[6]
+set_location_assignment PIN_136 -to en[5]
+set_location_assignment PIN_135 -to en[4]
+set_location_assignment PIN_133 -to en[3]
+set_location_assignment PIN_132 -to en[2]
+set_location_assignment PIN_129 -to en[1]
+set_location_assignment PIN_128 -to en[0]
+-- LEDs (LED D3=Pin_72,...LED D14=Pin_69)
+set_location_assignment PIN_72 -to led_out[0]
+set_location_assignment PIN_73 -to led_out[1]
+set_location_assignment PIN_74 -to led_out[2]
+set_location_assignment PIN_80 -to led_out[3]
+set_location_assignment PIN_83 -to led_out[4]
+set_location_assignment PIN_84 -to led_out[5]
+set_location_assignment PIN_77 -to led_out[6]
+set_location_assignment PIN_76 -to led_out[7]
+set_location_assignment PIN_75 -to led_out[8]
+set_location_assignment PIN_71 -to led_out[9]
+set_location_assignment PIN_70 -to led_out[10]
+set_location_assignment PIN_69 -to led_out[11]
+-- Buzzer
+set_location_assignment PIN_141 -to buzzer
+-- From I2C code
+-- DIP_Switches 1-8 (Switch_1=Pin_58...)
+set_location_assignment PIN_58 -to data_in[0]
+set_location_assignment PIN_59 -to data_in[1]
+set_location_assignment PIN_60 -to data_in[2]
+set_location_assignment PIN_64 -to data_in[3]
+set_location_assignment PIN_65 -to data_in[4]
+set_location_assignment PIN_66 -to data_in[5]
+set_location_assignment PIN_67 -to data_in[6]
+set_location_assignment PIN_68 -to data_in[7]
+-- From LCD1602 code
+set_location_assignment PIN_85 -to LCD_RS
+set_location_assignment PIN_99 -to LCD_RW
+set_location_assignment PIN_100 -to LCD_EN
+set_location_assignment PIN_101 -to LCD_Data[0]
+set_location_assignment PIN_103 -to LCD_Data[1]
+set_location_assignment PIN_104 -to LCD_Data[2]
+set_location_assignment PIN_105 -to LCD_Data[3]
+set_location_assignment PIN_106 -to LCD_Data[4]
+set_location_assignment PIN_110 -to LCD_Data[5]
+set_location_assignment PIN_111 -to LCD_Data[6]
+set_location_assignment PIN_112 -to LCD_Data[7]
+-- PS/2 Keyboard
+set_location_assignment PIN_11 -to KBD_CLK
+set_location_assignment PIN_10 -to KBD_DAT
+-- USB-to-Serial
+set_location_assignment PIN_114 -to rxd
+set_location_assignment PIN_113 -to txd
+-- From serial code
+set_location_assignment PIN_30 -to rxd
+set_location_assignment PIN_28 -to txd
+-- VGA
+set_location_assignment PIN_2 -to red
+set_location_assignment PIN_1 -to grn
+set_location_assignment PIN_144 -to blu
+set_location_assignment PIN_143 -to vsync
+set_location_assignment PIN_142 -to hsync
+set_location_assignment PIN_7 -to EEP_SCL
+set_location_assignment PIN_3 -to EEP_SDA
