@@ -14,14 +14,14 @@ ENTITY seg73 IS
       clk                     : IN std_logic;   
       rst                     : IN std_logic;   
       dataout                 : OUT std_logic_vector(7 DOWNTO 0);
-      en                      : OUT std_logic_vector(3 DOWNTO 0));
+      en                      : OUT std_logic_vector(7 DOWNTO 0));
 END seg73;
 
 ARCHITECTURE arch OF seg73 IS
 signal div_cnt : std_logic_vector(24 downto 0 );
 signal data4 :    std_logic_vector(3 downto 0);
 signal dataout_xhdl1 : std_logic_vector(7 downto 0);
-signal en_xhdl : std_logic_vector(3 downto 0);
+signal en_xhdl : std_logic_vector(7 downto 0);
 signal cntfirst :std_logic_vector(3 downto 0);
 signal cntsecond : std_logic_vector(3 downto 0);
 signal cntthird  : std_logic_vector(3 downto 0);
@@ -115,13 +115,13 @@ end process;
  process(rst,clk,div_cnt(19 downto 18))
  begin
   if(rst='0')then
-    en_xhdl<="1110";
+    en_xhdl<="11111110";
   elsif(clk'event and clk='1')then
     case div_cnt(19 downto 18) is
-     when"00"=> en_xhdl<="1110";
-     when"01"=> en_xhdl<="1101";
-     when"10"=> en_xhdl<="1011";
-     when"11"=> en_xhdl<="0111"; 
+     when"00"=> en_xhdl<="11111110";
+     when"01"=> en_xhdl<="11111101";
+     when"10"=> en_xhdl<="11111011";
+     when"11"=> en_xhdl<="11110111"; 
     end case;
   end if;
 
@@ -130,10 +130,10 @@ end process;
 process(en_xhdl,cntfirst,cntsecond,cntthird,cntlast)
 begin
  case en_xhdl is 
-   when "1110"=> data4<=cntfirst;
-   when "1101"=> data4<=cntsecond;
-   when "1011"=> data4<=cntthird;
-   when "0111"=> data4<=cntlast;   
+   when "11111110"=> data4<=cntfirst;
+   when "11111101"=> data4<=cntsecond;
+   when "11111011"=> data4<=cntthird;
+   when "11110111"=> data4<=cntlast;   
    when others    => data4<="1010";
   end case;
 end process;
@@ -141,40 +141,23 @@ end process;
 process(data4)
 begin
   case data4 is
-   WHEN "0000" =>
-                  dataout_xhdl1 <= "11000000";    
-         WHEN "0001" =>
-                  dataout_xhdl1 <= "11111001";    
-         WHEN "0010" =>
-                  dataout_xhdl1 <= "10100100";    
-         WHEN "0011" =>
-                  dataout_xhdl1 <= "10110000";    
-         WHEN "0100" =>
-                  dataout_xhdl1 <= "10011001";    
-         WHEN "0101" =>
-                  dataout_xhdl1 <= "10010010";    
-         WHEN "0110" =>
-                  dataout_xhdl1 <= "10000010";    
-         WHEN "0111" =>
-                  dataout_xhdl1 <= "11111000";    
-         WHEN "1000" =>
-                  dataout_xhdl1 <= "10000000";    
-         WHEN "1001" =>
-                  dataout_xhdl1 <= "10010000";    
-         WHEN "1010" =>
-                  dataout_xhdl1 <= "10000000";    
-         WHEN "1011" =>
-                  dataout_xhdl1 <= "10010000";    
-         WHEN "1100" =>
-                  dataout_xhdl1 <= "01100011";    
-         WHEN "1101" =>
-                  dataout_xhdl1 <= "10000101";    
-         WHEN "1110" =>
-                  dataout_xhdl1 <= "01100001";    
-         WHEN "1111" =>
-                  dataout_xhdl1 <= "01110001";    
-         WHEN OTHERS =>
-               dataout_xhdl1 <= "00000011"; 
+	WHEN "0000" =>	dataout_xhdl1 <= "11000000";    
+	WHEN "0001" =>	dataout_xhdl1 <= "11111001";    
+	WHEN "0010" =>	dataout_xhdl1 <= "10100100";    
+	WHEN "0011" =>	dataout_xhdl1 <= "10110000";    
+	WHEN "0100" =>	dataout_xhdl1 <= "10011001";    
+	WHEN "0101" =>	dataout_xhdl1 <= "10010010";    
+	WHEN "0110" =>	dataout_xhdl1 <= "10000010";    
+	WHEN "0111" =>	dataout_xhdl1 <= "11111000";    
+	WHEN "1000" =>	dataout_xhdl1 <= "10000000";    
+	WHEN "1001" =>	dataout_xhdl1 <= "10010000";    
+	WHEN "1010" =>	dataout_xhdl1 <= "10001000";    
+	WHEN "1011" =>	dataout_xhdl1 <= "10000011";    
+	WHEN "1100" =>	dataout_xhdl1 <= "11000110";    
+	WHEN "1101" =>	dataout_xhdl1 <= "10100001";    
+	WHEN "1110" =>	dataout_xhdl1 <= "10000110";    
+	WHEN "1111" =>	dataout_xhdl1 <= "10001110";    
+	WHEN OTHERS =>	dataout_xhdl1 <= "00000011"; 
          
          
       END CASE;

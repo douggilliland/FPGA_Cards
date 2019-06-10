@@ -1,5 +1,5 @@
 Flow report for seg73
-Wed Jun 05 15:09:53 2019
+Thu Jun 06 10:52:09 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Jun 05 15:09:50 2019       ;
+; Flow Status                        ; Successful - Thu Jun 06 10:52:06 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; seg73                                       ;
-; Top-level Entity Name              ; seg73                                       ;
+; Top-level Entity Name              ; ElapsedTimeCounter_7S8D_LED                 ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 79 / 6,272 ( 1 % )                          ;
-;     Total combinational functions  ; 79 / 6,272 ( 1 % )                          ;
-;     Dedicated logic registers      ; 49 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 49                                          ;
-; Total pins                         ; 14 / 92 ( 15 % )                            ;
+; Total logic elements               ; 134 / 6,272 ( 2 % )                         ;
+;     Total combinational functions  ; 129 / 6,272 ( 2 % )                         ;
+;     Dedicated logic registers      ; 80 / 6,272 ( 1 % )                          ;
+; Total registers                    ; 80                                          ;
+; Total pins                         ; 18 / 92 ( 20 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
@@ -64,27 +64,29 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/05/2019 15:09:29 ;
+; Start date & time ; 06/06/2019 10:51:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; seg73               ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                               ;
-+-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 193569097813697.155976176934760                               ; --            ; --          ; --         ;
-; FITTER_EFFORT                       ; Standard Fit                                                  ; Auto Fit      ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --          ; --         ;
-; MISC_FILE                           ; E:/A-C2FB English/VHDL-Examples/LED_0000-9999/seg73/seg73.dpf ; --            ; --          ; --         ;
-; OPTIMIZE_HOLD_TIMING                ; Off                                                           ; All Paths     ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                        ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                        ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                        ; --            ; --          ; Top        ;
-+-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-----------------------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name                 ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-----------------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 193569097813697.155983270732084        ; --            ; --                          ; --         ;
+; FITTER_EFFORT                       ; Standard Fit                           ; Auto Fit      ; --                          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                          ; --         ;
+; OPTIMIZE_HOLD_TIMING                ; Off                                    ; All Paths     ; --                          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ElapsedTimeCounter_7S8D_LED ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; ElapsedTimeCounter_7S8D_LED ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; ElapsedTimeCounter_7S8D_LED ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --                          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                          ; --         ;
+; TOP_LEVEL_ENTITY                    ; ElapsedTimeCounter_7S8D_LED            ; seg73         ; --                          ; --         ;
++-------------------------------------+----------------------------------------+---------------+-----------------------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -92,11 +94,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4821 MB             ; 00:00:24                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 5503 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4690 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4769 MB             ; 00:00:02                           ;
-; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:32                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4808 MB             ; 00:00:24                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5505 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4691 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4768 MB             ; 00:00:02                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

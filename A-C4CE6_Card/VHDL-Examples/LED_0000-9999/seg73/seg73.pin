@@ -90,8 +90,8 @@ GND                          : 19        : gnd    :                   :         
 TDO                          : 20        : output :                   :         : 1         :                
 nCE                          : 21        :        :                   :         : 1         :                
 GND                          : 22        : gnd    :                   :         :           :                
-clk                          : 23        : input  : 3.3-V LVTTL       :         : 1         : Y              
-GND+                         : 24        :        :                   :         : 2         :                
+clock_50Mhz                  : 23        : input  : 3.3-V LVTTL       :         : 1         : N              
+n_reset                      : 24        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND+                         : 25        :        :                   :         : 2         :                
 VCCIO2                       : 26        : power  :                   : 3.3V    : 2         :                
 GND                          : 27        : gnd    :                   :         :           :                
@@ -154,7 +154,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 83        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 84        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
-rst                          : 87        : input  : 3.3-V LVTTL       :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 87        :        :                   :         : 5         :                
 GND+                         : 88        :        :                   :         : 5         :                
 GND+                         : 89        :        :                   :         : 5         :                
 GND+                         : 90        :        :                   :         : 6         :                
@@ -182,30 +182,30 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 111       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 112       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 113       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 114       :        :                   :         : 7         :                
-dataout[7]                   : 115       : output : 3.3-V LVTTL       :         : 7         : Y              
+LED_out[7]                   : 115       : output : 3.3-V LVTTL       :         : 7         : Y              
 VCCINT                       : 116       : power  :                   : 1.2V    :           :                
 VCCIO7                       : 117       : power  :                   : 3.3V    : 7         :                
 GND                          : 118       : gnd    :                   :         :           :                
-dataout[6]                   : 119       : output : 3.3-V LVTTL       :         : 7         : Y              
-dataout[5]                   : 120       : output : 3.3-V LVTTL       :         : 7         : Y              
-dataout[4]                   : 121       : output : 3.3-V LVTTL       :         : 7         : Y              
+LED_out[6]                   : 119       : output : 3.3-V LVTTL       :         : 7         : Y              
+LED_out[5]                   : 120       : output : 3.3-V LVTTL       :         : 7         : Y              
+LED_out[4]                   : 121       : output : 3.3-V LVTTL       :         : 7         : Y              
 VCCIO7                       : 122       : power  :                   : 3.3V    : 7         :                
 GND                          : 123       : gnd    :                   :         :           :                
-dataout[3]                   : 124       : output : 3.3-V LVTTL       :         : 7         : Y              
-dataout[2]                   : 125       : output : 3.3-V LVTTL       :         : 7         : Y              
-dataout[1]                   : 126       : output : 3.3-V LVTTL       :         : 7         : Y              
-dataout[0]                   : 127       : output : 3.3-V LVTTL       :         : 7         : Y              
-en[0]                        : 128       : output : 3.3-V LVTTL       :         : 8         : Y              
-en[1]                        : 129       : output : 3.3-V LVTTL       :         : 8         : Y              
+LED_out[3]                   : 124       : output : 3.3-V LVTTL       :         : 7         : Y              
+LED_out[2]                   : 125       : output : 3.3-V LVTTL       :         : 7         : Y              
+LED_out[1]                   : 126       : output : 3.3-V LVTTL       :         : 7         : Y              
+LED_out[0]                   : 127       : output : 3.3-V LVTTL       :         : 7         : Y              
+Anode_Activate[7]            : 128       : output : 3.3-V LVTTL       :         : 8         : Y              
+Anode_Activate[6]            : 129       : output : 3.3-V LVTTL       :         : 8         : Y              
 VCCIO8                       : 130       : power  :                   : 3.3V    : 8         :                
 GND                          : 131       : gnd    :                   :         :           :                
-en[2]                        : 132       : output : 3.3-V LVTTL       :         : 8         : Y              
-en[3]                        : 133       : output : 3.3-V LVTTL       :         : 8         : Y              
+Anode_Activate[5]            : 132       : output : 3.3-V LVTTL       :         : 8         : Y              
+Anode_Activate[4]            : 133       : output : 3.3-V LVTTL       :         : 8         : Y              
 VCCINT                       : 134       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 135       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 136       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 137       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 138       :        :                   :         : 8         :                
+Anode_Activate[3]            : 135       : output : 3.3-V LVTTL       :         : 8         : Y              
+Anode_Activate[2]            : 136       : output : 3.3-V LVTTL       :         : 8         : Y              
+Anode_Activate[1]            : 137       : output : 3.3-V LVTTL       :         : 8         : Y              
+Anode_Activate[0]            : 138       : output : 3.3-V LVTTL       :         : 8         : Y              
 VCCIO8                       : 139       : power  :                   : 3.3V    : 8         :                
 GND                          : 140       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 141       :        :                   :         : 8         :                
