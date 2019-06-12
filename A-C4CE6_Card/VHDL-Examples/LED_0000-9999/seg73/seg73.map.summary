@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Jun 05 15:09:41 2019
+Analysis & Synthesis Status : Successful - Thu Jun 06 10:51:58 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : seg73
-Top-level Entity Name : seg73
+Top-level Entity Name : ElapsedTimeCounter_7S8D_LED
 Family : Cyclone IV E
-Total logic elements : 79
-    Total combinational functions : 79
-    Dedicated logic registers : 49
-Total registers : 49
-Total pins : 14
+Total logic elements : 129
+    Total combinational functions : 129
+    Dedicated logic registers : 80
+Total registers : 80
+Total pins : 18
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

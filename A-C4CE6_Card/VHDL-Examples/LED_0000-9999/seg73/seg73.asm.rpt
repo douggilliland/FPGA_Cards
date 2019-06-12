@@ -1,5 +1,5 @@
 Assembler report for seg73
-Wed Jun 05 15:09:50 2019
+Thu Jun 06 10:52:06 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,9 +40,9 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jun 05 15:09:50 2019 ;
+; Assembler Status      ; Successful - Thu Jun 06 10:52:06 2019 ;
 ; Revision Name         ; seg73                                 ;
-; Top-level Entity Name ; seg73                                 ;
+; Top-level Entity Name ; ElapsedTimeCounter_7S8D_LED           ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE6E22C8                           ;
 +-----------------------+---------------------------------------+
@@ -72,8 +72,8 @@ refer to the applicable agreement for further details.
 +----------------+-------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                           ;
 +----------------+-------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0009E3B9                                                                                                        ;
-; Checksum       ; 0x0009E3B9                                                                                                        ;
+; JTAG usercode  ; 0x000A2390                                                                                                        ;
+; Checksum       ; 0x000A2390                                                                                                        ;
 +----------------+-------------------------------------------------------------------------------------------------------------------+
 
 
@@ -110,7 +110,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jun 05 15:09:48 2019
+    Info: Processing started: Thu Jun 06 10:52:05 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off seg73 -c seg73
 Critical Warning (138069): Setting INCREMENTAL_COMPILATION to "OFF" is no longer supported. Assignment is ignored. To disable partitions, set the IGNORE_PARTITIONS global assignment to "ON" instead.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -119,9 +119,9 @@ Info (115030): Assembler is generating device programming files
 Info (210117): Created JAM or JBC file for the specified chain: 
 Device 1 (EP4CE6E22; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/A-C4CE6_Card/VHDL-Examples/LED_0000-9999/seg73/seg73.sof)
 Info: Quartus Prime Assembler was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4691 megabytes
-    Info: Processing ended: Wed Jun 05 15:09:50 2019
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4692 megabytes
+    Info: Processing ended: Thu Jun 06 10:52:06 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

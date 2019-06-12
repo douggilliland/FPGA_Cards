@@ -1,6 +1,6 @@
 -- A4_CE6 Pin assignments
 set_location_assignment PIN_23 -to clk
-set_location_assignment PIN_24 -to usr_clk
+set_location_assignment PIN_24 -to clk_usr
 -- Buttons
 -- K2=Pin_90, K3=Pin_91, K4=Pin_87, K5=Pin_86
 set_location_assignment PIN_86 -to rst
@@ -69,9 +69,6 @@ set_location_assignment PIN_10 -to KBD_DAT
 -- USB-to-Serial
 set_location_assignment PIN_114 -to rxd
 set_location_assignment PIN_113 -to txd
--- From serial code
-set_location_assignment PIN_30 -to rxd
-set_location_assignment PIN_28 -to txd
 -- VGA
 set_location_assignment PIN_2 -to red
 set_location_assignment PIN_1 -to grn
@@ -80,3 +77,26 @@ set_location_assignment PIN_143 -to vsync
 set_location_assignment PIN_142 -to hsync
 set_location_assignment PIN_7 -to EEP_SCL
 set_location_assignment PIN_3 -to EEP_SDA
+# I/O Connector
+set_location_assignment PIN_30 -to IOCON_01
+set_location_assignment PIN_28 -to IOCON_02
+set_location_assignment PIN_32 -to IOCON_03
+set_location_assignment PIN_31 -to IOCON_04
+set_location_assignment PIN_34 -to IOCON_05
+set_location_assignment PIN_33 -to IOCON_06
+set_location_assignment PIN_39 -to IOCON_07
+set_location_assignment PIN_38 -to IOCON_08
+set_location_assignment PIN_42 -to IOCON_11
+set_location_assignment PIN_43 -to IOCON_12
+set_location_assignment PIN_44 -to IOCON_13
+set_location_assignment PIN_46 -to IOCON_14
+set_location_assignment PIN_49 -to IOCON_15
+set_location_assignment PIN_50 -to IOCON_16
+set_location_assignment PIN_52 -to IOCON_19
+set_location_assignment PIN_51 -to IOCON_20
+set_location_assignment PIN_54 -to IOCON_21
+set_location_assignment PIN_53 -to IOCON_22
+set_location_assignment PIN_58 -to IOCON_23
+set_location_assignment PIN_55 -to IOCON_24
+set_location_assignment PIN_88 -to IOCON_27
+set_location_assignment PIN_89 -to IOCON_28

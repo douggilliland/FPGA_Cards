@@ -28,7 +28,6 @@
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 5.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:56:14  NOVEMBER 22, 2005"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
-set_global_assignment -name VHDL_FILE seg73.vhd
 
 # Pin & Location Assignments
 # ==========================
@@ -36,7 +35,7 @@ set_global_assignment -name VHDL_FILE seg73.vhd
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name TOP_LEVEL_ENTITY seg73
+set_global_assignment -name TOP_LEVEL_ENTITY ElapsedTimeCounter_7S8D_LED
 
 # Fitter Assignments
 # ==================
@@ -53,18 +52,6 @@ set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
 set_location_assignment PIN_23 -to clk
-set_location_assignment PIN_127 -to dataout[0]
-set_location_assignment PIN_126 -to dataout[1]
-set_location_assignment PIN_125 -to dataout[2]
-set_location_assignment PIN_124 -to dataout[3]
-set_location_assignment PIN_121 -to dataout[4]
-set_location_assignment PIN_120 -to dataout[5]
-set_location_assignment PIN_119 -to dataout[6]
-set_location_assignment PIN_115 -to dataout[7]
-set_location_assignment PIN_128 -to en[0]
-set_location_assignment PIN_129 -to en[1]
-set_location_assignment PIN_132 -to en[2]
-set_location_assignment PIN_133 -to en[3]
 set_location_assignment PIN_87 -to rst
 set_global_assignment -name ENABLE_INIT_DONE_OUTPUT ON
 set_global_assignment -name USE_CHECKSUM_AS_USERCODE ON
@@ -75,8 +62,27 @@ set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATE
 set_global_assignment -name CYCLONE_CONFIGURATION_DEVICE EPCS1
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name VHDL_FILE ../../../../../R32V2020/VHDL/Components/Seven_Seg_8_Digit/ElapsedTimeCounter_7S8D_LED.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_138 -to Anode_Activate[0]
+set_location_assignment PIN_137 -to Anode_Activate[1]
+set_location_assignment PIN_136 -to Anode_Activate[2]
+set_location_assignment PIN_135 -to Anode_Activate[3]
+set_location_assignment PIN_133 -to Anode_Activate[4]
+set_location_assignment PIN_132 -to Anode_Activate[5]
+set_location_assignment PIN_129 -to Anode_Activate[6]
+set_location_assignment PIN_128 -to Anode_Activate[7]
+set_location_assignment PIN_127 -to LED_out[0]
+set_location_assignment PIN_126 -to LED_out[1]
+set_location_assignment PIN_125 -to LED_out[2]
+set_location_assignment PIN_124 -to LED_out[3]
+set_location_assignment PIN_121 -to LED_out[4]
+set_location_assignment PIN_120 -to LED_out[5]
+set_location_assignment PIN_119 -to LED_out[6]
+set_location_assignment PIN_115 -to LED_out[7]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

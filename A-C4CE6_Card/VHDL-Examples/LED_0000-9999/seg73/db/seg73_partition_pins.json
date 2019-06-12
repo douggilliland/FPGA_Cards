@@ -4,59 +4,71 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "dataout[0]",
+					"name" : "Anode_Activate[0]",
 					"strict" : false
 				},
 				{
-					"name" : "dataout[1]",
+					"name" : "Anode_Activate[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dataout[2]",
+					"name" : "Anode_Activate[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dataout[3]",
+					"name" : "Anode_Activate[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dataout[4]",
+					"name" : "Anode_Activate[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dataout[5]",
+					"name" : "Anode_Activate[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dataout[6]",
+					"name" : "Anode_Activate[6]",
 					"strict" : false
 				},
 				{
-					"name" : "dataout[7]",
+					"name" : "Anode_Activate[7]",
 					"strict" : false
 				},
 				{
-					"name" : "en[0]",
+					"name" : "LED_out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "en[1]",
+					"name" : "LED_out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "en[2]",
+					"name" : "LED_out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "en[3]",
+					"name" : "LED_out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "LED_out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "LED_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50Mhz",
+					"strict" : false
+				},
+				{
+					"name" : "n_reset",
 					"strict" : false
 				}
 			]
