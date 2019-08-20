@@ -58,7 +58,6 @@ set_location_assignment PIN_G1 -to segdata[5]
 set_location_assignment PIN_E7 -to segdata[6]
 set_location_assignment PIN_E6 -to segdata[7]
 set_location_assignment PIN_J16 -to key_in
-set_location_assignment PIN_M8 -to led_out
 set_location_assignment PIN_M8 -to LED_D8
 # SDRAM
 set_location_assignment PIN_D9 -to SDR_BA[1]
