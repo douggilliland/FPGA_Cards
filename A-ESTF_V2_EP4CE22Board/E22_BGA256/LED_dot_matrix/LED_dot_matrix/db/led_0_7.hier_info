@@ -31,5 +31,18 @@ rst => cnt_scan[12].ACLR
 rst => cnt_scan[13].ACLR
 rst => cnt_scan[14].ACLR
 rst => cnt_scan[15].ACLR
+dataout[0] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[1] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[2] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+dataout[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[5] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[6] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+dataout[7] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
+U2_138_select <= <GND>
+U3_138_select <= <VCC>
+U3_138_A[0] <= cnt_scan[13].DB_MAX_OUTPUT_PORT_TYPE
+U3_138_A[1] <= cnt_scan[14].DB_MAX_OUTPUT_PORT_TYPE
+U3_138_A[2] <= cnt_scan[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
