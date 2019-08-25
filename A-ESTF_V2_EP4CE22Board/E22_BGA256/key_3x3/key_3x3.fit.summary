@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sat Feb 10 15:30:01 2018
-Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Fitter Status : Successful - Fri Aug 23 10:32:26 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : key_3x3
 Top-level Entity Name : key_3x3
 Family : Cyclone IV E
 Device : EP4CE22F17C8
 Timing Models : Final
-Total logic elements : 46 / 22,320 ( < 1 % )
+Total logic elements : 48 / 22,320 ( < 1 % )
     Total combinational functions : 44 / 22,320 ( < 1 % )
     Dedicated logic registers : 41 / 22,320 ( < 1 % )
 Total registers : 41

@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sun Apr 09 12:29:05 2017
-Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Fitter Status : Successful - Fri Aug 23 10:54:20 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : key_b
 Top-level Entity Name : key_b
 Family : Cyclone IV E
-Device : EP4CE10F17C8
+Device : EP4CE22F17C8
 Timing Models : Final
-Total logic elements : 4 / 10,320 ( < 1 % )
-    Total combinational functions : 4 / 10,320 ( < 1 % )
-    Dedicated logic registers : 0 / 10,320 ( 0 % )
+Total logic elements : 4 / 22,320 ( < 1 % )
+    Total combinational functions : 4 / 22,320 ( < 1 % )
+    Dedicated logic registers : 0 / 22,320 ( 0 % )
 Total registers : 0
-Total pins : 8 / 180 ( 4 % )
+Total pins : 8 / 154 ( 5 % )
 Total virtual pins : 0
-Total memory bits : 0 / 423,936 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
-Total PLLs : 0 / 2 ( 0 % )
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

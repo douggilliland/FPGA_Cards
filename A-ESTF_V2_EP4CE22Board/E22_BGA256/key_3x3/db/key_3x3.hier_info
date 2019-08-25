@@ -58,11 +58,27 @@ i_rst_n => col_val[0].ENA
 i_rst_n => row_val[2].ENA
 i_rst_n => row_val[1].ENA
 i_rst_n => row_val[0].ENA
+U2_128_A[0] <= <GND>
+U2_128_A[1] <= <GND>
+U2_128_A[2] <= <GND>
+U2_138_select <= <VCC>
+U3_138_select <= <GND>
 row[0] => row_val.DATAB
 row[0] => Equal0.IN2
 row[1] => row_val.DATAB
 row[1] => Equal0.IN1
 row[2] => row_val.DATAB
 row[2] => Equal0.IN0
+col[0] <= col[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[1] <= col[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[2] <= col[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyboard_val[0] <= keyboard_val[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyboard_val[1] <= keyboard_val[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyboard_val[2] <= keyboard_val[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyboard_val[3] <= keyboard_val[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyboard_val[4] <= keyboard_val[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyboard_val[5] <= keyboard_val[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyboard_val[6] <= keyboard_val[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyboard_val[7] <= keyboard_val[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

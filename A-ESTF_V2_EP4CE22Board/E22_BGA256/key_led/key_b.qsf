@@ -24,11 +24,11 @@
 
 
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE EP4CE10F17C8
+set_global_assignment -name DEVICE EP4CE22F17C8
 set_global_assignment -name TOP_LEVEL_ENTITY key_b
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 6.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:05:03  AUGUST 30, 2010"
-set_global_assignment -name LAST_QUARTUS_VERSION 11.0
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name VERILOG_FILE key_b.v
 set_location_assignment PIN_J13 -to Led[0]
 set_location_assignment PIN_F16 -to Led[1]
