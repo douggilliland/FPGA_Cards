@@ -1,0 +1,322 @@
+{| class="wikitable"
+! 60Pin
+! Pin (0.1")
+! FPGA_Pin
+! Function
+! 
+! 60Pin
+! Pin (0.1")
+! FPGA_Pin
+! Function
+|-
+| 1
+| 49
+| 5V
+| Power
+| 
+| 2
+| 50
+| 5V
+| Power
+|-
+| 3
+| 47
+| NC
+| 
+| 
+| 4
+| 48
+| NC
+| 
+|-
+| 5
+| 37
+| GND
+| Power
+| 
+| 6
+| 38
+| GND
+| Power
+|-
+| 7
+| 45
+| PIN_B1
+| ps2kbd_clk
+| 
+| 8
+| 46
+| PIN_C2
+| ps2kbd_dat
+|-
+| 9
+| 
+| PIN_D1
+| segdata[0]
+| 
+| 10
+| 
+| NC
+| NC
+|-
+| 11
+| 
+| PIN_F3
+| segdata[1]
+| 
+| 12
+| 44
+| PIN_F2
+| segdata[2]
+|-
+| 13
+| 
+| PIN_F1
+| segdata[3]
+| 
+| 14
+| 42
+| PIN_G2
+| segdata[4]
+|-
+| 15
+| 36
+| PIN_G1
+| segdata[5]
+| 
+| 16
+| 40
+| PIN_E7
+| segdata[6]
+|-
+| 17
+| 34
+| PIN_E6
+| segdata[7]
+| 
+| 18
+| 35
+| PIN_F8
+| U2_138_A[0]
+|-
+| 19
+| 32
+| PIN_L4
+| U2_128_A[1]
+| 
+| 20
+| 33
+| PIN_L3
+| U2_138_A[2]
+|-
+| 21
+| 28
+| PIN_J1
+| U3_138_select
+| 
+| 22
+| 31
+| PIN_G5
+| U2_138_select
+|-
+| 23
+| 26
+| PIN_K1
+| ds1820_dq
+| 
+| 24
+| 
+| PIN_J2
+| SD-D3/SDCS
+|-
+| 25
+| 27
+| PIN_P6
+| SD-CMD/Sdin/MOSI
+| 
+| 26
+| 25
+| PIN_K2
+| SDCS/SD-CLK
+|-
+| 27
+| 23
+| PIN_L8
+| SD-D0/Sdout/MISO
+| 
+| 28
+| 24
+| PIN_L7
+| vga_vs
+|-
+| 29
+| 19
+| PIN_K5
+| vga_r[4]
+| 
+| 30
+| 20
+| PIN_M10
+| vga_hs
+|-
+| 31
+| 13
+| GND
+| Power
+| 
+| 32
+| 14
+| GND
+| Power
+|-
+| 33
+| 
+| PIN_TMS
+| TMS
+| 
+| 34
+| 
+| TDO
+| TDO
+|-
+| 35
+| 
+| PIN_TCK
+| TCK
+| 
+| 36
+| 
+| TDI
+| TDI
+|-
+| 37
+| 17
+| PIN_L1
+| vga_r[2]
+| 
+| 38
+| 18
+| PIN_L2
+| vga_r[3]
+|-
+| 39
+| 15
+| PIN_N1
+| vga_r[0]
+| 
+| 40
+| 16
+| PIN_N2
+| vga_r[1]
+|-
+| 41
+| 11
+| PIN_P1
+| vga_g[4]
+| 
+| 42
+| 12
+| PIN_P2
+| vga_g[5]
+|-
+| 43
+| 9
+| PIN_R1
+| vga_g[2]
+| 
+| 44
+| 10
+| PIN_T2
+| vga_g[3]
+|-
+| 45
+| 7
+| PIN_N3
+| vga_g[0]
+| 
+| 46
+| 8
+| PIN_P3
+| vga_g[1]
+|-
+| 47
+| 5
+| PIN_N5
+| vga_b[3]
+| 
+| 48
+| 6
+| PIN_R3
+| vga_b[4]
+|-
+| 49
+| 3
+| PIN_T3
+| vga_b[1]
+| 
+| 50
+| 4
+| PIN_R4
+| vga_b[2]
+|-
+| 51
+| 1
+| PIN_T4
+| I2C-SDA
+| 
+| 52
+| 2
+| PIN_R5
+| I2C_SCL
+|-
+| 53
+| 
+| PIN_T3
+| RS232-TX
+| 
+| 54
+| 
+| PIN_R6
+| vga_b[0]
+|-
+| 55
+| 21
+| GND
+| Power
+| 
+| 56
+| 22
+| GND
+| Power
+|-
+| 57
+| 
+| PIN_T6
+| RS232-RX
+| 
+| 58
+| 
+| PIN_R7
+| ROW0
+|-
+| 59
+| 
+| PIN_T7
+| ROW1
+| 
+| 60
+| 
+| PIN_N6
+| ROW2
+|-
+| 
+| 29
+| GND
+| Power
+| 
+| 
+| 30
+| GND
+| Power
+|-
+|}
