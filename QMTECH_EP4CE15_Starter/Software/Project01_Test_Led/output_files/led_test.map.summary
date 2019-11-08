@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Mar 03 19:26:04 2019
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : led_test
+Top-level Entity Name : led_test
+Family : Cyclone IV E
+Total logic elements : 59
+    Total combinational functions : 59
+    Dedicated logic registers : 33
+Total registers : 33
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
