@@ -1,6 +1,6 @@
 = FPGA_Cards =
 
-<img src="http://land-boards.com/blwiki/images/9/95/FPGA_Cards-720.jpg"></img>
+<img src="http://land-boards.com/blwiki/images/d/dc/RETRO-EP4_TOP_BOTTOM-720px.jpg"></img>
 
 The following are purchased FPGA cards. Many of them are directly suitable for retro computing. See [https://github.com/douggilliland/MultiCompMulticomp Multicomp] for more details. I don't have all of them but have contemplated all of them.
 
