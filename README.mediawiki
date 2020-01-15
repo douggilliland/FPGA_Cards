@@ -18,7 +18,7 @@ The following are purchased FPGA cards. Many of them are directly suitable for r
 
 == EP2C5_Cyclone_II_Mini_Board ==
 
-* [https://www.aliexpress.com/item/Drop-Ship-Wholesale-ALTERA-FPGA-CycloneII-EP2C5T144-Learning-Board-Mini-System-Development-Board-New-APR29/33012725261.html?spm=2114.search0104.3.28.10d4455fEsWiEC&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=d185b0be-ba9d-4bdc-a62b-1b7edca60141-4&algo_pvid=d185b0be-ba9d-4bdc-a62b-1b7edca60141&transAbTest=ae803_3 FPGA Card Webpage]
+* [https://www.aliexpress.com/item/Drop-Ship-Wholesale-ALTERA-FPGA-CycloneII-EP2C5T144-Learning-Board-Mini-System-Development-Board-New-APR29/33012725261.html?spm=2114.search0104.3.28.10d4455fEsWiEC&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=d185b0be-ba9d-4bdc-a62b-1b7edca60141-4&algo_pvid=d185b0be-ba9d-4bdc-a62b-1b7edca60141&transAbTest=ae803_3 AliExpress FPGA Card Webpage]
 
 == QMTECH_EP4CE15 ==
 
