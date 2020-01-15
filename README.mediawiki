@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/douggilliland/FPGA_Cards/master/FPGA_Cards-720.jpg"></img>
 
-The following are purchased FPGA cards. Many of them are directly suitable for retro computing. See [https://github.com/douggilliland/MultiCompMulticomp Multicomp] for more details. I don't have all of them but have contemplated all of them.
+The following are purchased FPGA cards. Many of them are directly suitable for retro computing. See [https://github.com/douggilliland/MultiCompMulticomp Multicomp] for more details.
 
 == A-C4CE6_Card ==
 
