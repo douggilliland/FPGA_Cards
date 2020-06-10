@@ -1,0 +1,6 @@
+Switch,J9 Pin,FPGA Pin
+enablebtn ,J9-25 ,PIN_J15 
+resetbtn,J9-27 ,PIN_J16 
+sw_halt ,J9-30 ,PIN_N14 
+sw_cont ,J9-32 ,PIN_P15 
+led_run,J9-34 ,PIN_T15 

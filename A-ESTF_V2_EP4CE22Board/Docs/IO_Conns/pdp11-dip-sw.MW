@@ -1,0 +1,22 @@
+{| class="wikitable"
+! Function
+! DIP Switch
+! FPGA Pin
+|-
+| Swap 0 button
+| 1
+| PIN_M16 
+|-
+| treset
+| 2
+| PIN_M15 
+|-
+| Swap 2 button
+| 3
+| PIN_B8 
+|-
+| Swap console
+| 4
+| PIN_A8 
+|-
+|}
