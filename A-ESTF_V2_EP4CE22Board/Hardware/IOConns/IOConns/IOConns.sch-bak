@@ -310,4 +310,6 @@ Text Notes 7100 4500 0    50   ~ 0
 Pin 1 next to\nJ5 silkscreen
 Text Notes 4950 4500 0    50   ~ 0
 Pin 1 next to\nJ10 silkscreen
+Text Notes 8800 4300 0    50   ~ 0
+LCD (ref)
 $EndSCHEMATC
