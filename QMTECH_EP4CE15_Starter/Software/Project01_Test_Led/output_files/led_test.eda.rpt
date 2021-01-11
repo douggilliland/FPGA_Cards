@@ -1,6 +1,6 @@
 EDA Netlist Writer report for led_test
-Sun Mar 03 19:26:45 2019
-Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Sun Jan 10 15:48:01 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -17,27 +17,27 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Altera and sold by Altera or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Mar 03 19:26:45 2019 ;
+; EDA Netlist Writer Status ; Successful - Sun Jan 10 15:48:01 2021 ;
 ; Revision Name             ; led_test                              ;
 ; Top-level Entity Name     ; led_test                              ;
 ; Family                    ; Cyclone IV E                          ;
@@ -51,7 +51,7 @@ agreement for further details.
 ; Option                                                                                            ; Setting            ;
 +---------------------------------------------------------------------------------------------------+--------------------+
 ; Tool Name                                                                                         ; ModelSim (Verilog) ;
-; Generate netlist for functional simulation only                                                   ; Off                ;
+; Generate functional simulation netlist                                                            ; Off                ;
 ; Time scale                                                                                        ; 1 ps               ;
 ; Truncate long hierarchy paths                                                                     ; Off                ;
 ; Map illegal HDL characters                                                                        ; Off                ;
@@ -67,20 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                   ;
-+--------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                              ;
-+--------------------------------------------------------------------------------------------------------------+
-; E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/led_test_8_1200mv_85c_slow.vo     ;
-; E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/led_test_8_1200mv_0c_slow.vo      ;
-; E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/led_test_min_1200mv_0c_fast.vo    ;
-; E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/led_test.vo                       ;
-; E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/led_test_8_1200mv_85c_v_slow.sdo  ;
-; E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/led_test_8_1200mv_0c_v_slow.sdo   ;
-; E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/led_test_min_1200mv_0c_v_fast.sdo ;
-; E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/led_test_v.sdo                    ;
-+--------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                                          ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/led_test_8_1200mv_85c_slow.vo     ;
+; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/led_test_8_1200mv_0c_slow.vo      ;
+; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/led_test_min_1200mv_0c_fast.vo    ;
+; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/led_test.vo                       ;
+; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/led_test_8_1200mv_85c_v_slow.sdo  ;
+; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/led_test_8_1200mv_0c_v_slow.sdo   ;
+; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/led_test_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/led_test_v.sdo                    ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,21 +88,22 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Sun Mar 03 19:26:43 2019
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sun Jan 10 15:48:00 2021
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off led_test -c led_test
-Info (204019): Generated file led_test_8_1200mv_85c_slow.vo in folder "E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file led_test_8_1200mv_0c_slow.vo in folder "E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file led_test_min_1200mv_0c_fast.vo in folder "E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file led_test.vo in folder "E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file led_test_8_1200mv_85c_v_slow.sdo in folder "E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file led_test_8_1200mv_0c_v_slow.sdo in folder "E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file led_test_min_1200mv_0c_v_fast.sdo in folder "E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file led_test_v.sdo in folder "E:/Altera/Cyclone_IV/SW_Starter_Kit/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4850 megabytes
-    Info: Processing ended: Sun Mar 03 19:26:45 2019
-    Info: Elapsed time: 00:00:02
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file led_test_8_1200mv_85c_slow.vo in folder "C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file led_test_8_1200mv_0c_slow.vo in folder "C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file led_test_min_1200mv_0c_fast.vo in folder "C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file led_test.vo in folder "C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file led_test_8_1200mv_85c_v_slow.sdo in folder "C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file led_test_8_1200mv_0c_v_slow.sdo in folder "C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file led_test_min_1200mv_0c_v_fast.sdo in folder "C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file led_test_v.sdo in folder "C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_EP4CE15_Starter/Software/Project01_Test_Led/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4644 megabytes
+    Info: Processing ended: Sun Jan 10 15:48:01 2021
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
