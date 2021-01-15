@@ -1,0 +1,16 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios_ii.nios2_gen2_0.reset_bridge -pg 1
+preplace inst nios_ii.nios2_gen2_0.clock_bridge -pg 1
+preplace inst nios_ii.nios2_gen2_0 -pg 1 -lvl 2 -y 110
+preplace inst nios_ii -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios_ii.clk_0 -pg 1 -lvl 1 -y 130
+preplace inst nios_ii.onchip_memory2_0 -pg 1 -lvl 3 -y 30
+preplace inst nios_ii.nios2_gen2_0.cpu -pg 1
+preplace netloc EXPORT<net_container>nios_ii</net_container>(SLAVE)nios_ii.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_ii</net_container>(SLAVE)nios_ii.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>nios_ii</net_container>(SLAVE)onchip_memory2_0.clk1,(MASTER)clk_0.clk,(SLAVE)nios2_gen2_0.clk) 1 1 2 260 50 660
+preplace netloc FAN_OUT<net_container>nios_ii</net_container>(SLAVE)nios2_gen2_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)onchip_memory2_0.reset1) 1 1 2 280 70 680
+preplace netloc INTERCONNECT<net_container>nios_ii</net_container>(MASTER)nios2_gen2_0.data_master,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)onchip_memory2_0.s1) 1 1 2 300 250 700
+levelinfo -pg 1 0 50 870
+levelinfo -hier nios_ii 60 90 420 750 860

@@ -1,0 +1,130 @@
+Flow report for smg_interface_demo
+Wed Oct 03 21:20:12 2018
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Wed Oct 03 21:19:59 2018           ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
+; Revision Name                   ; smg_interface_demo                              ;
+; Top-level Entity Name           ; smg_interface_demo                              ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CEFA2F23C8                                     ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 50 / 9,430 ( < 1 % )                            ;
+; Total registers                 ; 98                                              ;
+; Total pins                      ; 13 / 224 ( 6 % )                                ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0 / 1,802,240 ( 0 % )                           ;
+; Total DSP Blocks                ; 0 / 25 ( 0 % )                                  ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0 / 4 ( 0 % )                                   ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/03/2018 21:18:59 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; smg_interface_demo  ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                ;
++-------------------------------------+--------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+--------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 79497678721010.153857273910960 ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing              ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing              ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                     ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                     ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                       ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; --          ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --          ; --         ;
++-------------------------------------+--------------------------------+---------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 5028 MB             ; 00:00:22                           ;
+; Fitter                    ; 00:00:25     ; 1.1                     ; 6504 MB             ; 00:00:31                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 5005 MB             ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 5304 MB             ; 00:00:07                           ;
+; Total                     ; 00:00:57     ; --                      ; --                  ; 00:01:05                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; evelovely        ; Windows 8 ; 6.2        ; x86_64         ;
+; Fitter                    ; evelovely        ; Windows 8 ; 6.2        ; x86_64         ;
+; Assembler                 ; evelovely        ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; evelovely        ; Windows 8 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off smg_interface_demo -c smg_interface_demo
+quartus_fit --read_settings_files=off --write_settings_files=off smg_interface_demo -c smg_interface_demo
+quartus_asm --read_settings_files=off --write_settings_files=off smg_interface_demo -c smg_interface_demo
+quartus_sta smg_interface_demo -c smg_interface_demo
+
+
+

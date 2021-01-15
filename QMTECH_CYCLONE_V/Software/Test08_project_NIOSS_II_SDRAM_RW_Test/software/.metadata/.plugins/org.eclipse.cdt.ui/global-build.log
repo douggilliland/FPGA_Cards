@@ -1,0 +1,36 @@
+22:36:25 **** Incremental Build of configuration Nios II for project HelloWorld ****
+make all 
+Info: Building ../HelloWorld_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../HelloWorld_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../HelloWorld_bsp//HAL/inc -I../HelloWorld_bsp/ -I../HelloWorld_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:110:3: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+   memcpy(pDes, szData, sizeof(szData));
+   ^
+hello_world_small.c:110:3: warning: incompatible implicit declaration of built-in function 'memcpy'
+hello_world_small.c:128:3: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+   memset(szData, 0x00, 1024);
+   ^
+hello_world_small.c:128:3: warning: incompatible implicit declaration of built-in function 'memset'
+hello_world_small.c:92:21: warning: unused variable 'pSrc' [-Wunused-variable]
+     alt_u16 *pDes, *pSrc;
+                     ^
+hello_world_small.c:91:35: warning: unused variable 'k' [-Wunused-variable]
+  unsigned int i = 0, counter = 0, k = 0;
+                                   ^
+Info: Linking HelloWorld.elf
+nios2-elf-g++  -T'../HelloWorld_bsp//linker.x' -msys-crt0='../HelloWorld_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../HelloWorld_bsp/  -msmallc  -Wl,-Map=HelloWorld.map   -Os -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o HelloWorld.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert HelloWorld.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_ii --quartus_project_dir "E:/Altera/Software/Test08_project_NIOSS_II_Basic" --jdi ../..//output_files/HelloWorld.jdi --sopcinfo E:/Altera/Software/Test08_project_NIOSS_II_Basic/software/HelloWorld_bsp/../../nios_ii.sopcinfo
+Info: (HelloWorld.elf) 976 Bytes program size (code + initialized data).
+Info:                  32767 KBytes free for stack + heap.
+Info: Creating HelloWorld.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source HelloWorld.elf >HelloWorld.objdump
+[HelloWorld build complete]
+22:36:31 **** Incremental Build of configuration Nios II for project HelloWorld ****
+make all 
+Info: Building ../HelloWorld_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../HelloWorld_bsp/
+[BSP build complete]
+[HelloWorld build complete]

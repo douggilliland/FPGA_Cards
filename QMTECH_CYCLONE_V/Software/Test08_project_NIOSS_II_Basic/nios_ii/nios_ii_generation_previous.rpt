@@ -1,0 +1,83 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\Altera\Software\Test08_project_NIOSS_II_Basic\nios_ii.qsys --block-symbol-file --output-directory=E:\Altera\Software\Test08_project_NIOSS_II_Basic\nios_ii --family="Cyclone V" --part=5CEFA2F23C8
+Progress: Loading Test08_project_NIOSS_II_Basic/nios_ii.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 15.1]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 15.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 15.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\Altera\Software\Test08_project_NIOSS_II_Basic\nios_ii.qsys --synthesis=VERILOG --output-directory=E:\Altera\Software\Test08_project_NIOSS_II_Basic\nios_ii\synthesis --family="Cyclone V" --part=5CEFA2F23C8
+Progress: Loading Test08_project_NIOSS_II_Basic/nios_ii.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 15.1]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 15.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 15.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nios_ii: Generating nios_ii "nios_ii" for QUARTUS_SYNTH
+Info: nios2_gen2_0: "nios_ii" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'nios_ii_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/altera/15.1/quartus/bin64/perl/bin/perl.exe -I C:/altera/15.1/quartus/bin64/perl/lib -I C:/altera/15.1/quartus/sopc_builder/bin/europa -I C:/altera/15.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/15.1/quartus/sopc_builder/bin -I C:/altera/15.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_ii_onchip_memory2_0 --dir=C:/Users/EVELOV~1/AppData/Local/Temp/alt7503_4884565395572653672.dir/0001_onchip_memory2_0_gen/ --quartus_dir=C:/altera/15.1/quartus --verilog --config=C:/Users/EVELOV~1/AppData/Local/Temp/alt7503_4884565395572653672.dir/0001_onchip_memory2_0_gen//nios_ii_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'nios_ii_onchip_memory2_0'
+Info: onchip_memory2_0: "nios_ii" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "nios_ii" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "nios_ii" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "nios_ii" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'nios_ii_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/altera/15.1/quartus/bin64//eperlcmd.exe -I C:/altera/15.1/quartus/bin64//perl/lib -I C:/altera/15.1/quartus/sopc_builder/bin/europa -I C:/altera/15.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/15.1/quartus/sopc_builder/bin -I C:/altera/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/altera/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/altera/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/altera/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/altera/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios_ii_nios2_gen2_0_cpu --dir=C:/Users/EVELOV~1/AppData/Local/Temp/alt7503_4884565395572653672.dir/0004_cpu_gen/ --quartus_bindir=C:/altera/15.1/quartus/bin64/ --verilog --config=C:/Users/EVELOV~1/AppData/Local/Temp/alt7503_4884565395572653672.dir/0004_cpu_gen//nios_ii_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2017.12.03 16:36:40 (*) Starting Nios II generation
+Info: cpu: # 2017.12.03 16:36:40 (*)   Checking for plaintext license.
+Info: cpu: # 2017.12.03 16:36:46 (*)   Plaintext license not found.
+Info: cpu: # 2017.12.03 16:36:46 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2017.12.03 16:36:50 (*)   Encrypted license found.  SOF will not be time-limited.
+Info: cpu: # 2017.12.03 16:36:50 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2017.12.03 16:36:50 (*)   Creating all objects for CPU
+Info: cpu: # 2017.12.03 16:36:50 (*)     Testbench
+Info: cpu: # 2017.12.03 16:36:51 (*)     Instruction decoding
+Info: cpu: # 2017.12.03 16:36:51 (*)       Instruction fields
+Info: cpu: # 2017.12.03 16:36:51 (*)       Instruction decodes
+Info: cpu: # 2017.12.03 16:36:51 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2017.12.03 16:36:51 (*)       Instruction controls
+Info: cpu: # 2017.12.03 16:36:51 (*)     Pipeline frontend
+Info: cpu: # 2017.12.03 16:36:52 (*)     Pipeline backend
+Info: cpu: # 2017.12.03 16:36:54 (*)   Generating RTL from CPU objects
+Info: cpu: # 2017.12.03 16:36:57 (*)   Creating encrypted RTL
+Info: cpu: # 2017.12.03 16:36:58 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'nios_ii_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: nios2_gen2_0_debug_mem_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "nios2_gen2_0_debug_mem_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: nios2_gen2_0_debug_mem_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "nios2_gen2_0_debug_mem_slave_agent"
+Info: nios2_gen2_0_debug_mem_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "nios2_gen2_0_debug_mem_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: nios2_gen2_0_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "nios2_gen2_0_data_master_limiter"
+Info: Reusing file E:/Altera/Software/Test08_project_NIOSS_II_Basic/nios_ii/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file E:/Altera/Software/Test08_project_NIOSS_II_Basic/nios_ii/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: nios_ii: Done "nios_ii" with 21 modules, 41 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

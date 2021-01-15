@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SD_cs",
+					"strict" : false
+				},
+				{
+					"name" : "SD_datain",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "SD_dataout",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

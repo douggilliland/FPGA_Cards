@@ -1,0 +1,6 @@
+module HelloWorldNIOS(clk, rst);
+input clk;
+input rst;
+
+NIOS u0()
+endmodule;

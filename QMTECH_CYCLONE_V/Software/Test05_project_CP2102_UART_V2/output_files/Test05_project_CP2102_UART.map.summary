@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Oct 03 21:55:23 2018
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : Test05_project_CP2102_UART
+Top-level Entity Name : Test05_project_CP2102_UART
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 70
+Total pins : 4
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

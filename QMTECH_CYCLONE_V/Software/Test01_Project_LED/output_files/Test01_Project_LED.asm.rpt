@@ -1,0 +1,91 @@
+Assembler report for Test01_Project_LED
+Tue Nov 12 11:17:34 2019
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Assembler Generated Files
+  5. Assembler Device Options: E:/Altera/Cyclone_V/Software/Test01_Project_LED/output_files/Test01_Project_LED.sof
+  6. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Tue Nov 12 11:17:34 2019 ;
+; Revision Name         ; Test01_Project_LED                    ;
+; Top-level Entity Name ; Test01_Project_LED                    ;
+; Family                ; Cyclone V                             ;
+; Device                ; 5CEFA2F23I7                           ;
++-----------------------+---------------------------------------+
+
+
++----------------------------------+
+; Assembler Settings               ;
++--------+---------+---------------+
+; Option ; Setting ; Default Value ;
++--------+---------+---------------+
+
+
++-------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                           ;
++-------------------------------------------------------------------------------------+
+; File Name                                                                           ;
++-------------------------------------------------------------------------------------+
+; E:/Altera/Cyclone_V/Software/Test01_Project_LED/output_files/Test01_Project_LED.sof ;
++-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: E:/Altera/Cyclone_V/Software/Test01_Project_LED/output_files/Test01_Project_LED.sof ;
++----------------+----------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                      ;
++----------------+----------------------------------------------------------------------------------------------+
+; Device         ; 5CEFA2F23I7                                                                                  ;
+; JTAG usercode  ; 0x004E6DB1                                                                                   ;
+; Checksum       ; 0x004E6DB1                                                                                   ;
++----------------+----------------------------------------------------------------------------------------------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+    Info: Processing started: Tue Nov 12 11:17:30 2019
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Test01_Project_LED -c Test01_Project_LED
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 5001 megabytes
+    Info: Processing ended: Tue Nov 12 11:17:34 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+

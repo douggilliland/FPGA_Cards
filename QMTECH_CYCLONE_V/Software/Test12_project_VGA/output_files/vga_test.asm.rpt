@@ -1,0 +1,91 @@
+Assembler report for vga_test
+Wed Oct 10 22:27:40 2018
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Assembler Generated Files
+  5. Assembler Device Options: E:/Altera/Cyclone_V/Software/Test12_project_VGA/output_files/vga_test.sof
+  6. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Wed Oct 10 22:27:40 2018 ;
+; Revision Name         ; vga_test                              ;
+; Top-level Entity Name ; vga_test                              ;
+; Family                ; Cyclone V                             ;
+; Device                ; 5CEFA2F23C8                           ;
++-----------------------+---------------------------------------+
+
+
++----------------------------------+
+; Assembler Settings               ;
++--------+---------+---------------+
+; Option ; Setting ; Default Value ;
++--------+---------+---------------+
+
+
++---------------------------------------------------------------------------+
+; Assembler Generated Files                                                 ;
++---------------------------------------------------------------------------+
+; File Name                                                                 ;
++---------------------------------------------------------------------------+
+; E:/Altera/Cyclone_V/Software/Test12_project_VGA/output_files/vga_test.sof ;
++---------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Assembler Device Options: E:/Altera/Cyclone_V/Software/Test12_project_VGA/output_files/vga_test.sof ;
++----------------+------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                            ;
++----------------+------------------------------------------------------------------------------------+
+; Device         ; 5CEFA2F23C8                                                                        ;
+; JTAG usercode  ; 0x0050C2A5                                                                         ;
+; Checksum       ; 0x0050C2A5                                                                         ;
++----------------+------------------------------------------------------------------------------------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+    Info: Processing started: Wed Oct 10 22:27:34 2018
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off vga_test -c vga_test
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 5008 megabytes
+    Info: Processing ended: Wed Oct 10 22:27:40 2018
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
+
+

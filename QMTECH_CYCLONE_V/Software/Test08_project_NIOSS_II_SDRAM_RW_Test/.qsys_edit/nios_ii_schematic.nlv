@@ -1,0 +1,22 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios_ii.nios2_gen2_0.reset_bridge -pg 1
+preplace inst nios_ii.nios2_gen2_0.clock_bridge -pg 1
+preplace inst nios_ii.nios2_gen2_0 -pg 1 -lvl 3 -y 110
+preplace inst nios_ii -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios_ii.new_sdram_controller_0 -pg 1 -lvl 4 -y 250
+preplace inst nios_ii.pll_0 -pg 1 -lvl 2 -y 130
+preplace inst nios_ii.clk_0 -pg 1 -lvl 1 -y 130
+preplace inst nios_ii.onchip_memory2_0 -pg 1 -lvl 4 -y 30
+preplace inst nios_ii.jtag_uart_0 -pg 1 -lvl 4 -y 150
+preplace inst nios_ii.nios2_gen2_0.cpu -pg 1
+preplace netloc EXPORT<net_container>nios_ii</net_container>(SLAVE)nios_ii.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>nios_ii</net_container>(SLAVE)jtag_uart_0.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)new_sdram_controller_0.clk,(MASTER)pll_0.outclk0) 1 2 2 680 270 1140
+preplace netloc EXPORT<net_container>nios_ii</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)nios_ii.reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>nios_ii</net_container>(SLAVE)pll_0.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)new_sdram_controller_0.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)jtag_uart_0.reset,(MASTER)clk_0.clk_reset) 1 1 3 390 200 700 290 1160
+preplace netloc POINT_TO_POINT<net_container>nios_ii</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)nios2_gen2_0.irq) 1 3 1 N
+preplace netloc INTERCONNECT<net_container>nios_ii</net_container>(MASTER)nios2_gen2_0.instruction_master,(SLAVE)onchip_memory2_0.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)nios2_gen2_0.debug_mem_slave,(MASTER)nios2_gen2_0.data_master,(SLAVE)new_sdram_controller_0.s1) 1 2 2 720 250 1120
+preplace netloc POINT_TO_POINT<net_container>nios_ii</net_container>(MASTER)clk_0.clk,(SLAVE)pll_0.refclk) 1 1 1 N
+preplace netloc EXPORT<net_container>nios_ii</net_container>(SLAVE)new_sdram_controller_0.wire,(SLAVE)nios_ii.new_sdram_controller_0_wire) 1 0 4 NJ 320 NJ 320 NJ 320 NJ
+levelinfo -pg 1 0 180 1380
+levelinfo -hier nios_ii 190 220 550 880 1230 1370

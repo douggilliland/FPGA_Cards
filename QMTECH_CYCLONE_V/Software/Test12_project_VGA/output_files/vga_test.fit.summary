@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed Oct 10 22:27:28 2018
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : vga_test
+Top-level Entity Name : vga_test
+Family : Cyclone V
+Device : 5CEFA2F23C8
+Timing Models : Final
+Logic utilization (in ALMs) : 90 / 9,430 ( < 1 % )
+Total registers : 71
+Total pins : 21 / 224 ( 9 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 1,802,240 ( 0 % )
+Total RAM Blocks : 0 / 176 ( 0 % )
+Total DSP Blocks : 0 / 25 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 4 ( 25 % )
+Total DLLs : 0 / 4 ( 0 % )
