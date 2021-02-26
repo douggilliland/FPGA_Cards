@@ -308,8 +308,8 @@ F 3 "http://www.raystar-optronics.com/down.php?ProID=18" H 9100 3300 50  0001 C 
 $EndComp
 Text Notes 7100 4500 0    50   ~ 0
 Pin 1 next to\nJ5 silkscreen
-Text Notes 4950 4500 0    50   ~ 0
-Pin 1 next to\nJ10 silkscreen
+Text Notes 6000 4500 0    50   ~ 0
+Pin 2 next to\nJ10 silkscreen
 Text Notes 8800 4300 0    50   ~ 0
 LCD (ref)
 $EndSCHEMATC

@@ -312,4 +312,8 @@ Text Notes 6000 4500 0    50   ~ 0
 Pin 2 next to\nJ10 silkscreen
 Text Notes 8800 4300 0    50   ~ 0
 LCD (ref)
+Text Label 6150 4300 0    50   ~ 0
+LCD_VCC
+Text Label 5000 4300 0    50   ~ 0
+LCD_VCC
 $EndSCHEMATC
