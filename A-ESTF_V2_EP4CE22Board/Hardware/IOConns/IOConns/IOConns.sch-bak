@@ -13,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Connector_Generic:Conn_02x20_Odd_Even J10
-U 1 1 5EE48D9C
-P 5700 3400
-F 0 "J10" H 5750 2175 50  0000 C CNN
-F 1 "Conn_02x20_Odd_Even" H 5750 2266 50  0000 C CNN
-F 2 "" H 5700 3400 50  0001 C CNN
-F 3 "~" H 5700 3400 50  0001 C CNN
-	1    5700 3400
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	7600 2350 6950 2350
 Wire Wire Line
@@ -65,81 +54,69 @@ Wire Wire Line
 Wire Wire Line
 	7600 4250 6950 4250
 Wire Wire Line
-	6550 2400 6000 2400
+	5550 2650 5050 2650
 Wire Wire Line
-	6550 2500 6000 2500
+	5550 2750 5050 2750
 Wire Wire Line
-	6550 2600 6000 2600
+	5550 2850 5050 2850
 Wire Wire Line
-	6550 2700 6000 2700
+	5550 2950 5050 2950
 Wire Wire Line
-	6550 2800 6000 2800
+	5550 3050 5050 3050
 Wire Wire Line
-	6550 2900 6000 2900
+	5550 3150 5050 3150
 Wire Wire Line
-	6550 3000 6000 3000
+	5550 3250 5050 3250
 Wire Wire Line
-	6550 3100 6000 3100
+	5550 3350 5050 3350
 Wire Wire Line
-	6550 3200 6000 3200
+	5550 3450 5050 3450
 Wire Wire Line
-	6550 3300 6000 3300
+	5550 3550 5050 3550
 Wire Wire Line
-	6550 3400 6000 3400
+	5550 3650 5050 3650
 Wire Wire Line
-	6550 3500 6000 3500
+	5550 3750 5050 3750
 Wire Wire Line
-	6550 3600 6000 3600
+	5550 3850 5050 3850
 Wire Wire Line
-	6550 3700 6000 3700
+	5550 3950 5050 3950
 Wire Wire Line
-	6550 3800 6000 3800
+	5550 4050 5050 4050
 Wire Wire Line
-	6550 3900 6000 3900
+	5550 4250 5050 4250
 Wire Wire Line
-	6550 4000 6000 4000
+	6500 2650 6050 2650
 Wire Wire Line
-	6550 4100 6000 4100
+	6500 2750 6050 2750
 Wire Wire Line
-	6550 4300 6000 4300
+	6500 2850 6050 2850
 Wire Wire Line
-	5500 2400 4950 2400
+	6500 2950 6050 2950
 Wire Wire Line
-	5500 2500 4950 2500
+	6500 3050 6050 3050
 Wire Wire Line
-	5500 2600 4950 2600
+	6500 3150 6050 3150
 Wire Wire Line
-	5500 2700 4950 2700
+	6500 3250 6050 3250
 Wire Wire Line
-	5500 2800 4950 2800
+	6500 3350 6050 3350
 Wire Wire Line
-	5500 2900 4950 2900
+	6500 3450 6050 3450
 Wire Wire Line
-	5500 3000 4950 3000
+	6500 3550 6050 3550
 Wire Wire Line
-	5500 3100 4950 3100
+	6500 3650 6050 3650
 Wire Wire Line
-	5500 3200 4950 3200
+	6500 3750 6050 3750
 Wire Wire Line
-	5500 3300 4950 3300
+	6500 3850 6050 3850
 Wire Wire Line
-	5500 3400 4950 3400
+	6500 3950 6050 3950
 Wire Wire Line
-	5500 3500 4950 3500
+	6500 4050 6050 4050
 Wire Wire Line
-	5500 3600 4950 3600
-Wire Wire Line
-	5500 3700 4950 3700
-Wire Wire Line
-	5500 3800 4950 3800
-Wire Wire Line
-	5500 3900 4950 3900
-Wire Wire Line
-	5500 4000 4950 4000
-Wire Wire Line
-	5500 4100 4950 4100
-Wire Wire Line
-	5500 4300 4950 4300
+	6500 4250 6050 4250
 $Comp
 L Connector_Generic:Conn_01x20 J5
 U 1 1 5EE57551
@@ -164,44 +141,44 @@ J3-1
 $Comp
 L Connector_Generic:Conn_01x03 J4
 U 1 1 5EE5CACD
-P 7800 2000
-F 0 "J4" H 7750 2200 50  0000 L CNN
-F 1 "Conn_01x03" V 7900 1750 50  0000 L CNN
-F 2 "" H 7800 2000 50  0001 C CNN
-F 3 "~" H 7800 2000 50  0001 C CNN
-	1    7800 2000
+P 9200 2600
+F 0 "J4" H 9150 2800 50  0000 L CNN
+F 1 "Conn_01x03" V 9300 2350 50  0000 L CNN
+F 2 "" H 9200 2600 50  0001 C CNN
+F 3 "~" H 9200 2600 50  0001 C CNN
+	1    9200 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7600 2000 6950 2000
-Text Label 7050 2000 0    50   ~ 0
+	9000 2600 8350 2600
+Text Label 8450 2600 0    50   ~ 0
 J4-2(PWR)
 Wire Wire Line
-	7600 1900 6950 1900
+	9000 2500 8350 2500
 Wire Wire Line
-	7600 2100 6950 2100
-Text Label 7050 1900 0    50   ~ 0
+	9000 2700 8350 2700
+Text Label 8450 2500 0    50   ~ 0
 +5V
-Text Label 7050 2100 0    50   ~ 0
+Text Label 8450 2700 0    50   ~ 0
 +3.3V
 $Comp
 L Connector_Generic:Conn_01x03 J3
 U 1 1 5EE645CE
-P 7800 1550
-F 0 "J3" H 7750 1750 50  0000 L CNN
-F 1 "Conn_01x03" V 7900 1350 50  0000 L CNN
-F 2 "" H 7800 1550 50  0001 C CNN
-F 3 "~" H 7800 1550 50  0001 C CNN
-	1    7800 1550
+P 9200 2150
+F 0 "J3" H 9150 2350 50  0000 L CNN
+F 1 "Conn_01x03" V 9300 1950 50  0000 L CNN
+F 2 "" H 9200 2150 50  0001 C CNN
+F 3 "~" H 9200 2150 50  0001 C CNN
+	1    9200 2150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7600 1650 6950 1650
-Text Label 7050 1650 0    50   ~ 0
+	9000 2250 8350 2250
+Text Label 8450 2250 0    50   ~ 0
 GND
 Wire Wire Line
-	7600 1450 6950 1450
-Text Label 7050 1450 0    50   ~ 0
+	9000 2050 8350 2050
+Text Label 8450 2050 0    50   ~ 0
 J3-1
 Text Label 7050 2650 0    50   ~ 0
 PUP2
@@ -233,83 +210,180 @@ Text Label 7050 3950 0    50   ~ 0
 PIN_T15
 Text Label 7050 4050 0    50   ~ 0
 PIN_
-Text Notes 8200 3900 0    50   ~ 0
+Text Notes 8200 4050 0    50   ~ 0
 LCD_RS
-Text Notes 8200 3800 0    50   ~ 0
+Text Notes 8200 3950 0    50   ~ 0
 LCD_RW
-Text Notes 8200 3700 0    50   ~ 0
+Text Notes 8200 3850 0    50   ~ 0
 LCD_EN
-Text Notes 8200 3600 0    50   ~ 0
+Text Notes 8200 3750 0    50   ~ 0
 LCD_D0
-Text Notes 8200 3500 0    50   ~ 0
+Text Notes 8200 3650 0    50   ~ 0
 LCD_D1
-Text Notes 8200 3400 0    50   ~ 0
+Text Notes 8200 3550 0    50   ~ 0
 LCD_D2
-Text Notes 8200 3300 0    50   ~ 0
+Text Notes 8200 3450 0    50   ~ 0
 LCD_D3
-Text Notes 8200 3200 0    50   ~ 0
+Text Notes 8200 3350 0    50   ~ 0
 LCD_D4
-Text Notes 8200 3100 0    50   ~ 0
+Text Notes 8200 3250 0    50   ~ 0
 LCD_D5
-Text Notes 8200 3000 0    50   ~ 0
+Text Notes 8200 3150 0    50   ~ 0
 LCD_D6
-Text Notes 8200 2900 0    50   ~ 0
+Text Notes 8200 3050 0    50   ~ 0
 LCD_D7
-Text Notes 8200 4200 0    50   ~ 0
+Text Notes 8200 4350 0    50   ~ 0
 LCD_GND
-Text Notes 8200 4100 0    50   ~ 0
+Text Notes 8200 4250 0    50   ~ 0
 LCD_PWR
-Text Notes 8200 4000 0    50   ~ 0
+Text Notes 8200 4150 0    50   ~ 0
 LCD_CONT
-Text Label 5000 4100 0    50   ~ 0
+Text Label 5150 4050 0    50   ~ 0
 PIN_T15
-Text Label 5000 4000 0    50   ~ 0
+Text Label 5150 3950 0    50   ~ 0
 PIN_P15
-Text Label 5000 3900 0    50   ~ 0
+Text Label 5150 3850 0    50   ~ 0
 PIN_N14
-Text Label 5000 3800 0    50   ~ 0
+Text Label 5150 3750 0    50   ~ 0
 PIN_N15
-Text Label 5000 3500 0    50   ~ 0
+Text Label 5150 3550 0    50   ~ 0
 PIN_N12
-Text Label 5000 3400 0    50   ~ 0
+Text Label 5150 3450 0    50   ~ 0
 PIN_L15
-Text Label 5050 2900 0    50   ~ 0
+Text Label 6100 2850 0    50   ~ 0
 GND
-Text Label 6200 2900 0    50   ~ 0
+Text Label 5150 2850 0    50   ~ 0
 GND
-Text Label 5000 3700 0    50   ~ 0
+Text Label 6100 3650 0    50   ~ 0
 GND
-Text Label 6150 4100 0    50   ~ 0
+Text Label 6100 4050 0    50   ~ 0
 PIN_R16
-Text Label 6150 4000 0    50   ~ 0
+Text Label 6100 3950 0    50   ~ 0
 PIN_P14
-Text Label 6150 3900 0    50   ~ 0
+Text Label 6100 3850 0    50   ~ 0
 PIN_P16
-Text Label 6150 3800 0    50   ~ 0
+Text Label 6100 3750 0    50   ~ 0
 PIN_N16
-Text Label 5000 3300 0    50   ~ 0
+Text Label 6100 3250 0    50   ~ 0
 GND
-Text Label 5000 3600 0    50   ~ 0
+Text Label 6100 3550 0    50   ~ 0
 PIN_J16
-Text Label 6150 3600 0    50   ~ 0
+Text Label 6100 3450 0    50   ~ 0
 PIN_J15
-Text Label 6150 3700 0    50   ~ 0
+Text Label 5150 3650 0    50   ~ 0
 GND
 $Comp
 L Display_Character:RC1602A U?
 U 1 1 5EE7B895
-P 9000 3400
-F 0 "U?" H 9000 2519 50  0000 C CNN
-F 1 "RC1602A" H 9000 2610 50  0000 C CNN
-F 2 "Display:RC1602A" H 9100 2600 50  0001 C CNN
-F 3 "http://www.raystar-optronics.com/down.php?ProID=18" H 9100 3300 50  0001 C CNN
-	1    9000 3400
+P 9000 3550
+F 0 "U?" H 9150 2900 50  0000 C CNN
+F 1 "RC1602A" H 9250 4250 50  0000 C CNN
+F 2 "Display:RC1602A" H 9100 2750 50  0001 C CNN
+F 3 "http://www.raystar-optronics.com/down.php?ProID=18" H 9100 3450 50  0001 C CNN
+	1    9000 3550
 	1    0    0    1   
 $EndComp
 Text Notes 7100 4500 0    50   ~ 0
 Pin 1 next to\nJ5 silkscreen
-Text Notes 6000 4500 0    50   ~ 0
+Text Notes 5950 4450 0    50   ~ 0
 Pin 2 next to\nJ10 silkscreen
-Text Notes 8800 4300 0    50   ~ 0
+Text Notes 8800 4450 0    50   ~ 0
 LCD (ref)
+Text Label 5150 4250 0    50   ~ 0
+LCD_VCC
+Text Label 6100 4250 0    50   ~ 0
+LCD_VCC
+NoConn ~ 6050 4150
+NoConn ~ 5550 4150
+Text Label 5150 3350 0    50   ~ 0
+PIN_L13
+$Comp
+L Connector_Generic:Conn_02x20_Odd_Even J10
+U 1 1 5EE48D9C
+P 5850 3350
+F 0 "J10" H 5900 2125 50  0000 C CNN
+F 1 "Conn_02x20_Odd_Even" H 5900 2216 50  0000 C CNN
+F 2 "" H 5850 3350 50  0001 C CNN
+F 3 "~" H 5850 3350 50  0001 C CNN
+	1    5850 3350
+	-1   0    0    1   
+$EndComp
+NoConn ~ 6050 2350
+Text Label 5150 3250 0    50   ~ 0
+GND
+Text Label 5150 3150 0    50   ~ 0
+PIN_F9
+Text Label 5150 3050 0    50   ~ 0
+PIN_K15
+Text Label 5150 2750 0    50   ~ 0
+PIN_F13
+Text Label 5150 2650 0    50   ~ 0
+PIN_T11
+Text Label 6100 2650 0    50   ~ 0
+PIN_F14
+Text Label 6100 2750 0    50   ~ 0
+PIN_K16
+Text Label 6100 3150 0    50   ~ 0
+PIN_L14
+Text Label 6100 3050 0    50   ~ 0
+PIN_E10
+Text Label 6100 2950 0    50   ~ 0
+PIN_R11
+Text Notes 4750 2650 0    50   ~ 0
+IO_0
+Text Notes 6550 4050 0    50   ~ 0
+IO_23
+Text Notes 4750 4050 0    50   ~ 0
+IO_22
+Text Notes 4750 3950 0    50   ~ 0
+IO_20
+Text Notes 4750 3850 0    50   ~ 0
+IO_18
+Text Notes 4750 3750 0    50   ~ 0
+IO_16
+Text Notes 4750 3550 0    50   ~ 0
+IO_14
+Text Notes 4750 3450 0    50   ~ 0
+IO_12
+Text Notes 6550 3950 0    50   ~ 0
+IO_21
+Text Notes 6550 3850 0    50   ~ 0
+IO_19
+Text Notes 6550 3750 0    50   ~ 0
+IO_17
+Text Notes 6550 3550 0    50   ~ 0
+IO_15
+Text Notes 6550 3450 0    50   ~ 0
+IO_13
+Text Notes 4750 3350 0    50   ~ 0
+IO_10
+Text Notes 4750 3150 0    50   ~ 0
+IO_8
+Text Notes 4750 3050 0    50   ~ 0
+IO_6
+Text Notes 6550 2650 0    50   ~ 0
+IO_1
+Text Notes 6550 2750 0    50   ~ 0
+IO_3
+Text Notes 6550 2950 0    50   ~ 0
+IO_5
+Text Notes 6550 3050 0    50   ~ 0
+IO_7
+Text Notes 6550 3150 0    50   ~ 0
+IO_9
+Text Label 6100 3350 0    50   ~ 0
+PIN_L16
+Text Notes 6550 3350 0    50   ~ 0
+IO_11
+Text Notes 4750 2750 0    50   ~ 0
+IO_2
+Text Notes 4750 2950 0    50   ~ 0
+IO_4
+Text Label 5150 2950 0    50   ~ 0
+PIN_J14
+NoConn ~ 6050 2450
+NoConn ~ 6050 2550
+NoConn ~ 5550 2550
+NoConn ~ 5550 2450
+NoConn ~ 5550 2350
 $EndSCHEMATC
