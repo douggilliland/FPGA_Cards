@@ -1,17 +1,17 @@
 |smg_interface_demo
 CLK => CLK.IN2
 RSTn => RSTn.IN2
-SMG_Data[0] << smg_interface:U2.SMG_Data
-SMG_Data[1] << smg_interface:U2.SMG_Data
-SMG_Data[2] << smg_interface:U2.SMG_Data
-SMG_Data[3] << smg_interface:U2.SMG_Data
-SMG_Data[4] << smg_interface:U2.SMG_Data
-SMG_Data[5] << smg_interface:U2.SMG_Data
-SMG_Data[6] << smg_interface:U2.SMG_Data
-SMG_Data[7] << smg_interface:U2.SMG_Data
-Scan_Sig[0] << smg_interface:U2.Scan_Sig
-Scan_Sig[1] << smg_interface:U2.Scan_Sig
-Scan_Sig[2] << smg_interface:U2.Scan_Sig
+SMG_Data[0] <= smg_interface:U2.SMG_Data
+SMG_Data[1] <= smg_interface:U2.SMG_Data
+SMG_Data[2] <= smg_interface:U2.SMG_Data
+SMG_Data[3] <= smg_interface:U2.SMG_Data
+SMG_Data[4] <= smg_interface:U2.SMG_Data
+SMG_Data[5] <= smg_interface:U2.SMG_Data
+SMG_Data[6] <= smg_interface:U2.SMG_Data
+SMG_Data[7] <= smg_interface:U2.SMG_Data
+Scan_Sig[0] <= smg_interface:U2.Scan_Sig
+Scan_Sig[1] <= smg_interface:U2.Scan_Sig
+Scan_Sig[2] <= smg_interface:U2.Scan_Sig
 
 
 |smg_interface_demo|demo_control_module:U1

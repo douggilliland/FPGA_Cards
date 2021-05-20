@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Mar 20 04:15:59 2019
-Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Fitter Status : Successful - Thu May 20 08:39:01 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : smg_interface_demo
 Top-level Entity Name : smg_interface_demo
 Family : Cyclone IV E
 Device : EP4CE15F23C8
 Timing Models : Final
-Total logic elements : 118 / 15,408 ( < 1 % )
+Total logic elements : 116 / 15,408 ( < 1 % )
     Total combinational functions : 109 / 15,408 ( < 1 % )
     Dedicated logic registers : 79 / 15,408 ( < 1 % )
 Total registers : 79
