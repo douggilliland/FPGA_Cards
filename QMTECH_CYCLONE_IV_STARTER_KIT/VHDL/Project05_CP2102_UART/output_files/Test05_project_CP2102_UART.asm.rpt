@@ -1,6 +1,6 @@
 Assembler report for Test05_project_CP2102_UART
-Wed Mar 20 04:22:11 2019
-Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Thu May 20 08:53:19 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/Altera/Cyclone_IV/SW_Starter_Kit/Project05_CP2102_UART/output_files/Test05_project_CP2102_UART.sof
+  5. Assembler Device Options: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project05_CP2102_UART/output_files/Test05_project_CP2102_UART.sof
   6. Assembler Messages
 
 
@@ -18,27 +18,27 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Altera and sold by Altera or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Mar 20 04:22:11 2019 ;
+; Assembler Status      ; Successful - Thu May 20 08:53:19 2021 ;
 ; Revision Name         ; Test05_project_CP2102_UART            ;
 ; Top-level Entity Name ; Test05_project_CP2102_UART            ;
 ; Family                ; Cyclone IV E                          ;
@@ -53,24 +53,23 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                             ;
-+-------------------------------------------------------------------------------------------------------+
-; File Name                                                                                             ;
-+-------------------------------------------------------------------------------------------------------+
-; E:/Altera/Cyclone_IV/SW_Starter_Kit/Project05_CP2102_UART/output_files/Test05_project_CP2102_UART.sof ;
-+-------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                                                                       ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                                                       ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project05_CP2102_UART/output_files/Test05_project_CP2102_UART.sof ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: E:/Altera/Cyclone_IV/SW_Starter_Kit/Project05_CP2102_UART/output_files/Test05_project_CP2102_UART.sof ;
-+----------------+----------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                        ;
-+----------------+----------------------------------------------------------------------------------------------------------------+
-; Device         ; EP4CE15F23C8                                                                                                   ;
-; JTAG usercode  ; 0x000D550C                                                                                                     ;
-; Checksum       ; 0x000D550C                                                                                                     ;
-+----------------+----------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project05_CP2102_UART/output_files/Test05_project_CP2102_UART.sof ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                                                                  ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x000D55FB                                                                                                                                                               ;
+; Checksum       ; 0x000D55FB                                                                                                                                                               ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,14 +77,15 @@ agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Wed Mar 20 04:22:10 2019
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu May 20 08:53:18 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Test05_project_CP2102_UART -c Test05_project_CP2102_UART
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Wed Mar 20 04:22:11 2019
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4680 megabytes
+    Info: Processing ended: Thu May 20 08:53:19 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

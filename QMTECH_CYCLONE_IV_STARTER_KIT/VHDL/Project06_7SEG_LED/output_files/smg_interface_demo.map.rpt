@@ -1,6 +1,6 @@
 Analysis & Synthesis report for smg_interface_demo
-Thu May 20 08:38:47 2021
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Thu May 20 08:51:39 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -30,9 +30,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -42,15 +42,16 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 20 08:38:47 2021       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu May 20 08:51:39 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; smg_interface_demo                          ;
 ; Top-level Entity Name              ; smg_interface_demo                          ;
 ; Family                             ; Cyclone IV E                                ;
@@ -169,18 +170,18 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                    ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------+---------+
-; rtl/smg_scan_module.v            ; yes             ; User Verilog HDL File  ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_scan_module.v     ;         ;
-; rtl/smg_interface_demo.v         ; yes             ; User Verilog HDL File  ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface_demo.v  ;         ;
-; rtl/smg_interface.v              ; yes             ; User Verilog HDL File  ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface.v       ;         ;
-; rtl/smg_encode_module.v          ; yes             ; User Verilog HDL File  ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_encode_module.v   ;         ;
-; rtl/smg_control_module.v         ; yes             ; User Verilog HDL File  ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_control_module.v  ;         ;
-; rtl/demo_control_module.v        ; yes             ; User Verilog HDL File  ; C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/demo_control_module.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                             ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                               ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; rtl/smg_scan_module.v            ; yes             ; User Verilog HDL File  ; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_scan_module.v     ;         ;
+; rtl/smg_interface_demo.v         ; yes             ; User Verilog HDL File  ; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface_demo.v  ;         ;
+; rtl/smg_interface.v              ; yes             ; User Verilog HDL File  ; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface.v       ;         ;
+; rtl/smg_encode_module.v          ; yes             ; User Verilog HDL File  ; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_encode_module.v   ;         ;
+; rtl/smg_control_module.v         ; yes             ; User Verilog HDL File  ; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_control_module.v  ;         ;
+; rtl/demo_control_module.v        ; yes             ; User Verilog HDL File  ; C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/demo_control_module.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -398,33 +399,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 20 08:38:27 2021
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu May 20 08:51:22 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off smg_interface_demo -c smg_interface_demo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/smg_scan_module.v
-    Info (12023): Found entity 1: smg_scan_module File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_scan_module.v Line: 4
+    Info (12023): Found entity 1: smg_scan_module File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_scan_module.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/smg_interface_demo.v
-    Info (12023): Found entity 1: smg_interface_demo File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface_demo.v Line: 1
+    Info (12023): Found entity 1: smg_interface_demo File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface_demo.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/smg_interface.v
-    Info (12023): Found entity 1: smg_interface File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface.v Line: 5
+    Info (12023): Found entity 1: smg_interface File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/smg_encode_module.v
-    Info (12023): Found entity 1: smg_encode_module File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_encode_module.v Line: 4
+    Info (12023): Found entity 1: smg_encode_module File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_encode_module.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/smg_control_module.v
-    Info (12023): Found entity 1: smg_control_module File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_control_module.v Line: 4
+    Info (12023): Found entity 1: smg_control_module File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_control_module.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/demo_control_module.v
-    Info (12023): Found entity 1: demo_control_module File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/demo_control_module.v Line: 4
+    Info (12023): Found entity 1: demo_control_module File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/demo_control_module.v Line: 4
 Info (12127): Elaborating entity "smg_interface_demo" for the top level hierarchy
-Info (12128): Elaborating entity "demo_control_module" for hierarchy "demo_control_module:U1" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface_demo.v Line: 18
-Info (12128): Elaborating entity "smg_interface" for hierarchy "smg_interface:U2" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface_demo.v Line: 29
-Info (12128): Elaborating entity "smg_control_module" for hierarchy "smg_interface:U2|smg_control_module:U1" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface.v Line: 24
-Info (12128): Elaborating entity "smg_encode_module" for hierarchy "smg_interface:U2|smg_encode_module:U2" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface.v Line: 34
-Info (12128): Elaborating entity "smg_scan_module" for hierarchy "smg_interface:U2|smg_scan_module:U3" File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface.v Line: 43
-Info (13000): Registers with preset signals will power-up high File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_encode_module.v Line: 29
+Info (12128): Elaborating entity "demo_control_module" for hierarchy "demo_control_module:U1" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface_demo.v Line: 18
+Info (12128): Elaborating entity "smg_interface" for hierarchy "smg_interface:U2" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface_demo.v Line: 29
+Info (12128): Elaborating entity "smg_control_module" for hierarchy "smg_interface:U2|smg_control_module:U1" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface.v Line: 24
+Info (12128): Elaborating entity "smg_encode_module" for hierarchy "smg_interface:U2|smg_encode_module:U2" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface.v Line: 34
+Info (12128): Elaborating entity "smg_scan_module" for hierarchy "smg_interface:U2|smg_scan_module:U3" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface.v Line: 43
+Info (13000): Registers with preset signals will power-up high File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_encode_module.v Line: 29
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SMG_Data[7]" is stuck at VCC File: C:/Users/dgilliland/Documents/GitHub/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface_demo.v Line: 5
+    Warning (13410): Pin "SMG_Data[7]" is stuck at VCC File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_IV_STARTER_KIT/VHDL/Project06_7SEG_LED/rtl/smg_interface_demo.v Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -433,9 +434,9 @@ Info (21057): Implemented 134 device resources after synthesis - the final resou
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 121 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Thu May 20 08:38:47 2021
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Thu May 20 08:51:39 2021
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:37
 
 

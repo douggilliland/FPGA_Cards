@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP4CE15F23C8
 set_global_assignment -name TOP_LEVEL_ENTITY vga_test
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:42:36  AUGUST 19, 2015"
-set_global_assignment -name LAST_QUARTUS_VERSION 15.1.0
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -89,5 +89,5 @@ set_location_assignment PIN_AA14 -to vga_b[4]
 set_global_assignment -name VERILOG_FILE pll.v
 set_global_assignment -name VERILOG_FILE rtl/vga_test.v
 set_global_assignment -name QIP_FILE pll.qip
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name CDF_FILE output_files/vga_test.cdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
