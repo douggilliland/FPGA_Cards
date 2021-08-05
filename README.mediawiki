@@ -1,28 +1,55 @@
 = FPGA_Cards =
 
-<img src="https://raw.githubusercontent.com/douggilliland/FPGA_Cards/master/FPGA_Cards-720.jpg"></img>
+<img src="https://raw.githubusercontent.com/douggilliland/FPGA_Cards/pics/master/FPGA_Cards-720.jpg"></img>
 
 The following are purchased FPGA cards. Many of them are directly suitable for retro computing. See [https://github.com/douggilliland/MultiCompMulticomp Multicomp] for more details.
 
 == A-C4CE6_Card ==
 
+* Altera EP4CE6 FPGA
+* '''Out of Production'''
 * [https://www.aliexpress.com/item/USB-Blaster-altera-fpga-board-altera-board-fpga-development-board-EP4CE6E22C8N-board-cyclone-IV-kit/32813061054.html?spm=2114.search0104.3.8.3329455fyLnGdW&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=710df29a-e3ca-489a-94ef-7778ff459458-1&algo_pvid=710df29a-e3ca-489a-94ef-7778ff459458&transAbTest=ae803_3  AliExpress FPGA Card Webpage]
 
 == A-C4E10_Card ==
 
+* Altera EP4CE10 FPGA
+* '''Out of Production'''
 * [https://www.aliexpress.com/item/usb-blaster-EP4CE10E22C8N-altera-fpga-board-altera-board-fpga-development-board-cyclone-IV-board/32813736111.html?spm=a2g0s.9042311.0.0.2f0f4c4d85I6EW AliExpress FPGA Card Webpage]
 
 == A-ESTF_V2_EP4CE22Board ==
 
+* Altera EP4CE22 FPGA
+* '''Out of Production?'''
 * [https://www.aliexpress.com/item/E22-core-bottom-board-fpga-development-board-cyclone-iv-board-EP4CE22F17C8N-altera-fpga-board-altera-board/32859908966.html?spm=2114.search0104.3.60.54a0455fElsvmW&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=a276ebc6-3063-476e-be29-e462a6377577-9&algo_pvid=a276ebc6-3063-476e-be29-e462a6377577&transAbTest=ae803_3 AliExpress FPGA Card Webpage]
 
 == EP2C5_Cyclone_II_Mini_Board ==
 
+* Altera EP2C5 FPGA
 * [https://www.aliexpress.com/item/Drop-Ship-Wholesale-ALTERA-FPGA-CycloneII-EP2C5T144-Learning-Board-Mini-System-Development-Board-New-APR29/33012725261.html?spm=2114.search0104.3.28.10d4455fEsWiEC&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=d185b0be-ba9d-4bdc-a62b-1b7edca60141-4&algo_pvid=d185b0be-ba9d-4bdc-a62b-1b7edca60141&transAbTest=ae803_3 AliExpress FPGA Card Webpage]
 
-== QMTECH_EP4CE15 ==
+== Lattice_MAXH_X03  ==
+
+== NEO_DE0 ==
+
+== OMDAZZ ==
+
+* Altera EP4CE6 FPGA
+
+== QMTECH_CYCLONE_10 ==
+
+== QMTECH_CYCLONE_IV_EP4CE15_DB ==
+
+== QMTECH_CYCLONE_EP4CE55 ==
 
 * [https://www.aliexpress.com/item/QMTECH-Altera-Intel-FPGA-Core-Board-Cyclone-IV-CycloneIV-EP4CE15-SDRAM-Development-Board/32949281189.html?spm=2114.search0104.3.24.16ce7f11aFO5Ni&ws_ab_test=searchweb0_0,searchweb201602_4_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10059_10884_10887_321_322_10103,searchweb201603_52,ppcSwitch_0&algo_expid=72dd6b82-3ef5-498d-8c47-e71d5393170d-3&algo_pvid=72dd6b82-3ef5-498d-8c47-e71d5393170d&transAbTest=ae803_3 AliExpress Card Webpage]
+
+== QMTECH_CYCLONE_IV_STARTER_KIT ==
+
+* Altera EP4CE15 FPGA
+
+== QMTECH_CYCLONE_V ==
+
+* Altera 5CEFA2F23 FPGA
 
 == WaveShare_CoreEP4CE6_Card ==
 
@@ -30,4 +57,6 @@ The following are purchased FPGA cards. Many of them are directly suitable for r
 
 == zrTech_V2_C4E6_Card ==
 
+* Altera EP4CE6 FPGA
+* '''Out of Production'''
 * [https://www.ebay.com/itm/New-2018-Altera-Cyclone-IV-FPGA-EP4CE6E22C8N-Development-Board-USB-V2-0-CPLD/163044282291?hash=item25f6324fb3:g:QlgAAOSwCGVX5KLz Ebay listing]
