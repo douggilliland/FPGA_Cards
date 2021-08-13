@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Aug 27 22:13:24 2018
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+Revision Name : Test05_NIOS
+Top-level Entity Name : Test05_NIOS
+Family : Cyclone 10 LP
+Device : 10CL006YU256C8G
+Timing Models : Final
+Total logic elements : 3,365 / 6,272 ( 54 % )
+    Total combinational functions : 2,852 / 6,272 ( 45 % )
+    Dedicated logic registers : 2,010 / 6,272 ( 32 % )
+Total registers : 2010
+Total pins : 2 / 177 ( 1 % )
+Total virtual pins : 0
+Total memory bits : 98,624 / 276,480 ( 36 % )
+Embedded Multiplier 9-bit elements : 6 / 30 ( 20 % )
+Total PLLs : 1 / 2 ( 50 % )

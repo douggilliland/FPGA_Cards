@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="6827494ceb31b708d19e"/>
+  </project>
+  <file_info>
+    <file device="10CL006YU256C8G" path="Test03_project_PLL.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="c10_altclkctrl:c10_altclkctrl_inst" name="c10_altclkctrl_inst">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME c10_altclkctrl HAS_SOPCINFO 1 GENERATION_ID 1525150091"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

@@ -1,0 +1,111 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\Altera\Cyclone_10\SW\Test05_NIOS\HelloWorld.qsys --block-symbol-file --output-directory=E:\Altera\Cyclone_10\SW\Test05_NIOS\HelloWorld --family="Cyclone 10 LP" --part=10CL006YU256C8G
+Progress: Loading Test05_NIOS/HelloWorld.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 17.0]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 17.0]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.0]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 17.0]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 17.0]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: HelloWorld.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Warning: HelloWorld.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: HelloWorld.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\Altera\Cyclone_10\SW\Test05_NIOS\HelloWorld.qsys --synthesis=VERILOG --output-directory=E:\Altera\Cyclone_10\SW\Test05_NIOS\HelloWorld\synthesis --family="Cyclone 10 LP" --part=10CL006YU256C8G
+Progress: Loading Test05_NIOS/HelloWorld.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 17.0]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 17.0]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.0]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 17.0]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 17.0]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: HelloWorld.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Warning: HelloWorld.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: HelloWorld.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: HelloWorld: Generating HelloWorld "HelloWorld" for QUARTUS_SYNTH
+Info: altpll_0: "HelloWorld" instantiated altpll "altpll_0"
+Info: jtag_uart_0: Starting RTL generation for module 'HelloWorld_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=HelloWorld_jtag_uart_0 --dir=C:/Users/EVELOV~1/AppData/Local/Temp/alt7770_7161425559811714233.dir/0003_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/EVELOV~1/AppData/Local/Temp/alt7770_7161425559811714233.dir/0003_jtag_uart_0_gen//HelloWorld_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'HelloWorld_jtag_uart_0'
+Info: jtag_uart_0: "HelloWorld" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: nios2_gen2_0: "HelloWorld" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'HelloWorld_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=HelloWorld_onchip_memory2_0 --dir=C:/Users/EVELOV~1/AppData/Local/Temp/alt7770_7161425559811714233.dir/0004_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/EVELOV~1/AppData/Local/Temp/alt7770_7161425559811714233.dir/0004_onchip_memory2_0_gen//HelloWorld_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'HelloWorld_onchip_memory2_0'
+Info: onchip_memory2_0: "HelloWorld" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "HelloWorld" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "HelloWorld" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "HelloWorld" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'HelloWorld_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA/17.0/quartus/bin64//eperlcmd.exe -I C:/intelFPGA/17.0/quartus/bin64//perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=HelloWorld_nios2_gen2_0_cpu --dir=C:/Users/EVELOV~1/AppData/Local/Temp/alt7770_7161425559811714233.dir/0007_cpu_gen/ --quartus_bindir=C:/intelFPGA/17.0/quartus/bin64/ --verilog --config=C:/Users/EVELOV~1/AppData/Local/Temp/alt7770_7161425559811714233.dir/0007_cpu_gen//HelloWorld_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2018.08.27 22:05:20 (*) Starting Nios II generation
+Info: cpu: # 2018.08.27 22:05:20 (*)   Checking for plaintext license.
+Info: cpu: # 2018.08.27 22:05:22 (*)   Plaintext license not found.
+Info: cpu: # 2018.08.27 22:05:22 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2018.08.27 22:05:23 (*)   Encrypted license found.  SOF will not be time-limited.
+Info: cpu: # 2018.08.27 22:05:23 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2018.08.27 22:05:23 (*)   Creating all objects for CPU
+Info: cpu: # 2018.08.27 22:05:23 (*)     Testbench
+Info: cpu: # 2018.08.27 22:05:24 (*)     Instruction decoding
+Info: cpu: # 2018.08.27 22:05:24 (*)       Instruction fields
+Info: cpu: # 2018.08.27 22:05:24 (*)       Instruction decodes
+Info: cpu: # 2018.08.27 22:05:24 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2018.08.27 22:05:25 (*)       Instruction controls
+Info: cpu: # 2018.08.27 22:05:25 (*)     Pipeline frontend
+Info: cpu: # 2018.08.27 22:05:25 (*)     Pipeline backend
+Info: cpu: # 2018.08.27 22:05:27 (*)   Generating RTL from CPU objects
+Info: cpu: # 2018.08.27 22:05:29 (*)   Creating encrypted RTL
+Info: cpu: # 2018.08.27 22:05:30 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'HelloWorld_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: nios2_gen2_0_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "nios2_gen2_0_data_master_limiter"
+Info: Reusing file E:/Altera/Cyclone_10/SW/Test05_NIOS/HelloWorld/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file E:/Altera/Cyclone_10/SW/Test05_NIOS/HelloWorld/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file E:/Altera/Cyclone_10/SW/Test05_NIOS/HelloWorld/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file E:/Altera/Cyclone_10/SW/Test05_NIOS/HelloWorld/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: HelloWorld: Done "HelloWorld" with 29 modules, 49 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

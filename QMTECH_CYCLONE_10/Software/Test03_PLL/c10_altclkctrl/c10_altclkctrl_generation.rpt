@@ -1,0 +1,33 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\Altera\Cyclone_10\SW\Test03_PLL\c10_altclkctrl.qsys --block-symbol-file --output-directory=E:\Altera\Cyclone_10\SW\Test03_PLL\c10_altclkctrl --family="Cyclone 10 LP" --part=10CL006YU256C8G
+Progress: Loading Test03_PLL/c10_altclkctrl.qsys
+Progress: Reading input file
+Progress: Adding altclkctrl_0 [altclkctrl 17.0]
+Progress: Parameterizing module altclkctrl_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: c10_altclkctrl.altclkctrl_0: Targeting device family: Cyclone 10 LP.
+: c10_altclkctrl.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\Altera\Cyclone_10\SW\Test03_PLL\c10_altclkctrl.qsys --synthesis=VERILOG --output-directory=E:\Altera\Cyclone_10\SW\Test03_PLL\c10_altclkctrl\synthesis --family="Cyclone 10 LP" --part=10CL006YU256C8G
+Progress: Loading Test03_PLL/c10_altclkctrl.qsys
+Progress: Reading input file
+Progress: Adding altclkctrl_0 [altclkctrl 17.0]
+Progress: Parameterizing module altclkctrl_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: c10_altclkctrl.altclkctrl_0: Targeting device family: Cyclone 10 LP.
+: c10_altclkctrl.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info: c10_altclkctrl: Generating c10_altclkctrl "c10_altclkctrl" for QUARTUS_SYNTH
+Info: altclkctrl_0: Generating top-level entity c10_altclkctrl_altclkctrl_0.
+Info: altclkctrl_0: "c10_altclkctrl" instantiated altclkctrl "altclkctrl_0"
+Info: c10_altclkctrl: Done "c10_altclkctrl" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

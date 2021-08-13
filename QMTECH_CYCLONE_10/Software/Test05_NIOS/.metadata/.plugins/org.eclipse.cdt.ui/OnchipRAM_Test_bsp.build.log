@@ -1,0 +1,6 @@
+22:37:27 **** Clean-only build of configuration Nios II for project OnchipRAM_Test_bsp ****
+make clean 
+[BSP clean complete]
+
+22:37:28 Build Finished (took 720ms)
+
