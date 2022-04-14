@@ -1,24 +1,24 @@
 //altera_mult_add ADDNSUB_MULTIPLIER_PIPELINE_ACLR1="ACLR0" ADDNSUB_MULTIPLIER_PIPELINE_REGISTER1="CLOCK0" ADDNSUB_MULTIPLIER_REGISTER1="UNREGISTERED" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEDICATED_MULTIPLIER_CIRCUITRY="YES" DEVICE_FAMILY="Cyclone 10 LP" DSP_BLOCK_BALANCING="Auto" INPUT_REGISTER_A0="UNREGISTERED" INPUT_REGISTER_B0="UNREGISTERED" INPUT_SOURCE_A0="DATAA" INPUT_SOURCE_B0="DATAB" MULTIPLIER1_DIRECTION="ADD" MULTIPLIER_ACLR0="ACLR0" MULTIPLIER_REGISTER0="CLOCK0" NUMBER_OF_MULTIPLIERS=1 OUTPUT_REGISTER="UNREGISTERED" port_addnsub1="PORT_UNUSED" port_addnsub3="PORT_UNUSED" REPRESENTATION_A="UNSIGNED" REPRESENTATION_B="UNSIGNED" SELECTED_DEVICE_FAMILY="CYCLONE10LP" SIGNED_PIPELINE_ACLR_A="ACLR0" SIGNED_PIPELINE_ACLR_B="ACLR0" SIGNED_PIPELINE_REGISTER_A="CLOCK0" SIGNED_PIPELINE_REGISTER_B="CLOCK0" SIGNED_REGISTER_A="UNREGISTERED" SIGNED_REGISTER_B="UNREGISTERED" WIDTH_A=16 WIDTH_B=16 WIDTH_RESULT=32 aclr0 clock0 dataa datab ena0 result
-//VERSION_BEGIN 17.0 cbx_altera_mult_add 2017:04:25:18:06:29:SJ cbx_altera_mult_add_rtl 2017:04:25:18:06:29:SJ cbx_mgl 2017:04:25:18:09:28:SJ  VERSION_END
+//VERSION_BEGIN 21.1 cbx_altera_mult_add 2021:10:21:11:03:22:SJ cbx_altera_mult_add_rtl 2021:10:21:11:03:22:SJ cbx_mgl 2021:10:21:11:03:46:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
 
 
 
-// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Copyright (C) 2021  Intel Corporation. All rights reserved.
 //  Your use of Intel Corporation's design tools, logic functions 
-//  and other software and tools, and its AMPP partner logic 
+//  and other software and tools, and any partner logic 
 //  functions, and any output files from any of the foregoing 
 //  (including device programming or simulation files), and any 
 //  associated documentation or information are expressly subject 
 //  to the terms and conditions of the Intel Program License 
 //  Subscription Agreement, the Intel Quartus Prime License Agreement,
-//  the Intel MegaCore Function License Agreement, or other 
-//  applicable license agreement, including, without limitation, 
-//  that your use is for the sole purpose of programming logic 
-//  devices manufactured by Intel and sold by Intel or its 
-//  authorized distributors.  Please refer to the applicable 
-//  agreement for further details.
+//  the Intel FPGA IP License Agreement, or other applicable license
+//  agreement, including, without limitation, that your use is for
+//  the sole purpose of programming logic devices manufactured by
+//  Intel and sold by Intel or its authorized distributors.  Please
+//  refer to the applicable agreement for further details, at
+//  https://fpgasoftware.intel.com/eula.
 
 
 

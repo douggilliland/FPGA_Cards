@@ -1,6 +1,6 @@
 Flow report for Test01_Project_LED
-Tue Nov 12 11:17:44 2019
-Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Tue Apr 12 17:41:46 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -21,35 +21,35 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Altera and sold by Altera or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 12 11:17:34 2019       ;
-; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Flow Status                     ; Successful - Tue Apr 12 17:41:38 2022       ;
+; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; Test01_Project_LED                          ;
 ; Top-level Entity Name           ; Test01_Project_LED                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEFA2F23I7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 26 / 9,430 ( < 1 % )                        ;
-; Total registers                 ; 44                                          ;
+; Total registers                 ; 50                                          ;
 ; Total pins                      ; 3 / 224 ( 1 % )                             ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 1,802,240 ( 0 % )                       ;
@@ -68,52 +68,52 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/12/2019 11:16:55 ;
+; Start date & time ; 04/12/2022 17:40:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Test01_Project_LED  ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                       ;
-+-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 79497678721010.157352861406224        ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 100                                   ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; -40                                   ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --         ;
-+-------------------------------------+---------------------------------------+---------------+-------------+------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 10995770589187.164979964917556         ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 100                                    ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; -40                                    ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 5023 MB             ; 00:00:20                           ;
-; Fitter                    ; 00:00:17     ; 1.0                     ; 6476 MB             ; 00:00:26                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 5001 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 5300 MB             ; 00:00:06                           ;
-; Total                     ; 00:00:37     ; --                      ; --                  ; 00:00:56                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4847 MB             ; 00:00:37                           ;
+; Fitter               ; 00:00:26     ; 1.0                     ; 6223 MB             ; 00:00:42                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4845 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 5073 MB             ; 00:00:07                           ;
+; Total                ; 00:00:53     ; --                      ; --                  ; 00:01:32                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; EVELOVELY        ; Windows 8 ; 6.2        ; x86_64         ;
-; Fitter                    ; EVELOVELY        ; Windows 8 ; 6.2        ; x86_64         ;
-; Assembler                 ; EVELOVELY        ; Windows 8 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; EVELOVELY        ; Windows 8 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-2UF8LNB  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-2UF8LNB  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-2UF8LNB  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-2UF8LNB  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------

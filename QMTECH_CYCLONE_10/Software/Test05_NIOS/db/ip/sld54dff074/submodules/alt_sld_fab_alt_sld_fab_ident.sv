@@ -1,10 +1,10 @@
-// (C) 2001-2017 Intel Corporation. All rights reserved.
+// (C) 2001-2021 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
-// files any of the foregoing (including device programming or simulation 
+// files from any of the foregoing (including device programming or simulation 
 // files), and any associated documentation or information are expressly subject 
 // to the terms and conditions of the Intel Program License Subscription 
-// Agreement, Intel MegaCore Function License Agreement, or other applicable 
+// Agreement, Intel FPGA IP License Agreement, or other applicable 
 // license agreement, including, without limitation, that your use is for the 
 // sole purpose of programming logic devices manufactured by Intel and sold by 
 // Intel or its authorized distributors.  Please refer to the applicable 
@@ -20,7 +20,7 @@
 // Altera Identification hub
 //
 // Parameters
-//   DESIGN_HASH   : 0721b21d2632d55ce4c0
+//   DESIGN_HASH   : 5a0aca54352aabde080b
 //   COUNT         : 1
 //   ROM_WIDTHS    : 4
 //   LATENCIES     : 0
@@ -39,7 +39,7 @@ module alt_sld_fab_alt_sld_fab_ident
 );
 
 
-wire [127:0] data_0 = { mixed, 12'h0, 32'h0, 80'h0721b21d2632d55ce4c0 };
+wire [127:0] data_0 = { mixed, 12'h0, 32'h0, 80'h5a0aca54352aabde080b };
 
 reg [3:0] result_0;
 always @(address_0 or data_0) begin
