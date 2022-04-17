@@ -1,5 +1,5 @@
 Timing Analyzer report for Test01_Project_LED
-Tue Apr 12 17:41:46 2022
+Sun Apr 17 05:36:49 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -106,8 +106,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   2.1%      ;
-;     Processor 3            ;   1.9%      ;
-;     Processor 4            ;   1.8%      ;
+;     Processor 3            ;   2.0%      ;
+;     Processor 4            ;   2.0%      ;
 +----------------------------+-------------+
 
 
@@ -490,7 +490,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Tue Apr 12 17:41:40 2022
+    Info: Processing started: Sun Apr 17 05:36:43 2022
 Info: Command: quartus_sta Test01_Project_LED -c Test01_Project_LED
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -582,9 +582,9 @@ Info (332146): Worst-case minimum pulse width slack is -0.096
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5073 megabytes
-    Info: Processing ended: Tue Apr 12 17:41:46 2022
+    Info: Peak virtual memory: 5056 megabytes
+    Info: Processing ended: Sun Apr 17 05:36:49 2022
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 

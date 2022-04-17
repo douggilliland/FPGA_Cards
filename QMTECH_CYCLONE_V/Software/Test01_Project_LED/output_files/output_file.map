@@ -10,10 +10,6 @@ Quad-Serial configuration device dummy clock cycle: 12
 
 Notes:
 
-- Data checksum for this conversion is 0xD77F0E2A
+- Data checksum for this conversion is 0xD77F0E50
 
 - All the addresses in this file are byte addresses
-
-- The following changes from default values for Advanced Options settings are in effect:
-	Disable EPCS ID check: ON
-	Disable AS mode CONF_DONE error check: ON

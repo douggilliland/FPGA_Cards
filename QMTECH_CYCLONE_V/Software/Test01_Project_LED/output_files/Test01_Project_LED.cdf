@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEFA2) Path("C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_V/Software/Test01_Project_LED/output_files/") File("output_file.jic") MfrSpec(OpMask(1) SEC_Device(MT25QL128) Child_OpMask(1 1));
+		Device PartName(5CEFA2F23) Path("C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Cards/QMTECH_CYCLONE_V/Software/Test01_Project_LED/output_files/") File("Test01_Project_LED.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
