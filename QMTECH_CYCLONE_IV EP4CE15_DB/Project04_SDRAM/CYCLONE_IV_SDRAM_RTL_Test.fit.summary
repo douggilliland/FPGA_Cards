@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Mar 03 19:41:28 2019
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : CYCLONE_IV_SDRAM_RTL_Test
+Top-level Entity Name : CYCLONE_IV_SDRAM_RTL_Test
+Family : Cyclone IV E
+Device : EP4CE15F23C8
+Timing Models : Final
+Total logic elements : 3,007 / 15,408 ( 20 % )
+    Total combinational functions : 1,461 / 15,408 ( 9 % )
+    Dedicated logic registers : 2,623 / 15,408 ( 17 % )
+Total registers : 2623
+Total pins : 43 / 344 ( 13 % )
+Total virtual pins : 0
+Total memory bits : 161,792 / 516,096 ( 31 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
